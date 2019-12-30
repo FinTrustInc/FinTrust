@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DL\FinTrustDL.cs" />
+    <Compile Include="HELPER\DBHelper.cs" />
+    <Compile Include="HELPER\UtilityHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -52,8 +55,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DATA\" />
-    <Folder Include="DL\" />
-    <Folder Include="HELPER\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
