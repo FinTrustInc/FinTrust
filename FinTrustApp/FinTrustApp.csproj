@@ -88,6 +88,42 @@
     <Compile Include="PL\FinTrust-Registration.Designer.cs">
       <DependentUpon>FinTrust-Registration.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Grievance _Approval_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Grievance _Approval_Form.Designer.cs">
+      <DependentUpon>Grievance _Approval_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Grievance_Redressal_Application.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Grievance_Redressal_Application.Designer.cs">
+      <DependentUpon>Grievance_Redressal_Application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Loan ApplicationForm .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Loan ApplicationForm .Designer.cs">
+      <DependentUpon>Loan ApplicationForm .cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Pending_Loan_Applications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Pending_Loan_Applications.Designer.cs">
+      <DependentUpon>Pending_Loan_Applications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Probationary Officer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Probationary Officer.Designer.cs">
+      <DependentUpon>Probationary Officer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestClass1.cs" />
@@ -108,6 +144,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FinTrust-Registration.resx">
       <DependentUpon>FinTrust-Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Grievance _Approval_Form.resx">
+      <DependentUpon>Grievance _Approval_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Grievance_Redressal_Application.resx">
+      <DependentUpon>Grievance_Redressal_Application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Loan ApplicationForm .resx">
+      <DependentUpon>Loan ApplicationForm .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Pending_Loan_Applications.resx">
+      <DependentUpon>Pending_Loan_Applications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Probationary Officer.resx">
+      <DependentUpon>Probationary Officer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
