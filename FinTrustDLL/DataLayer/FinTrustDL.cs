@@ -3,16 +3,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FinTrustDTO.DataTransferObject;
-using FinTrustDSL.Helper;
+using FinTrustDTO.DTO;
+using FinTrustDLL.Helper;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace FinTrustDSL.DataServiceLayer
+namespace FinTrustDLL.DataLayer
 {
 	public class FinTrustDL
 	{
-		public static int InsertTransactionDetails(Transaction objTransaction)
+        public static DataSet GetEmployeeCredentials()
+        {
+            string sql = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            DataSet dsContactIds = null;
+            try
+            {
+                sql = "select email,password from user_table where";
+                con = DBHelper.GetConnection();
+                con.Open();
+                dsContactIds = new DataSet();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dsContactIds);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("Error : AddressBookDSL:GetContactIds : " + ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+
+            return dsContactIds;
+        }
+
+
+        public static int InsertTransactionDetails(Transaction objTransaction)
 		{
 			int output = 0;
 			string sql = "";
