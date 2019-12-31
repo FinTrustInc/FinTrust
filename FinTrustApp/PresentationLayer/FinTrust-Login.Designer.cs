@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinTrust_Login));
-            this.lblTrust = new System.Windows.Forms.Label();
-            this.lblnTrust = new System.Windows.Forms.Label();
-            this.lbli = new System.Windows.Forms.Label();
-            this.lblF = new System.Windows.Forms.Label();
             this.panelLogin = new System.Windows.Forms.Panel();
             this.labelLoginMessage = new System.Windows.Forms.Label();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
@@ -45,56 +41,14 @@
             this.comboBoxUser = new System.Windows.Forms.ComboBox();
             this.panelLoginHead = new System.Windows.Forms.Panel();
             this.labelSignin = new System.Windows.Forms.Label();
+            this.lblF = new System.Windows.Forms.Label();
+            this.lbli = new System.Windows.Forms.Label();
+            this.lblnTrust = new System.Windows.Forms.Label();
+            this.lblTrust = new System.Windows.Forms.Label();
             this.panelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.panelLoginHead.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblTrust
-            // 
-            this.lblTrust.AutoSize = true;
-            this.lblTrust.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrust.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblTrust.Location = new System.Drawing.Point(686, 86);
-            this.lblTrust.Name = "lblTrust";
-            this.lblTrust.Size = new System.Drawing.Size(128, 18);
-            this.lblTrust.TabIndex = 14;
-            this.lblTrust.Text = "Tradition of Trust";
-            // 
-            // lblnTrust
-            // 
-            this.lblnTrust.AutoSize = true;
-            this.lblnTrust.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnTrust.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblnTrust.Location = new System.Drawing.Point(690, 18);
-            this.lblnTrust.Margin = new System.Windows.Forms.Padding(0);
-            this.lblnTrust.Name = "lblnTrust";
-            this.lblnTrust.Size = new System.Drawing.Size(171, 56);
-            this.lblnTrust.TabIndex = 11;
-            this.lblnTrust.Text = "nTrust";
-            // 
-            // lbli
-            // 
-            this.lbli.AutoSize = true;
-            this.lbli.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbli.ForeColor = System.Drawing.Color.Red;
-            this.lbli.Location = new System.Drawing.Point(667, 18);
-            this.lbli.Name = "lbli";
-            this.lbli.Size = new System.Drawing.Size(37, 56);
-            this.lbli.TabIndex = 13;
-            this.lbli.Text = "i";
-            this.lbli.Click += new System.EventHandler(this.lbli_Click);
-            // 
-            // lblF
-            // 
-            this.lblF.AutoSize = true;
-            this.lblF.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblF.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblF.Location = new System.Drawing.Point(632, 18);
-            this.lblF.Name = "lblF";
-            this.lblF.Size = new System.Drawing.Size(53, 56);
-            this.lblF.TabIndex = 12;
-            this.lblF.Text = "F";
             // 
             // panelLogin
             // 
@@ -234,6 +188,52 @@
             this.labelSignin.TabIndex = 0;
             this.labelSignin.Text = "SIGN IN";
             // 
+            // lblF
+            // 
+            this.lblF.AutoSize = true;
+            this.lblF.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblF.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblF.Location = new System.Drawing.Point(632, 18);
+            this.lblF.Name = "lblF";
+            this.lblF.Size = new System.Drawing.Size(53, 56);
+            this.lblF.TabIndex = 12;
+            this.lblF.Text = "F";
+            // 
+            // lbli
+            // 
+            this.lbli.AutoSize = true;
+            this.lbli.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbli.ForeColor = System.Drawing.Color.Red;
+            this.lbli.Location = new System.Drawing.Point(667, 18);
+            this.lbli.Name = "lbli";
+            this.lbli.Size = new System.Drawing.Size(37, 56);
+            this.lbli.TabIndex = 13;
+            this.lbli.Text = "i";
+            this.lbli.Click += new System.EventHandler(this.lbli_Click);
+            // 
+            // lblnTrust
+            // 
+            this.lblnTrust.AutoSize = true;
+            this.lblnTrust.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnTrust.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblnTrust.Location = new System.Drawing.Point(690, 18);
+            this.lblnTrust.Margin = new System.Windows.Forms.Padding(0);
+            this.lblnTrust.Name = "lblnTrust";
+            this.lblnTrust.Size = new System.Drawing.Size(171, 56);
+            this.lblnTrust.TabIndex = 11;
+            this.lblnTrust.Text = "nTrust";
+            // 
+            // lblTrust
+            // 
+            this.lblTrust.AutoSize = true;
+            this.lblTrust.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrust.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblTrust.Location = new System.Drawing.Point(686, 86);
+            this.lblTrust.Name = "lblTrust";
+            this.lblTrust.Size = new System.Drawing.Size(128, 18);
+            this.lblTrust.TabIndex = 14;
+            this.lblTrust.Text = "Tradition of Trust";
+            // 
             // FinTrust_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,11 +259,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblTrust;
-        private System.Windows.Forms.Label lblnTrust;
-        private System.Windows.Forms.Label lbli;
-        private System.Windows.Forms.Label lblF;
         private System.Windows.Forms.Panel panelLogin;
         private System.Windows.Forms.Panel panelLoginHead;
         private System.Windows.Forms.Label labelSignin;
@@ -276,5 +271,9 @@
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.Label labelLoginMessage;
+        private System.Windows.Forms.Label lblF;
+        private System.Windows.Forms.Label lbli;
+        private System.Windows.Forms.Label lblnTrust;
+        private System.Windows.Forms.Label lblTrust;
     }
 }

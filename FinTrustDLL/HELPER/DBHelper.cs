@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinTrustDSL.Helper
+namespace FinTrustDLL.Helper
 {
 	public class DBHelper
 	{
@@ -15,7 +15,7 @@ namespace FinTrustDSL.Helper
 			String ConnectionString = null;
 			try
 			{
-				ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\1028258\\Desktop\\FinTrustRepo\\FinTrustDSL\\DataBase\\FinTrustDB.mdf;Integrated Security=True";
+				ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\1028259\\source\repos\\FinTrustApp\\FinTrustDLL\\DATA\\FinTrustDB.mdf;Integrated Security=True";
 				connection = new SqlConnection(ConnectionString);
 			}
 			catch (Exception ex)

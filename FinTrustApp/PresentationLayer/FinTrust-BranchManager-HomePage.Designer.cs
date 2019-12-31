@@ -31,6 +31,7 @@
             this.menuStripClerk = new System.Windows.Forms.MenuStrip();
             this.accountHandlingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grievanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelClerk = new System.Windows.Forms.Panel();
             this.textBoxSearchAccountNo = new System.Windows.Forms.TextBox();
             this.textBoxSearchTransactionID = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@
             this.labelSearchAccuntNo = new System.Windows.Forms.Label();
             this.labelSearchTransactionID = new System.Windows.Forms.Label();
             this.labelSearchID = new System.Windows.Forms.Label();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripClerk.SuspendLayout();
             this.panelClerk.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,12 @@
             this.grievanceToolStripMenuItem.Name = "grievanceToolStripMenuItem";
             this.grievanceToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.grievanceToolStripMenuItem.Text = "Approvals";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
             // 
             // panelClerk
             // 
@@ -137,12 +143,6 @@
             this.labelSearchID.TabIndex = 0;
             this.labelSearchID.Text = "Serach by ID";
             // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
             // FinTrust_BranchManager_HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,7 +151,7 @@
             this.Controls.Add(this.menuStripClerk);
             this.Controls.Add(this.panelClerk);
             this.Name = "FinTrust_BranchManager_HomePage";
-            this.Text = "FinTrust_BranchManager_HomePage";
+            this.Text = "Branch Manager/View ";
             this.menuStripClerk.ResumeLayout(false);
             this.menuStripClerk.PerformLayout();
             this.panelClerk.ResumeLayout(false);

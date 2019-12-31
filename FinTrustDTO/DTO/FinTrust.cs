@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinTrustDTO.DataTransferObject
+namespace FinTrustDTO.DTO
 {
     class FinTrust
     {
