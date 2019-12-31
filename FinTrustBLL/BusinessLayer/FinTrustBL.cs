@@ -3,15 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FinTrustDSL.DataServiceLayer;
-using FinTrustDTO.DataTransferObject;
-using FinTrustDSL.Helper;
+using FinTrustDLL.DataLayer;
+using FinTrustDTO.DTO;
+using System.Data;
+
 
 namespace FinTrustBLL.BusinessLayer
 {
 	public class FinTrustBL
 	{
-		public static int InsertTransactionDetails(Transaction objTransaction)
+        //public static bool CheckEmployeeUser()
+        //{
+
+
+        //    DataSet dsEmployeeUser = null;
+        //    try
+        //    {
+        //        dsEmployeeUser = FinTrustDL.GetEmployeeCredentials(User objUser);
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.Out.WriteLine("Error : FinTrustBL:CheckEmployeeUser : " + ex.Message.ToString());
+        //    }
+
+
+        //    return dsContactIds;
+        //}
+
+
+        public static int InsertTransactionDetails(Transaction objTransaction)
 		{
 			int output = 0;
 			try

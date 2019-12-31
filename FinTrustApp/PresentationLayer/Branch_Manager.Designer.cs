@@ -33,7 +33,7 @@
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.greivanceRedressalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loanApprovalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -65,32 +65,36 @@
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
             this.addToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.addToolStripMenuItem.Text = "Add Users";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
+            this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.greivanceRedressalToolStripMenuItem});
+            this.loanApprovalToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.helpToolStripMenuItem.Text = "Validate";
             // 
-            // greivanceRedressalToolStripMenuItem
+            // loanApprovalToolStripMenuItem
             // 
-            this.greivanceRedressalToolStripMenuItem.Name = "greivanceRedressalToolStripMenuItem";
-            this.greivanceRedressalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.greivanceRedressalToolStripMenuItem.Text = "Loan Approval";
+            this.loanApprovalToolStripMenuItem.Name = "loanApprovalToolStripMenuItem";
+            this.loanApprovalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loanApprovalToolStripMenuItem.Text = "Loan Approval";
+            this.loanApprovalToolStripMenuItem.Click += new System.EventHandler(this.loanApprovalToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem2
             // 
             this.helpToolStripMenuItem2.Name = "helpToolStripMenuItem2";
             this.helpToolStripMenuItem2.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem2.Text = "Help";
+            this.helpToolStripMenuItem2.Click += new System.EventHandler(this.helpToolStripMenuItem2_Click);
             // 
             // pictureBox1
             // 
@@ -164,7 +168,7 @@
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem greivanceRedressalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loanApprovalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;

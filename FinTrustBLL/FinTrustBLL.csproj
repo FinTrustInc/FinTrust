@@ -41,8 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BL\FinTrustBL.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="BusinessLayer\FinTrustBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

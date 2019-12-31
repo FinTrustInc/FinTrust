@@ -77,26 +77,30 @@
             // greivanceRedressalToolStripMenuItem
             // 
             this.greivanceRedressalToolStripMenuItem.Name = "greivanceRedressalToolStripMenuItem";
-            this.greivanceRedressalToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.greivanceRedressalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.greivanceRedressalToolStripMenuItem.Text = "Grievance Redressal";
+            this.greivanceRedressalToolStripMenuItem.Click += new System.EventHandler(this.greivanceRedressalToolStripMenuItem_Click);
             // 
             // accountHandlingToolStripMenuItem
             // 
             this.accountHandlingToolStripMenuItem.Name = "accountHandlingToolStripMenuItem";
             this.accountHandlingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.accountHandlingToolStripMenuItem.Text = "Account Approval";
+            this.accountHandlingToolStripMenuItem.Click += new System.EventHandler(this.accountHandlingToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem1
             // 
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
             this.helpToolStripMenuItem1.Size = new System.Drawing.Size(109, 20);
             this.helpToolStripMenuItem1.Text = "Loan Application";
+            this.helpToolStripMenuItem1.Click += new System.EventHandler(this.helpToolStripMenuItem1_Click);
             // 
             // helpToolStripMenuItem2
             // 
             this.helpToolStripMenuItem2.Name = "helpToolStripMenuItem2";
             this.helpToolStripMenuItem2.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem2.Text = "Help";
+            this.helpToolStripMenuItem2.Click += new System.EventHandler(this.helpToolStripMenuItem2_Click);
             // 
             // panel2
             // 

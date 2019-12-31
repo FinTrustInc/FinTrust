@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FinTrustDTO.DataTransferObject;
+using FinTrustDTO.DTO;
+using FinTrustBLL.BusinessLayer;
 
 
 
@@ -53,12 +54,15 @@ namespace FinTrustApp.PresentationLayer
                 objUser = new User();
                 if (comboBoxUser.Text=="Branch Manager")
                 {
+                    objUser.Email = textBoxUsername.Text;
+                    objUser.Password = textBoxPassword.Text;
+                    //string userName = FinTrustBL.CheckEmployeeUser(objUser);
                     if (textBoxUsername.Text == "abc@gmail.com" && textBoxPassword.Text == "12345")
                     {
                         this.Hide();
 
-                        FinTrust_BranchManager_HomePage addUserForm = new FinTrust_BranchManager_HomePage();
-                        addUserForm.Show();
+                        Branch_Manager BMHomeForm = new Branch_Manager();
+                        BMHomeForm.Show();
                     }
                     else
                     {
