@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FinTrustDLL.DataLayer;
 using FinTrustDTO.DTO;
+using FinTrustDLL.Helper;
 using System.Data;
 
 

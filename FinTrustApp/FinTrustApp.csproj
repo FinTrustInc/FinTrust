@@ -52,6 +52,12 @@
     <Compile Include="PresentationLayer\Branch_Manager.Designer.cs">
       <DependentUpon>Branch_Manager.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\Clerk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Clerk.Designer.cs">
+      <DependentUpon>Clerk.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\FinTrust-AccountClose.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,12 +69,6 @@
     </Compile>
     <Compile Include="PresentationLayer\FinTrust-AccountOpen.Designer.cs">
       <DependentUpon>FinTrust-AccountOpen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PresentationLayer\FinTrust-BranchManager-HomePage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\FinTrust-BranchManager-HomePage.Designer.cs">
-      <DependentUpon>FinTrust-BranchManager-HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\FinTrust-Cashier-Search.cs">
       <SubType>Form</SubType>
@@ -93,12 +93,6 @@
     </Compile>
     <Compile Include="PresentationLayer\FinTrust-Cashier.Designer.cs">
       <DependentUpon>FinTrust-Cashier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PresentationLayer\FinTrust-Clerk-HomePage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\FinTrust-Clerk-HomePage.Designer.cs">
-      <DependentUpon>FinTrust-Clerk-HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\FinTrust-Login.cs">
       <SubType>Form</SubType>
@@ -153,14 +147,14 @@
     <EmbeddedResource Include="PresentationLayer\Branch_Manager.resx">
       <DependentUpon>Branch_Manager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Clerk.resx">
+      <DependentUpon>Clerk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FinTrust-AccountClose.resx">
       <DependentUpon>FinTrust-AccountClose.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FinTrust-AccountOpen.resx">
       <DependentUpon>FinTrust-AccountOpen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\FinTrust-BranchManager-HomePage.resx">
-      <DependentUpon>FinTrust-BranchManager-HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FinTrust-Cashier-Search.resx">
       <DependentUpon>FinTrust-Cashier-Search.cs</DependentUpon>
@@ -173,9 +167,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FinTrust-Cashier.resx">
       <DependentUpon>FinTrust-Cashier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\FinTrust-Clerk-HomePage.resx">
-      <DependentUpon>FinTrust-Clerk-HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FinTrust-Login.resx">
       <DependentUpon>FinTrust-Login.cs</DependentUpon>

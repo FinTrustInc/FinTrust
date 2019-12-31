@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FinTrustDTO.DataTransferObject;
+using FinTrustDTO.DTO;
 using FinTrustBLL.BusinessLayer;
 
 namespace FinTrustApp.PresentationLayer

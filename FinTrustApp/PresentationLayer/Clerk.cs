@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace FinTrustApp.PresentationLayer
 {
-    public partial class FinTrust_Registration : Form
+    public partial class Clerk : Form
     {
-        public FinTrust_Registration()
+        public Clerk()
         {
             InitializeComponent();
-        }
-
-        private void buttonRegister_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-
-            //FinTrust_Clerk_HomePage clerkform = new FinTrust_Clerk_HomePage();
-           // clerkform.Show();
         }
     }
 }
