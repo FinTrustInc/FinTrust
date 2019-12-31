@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinTrustBLL.BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,5 +37,33 @@ namespace FinTrustApp.PresentationLayer
         {
 
         }
+
+        private void Pending_Loan_Applications_Load(object sender, EventArgs e)
+        {
+            LoadLoanApplications();
+        }
+
+        private void LoadLoanApplications()
+        {
+            DataSet dsLoans = null;
+            try
+            {
+                dsLoans = LoanBL.GetLoanDetails();
+                if (dsLoans != null)
+                {
+                    dgvLoanApplications.DataSource = dsLoans.Tables[0];
+                }
+                else
+                {
+                    //lblMessage.Text = "No Students Available!";
+                }
+            }
+            catch (Exception ex)
+            {
+                //lblMessage.Text = ex.Message.ToString();
+            }
+        }
+
     }
+
 }

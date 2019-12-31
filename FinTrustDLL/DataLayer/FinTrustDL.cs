@@ -12,25 +12,26 @@ namespace FinTrustDLL.DataLayer
 {
 	public class FinTrustDL
 	{
-        public static DataSet GetEmployeeCredentials()
+        public static DataSet GetEmployeeCredentials(User objUser)
         {
             string sql = "";
             SqlConnection con = null;
             SqlDataAdapter adapter = null;
-            DataSet dsContactIds = null;
+            DataSet dsEmployeeUser = null;
+
             try
             {
-                sql = "select email,password from user_table where";
+                sql = "select email,password from user_table where designation='"+objUser.Designation+"'";
                 con = DBHelper.GetConnection();
                 con.Open();
-                dsContactIds = new DataSet();
+                dsEmployeeUser = new DataSet();
                 adapter = new SqlDataAdapter(sql, con);
-                adapter.Fill(dsContactIds);
+                adapter.Fill(dsEmployeeUser);
 
             }
             catch (Exception ex)
             {
-                Console.Out.WriteLine("Error : AddressBookDSL:GetContactIds : " + ex.Message.ToString());
+                Console.Out.WriteLine("Error : FinTrustDL:GetEmployeeCredentials : " + ex.Message.ToString());
             }
             finally
             {
@@ -38,7 +39,7 @@ namespace FinTrustDLL.DataLayer
                 adapter.Dispose();
             }
 
-            return dsContactIds;
+            return dsEmployeeUser;
         }
 
 

@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvLoanApplications = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             this.labelloanpage = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxSearchBy = new System.Windows.Forms.ComboBox();
@@ -65,22 +66,21 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLoanApplications)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvLoanApplications
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 212);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(463, 420);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvLoanApplications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLoanApplications.Location = new System.Drawing.Point(31, 212);
+            this.dgvLoanApplications.Name = "dgvLoanApplications";
+            this.dgvLoanApplications.Size = new System.Drawing.Size(463, 420);
+            this.dgvLoanApplications.TabIndex = 0;
+            this.dgvLoanApplications.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel2
             // 
@@ -92,6 +92,17 @@
             this.panel2.Size = new System.Drawing.Size(983, 46);
             this.panel2.TabIndex = 21;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(509, 18);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(323, 20);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "loan application approval by branch manager";
+            // 
             // labelloanpage
             // 
             this.labelloanpage.AutoSize = true;
@@ -100,9 +111,9 @@
             this.labelloanpage.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelloanpage.Location = new System.Drawing.Point(3, 9);
             this.labelloanpage.Name = "labelloanpage";
-            this.labelloanpage.Size = new System.Drawing.Size(466, 31);
+            this.labelloanpage.Size = new System.Drawing.Size(231, 31);
             this.labelloanpage.TabIndex = 3;
-            this.labelloanpage.Text = "Search for Pending Loan Applications";
+            this.labelloanpage.Text = "Loan Applications";
             this.labelloanpage.Click += new System.EventHandler(this.labelloanpage_Click);
             // 
             // label2
@@ -426,17 +437,6 @@
             this.comboBox1.Size = new System.Drawing.Size(213, 21);
             this.comboBox1.TabIndex = 31;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(509, 18);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(323, 20);
-            this.label13.TabIndex = 32;
-            this.label13.Text = "loan application approval by branch manager";
-            // 
             // Pending_Loan_Applications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -448,11 +448,12 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvLoanApplications);
             this.Controls.Add(this.checkBox1);
             this.Name = "Pending_Loan_Applications";
             this.Text = "Pending_Loan_Applications";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Pending_Loan_Applications_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLoanApplications)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -467,7 +468,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvLoanApplications;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label labelloanpage;
         private System.Windows.Forms.Label label2;

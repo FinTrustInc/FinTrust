@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.checkBoxLoanApplication = new System.Windows.Forms.CheckBox();
+            this.checkBoxLoanApplicationDeclaration = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -37,10 +37,10 @@
             this.textBoxTerm = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxGuarantor = new System.Windows.Forms.TextBox();
-            this.textBoxloanamount = new System.Windows.Forms.TextBox();
+            this.textBoxLoanAmount = new System.Windows.Forms.TextBox();
             this.comboBoxLoanType = new System.Windows.Forms.ComboBox();
-            this.textBoxcustomerid = new System.Windows.Forms.TextBox();
-            this.textBoxname = new System.Windows.Forms.TextBox();
+            this.textBoxCustomerId = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +50,7 @@
             this.labelloanpage = new System.Windows.Forms.Label();
             this.buttonsubmit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblLoanMessage = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +58,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.checkBoxLoanApplication);
+            this.panel1.Controls.Add(this.checkBoxLoanApplicationDeclaration);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
@@ -65,10 +66,10 @@
             this.panel1.Controls.Add(this.textBoxTerm);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.textBoxGuarantor);
-            this.panel1.Controls.Add(this.textBoxloanamount);
+            this.panel1.Controls.Add(this.textBoxLoanAmount);
             this.panel1.Controls.Add(this.comboBoxLoanType);
-            this.panel1.Controls.Add(this.textBoxcustomerid);
-            this.panel1.Controls.Add(this.textBoxname);
+            this.panel1.Controls.Add(this.textBoxCustomerId);
+            this.panel1.Controls.Add(this.textBoxName);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -80,18 +81,19 @@
             this.panel1.Size = new System.Drawing.Size(911, 474);
             this.panel1.TabIndex = 0;
             // 
-            // checkBoxLoanApplication
+            // checkBoxLoanApplicationDeclaration
             // 
-            this.checkBoxLoanApplication.AutoSize = true;
-            this.checkBoxLoanApplication.BackColor = System.Drawing.Color.AliceBlue;
-            this.checkBoxLoanApplication.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkBoxLoanApplication.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBoxLoanApplication.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBoxLoanApplication.Location = new System.Drawing.Point(24, 393);
-            this.checkBoxLoanApplication.Name = "checkBoxLoanApplication";
-            this.checkBoxLoanApplication.Size = new System.Drawing.Size(13, 12);
-            this.checkBoxLoanApplication.TabIndex = 19;
-            this.checkBoxLoanApplication.UseVisualStyleBackColor = false;
+            this.checkBoxLoanApplicationDeclaration.AutoSize = true;
+            this.checkBoxLoanApplicationDeclaration.BackColor = System.Drawing.Color.AliceBlue;
+            this.checkBoxLoanApplicationDeclaration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxLoanApplicationDeclaration.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBoxLoanApplicationDeclaration.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBoxLoanApplicationDeclaration.Location = new System.Drawing.Point(24, 393);
+            this.checkBoxLoanApplicationDeclaration.Name = "checkBoxLoanApplicationDeclaration";
+            this.checkBoxLoanApplicationDeclaration.Size = new System.Drawing.Size(13, 12);
+            this.checkBoxLoanApplicationDeclaration.TabIndex = 19;
+            this.checkBoxLoanApplicationDeclaration.UseVisualStyleBackColor = false;
+            this.checkBoxLoanApplicationDeclaration.CheckedChanged += new System.EventHandler(this.checkBoxLoanApplicationDeclaration_CheckedChanged);
             // 
             // label8
             // 
@@ -163,12 +165,12 @@
             this.textBoxGuarantor.Size = new System.Drawing.Size(172, 20);
             this.textBoxGuarantor.TabIndex = 13;
             // 
-            // textBoxloanamount
+            // textBoxLoanAmount
             // 
-            this.textBoxloanamount.Location = new System.Drawing.Point(248, 119);
-            this.textBoxloanamount.Name = "textBoxloanamount";
-            this.textBoxloanamount.Size = new System.Drawing.Size(172, 20);
-            this.textBoxloanamount.TabIndex = 12;
+            this.textBoxLoanAmount.Location = new System.Drawing.Point(248, 119);
+            this.textBoxLoanAmount.Name = "textBoxLoanAmount";
+            this.textBoxLoanAmount.Size = new System.Drawing.Size(172, 20);
+            this.textBoxLoanAmount.TabIndex = 12;
             // 
             // comboBoxLoanType
             // 
@@ -178,20 +180,21 @@
             this.comboBoxLoanType.Size = new System.Drawing.Size(172, 21);
             this.comboBoxLoanType.TabIndex = 11;
             // 
-            // textBoxcustomerid
+            // textBoxCustomerId
             // 
-            this.textBoxcustomerid.Location = new System.Drawing.Point(694, 47);
-            this.textBoxcustomerid.Name = "textBoxcustomerid";
-            this.textBoxcustomerid.Size = new System.Drawing.Size(172, 20);
-            this.textBoxcustomerid.TabIndex = 8;
-            this.textBoxcustomerid.TextChanged += new System.EventHandler(this.textBoxcustomerid_TextChanged);
+            this.textBoxCustomerId.Location = new System.Drawing.Point(694, 47);
+            this.textBoxCustomerId.Name = "textBoxCustomerId";
+            this.textBoxCustomerId.Size = new System.Drawing.Size(172, 20);
+            this.textBoxCustomerId.TabIndex = 8;
+            this.textBoxCustomerId.TextChanged += new System.EventHandler(this.textBoxcustomerid_TextChanged);
             // 
-            // textBoxname
+            // textBoxName
             // 
-            this.textBoxname.Location = new System.Drawing.Point(248, 44);
-            this.textBoxname.Name = "textBoxname";
-            this.textBoxname.Size = new System.Drawing.Size(172, 20);
-            this.textBoxname.TabIndex = 4;
+            this.textBoxName.Enabled = false;
+            this.textBoxName.Location = new System.Drawing.Point(248, 44);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(172, 20);
+            this.textBoxName.TabIndex = 4;
             // 
             // label3
             // 
@@ -276,6 +279,7 @@
             this.buttonsubmit.TabIndex = 14;
             this.buttonsubmit.Text = "SUBMIT";
             this.buttonsubmit.UseVisualStyleBackColor = false;
+            this.buttonsubmit.Visible = false;
             this.buttonsubmit.Click += new System.EventHandler(this.buttonsubmit_Click);
             // 
             // panel2
@@ -287,12 +291,23 @@
             this.panel2.Size = new System.Drawing.Size(983, 49);
             this.panel2.TabIndex = 20;
             // 
+            // lblLoanMessage
+            // 
+            this.lblLoanMessage.AutoSize = true;
+            this.lblLoanMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoanMessage.ForeColor = System.Drawing.Color.Green;
+            this.lblLoanMessage.Location = new System.Drawing.Point(419, 65);
+            this.lblLoanMessage.Name = "lblLoanMessage";
+            this.lblLoanMessage.Size = new System.Drawing.Size(0, 16);
+            this.lblLoanMessage.TabIndex = 21;
+            // 
             // Loan_ApplicationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 662);
+            this.Controls.Add(this.lblLoanMessage);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.buttonsubmit);
             this.Controls.Add(this.panel1);
@@ -303,6 +318,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -310,10 +326,10 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBoxGuarantor;
-        private System.Windows.Forms.TextBox textBoxloanamount;
+        private System.Windows.Forms.TextBox textBoxLoanAmount;
         private System.Windows.Forms.ComboBox comboBoxLoanType;
-        private System.Windows.Forms.TextBox textBoxcustomerid;
-        private System.Windows.Forms.TextBox textBoxname;
+        private System.Windows.Forms.TextBox textBoxCustomerId;
+        private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -328,7 +344,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxTerm;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBoxLoanApplication;
+        private System.Windows.Forms.CheckBox checkBoxLoanApplicationDeclaration;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblLoanMessage;
     }
 }

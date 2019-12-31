@@ -6,30 +6,45 @@ using System.Threading.Tasks;
 using FinTrustDLL.DataLayer;
 using FinTrustDTO.DTO;
 using System.Data;
-
+using FinTrustDLL.Helper;
 
 namespace FinTrustBLL.BusinessLayer
 {
 	public class FinTrustBL
-	{
-        //public static bool CheckEmployeeUser()
-        //{
+    {
+        public static bool CheckEmployeeUser(User objUser)
+        {
+            bool flag = false;
+            DataSet dsEmployeeUser = null;
+            try
+            {
+                dsEmployeeUser = FinTrustDL.GetEmployeeCredentials(objUser);
+                Object[] Data = null;
 
+                if (dsEmployeeUser.Tables[0].Rows.Count > 0)
+                {
+                    Data = dsEmployeeUser.Tables[0].Rows[0].ItemArray;
 
-        //    DataSet dsEmployeeUser = null;
-        //    try
-        //    {
-        //        dsEmployeeUser = FinTrustDL.GetEmployeeCredentials(User objUser);
+                    string email = Data[0].ToString();
+                    string password = Data[1].ToString();
 
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.Out.WriteLine("Error : FinTrustBL:CheckEmployeeUser : " + ex.Message.ToString());
-        //    }
+                    if(objUser.Email== email&& objUser.Password == password)
+                    {
+                        flag = true;
+                    }
+                    else
+                    {
+                        flag = false;
+                    }
 
-
-        //    return dsContactIds;
-        //}
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("Error : FinTrustBL:CheckEmployeeUser : " + ex.Message.ToString());
+            }
+            return flag;
+        }
 
 
         public static int InsertTransactionDetails(Transaction objTransaction)
@@ -58,7 +73,7 @@ namespace FinTrustBLL.BusinessLayer
 				}
 				else
 				{
-					newTransactionId = "TRA12101";
+					newTransactionId = "TRA1001";
 				}
 			}
 			catch (Exception ex)
