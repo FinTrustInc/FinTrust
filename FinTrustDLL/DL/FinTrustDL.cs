@@ -66,6 +66,7 @@ namespace FinTrustDSL.DataServiceLayer
 					Data = dsTransactions.Tables[0].Rows[0].ItemArray;
 					lastTransactionId = Data[0].ToString();
 				}
+				
 			}
 			catch (Exception ex)
 			{

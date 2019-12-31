@@ -26,7 +26,7 @@ namespace FinTrustApp.PresentationLayer
 			try
 			{
 				objTransaction = new Transaction();
-				objTransaction.TransactionId = "TRA1001";
+				objTransaction.TransactionId = textBoxTransactionId.Text;
 				objTransaction.AccountNumber = textBoxAccNo.Text;				
 				DateTime today = DateTime.Today;
 				objTransaction.TransactionDate = today.ToString();
@@ -61,7 +61,7 @@ namespace FinTrustApp.PresentationLayer
 
 		private void FinTrust_Cashier_Transaction_Load(object sender, EventArgs e)
 		{
-			textBoxTransactionId.Text = FinTrustBL.GetNewTransactionId().ToString();
+			textBoxTransactionId.Text = FinTrustBL.GetNewTransactionId();
 		}
 
 		private void textBoxTransactionId_TextChanged(object sender, EventArgs e)

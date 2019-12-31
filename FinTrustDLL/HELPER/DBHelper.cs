@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace FinTrustDSL.Helper
 {
@@ -12,11 +13,11 @@ namespace FinTrustDSL.Helper
 		public static SqlConnection GetConnection()
 		{
 			SqlConnection connection = null;
-			String ConnectionString = null;
+			
 			try
 			{
-				ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\1028258\\Desktop\\FinTrustRepo\\FinTrustDSL\\DataBase\\FinTrustDB.mdf;Integrated Security=True";
-				connection = new SqlConnection(ConnectionString);
+				String connectionString = ConfigurationManager.ConnectionStrings["FinTrustApp.Properties.Settings.DataBaseConnection"].ConnectionString;
+				connection = new SqlConnection(connectionString);
 			}
 			catch (Exception ex)
 			{
