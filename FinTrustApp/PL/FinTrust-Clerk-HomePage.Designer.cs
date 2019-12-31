@@ -30,6 +30,8 @@
         {
             this.menuStripClerk = new System.Windows.Forms.MenuStrip();
             this.accountHandlingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountOpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountCloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grievanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelClerk = new System.Windows.Forms.Panel();
             this.textBoxSearchAccountNo = new System.Windows.Forms.TextBox();
@@ -38,8 +40,6 @@
             this.labelSearchAccuntNo = new System.Windows.Forms.Label();
             this.labelSearchTransactionID = new System.Windows.Forms.Label();
             this.labelSearchID = new System.Windows.Forms.Label();
-            this.accountCloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.accountOpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripClerk.SuspendLayout();
             this.panelClerk.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,20 @@
             this.accountHandlingToolStripMenuItem.Name = "accountHandlingToolStripMenuItem";
             this.accountHandlingToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
             this.accountHandlingToolStripMenuItem.Text = "Account Handling";
+            // 
+            // accountOpenToolStripMenuItem
+            // 
+            this.accountOpenToolStripMenuItem.Name = "accountOpenToolStripMenuItem";
+            this.accountOpenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.accountOpenToolStripMenuItem.Text = "Account Open";
+            this.accountOpenToolStripMenuItem.Click += new System.EventHandler(this.accountOpenToolStripMenuItem_Click);
+            // 
+            // accountCloseToolStripMenuItem
+            // 
+            this.accountCloseToolStripMenuItem.Name = "accountCloseToolStripMenuItem";
+            this.accountCloseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.accountCloseToolStripMenuItem.Text = "Account Close";
+            this.accountCloseToolStripMenuItem.Click += new System.EventHandler(this.accountCloseToolStripMenuItem_Click);
             // 
             // grievanceToolStripMenuItem
             // 
@@ -139,20 +153,6 @@
             this.labelSearchID.TabIndex = 0;
             this.labelSearchID.Text = "Serach by ID";
             // 
-            // accountCloseToolStripMenuItem
-            // 
-            this.accountCloseToolStripMenuItem.Name = "accountCloseToolStripMenuItem";
-            this.accountCloseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.accountCloseToolStripMenuItem.Text = "Account Close";
-            this.accountCloseToolStripMenuItem.Click += new System.EventHandler(this.accountCloseToolStripMenuItem_Click);
-            // 
-            // accountOpenToolStripMenuItem
-            // 
-            this.accountOpenToolStripMenuItem.Name = "accountOpenToolStripMenuItem";
-            this.accountOpenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.accountOpenToolStripMenuItem.Text = "Account Open";
-            this.accountOpenToolStripMenuItem.Click += new System.EventHandler(this.accountOpenToolStripMenuItem_Click);
-            // 
             // FinTrust_Clerk_HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,7 +162,7 @@
             this.Controls.Add(this.panelClerk);
             this.Controls.Add(this.menuStripClerk);
             this.Name = "FinTrust_Clerk_HomePage";
-            this.Text = "Clerk";
+            this.Text = "Clerk/View";
             this.menuStripClerk.ResumeLayout(false);
             this.menuStripClerk.PerformLayout();
             this.panelClerk.ResumeLayout(false);
