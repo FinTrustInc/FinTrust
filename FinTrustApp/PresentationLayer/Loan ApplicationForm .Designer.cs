@@ -184,6 +184,7 @@
             this.textBoxcustomerid.Name = "textBoxcustomerid";
             this.textBoxcustomerid.Size = new System.Drawing.Size(172, 20);
             this.textBoxcustomerid.TabIndex = 8;
+            this.textBoxcustomerid.TextChanged += new System.EventHandler(this.textBoxcustomerid_TextChanged);
             // 
             // textBoxname
             // 

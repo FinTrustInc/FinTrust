@@ -24,6 +24,11 @@ namespace FinTrustApp.PresentationLayer
 
         }
 
+        private void textBoxcustomerid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         string name, loanType,guarontor;
 
         private void label8_Click(object sender, EventArgs e)

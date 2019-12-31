@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.menuStripClerk = new System.Windows.Forms.MenuStrip();
+            this.accountHandlingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grievanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelClerk = new System.Windows.Forms.Panel();
             this.textBoxSearchAccountNo = new System.Windows.Forms.TextBox();
             this.textBoxSearchTransactionID = new System.Windows.Forms.TextBox();
@@ -35,22 +39,54 @@
             this.labelSearchAccuntNo = new System.Windows.Forms.Label();
             this.labelSearchTransactionID = new System.Windows.Forms.Label();
             this.labelSearchID = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.menuStripClerk.SuspendLayout();
             this.panelClerk.SuspendLayout();
             this.SuspendLayout();
             // 
+            // menuStripClerk
+            // 
+            this.menuStripClerk.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.menuStripClerk.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.accountHandlingToolStripMenuItem,
+            this.grievanceToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuStripClerk.Location = new System.Drawing.Point(0, 0);
+            this.menuStripClerk.Name = "menuStripClerk";
+            this.menuStripClerk.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.menuStripClerk.Size = new System.Drawing.Size(984, 24);
+            this.menuStripClerk.TabIndex = 2;
+            this.menuStripClerk.Text = "menuStrip1";
+            // 
+            // accountHandlingToolStripMenuItem
+            // 
+            this.accountHandlingToolStripMenuItem.Name = "accountHandlingToolStripMenuItem";
+            this.accountHandlingToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.accountHandlingToolStripMenuItem.Text = "Add Users";
+            this.accountHandlingToolStripMenuItem.Click += new System.EventHandler(this.accountHandlingToolStripMenuItem_Click);
+            // 
+            // grievanceToolStripMenuItem
+            // 
+            this.grievanceToolStripMenuItem.Name = "grievanceToolStripMenuItem";
+            this.grievanceToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.grievanceToolStripMenuItem.Text = "Approvals";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
             // panelClerk
             // 
-            this.panelClerk.Controls.Add(this.comboBox1);
             this.panelClerk.Controls.Add(this.textBoxSearchAccountNo);
             this.panelClerk.Controls.Add(this.textBoxSearchTransactionID);
             this.panelClerk.Controls.Add(this.textBoxSearchClerkID);
             this.panelClerk.Controls.Add(this.labelSearchAccuntNo);
             this.panelClerk.Controls.Add(this.labelSearchTransactionID);
             this.panelClerk.Controls.Add(this.labelSearchID);
-            this.panelClerk.Location = new System.Drawing.Point(104, 59);
+            this.panelClerk.Location = new System.Drawing.Point(104, 147);
             this.panelClerk.Name = "panelClerk";
-            this.panelClerk.Size = new System.Drawing.Size(740, 533);
+            this.panelClerk.Size = new System.Drawing.Size(740, 445);
             this.panelClerk.TabIndex = 3;
             // 
             // textBoxSearchAccountNo
@@ -101,35 +137,35 @@
             // 
             this.labelSearchID.AutoSize = true;
             this.labelSearchID.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSearchID.Location = new System.Drawing.Point(37, 50);
+            this.labelSearchID.Location = new System.Drawing.Point(122, 101);
             this.labelSearchID.Name = "labelSearchID";
             this.labelSearchID.Size = new System.Drawing.Size(94, 18);
             this.labelSearchID.TabIndex = 0;
             this.labelSearchID.Text = "Serach by ID";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(0, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 6;
             // 
             // FinTrust_BranchManager_HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.menuStripClerk);
             this.Controls.Add(this.panelClerk);
             this.Name = "FinTrust_BranchManager_HomePage";
-            this.Text = "FinTrust_BranchManager_HomePage";
+            this.Text = "Branch Manager/View ";
+            this.menuStripClerk.ResumeLayout(false);
+            this.menuStripClerk.PerformLayout();
             this.panelClerk.ResumeLayout(false);
             this.panelClerk.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip menuStripClerk;
+        private System.Windows.Forms.ToolStripMenuItem accountHandlingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grievanceToolStripMenuItem;
         private System.Windows.Forms.Panel panelClerk;
         private System.Windows.Forms.TextBox textBoxSearchAccountNo;
         private System.Windows.Forms.TextBox textBoxSearchTransactionID;
@@ -137,6 +173,6 @@
         private System.Windows.Forms.Label labelSearchAccuntNo;
         private System.Windows.Forms.Label labelSearchTransactionID;
         private System.Windows.Forms.Label labelSearchID;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
     }
 }
