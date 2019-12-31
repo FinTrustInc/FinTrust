@@ -62,7 +62,7 @@
             // panel3
             // 
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.Location = new System.Drawing.Point(-5, 603);
+            this.panel3.Location = new System.Drawing.Point(835, 36);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(148, 47);
             this.panel3.TabIndex = 5;
@@ -108,8 +108,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(984, 662);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Black;

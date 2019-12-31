@@ -37,9 +37,9 @@
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +83,7 @@
             // accountHandlingToolStripMenuItem
             // 
             this.accountHandlingToolStripMenuItem.Name = "accountHandlingToolStripMenuItem";
-            this.accountHandlingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.accountHandlingToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.accountHandlingToolStripMenuItem.Text = "Account Approval";
             // 
             // helpToolStripMenuItem1
@@ -110,17 +110,6 @@
             this.panel2.Size = new System.Drawing.Size(317, 191);
             this.panel2.TabIndex = 26;
             // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Cursor = System.Windows.Forms.Cursors.Help;
-            this.panel3.Location = new System.Drawing.Point(372, 401);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(251, 196);
-            this.panel3.TabIndex = 27;
-            // 
             // panel4
             // 
             this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
@@ -135,11 +124,22 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 605);
+            this.pictureBox1.Location = new System.Drawing.Point(163, 332);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(136, 59);
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Help;
+            this.panel1.Location = new System.Drawing.Point(361, 389);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(246, 196);
+            this.panel1.TabIndex = 29;
             // 
             // Probationary_Officer
             // 
@@ -147,9 +147,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(984, 662);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Probationary_Officer";
@@ -170,9 +170,9 @@
         private System.Windows.Forms.ToolStripMenuItem accountHandlingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

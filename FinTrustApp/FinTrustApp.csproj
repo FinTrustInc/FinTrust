@@ -58,6 +58,12 @@
     <Compile Include="PL\Branch_Manager.Designer.cs">
       <DependentUpon>Branch_Manager.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Clerk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Clerk.Designer.cs">
+      <DependentUpon>Clerk.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\FinTrust-AccountClose.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     <Compile Include="TestClass1.cs" />
     <EmbeddedResource Include="PL\Branch_Manager.resx">
       <DependentUpon>Branch_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Clerk.resx">
+      <DependentUpon>Clerk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FinTrust-AccountClose.resx">
       <DependentUpon>FinTrust-AccountClose.cs</DependentUpon>

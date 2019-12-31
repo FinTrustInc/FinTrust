@@ -32,27 +32,27 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBoxAccNo = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBoxAccType = new System.Windows.Forms.ComboBox();
+            this.richTextBoxGrievance = new System.Windows.Forms.RichTextBox();
             this.checkBoxDeclerationGrievance = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxPhoneNo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBoxcustomerid = new System.Windows.Forms.TextBox();
             this.textBoxComplainant = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.labelcustomerID = new System.Windows.Forms.Label();
             this.labelname = new System.Windows.Forms.Label();
-            this.richTextBoxGrievance = new System.Windows.Forms.RichTextBox();
-            this.textBoxcustomerid = new System.Windows.Forms.TextBox();
-            this.comboBoxAccType = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBoxAccNo = new System.Windows.Forms.TextBox();
             this.buttonsubmit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -106,6 +106,57 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(912, 470);
             this.panel1.TabIndex = 22;
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Location = new System.Drawing.Point(683, 186);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(202, 20);
+            this.textBoxEmail.TabIndex = 25;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(518, 188);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(72, 18);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "e mail ID";
+            // 
+            // textBoxAccNo
+            // 
+            this.textBoxAccNo.Location = new System.Drawing.Point(683, 253);
+            this.textBoxAccNo.Name = "textBoxAccNo";
+            this.textBoxAccNo.Size = new System.Drawing.Size(202, 20);
+            this.textBoxAccNo.TabIndex = 23;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(32, 252);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 18);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Phone Number";
+            // 
+            // comboBoxAccType
+            // 
+            this.comboBoxAccType.FormattingEnabled = true;
+            this.comboBoxAccType.Location = new System.Drawing.Point(683, 110);
+            this.comboBoxAccType.Name = "comboBoxAccType";
+            this.comboBoxAccType.Size = new System.Drawing.Size(202, 21);
+            this.comboBoxAccType.TabIndex = 21;
+            // 
+            // richTextBoxGrievance
+            // 
+            this.richTextBoxGrievance.Location = new System.Drawing.Point(212, 100);
+            this.richTextBoxGrievance.Name = "richTextBoxGrievance";
+            this.richTextBoxGrievance.Size = new System.Drawing.Size(257, 96);
+            this.richTextBoxGrievance.TabIndex = 20;
+            this.richTextBoxGrievance.Text = "";
+            this.richTextBoxGrievance.TextChanged += new System.EventHandler(this.richTextBoxGrievance_TextChanged);
             // 
             // checkBoxDeclerationGrievance
             // 
@@ -170,6 +221,13 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Account Number";
             // 
+            // textBoxcustomerid
+            // 
+            this.textBoxcustomerid.Location = new System.Drawing.Point(683, 31);
+            this.textBoxcustomerid.Name = "textBoxcustomerid";
+            this.textBoxcustomerid.Size = new System.Drawing.Size(202, 20);
+            this.textBoxcustomerid.TabIndex = 8;
+            // 
             // textBoxComplainant
             // 
             this.textBoxComplainant.Location = new System.Drawing.Point(212, 31);
@@ -226,47 +284,6 @@
             this.labelname.TabIndex = 0;
             this.labelname.Text = "Name of Complainant";
             // 
-            // richTextBoxGrievance
-            // 
-            this.richTextBoxGrievance.Location = new System.Drawing.Point(212, 100);
-            this.richTextBoxGrievance.Name = "richTextBoxGrievance";
-            this.richTextBoxGrievance.Size = new System.Drawing.Size(257, 96);
-            this.richTextBoxGrievance.TabIndex = 20;
-            this.richTextBoxGrievance.Text = "";
-            this.richTextBoxGrievance.TextChanged += new System.EventHandler(this.richTextBoxGrievance_TextChanged);
-            // 
-            // textBoxcustomerid
-            // 
-            this.textBoxcustomerid.Location = new System.Drawing.Point(683, 31);
-            this.textBoxcustomerid.Name = "textBoxcustomerid";
-            this.textBoxcustomerid.Size = new System.Drawing.Size(202, 20);
-            this.textBoxcustomerid.TabIndex = 8;
-            // 
-            // comboBoxAccType
-            // 
-            this.comboBoxAccType.FormattingEnabled = true;
-            this.comboBoxAccType.Location = new System.Drawing.Point(683, 110);
-            this.comboBoxAccType.Name = "comboBoxAccType";
-            this.comboBoxAccType.Size = new System.Drawing.Size(202, 21);
-            this.comboBoxAccType.TabIndex = 21;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(32, 252);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 18);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "Phone Number";
-            // 
-            // textBoxAccNo
-            // 
-            this.textBoxAccNo.Location = new System.Drawing.Point(683, 253);
-            this.textBoxAccNo.Name = "textBoxAccNo";
-            this.textBoxAccNo.Size = new System.Drawing.Size(202, 20);
-            this.textBoxAccNo.TabIndex = 23;
-            // 
             // buttonsubmit
             // 
             this.buttonsubmit.BackColor = System.Drawing.Color.SteelBlue;
@@ -285,27 +302,10 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(37, 570);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(417, 88);
+            this.pictureBox1.Size = new System.Drawing.Size(469, 88);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(518, 188);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 18);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "e mail ID";
-            // 
-            // textBoxEmail
-            // 
-            this.textBoxEmail.Location = new System.Drawing.Point(683, 186);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(202, 20);
-            this.textBoxEmail.TabIndex = 25;
             // 
             // Grievance_Redressal_Application
             // 
