@@ -166,7 +166,7 @@ namespace FinTrustDLL.DataLayer
                 adapter.Dispose();
             }
 
-            return dsStudents;
+            return dsLoans;
         }
 
     }
