@@ -40,7 +40,7 @@ namespace FinTrustApp.PresentationLayer
 
         private void Pending_Loan_Applications_Load(object sender, EventArgs e)
         {
-            this.loan_tableTableAdapter.Fill(this.FinTrustDBDataSet.student_mark);
+           
             LoadLoanApplications();
         }
 
