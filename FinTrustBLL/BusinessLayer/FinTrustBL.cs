@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using System.Data;
 using FinTrustDLL.DataLayer;
 using FinTrustDTO.DTO;
+using System.Data;
 using FinTrustDLL.Helper;
 
 namespace FinTrustBLL.BusinessLayer
@@ -96,6 +95,21 @@ namespace FinTrustBLL.BusinessLayer
 			}
 			return objCustomer;
 		}
-       
+
+        public static int UserInsert(User objUser)
+        {
+            int output = 0;
+            
+            try
+            {             
+                output = FinTrustDL.UserInsert(objUser);
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("******Error:FinTrustBL.cs:UserInsert" + ex.Message.ToString());
+            }
+           
+            return output;
+        }
     }
 }

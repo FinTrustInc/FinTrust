@@ -80,6 +80,9 @@ namespace FinTrustApp.PresentationLayer
                     loanObj.NetAmount = loanObj.LoanAmount * (1 + loanObj.InterestRate);
                     loanObj.GuarantorName = textBoxGuarantor.Text;
                     loanObj.Status = "Submitted";
+                    DateTime today = DateTime.Today;
+                    loanObj.Date = today.ToString();
+                    
                     output = LoanBL.InsertLoanDetails(loanObj);
 
                     if (output > 0)

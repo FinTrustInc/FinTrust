@@ -37,25 +37,25 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.customerDetailsPanel = new System.Windows.Forms.Panel();
+            this.textBoxLoanType = new System.Windows.Forms.TextBox();
+            this.textBoxAccountNumber = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textBoxAddress = new System.Windows.Forms.RichTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxDate = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxRateofInterest = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxLoanId = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTerm = new System.Windows.Forms.TextBox();
             this.textBoxTerm = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxGuarantor = new System.Windows.Forms.TextBox();
-            this.textBoxloanamount = new System.Windows.Forms.TextBox();
-            this.textBoxcustomerid = new System.Windows.Forms.TextBox();
-            this.textBoxname = new System.Windows.Forms.TextBox();
+            this.textBoxLoanAmount = new System.Windows.Forms.TextBox();
+            this.textBoxCustomerId = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -65,12 +65,12 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoanApplications)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.customerDetailsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvLoanApplications
@@ -81,6 +81,7 @@
             this.dgvLoanApplications.Size = new System.Drawing.Size(463, 420);
             this.dgvLoanApplications.TabIndex = 0;
             this.dgvLoanApplications.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvLoanApplications.SelectionChanged += new System.EventHandler(this.dgvLoanApplications_SelectionChanged);
             // 
             // panel2
             // 
@@ -153,57 +154,57 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.customerDetailsPanel);
             this.panel3.Location = new System.Drawing.Point(522, 63);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(436, 437);
             this.panel3.TabIndex = 25;
             // 
-            // panel4
+            // customerDetailsPanel
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.textBox7);
-            this.panel4.Controls.Add(this.textBox6);
-            this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.richTextBox1);
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.textBox5);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.textBox4);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.textBox3);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Controls.Add(this.textBoxTerm);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.textBoxGuarantor);
-            this.panel4.Controls.Add(this.textBoxloanamount);
-            this.panel4.Controls.Add(this.textBoxcustomerid);
-            this.panel4.Controls.Add(this.textBoxname);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.labelcustomerID);
-            this.panel4.Controls.Add(this.labelloantype);
-            this.panel4.Controls.Add(this.labelname);
-            this.panel4.Location = new System.Drawing.Point(3, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(433, 434);
-            this.panel4.TabIndex = 27;
+            this.customerDetailsPanel.BackColor = System.Drawing.Color.White;
+            this.customerDetailsPanel.Controls.Add(this.textBoxLoanType);
+            this.customerDetailsPanel.Controls.Add(this.textBoxAccountNumber);
+            this.customerDetailsPanel.Controls.Add(this.label11);
+            this.customerDetailsPanel.Controls.Add(this.textBoxAddress);
+            this.customerDetailsPanel.Controls.Add(this.label9);
+            this.customerDetailsPanel.Controls.Add(this.textBoxDate);
+            this.customerDetailsPanel.Controls.Add(this.label8);
+            this.customerDetailsPanel.Controls.Add(this.textBoxRateofInterest);
+            this.customerDetailsPanel.Controls.Add(this.label7);
+            this.customerDetailsPanel.Controls.Add(this.textBoxLoanId);
+            this.customerDetailsPanel.Controls.Add(this.label6);
+            this.customerDetailsPanel.Controls.Add(this.txtTerm);
+            this.customerDetailsPanel.Controls.Add(this.textBoxTerm);
+            this.customerDetailsPanel.Controls.Add(this.label4);
+            this.customerDetailsPanel.Controls.Add(this.textBoxGuarantor);
+            this.customerDetailsPanel.Controls.Add(this.textBoxLoanAmount);
+            this.customerDetailsPanel.Controls.Add(this.textBoxCustomerId);
+            this.customerDetailsPanel.Controls.Add(this.textBoxName);
+            this.customerDetailsPanel.Controls.Add(this.label3);
+            this.customerDetailsPanel.Controls.Add(this.label1);
+            this.customerDetailsPanel.Controls.Add(this.label5);
+            this.customerDetailsPanel.Controls.Add(this.labelcustomerID);
+            this.customerDetailsPanel.Controls.Add(this.labelloantype);
+            this.customerDetailsPanel.Controls.Add(this.labelname);
+            this.customerDetailsPanel.Location = new System.Drawing.Point(3, 3);
+            this.customerDetailsPanel.Name = "customerDetailsPanel";
+            this.customerDetailsPanel.Size = new System.Drawing.Size(433, 434);
+            this.customerDetailsPanel.TabIndex = 27;
             // 
-            // textBox7
+            // textBoxLoanType
             // 
-            this.textBox7.Location = new System.Drawing.Point(80, 117);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(128, 20);
-            this.textBox7.TabIndex = 31;
+            this.textBoxLoanType.Location = new System.Drawing.Point(80, 117);
+            this.textBoxLoanType.Name = "textBoxLoanType";
+            this.textBoxLoanType.Size = new System.Drawing.Size(128, 20);
+            this.textBoxLoanType.TabIndex = 31;
             // 
-            // textBox6
+            // textBoxAccountNumber
             // 
-            this.textBox6.Location = new System.Drawing.Point(99, 294);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(320, 20);
-            this.textBox6.TabIndex = 30;
+            this.textBoxAccountNumber.Location = new System.Drawing.Point(99, 294);
+            this.textBoxAccountNumber.Name = "textBoxAccountNumber";
+            this.textBoxAccountNumber.Size = new System.Drawing.Size(320, 20);
+            this.textBoxAccountNumber.TabIndex = 30;
             // 
             // label11
             // 
@@ -215,13 +216,13 @@
             this.label11.TabIndex = 29;
             this.label11.Text = "Date";
             // 
-            // richTextBox1
+            // textBoxAddress
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(80, 343);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(339, 75);
-            this.richTextBox1.TabIndex = 28;
-            this.richTextBox1.Text = "";
+            this.textBoxAddress.Location = new System.Drawing.Point(80, 343);
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(339, 75);
+            this.textBoxAddress.TabIndex = 28;
+            this.textBoxAddress.Text = "";
             // 
             // label9
             // 
@@ -233,12 +234,12 @@
             this.label9.TabIndex = 27;
             this.label9.Text = "Address";
             // 
-            // textBox5
+            // textBoxDate
             // 
-            this.textBox5.Location = new System.Drawing.Point(99, 253);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(320, 20);
-            this.textBox5.TabIndex = 26;
+            this.textBoxDate.Location = new System.Drawing.Point(99, 253);
+            this.textBoxDate.Name = "textBoxDate";
+            this.textBoxDate.Size = new System.Drawing.Size(320, 20);
+            this.textBoxDate.TabIndex = 26;
             // 
             // label8
             // 
@@ -250,12 +251,12 @@
             this.label8.TabIndex = 25;
             this.label8.Text = "Acc No";
             // 
-            // textBox4
+            // textBoxRateofInterest
             // 
-            this.textBox4.Location = new System.Drawing.Point(319, 213);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 24;
+            this.textBoxRateofInterest.Location = new System.Drawing.Point(319, 213);
+            this.textBoxRateofInterest.Name = "textBoxRateofInterest";
+            this.textBoxRateofInterest.Size = new System.Drawing.Size(100, 20);
+            this.textBoxRateofInterest.TabIndex = 24;
             // 
             // label7
             // 
@@ -267,12 +268,12 @@
             this.label7.TabIndex = 23;
             this.label7.Text = "Rate Of Interest";
             // 
-            // textBox3
+            // textBoxLoanId
             // 
-            this.textBox3.Location = new System.Drawing.Point(332, 118);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(87, 20);
-            this.textBox3.TabIndex = 22;
+            this.textBoxLoanId.Location = new System.Drawing.Point(332, 118);
+            this.textBoxLoanId.Name = "textBoxLoanId";
+            this.textBoxLoanId.Size = new System.Drawing.Size(87, 20);
+            this.textBoxLoanId.TabIndex = 22;
             // 
             // label6
             // 
@@ -284,12 +285,12 @@
             this.label6.TabIndex = 21;
             this.label6.Text = "Loan ID";
             // 
-            // textBox2
+            // txtTerm
             // 
-            this.textBox2.Location = new System.Drawing.Point(137, 212);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(45, 20);
-            this.textBox2.TabIndex = 20;
+            this.txtTerm.Location = new System.Drawing.Point(137, 212);
+            this.txtTerm.Name = "txtTerm";
+            this.txtTerm.Size = new System.Drawing.Size(45, 20);
+            this.txtTerm.TabIndex = 20;
             // 
             // textBoxTerm
             // 
@@ -315,27 +316,27 @@
             this.textBoxGuarantor.Size = new System.Drawing.Size(282, 20);
             this.textBoxGuarantor.TabIndex = 13;
             // 
-            // textBoxloanamount
+            // textBoxLoanAmount
             // 
-            this.textBoxloanamount.Location = new System.Drawing.Point(182, 62);
-            this.textBoxloanamount.Name = "textBoxloanamount";
-            this.textBoxloanamount.Size = new System.Drawing.Size(237, 20);
-            this.textBoxloanamount.TabIndex = 12;
-            this.textBoxloanamount.TextChanged += new System.EventHandler(this.textBoxloanamount_TextChanged);
+            this.textBoxLoanAmount.Location = new System.Drawing.Point(182, 62);
+            this.textBoxLoanAmount.Name = "textBoxLoanAmount";
+            this.textBoxLoanAmount.Size = new System.Drawing.Size(237, 20);
+            this.textBoxLoanAmount.TabIndex = 12;
+            this.textBoxLoanAmount.TextChanged += new System.EventHandler(this.textBoxloanamount_TextChanged);
             // 
-            // textBoxcustomerid
+            // textBoxCustomerId
             // 
-            this.textBoxcustomerid.Location = new System.Drawing.Point(332, 14);
-            this.textBoxcustomerid.Name = "textBoxcustomerid";
-            this.textBoxcustomerid.Size = new System.Drawing.Size(87, 20);
-            this.textBoxcustomerid.TabIndex = 8;
+            this.textBoxCustomerId.Location = new System.Drawing.Point(332, 14);
+            this.textBoxCustomerId.Name = "textBoxCustomerId";
+            this.textBoxCustomerId.Size = new System.Drawing.Size(87, 20);
+            this.textBoxCustomerId.TabIndex = 8;
             // 
-            // textBoxname
+            // textBoxName
             // 
-            this.textBoxname.Location = new System.Drawing.Point(80, 14);
-            this.textBoxname.Name = "textBoxname";
-            this.textBoxname.Size = new System.Drawing.Size(128, 20);
-            this.textBoxname.TabIndex = 4;
+            this.textBoxName.Location = new System.Drawing.Point(80, 14);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(128, 20);
+            this.textBoxName.TabIndex = 4;
             // 
             // label3
             // 
@@ -429,20 +430,20 @@
             this.label12.TabIndex = 30;
             this.label12.Text = "Application Approval Status";
             // 
-            // comboBox1
+            // comboBoxStatus
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(745, 611);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(213, 21);
-            this.comboBox1.TabIndex = 31;
+            this.comboBoxStatus.FormattingEnabled = true;
+            this.comboBoxStatus.Location = new System.Drawing.Point(745, 611);
+            this.comboBoxStatus.Name = "comboBoxStatus";
+            this.comboBoxStatus.Size = new System.Drawing.Size(213, 21);
+            this.comboBoxStatus.TabIndex = 31;
             // 
             // Pending_Loan_Applications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 662);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel3);
@@ -459,8 +460,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.customerDetailsPanel.ResumeLayout(false);
+            this.customerDetailsPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -476,35 +477,35 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel customerDetailsPanel;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBoxTerm;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxGuarantor;
-        private System.Windows.Forms.TextBox textBoxloanamount;
-        private System.Windows.Forms.TextBox textBoxcustomerid;
-        private System.Windows.Forms.TextBox textBoxname;
+        private System.Windows.Forms.TextBox textBoxLoanAmount;
+        private System.Windows.Forms.TextBox textBoxCustomerId;
+        private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelcustomerID;
         private System.Windows.Forms.Label labelloantype;
         private System.Windows.Forms.Label labelname;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTerm;
+        private System.Windows.Forms.TextBox textBoxRateofInterest;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxLoanId;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxLoanType;
+        private System.Windows.Forms.TextBox textBoxAccountNumber;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox textBoxAddress;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxDate;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.Label label13;
     }
 }

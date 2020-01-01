@@ -148,5 +148,46 @@ namespace FinTrustDLL.DataLayer
 			}
 			return objCustomer;
 		}
-	}
+
+        public static int UserInsert(User objUser)
+        {
+            int output = 0;
+            string sql = "";
+            SqlConnection con = null;
+            SqlCommand cmd = null;
+
+            try
+            {
+                sql = "insert into user_table (employeeId,employeeName,dateOfBirth,gender,designation,phone,email,address,aadharNumber,panNumber,password) values (";
+                sql = sql + "'" + objUser.EmployeeId + "',";
+                sql = sql + "'" + objUser.EmployeeName + "',";
+                sql = sql + "'" + objUser.DateOfBirth + "',";
+                sql = sql + "'" + objUser.Gender + "',";
+                sql = sql + "'" + objUser.Designation + "',";
+                sql = sql + "" + objUser.Phone + ",";
+                sql = sql + "'" + objUser.Email + "',";
+                sql = sql + "'" + objUser.Address + "',";
+                sql = sql + "" + objUser.AadharNumber + ",";
+                sql = sql + "'" + objUser.PanNumber + "',";
+                sql = sql + "" + objUser.Phone + ")";
+
+                con = DBHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+
+                output = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("******Error:FinTrustDL.cs:UserInsert" + ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                cmd.Dispose();
+            }
+            return output;
+        }
+
+    }
 }

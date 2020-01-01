@@ -70,14 +70,14 @@ namespace FinTrustBLL.BusinessLayer
 
         }
 
-        public static DataSet GetLoanDetails()
+        public static DataSet GetLoanDetails(string loanId)
         {
 
 
             DataSet dsLoans = null;
             try
             {
-                dsLoans = LoanDL.GetLoanDetails();
+                dsLoans = LoanDL.GetLoanDetails(loanId);
 
             }
             catch (Exception ex)
@@ -89,6 +89,24 @@ namespace FinTrustBLL.BusinessLayer
             return dsLoans;
         }
 
+        public static DataSet GetBasicLoanDetails()
+        {
+
+
+            DataSet dsLoans = null;
+            try
+            {
+                dsLoans = LoanDL.GetBasicLoanDetails();
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("Error : LoanBL:GetBasicLoanDetails : " + ex.Message.ToString());
+            }
+
+
+            return dsLoans;
+        }
 
 
     }
