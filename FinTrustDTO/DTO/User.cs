@@ -126,6 +126,7 @@ namespace FinTrustDTO.DTO
 			get { return balanceAmount; }
 			set { balanceAmount = value; }
 		}
+
 		private string accountNumber;
 
 		public string AccountNumber
