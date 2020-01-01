@@ -39,11 +39,13 @@
             this.radioButtonFemale = new System.Windows.Forms.RadioButton();
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
             this.dateTimePickerCustomerDOB = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBoxCustomerAadhar = new System.Windows.Forms.TextBox();
             this.textBoxCustomerAddress = new System.Windows.Forms.TextBox();
             this.textBoxCustomerEmail = new System.Windows.Forms.TextBox();
             this.textBoxCustomerPhone = new System.Windows.Forms.TextBox();
             this.textBoxCustomerName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBoxCustomerID = new System.Windows.Forms.TextBox();
             this.labelCustomerAadhar = new System.Windows.Forms.Label();
             this.labelCustomerAddress = new System.Windows.Forms.Label();
@@ -54,8 +56,6 @@
             this.labelCustomerName = new System.Windows.Forms.Label();
             this.labelCustomerID = new System.Windows.Forms.Label();
             this.labellAccountOpenHead = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelAccountOpen.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +72,7 @@
             this.buttonSubmit.TabIndex = 43;
             this.buttonSubmit.Text = "SUBMIT";
             this.buttonSubmit.UseVisualStyleBackColor = false;
+            this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
             // panelAccountOpen
             // 
@@ -197,6 +198,14 @@
             this.dateTimePickerCustomerDOB.Size = new System.Drawing.Size(234, 25);
             this.dateTimePickerCustomerDOB.TabIndex = 39;
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(661, 423);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(234, 25);
+            this.textBox1.TabIndex = 38;
+            // 
             // textBoxCustomerAadhar
             // 
             this.textBoxCustomerAadhar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -237,6 +246,16 @@
             this.textBoxCustomerName.Name = "textBoxCustomerName";
             this.textBoxCustomerName.Size = new System.Drawing.Size(234, 25);
             this.textBoxCustomerName.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(500, 426);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 18);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Pan Number";
             // 
             // textBoxCustomerID
             // 
@@ -336,24 +355,6 @@
             this.labellAccountOpenHead.Size = new System.Drawing.Size(236, 29);
             this.labellAccountOpenHead.TabIndex = 4;
             this.labellAccountOpenHead.Text = "Account Open Form";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(500, 426);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 18);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Pan Number";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(661, 423);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 25);
-            this.textBox1.TabIndex = 38;
             // 
             // FinTrust_AccountOpen
             // 

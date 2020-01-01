@@ -107,7 +107,7 @@ namespace FinTrustDLL.DataLayer
             try
             {
 
-                sql = "insert into loan_table(loanId,customerId,loanType,loanAmount,interestRate,term,netAmount,guarantorName,status) values(";
+                sql = "insert into loan_table(loanId,customerId,loanType,loanAmount,interestRate,term,netAmount,guarantorName,status,date) values(";
                 sql = sql + "'" + loanObj.LoanId + "',";
                 sql = sql + "'" + loanObj.CustomerId + "',";
                 sql = sql + "'" + loanObj.LoanType + "',";
@@ -116,7 +116,8 @@ namespace FinTrustDLL.DataLayer
                 sql = sql + loanObj.Term + ",";
                 sql = sql + loanObj.NetAmount + ",";
                 sql = sql + "'" + loanObj.GuarantorName + "',";
-                sql = sql + "'" + loanObj.Status + "')";
+                sql = sql + "'" + loanObj.Status + "',";
+                sql = sql + "'" + loanObj.Date + "')";
 
                 con = DBHelper.GetConnection();
                 con.Open();
@@ -140,7 +141,36 @@ namespace FinTrustDLL.DataLayer
 
         }
 
-        public static DataSet GetLoanDetails()
+        public static DataSet GetLoanDetails(string loanId)
+        {
+            string sql = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            DataSet dsLoans = null;
+            try
+            {
+                sql = "SELECT customer_table.*,loan_table.* FROM customer_table INNER JOIN loan_table ON customer_table.customerId = loan_table.customerId where loan_table.status = 'Submitted' and loan_table.loanId='"+ loanId + "'";
+                con = DBHelper.GetConnection();
+                con.Open();
+                dsLoans = new DataSet();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dsLoans);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("Error : LoanDL:GetLoanDetails : " + ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+
+            return dsLoans;
+        }
+
+        public static DataSet GetBasicLoanDetails()
         {
             string sql = "";
             SqlConnection con = null;
@@ -166,8 +196,7 @@ namespace FinTrustDLL.DataLayer
                 adapter.Dispose();
             }
 
-            return dsStudents;
+            return dsLoans;
         }
-
     }
 }
