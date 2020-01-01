@@ -16,5 +16,10 @@ namespace FinTrustApp.PresentationLayer
         {
             InitializeComponent();
         }
+
+        private void Grievance__Approval_Form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

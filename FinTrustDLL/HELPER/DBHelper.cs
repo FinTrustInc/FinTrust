@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -11,22 +12,18 @@ namespace FinTrustDLL.Helper
 	{
         public static SqlConnection GetConnection()
         {
-
-            SqlConnection con = null;
-            string connectionString = null;
+            SqlConnection connection = null;
 
             try
             {
-                connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\1028270\\source\\repos\\FinTrust\\FinTrustDLL\\DATA\\FinTrustDB.mdf;Integrated Security=True";
-                con = new SqlConnection(connectionString);
-
+                String connectionString = ConfigurationManager.ConnectionStrings["FinTrustApp.Properties.Settings.DataBaseConnection"].ConnectionString;
+                connection = new SqlConnection(connectionString);
             }
             catch (Exception ex)
             {
-                Console.Out.WriteLine("******Error:DBHelper.cs:GetConnection" + ex.Message.ToString());
+                Console.Out.WriteLine(ex.Message.ToString());
             }
-            return con;
-
+            return connection;
         }
 
     }

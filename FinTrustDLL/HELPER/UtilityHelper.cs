@@ -27,5 +27,26 @@ namespace FinTrustDLL.Helper
 			}
 			return newTransactionID;
 		}
-	}
+
+
+        public static string GenerateLoanId(string oldID)
+        {
+            string prefix, suffix;
+            int next;
+            string newLoanID = null;
+            try
+            {
+                prefix = oldID.Substring(0, 2);
+                suffix = oldID.Substring(2);
+                next = Convert.ToInt32(suffix) + 1;
+                newLoanID = prefix + next;
+            }
+            catch (Exception e3)
+            {
+                Console.Out.WriteLine("Error : UtilityHelper : GenerateLoanId" + e3.Message.ToString());
+
+            }
+            return newLoanID;
+        }
+    }
 }
