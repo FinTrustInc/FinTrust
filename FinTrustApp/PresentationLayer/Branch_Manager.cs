@@ -34,8 +34,8 @@ namespace FinTrustApp.PresentationLayer
         {
             this.Hide();
 
-            FinTrust_BranchManager_HomePage BMViewForm = new FinTrust_BranchManager_HomePage();
-            BMViewForm.Show();
+            //FinTrust_BranchManager_HomePage BMViewForm = new FinTrust_BranchManager_HomePage();
+            //BMViewForm.Show();
             
         }
 
