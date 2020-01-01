@@ -53,6 +53,12 @@
     <Compile Include="PresentationLayer\Branch_Manager.Designer.cs">
       <DependentUpon>Branch_Manager.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\Clerk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Clerk.Designer.cs">
+      <DependentUpon>Clerk.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\FinTrust-AccountClose.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,12 +82,6 @@
     </Compile>
     <Compile Include="PresentationLayer\FinTrust-Cashier-Transaction.Designer.cs">
       <DependentUpon>FinTrust-Cashier-Transaction.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PresentationLayer\FinTrust-Cashier-View.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\FinTrust-Cashier-View.Designer.cs">
-      <DependentUpon>FinTrust-Cashier-View.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\FinTrust-Cashier.cs">
       <SubType>Form</SubType>
@@ -142,6 +142,9 @@
     <EmbeddedResource Include="PresentationLayer\Branch_Manager.resx">
       <DependentUpon>Branch_Manager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Clerk.resx">
+      <DependentUpon>Clerk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FinTrust-AccountClose.resx">
       <DependentUpon>FinTrust-AccountClose.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FinTrust-Cashier-Transaction.resx">
       <DependentUpon>FinTrust-Cashier-Transaction.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\FinTrust-Cashier-View.resx">
-      <DependentUpon>FinTrust-Cashier-View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FinTrust-Cashier.resx">
       <DependentUpon>FinTrust-Cashier.cs</DependentUpon>

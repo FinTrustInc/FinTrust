@@ -53,6 +53,7 @@
             this.labelname = new System.Windows.Forms.Label();
             this.buttonsubmit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelMessage = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -296,6 +297,7 @@
             this.buttonsubmit.TabIndex = 23;
             this.buttonsubmit.Text = "SUBMIT";
             this.buttonsubmit.UseVisualStyleBackColor = false;
+            this.buttonsubmit.Click += new System.EventHandler(this.buttonsubmit_Click);
             // 
             // pictureBox1
             // 
@@ -307,12 +309,22 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // labelMessage
+            // 
+            this.labelMessage.AutoSize = true;
+            this.labelMessage.Location = new System.Drawing.Point(383, 68);
+            this.labelMessage.Name = "labelMessage";
+            this.labelMessage.Size = new System.Drawing.Size(127, 13);
+            this.labelMessage.TabIndex = 25;
+            this.labelMessage.Text = "____________________";
+            // 
             // Grievance_Redressal_Application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 662);
+            this.Controls.Add(this.labelMessage);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonsubmit);
             this.Controls.Add(this.panel1);
@@ -325,6 +337,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -353,5 +366,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelMessage;
     }
 }

@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using System.Data;
-using FinTrustDTO.DTO;
 using FinTrustDLL.DataLayer;
+using FinTrustDTO.DTO;
 using FinTrustDLL.Helper;
-
-
 
 namespace FinTrustBLL.BusinessLayer
 {
@@ -97,5 +96,6 @@ namespace FinTrustBLL.BusinessLayer
 			}
 			return objCustomer;
 		}
-	}
+       
+    }
 }

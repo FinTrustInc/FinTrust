@@ -21,8 +21,8 @@ namespace FinTrustApp.PresentationLayer
         {
             this.Hide();
 
-           // FinTrust_Clerk_HomePage clerkform = new FinTrust_Clerk_HomePage();
-          //  clerkform.Show();
+            //FinTrust_Clerk_HomePage clerkform = new FinTrust_Clerk_HomePage();
+           // clerkform.Show();
         }
     }
 }
