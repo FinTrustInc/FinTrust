@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Data;
 using FinTrustDLL.DataLayer;
 using FinTrustDTO.DTO;
+using FinTrustDLL.Helper;
 
 namespace FinTrustBLL.BusinessLayer
 {
@@ -95,5 +96,6 @@ namespace FinTrustBLL.BusinessLayer
 			}
 			return objCustomer;
 		}
-	}
+       
+    }
 }

@@ -166,10 +166,10 @@ namespace FinTrustApp.PresentationLayer
 
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+        //private void pictureBox3_Click(object sender, EventArgs e)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         #endregion
 

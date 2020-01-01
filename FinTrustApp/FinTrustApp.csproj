@@ -83,12 +83,6 @@
     <Compile Include="PresentationLayer\FinTrust-Cashier-Transaction.Designer.cs">
       <DependentUpon>FinTrust-Cashier-Transaction.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\FinTrust-Cashier-View.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\FinTrust-Cashier-View.Designer.cs">
-      <DependentUpon>FinTrust-Cashier-View.cs</DependentUpon>
-    </Compile>
     <Compile Include="PresentationLayer\FinTrust-Cashier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FinTrust-Cashier-Transaction.resx">
       <DependentUpon>FinTrust-Cashier-Transaction.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\FinTrust-Cashier-View.resx">
-      <DependentUpon>FinTrust-Cashier-View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FinTrust-Cashier.resx">
       <DependentUpon>FinTrust-Cashier.cs</DependentUpon>
