@@ -160,7 +160,7 @@
             this.comboBoxUser.FormattingEnabled = true;
             this.comboBoxUser.Items.AddRange(new object[] {
             "Branch Manager",
-            "probationary Officer",
+            "Probationary Officer",
             "Cashier",
             "Clerk"});
             this.comboBoxUser.Location = new System.Drawing.Point(148, 189);

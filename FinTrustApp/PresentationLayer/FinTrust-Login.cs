@@ -47,32 +47,45 @@ namespace FinTrustApp.PresentationLayer
             
             if(comboBoxUser.Text==string.Empty || textBoxUsername.Text==string.Empty || textBoxPassword.Text==string.Empty)
             {
-                labelLoginMessage.Text = "Enter Input !!";
+                labelLoginMessage.Text = "Enter Valid Input !!";
             }
             else
             {
                 objUser = new User();
-                if (comboBoxUser.Text=="Branch Manager")
+                objUser.Email = textBoxUsername.Text;
+                objUser.Password = textBoxPassword.Text;
+                objUser.Designation = comboBoxUser.Text;
+                bool validUser = FinTrustBL.CheckEmployeeUser(objUser);
+                if (validUser)
                 {
-                    objUser.Email = textBoxUsername.Text;
-                    objUser.Password = textBoxPassword.Text;
-                    //string userName = FinTrustBL.CheckEmployeeUser(objUser);
-                    if (textBoxUsername.Text == "abc@gmail.com" && textBoxPassword.Text == "12345")
+                    if (objUser.Designation == "Branch Manager")
                     {
                         this.Hide();
-
                         Branch_Manager BMHomeForm = new Branch_Manager();
                         BMHomeForm.Show();
                     }
-                    else
+                    else if (objUser.Designation == "Probationary Officer")
                     {
-                        labelLoginMessage.Text = "Enter Valid Input !!";
+                        this.Hide();
+                        Probationary_Officer POHomeForm = new Probationary_Officer();
+                        POHomeForm.Show();
                     }
-                    
+                    else if (objUser.Designation == "Cashier")
+                    {
+                        this.Hide();
+                        FinTrust_Cashier CashierHomeForm = new FinTrust_Cashier();
+                        CashierHomeForm.Show();
+                    }
+                }  
+                else
+                {
+                        labelLoginMessage.Text = "Invalid Login Credentials!";
                 }
+         
             }
-
-           
+                
         }
-    }
-}
+     }         
+ }
+
+
