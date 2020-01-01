@@ -420,6 +420,7 @@
             this.buttonUserRegister.TabIndex = 46;
             this.buttonUserRegister.Text = "REGISTER";
             this.buttonUserRegister.UseVisualStyleBackColor = false;
+            this.buttonUserRegister.Click += new System.EventHandler(this.buttonUserRegister_Click);
             // 
             // pictureBoxRegistration
             // 

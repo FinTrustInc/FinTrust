@@ -233,5 +233,10 @@ namespace FinTrustApp.PresentationLayer
                 textBoxEmployeeAadhar.BackColor = Color.White;
             }
         }
+
+        private void buttonUserRegister_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
