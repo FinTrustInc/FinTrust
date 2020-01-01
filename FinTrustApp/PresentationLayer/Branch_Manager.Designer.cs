@@ -1,4 +1,6 @@
-﻿namespace FinTrustApp.PresentationLayer
+﻿using System;
+
+namespace FinTrustApp.PresentationLayer
 {
     partial class Branch_Manager
     {
@@ -161,6 +163,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

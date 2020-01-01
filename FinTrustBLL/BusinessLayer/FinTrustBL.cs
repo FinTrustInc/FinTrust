@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using FinTrustDLL.DataLayer;
 using FinTrustDTO.DTO;
 using System.Data;
-
+using FinTrustDLL.Helper;
 
 namespace FinTrustBLL.BusinessLayer
 {
