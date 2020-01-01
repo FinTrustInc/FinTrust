@@ -39,6 +39,10 @@
             this.labelloanpage = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxPhoneNo = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.comboBoxAccType = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.richTextBoxGrievance = new System.Windows.Forms.RichTextBox();
@@ -55,10 +59,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBoxPhoneNo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -188,6 +188,40 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(433, 434);
             this.panel4.TabIndex = 27;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(131, 284);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(288, 20);
+            this.textBox2.TabIndex = 38;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 283);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 18);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Date";
+            // 
+            // textBoxPhoneNo
+            // 
+            this.textBoxPhoneNo.Location = new System.Drawing.Point(131, 233);
+            this.textBoxPhoneNo.Name = "textBoxPhoneNo";
+            this.textBoxPhoneNo.Size = new System.Drawing.Size(288, 20);
+            this.textBoxPhoneNo.TabIndex = 36;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(12, 235);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 18);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Phone Number";
             // 
             // comboBoxAccType
             // 
@@ -325,40 +359,6 @@
             this.panel3.Size = new System.Drawing.Size(436, 437);
             this.panel3.TabIndex = 36;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 235);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 18);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "Phone Number";
-            // 
-            // textBoxPhoneNo
-            // 
-            this.textBoxPhoneNo.Location = new System.Drawing.Point(131, 233);
-            this.textBoxPhoneNo.Name = "textBoxPhoneNo";
-            this.textBoxPhoneNo.Size = new System.Drawing.Size(288, 20);
-            this.textBoxPhoneNo.TabIndex = 36;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 283);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 18);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "Date";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(131, 284);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(288, 20);
-            this.textBox2.TabIndex = 38;
-            // 
             // Grievance__Approval_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -374,6 +374,7 @@
             this.Controls.Add(this.panel3);
             this.Name = "Grievance__Approval_Form";
             this.Text = "Grievance__Approval_Form";
+            this.Load += new System.EventHandler(this.Grievance__Approval_Form_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
