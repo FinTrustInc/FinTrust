@@ -28,23 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonSubmit = new System.Windows.Forms.Button();
             this.panelAccountOpen = new System.Windows.Forms.Panel();
-            this.dateTimePickerDate = new System.Windows.Forms.DateTimePicker();
-            this.labelDate = new System.Windows.Forms.Label();
             this.comboBoxAccountType = new System.Windows.Forms.ComboBox();
             this.labelAccountType = new System.Windows.Forms.Label();
-            this.textBoxAccountNumber = new System.Windows.Forms.TextBox();
-            this.labelAccountNumber = new System.Windows.Forms.Label();
             this.radioButtonFemale = new System.Windows.Forms.RadioButton();
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
             this.dateTimePickerCustomerDOB = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBoxCustomerAadhar = new System.Windows.Forms.TextBox();
             this.textBoxCustomerAddress = new System.Windows.Forms.TextBox();
             this.textBoxCustomerEmail = new System.Windows.Forms.TextBox();
             this.textBoxCustomerPhone = new System.Windows.Forms.TextBox();
             this.textBoxCustomerName = new System.Windows.Forms.TextBox();
-            this.textBoxCustomerID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.labelCustomerAadhar = new System.Windows.Forms.Label();
             this.labelCustomerAddress = new System.Windows.Forms.Label();
             this.labelCustomerEmail = new System.Windows.Forms.Label();
@@ -52,37 +48,28 @@
             this.labelCustomerGender = new System.Windows.Forms.Label();
             this.labelCustomerDOB = new System.Windows.Forms.Label();
             this.labelCustomerName = new System.Windows.Forms.Label();
-            this.labelCustomerID = new System.Windows.Forms.Label();
-            this.labellAccountOpenHead = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panelCustomerApplicationForm = new System.Windows.Forms.Panel();
+            this.labelCutomerApplicationForm = new System.Windows.Forms.Label();
+            this.buttonCustomerAccountOpenSubmit = new System.Windows.Forms.Button();
+            this.labelLine = new System.Windows.Forms.Label();
+            this.labelDeclaration = new System.Windows.Forms.Label();
+            this.checkBoxCustomerApplication = new System.Windows.Forms.CheckBox();
+            this.labelPara1 = new System.Windows.Forms.Label();
+            this.labelPara2 = new System.Windows.Forms.Label();
             this.panelAccountOpen.SuspendLayout();
+            this.panelCustomerApplicationForm.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // buttonSubmit
-            // 
-            this.buttonSubmit.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.buttonSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonSubmit.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSubmit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonSubmit.Location = new System.Drawing.Point(369, 517);
-            this.buttonSubmit.Name = "buttonSubmit";
-            this.buttonSubmit.Size = new System.Drawing.Size(198, 44);
-            this.buttonSubmit.TabIndex = 43;
-            this.buttonSubmit.Text = "SUBMIT";
-            this.buttonSubmit.UseVisualStyleBackColor = false;
             // 
             // panelAccountOpen
             // 
-            this.panelAccountOpen.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panelAccountOpen.Controls.Add(this.dateTimePickerDate);
-            this.panelAccountOpen.Controls.Add(this.labelDate);
+            this.panelAccountOpen.BackColor = System.Drawing.Color.White;
+            this.panelAccountOpen.Controls.Add(this.labelPara2);
+            this.panelAccountOpen.Controls.Add(this.labelPara1);
+            this.panelAccountOpen.Controls.Add(this.checkBoxCustomerApplication);
+            this.panelAccountOpen.Controls.Add(this.labelDeclaration);
+            this.panelAccountOpen.Controls.Add(this.labelLine);
             this.panelAccountOpen.Controls.Add(this.comboBoxAccountType);
             this.panelAccountOpen.Controls.Add(this.labelAccountType);
-            this.panelAccountOpen.Controls.Add(this.textBoxAccountNumber);
-            this.panelAccountOpen.Controls.Add(this.labelAccountNumber);
-            this.panelAccountOpen.Controls.Add(this.buttonSubmit);
             this.panelAccountOpen.Controls.Add(this.radioButtonFemale);
             this.panelAccountOpen.Controls.Add(this.radioButtonMale);
             this.panelAccountOpen.Controls.Add(this.dateTimePickerCustomerDOB);
@@ -93,7 +80,6 @@
             this.panelAccountOpen.Controls.Add(this.textBoxCustomerPhone);
             this.panelAccountOpen.Controls.Add(this.textBoxCustomerName);
             this.panelAccountOpen.Controls.Add(this.label1);
-            this.panelAccountOpen.Controls.Add(this.textBoxCustomerID);
             this.panelAccountOpen.Controls.Add(this.labelCustomerAadhar);
             this.panelAccountOpen.Controls.Add(this.labelCustomerAddress);
             this.panelAccountOpen.Controls.Add(this.labelCustomerEmail);
@@ -101,29 +87,10 @@
             this.panelAccountOpen.Controls.Add(this.labelCustomerGender);
             this.panelAccountOpen.Controls.Add(this.labelCustomerDOB);
             this.panelAccountOpen.Controls.Add(this.labelCustomerName);
-            this.panelAccountOpen.Controls.Add(this.labelCustomerID);
-            this.panelAccountOpen.Location = new System.Drawing.Point(33, 32);
+            this.panelAccountOpen.Location = new System.Drawing.Point(39, 95);
             this.panelAccountOpen.Name = "panelAccountOpen";
-            this.panelAccountOpen.Size = new System.Drawing.Size(922, 617);
+            this.panelAccountOpen.Size = new System.Drawing.Size(911, 474);
             this.panelAccountOpen.TabIndex = 3;
-            // 
-            // dateTimePickerDate
-            // 
-            this.dateTimePickerDate.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerDate.Location = new System.Drawing.Point(209, 218);
-            this.dateTimePickerDate.Name = "dateTimePickerDate";
-            this.dateTimePickerDate.Size = new System.Drawing.Size(234, 25);
-            this.dateTimePickerDate.TabIndex = 49;
-            // 
-            // labelDate
-            // 
-            this.labelDate.AutoSize = true;
-            this.labelDate.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDate.Location = new System.Drawing.Point(14, 218);
-            this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(159, 18);
-            this.labelDate.TabIndex = 48;
-            this.labelDate.Text = "Account Opening Date ";
             // 
             // comboBoxAccountType
             // 
@@ -132,44 +99,27 @@
             this.comboBoxAccountType.Items.AddRange(new object[] {
             "Savings Account",
             "Current Account"});
-            this.comboBoxAccountType.Location = new System.Drawing.Point(661, 138);
+            this.comboBoxAccountType.Location = new System.Drawing.Point(661, 31);
             this.comboBoxAccountType.Name = "comboBoxAccountType";
             this.comboBoxAccountType.Size = new System.Drawing.Size(234, 26);
             this.comboBoxAccountType.TabIndex = 47;
+            this.comboBoxAccountType.Text = "           - - - Select - - -";
             // 
             // labelAccountType
             // 
             this.labelAccountType.AutoSize = true;
             this.labelAccountType.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAccountType.Location = new System.Drawing.Point(500, 145);
+            this.labelAccountType.Location = new System.Drawing.Point(500, 38);
             this.labelAccountType.Name = "labelAccountType";
             this.labelAccountType.Size = new System.Drawing.Size(96, 18);
             this.labelAccountType.TabIndex = 46;
             this.labelAccountType.Text = "Account Type";
             // 
-            // textBoxAccountNumber
-            // 
-            this.textBoxAccountNumber.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAccountNumber.Location = new System.Drawing.Point(661, 70);
-            this.textBoxAccountNumber.Name = "textBoxAccountNumber";
-            this.textBoxAccountNumber.Size = new System.Drawing.Size(234, 25);
-            this.textBoxAccountNumber.TabIndex = 45;
-            // 
-            // labelAccountNumber
-            // 
-            this.labelAccountNumber.AutoSize = true;
-            this.labelAccountNumber.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAccountNumber.Location = new System.Drawing.Point(500, 77);
-            this.labelAccountNumber.Name = "labelAccountNumber";
-            this.labelAccountNumber.Size = new System.Drawing.Size(116, 18);
-            this.labelAccountNumber.TabIndex = 44;
-            this.labelAccountNumber.Text = "Account Number";
-            // 
             // radioButtonFemale
             // 
             this.radioButtonFemale.AutoSize = true;
             this.radioButtonFemale.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonFemale.Location = new System.Drawing.Point(336, 289);
+            this.radioButtonFemale.Location = new System.Drawing.Point(334, 104);
             this.radioButtonFemale.Name = "radioButtonFemale";
             this.radioButtonFemale.Size = new System.Drawing.Size(72, 22);
             this.radioButtonFemale.TabIndex = 41;
@@ -181,7 +131,7 @@
             // 
             this.radioButtonMale.AutoSize = true;
             this.radioButtonMale.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonMale.Location = new System.Drawing.Point(209, 289);
+            this.radioButtonMale.Location = new System.Drawing.Point(209, 104);
             this.radioButtonMale.Name = "radioButtonMale";
             this.radioButtonMale.Size = new System.Drawing.Size(58, 22);
             this.radioButtonMale.TabIndex = 40;
@@ -192,15 +142,23 @@
             // dateTimePickerCustomerDOB
             // 
             this.dateTimePickerCustomerDOB.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerCustomerDOB.Location = new System.Drawing.Point(661, 218);
+            this.dateTimePickerCustomerDOB.Location = new System.Drawing.Point(661, 99);
             this.dateTimePickerCustomerDOB.Name = "dateTimePickerCustomerDOB";
             this.dateTimePickerCustomerDOB.Size = new System.Drawing.Size(234, 25);
             this.dateTimePickerCustomerDOB.TabIndex = 39;
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(661, 312);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(234, 25);
+            this.textBox1.TabIndex = 38;
+            // 
             // textBoxCustomerAadhar
             // 
             this.textBoxCustomerAadhar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerAadhar.Location = new System.Drawing.Point(209, 420);
+            this.textBoxCustomerAadhar.Location = new System.Drawing.Point(209, 309);
             this.textBoxCustomerAadhar.Name = "textBoxCustomerAadhar";
             this.textBoxCustomerAadhar.Size = new System.Drawing.Size(234, 25);
             this.textBoxCustomerAadhar.TabIndex = 37;
@@ -208,7 +166,7 @@
             // textBoxCustomerAddress
             // 
             this.textBoxCustomerAddress.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerAddress.Location = new System.Drawing.Point(661, 326);
+            this.textBoxCustomerAddress.Location = new System.Drawing.Point(661, 170);
             this.textBoxCustomerAddress.Multiline = true;
             this.textBoxCustomerAddress.Name = "textBoxCustomerAddress";
             this.textBoxCustomerAddress.Size = new System.Drawing.Size(234, 80);
@@ -217,7 +175,7 @@
             // textBoxCustomerEmail
             // 
             this.textBoxCustomerEmail.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerEmail.Location = new System.Drawing.Point(209, 349);
+            this.textBoxCustomerEmail.Location = new System.Drawing.Point(209, 163);
             this.textBoxCustomerEmail.Name = "textBoxCustomerEmail";
             this.textBoxCustomerEmail.Size = new System.Drawing.Size(234, 25);
             this.textBoxCustomerEmail.TabIndex = 35;
@@ -225,7 +183,7 @@
             // textBoxCustomerPhone
             // 
             this.textBoxCustomerPhone.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerPhone.Location = new System.Drawing.Point(661, 282);
+            this.textBoxCustomerPhone.Location = new System.Drawing.Point(209, 235);
             this.textBoxCustomerPhone.Name = "textBoxCustomerPhone";
             this.textBoxCustomerPhone.Size = new System.Drawing.Size(234, 25);
             this.textBoxCustomerPhone.TabIndex = 34;
@@ -233,24 +191,26 @@
             // textBoxCustomerName
             // 
             this.textBoxCustomerName.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerName.Location = new System.Drawing.Point(209, 138);
+            this.textBoxCustomerName.Location = new System.Drawing.Point(209, 35);
             this.textBoxCustomerName.Name = "textBoxCustomerName";
             this.textBoxCustomerName.Size = new System.Drawing.Size(234, 25);
             this.textBoxCustomerName.TabIndex = 33;
             // 
-            // textBoxCustomerID
+            // label1
             // 
-            this.textBoxCustomerID.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerID.Location = new System.Drawing.Point(209, 74);
-            this.textBoxCustomerID.Name = "textBoxCustomerID";
-            this.textBoxCustomerID.Size = new System.Drawing.Size(234, 25);
-            this.textBoxCustomerID.TabIndex = 32;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(500, 315);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 18);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Pan Number";
             // 
             // labelCustomerAadhar
             // 
             this.labelCustomerAadhar.AutoSize = true;
             this.labelCustomerAadhar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCustomerAadhar.Location = new System.Drawing.Point(14, 423);
+            this.labelCustomerAadhar.Location = new System.Drawing.Point(14, 312);
             this.labelCustomerAadhar.Name = "labelCustomerAadhar";
             this.labelCustomerAadhar.Size = new System.Drawing.Size(112, 18);
             this.labelCustomerAadhar.TabIndex = 30;
@@ -260,7 +220,7 @@
             // 
             this.labelCustomerAddress.AutoSize = true;
             this.labelCustomerAddress.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCustomerAddress.Location = new System.Drawing.Point(500, 356);
+            this.labelCustomerAddress.Location = new System.Drawing.Point(500, 200);
             this.labelCustomerAddress.Name = "labelCustomerAddress";
             this.labelCustomerAddress.Size = new System.Drawing.Size(59, 18);
             this.labelCustomerAddress.TabIndex = 29;
@@ -270,7 +230,7 @@
             // 
             this.labelCustomerEmail.AutoSize = true;
             this.labelCustomerEmail.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCustomerEmail.Location = new System.Drawing.Point(14, 356);
+            this.labelCustomerEmail.Location = new System.Drawing.Point(18, 170);
             this.labelCustomerEmail.Name = "labelCustomerEmail";
             this.labelCustomerEmail.Size = new System.Drawing.Size(48, 18);
             this.labelCustomerEmail.TabIndex = 28;
@@ -280,7 +240,7 @@
             // 
             this.labelCustomerPhone.AutoSize = true;
             this.labelCustomerPhone.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCustomerPhone.Location = new System.Drawing.Point(500, 285);
+            this.labelCustomerPhone.Location = new System.Drawing.Point(18, 242);
             this.labelCustomerPhone.Name = "labelCustomerPhone";
             this.labelCustomerPhone.Size = new System.Drawing.Size(49, 18);
             this.labelCustomerPhone.TabIndex = 27;
@@ -290,7 +250,7 @@
             // 
             this.labelCustomerGender.AutoSize = true;
             this.labelCustomerGender.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCustomerGender.Location = new System.Drawing.Point(14, 289);
+            this.labelCustomerGender.Location = new System.Drawing.Point(18, 106);
             this.labelCustomerGender.Name = "labelCustomerGender";
             this.labelCustomerGender.Size = new System.Drawing.Size(54, 18);
             this.labelCustomerGender.TabIndex = 25;
@@ -300,7 +260,7 @@
             // 
             this.labelCustomerDOB.AutoSize = true;
             this.labelCustomerDOB.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCustomerDOB.Location = new System.Drawing.Point(500, 225);
+            this.labelCustomerDOB.Location = new System.Drawing.Point(500, 106);
             this.labelCustomerDOB.Name = "labelCustomerDOB";
             this.labelCustomerDOB.Size = new System.Drawing.Size(97, 18);
             this.labelCustomerDOB.TabIndex = 24;
@@ -310,70 +270,124 @@
             // 
             this.labelCustomerName.AutoSize = true;
             this.labelCustomerName.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCustomerName.Location = new System.Drawing.Point(18, 145);
+            this.labelCustomerName.Location = new System.Drawing.Point(18, 38);
             this.labelCustomerName.Name = "labelCustomerName";
             this.labelCustomerName.Size = new System.Drawing.Size(108, 18);
             this.labelCustomerName.TabIndex = 23;
             this.labelCustomerName.Text = "Customer Name";
             // 
-            // labelCustomerID
+            // panelCustomerApplicationForm
             // 
-            this.labelCustomerID.AutoSize = true;
-            this.labelCustomerID.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCustomerID.Location = new System.Drawing.Point(18, 81);
-            this.labelCustomerID.Name = "labelCustomerID";
-            this.labelCustomerID.Size = new System.Drawing.Size(91, 18);
-            this.labelCustomerID.TabIndex = 22;
-            this.labelCustomerID.Text = "Customer ID";
+            this.panelCustomerApplicationForm.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelCustomerApplicationForm.Controls.Add(this.labelCutomerApplicationForm);
+            this.panelCustomerApplicationForm.Location = new System.Drawing.Point(1, 0);
+            this.panelCustomerApplicationForm.Name = "panelCustomerApplicationForm";
+            this.panelCustomerApplicationForm.Size = new System.Drawing.Size(983, 49);
+            this.panelCustomerApplicationForm.TabIndex = 21;
             // 
-            // labellAccountOpenHead
+            // labelCutomerApplicationForm
             // 
-            this.labellAccountOpenHead.AutoSize = true;
-            this.labellAccountOpenHead.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labellAccountOpenHead.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.labellAccountOpenHead.Location = new System.Drawing.Point(364, 0);
-            this.labellAccountOpenHead.Name = "labellAccountOpenHead";
-            this.labellAccountOpenHead.Size = new System.Drawing.Size(236, 29);
-            this.labellAccountOpenHead.TabIndex = 4;
-            this.labellAccountOpenHead.Text = "Account Open Form";
+            this.labelCutomerApplicationForm.AutoSize = true;
+            this.labelCutomerApplicationForm.BackColor = System.Drawing.Color.SteelBlue;
+            this.labelCutomerApplicationForm.Font = new System.Drawing.Font("Modern No. 20", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCutomerApplicationForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelCutomerApplicationForm.Location = new System.Drawing.Point(282, 9);
+            this.labelCutomerApplicationForm.Name = "labelCutomerApplicationForm";
+            this.labelCutomerApplicationForm.Size = new System.Drawing.Size(438, 38);
+            this.labelCutomerApplicationForm.TabIndex = 3;
+            this.labelCutomerApplicationForm.Text = "Customer Application Form";
             // 
-            // label1
+            // buttonCustomerAccountOpenSubmit
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(500, 426);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 18);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Pan Number";
+            this.buttonCustomerAccountOpenSubmit.BackColor = System.Drawing.Color.SteelBlue;
+            this.buttonCustomerAccountOpenSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCustomerAccountOpenSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonCustomerAccountOpenSubmit.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustomerAccountOpenSubmit.Location = new System.Drawing.Point(850, 598);
+            this.buttonCustomerAccountOpenSubmit.Name = "buttonCustomerAccountOpenSubmit";
+            this.buttonCustomerAccountOpenSubmit.Size = new System.Drawing.Size(100, 51);
+            this.buttonCustomerAccountOpenSubmit.TabIndex = 45;
+            this.buttonCustomerAccountOpenSubmit.Text = "SUBMIT";
+            this.buttonCustomerAccountOpenSubmit.UseVisualStyleBackColor = false;
+            this.buttonCustomerAccountOpenSubmit.Click += new System.EventHandler(this.buttonCustomerAccountOpenSubmit_Click);
             // 
-            // textBox1
+            // labelLine
             // 
-            this.textBox1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(661, 423);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 25);
-            this.textBox1.TabIndex = 38;
+            this.labelLine.AutoSize = true;
+            this.labelLine.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLine.Location = new System.Drawing.Point(10, 353);
+            this.labelLine.Name = "labelLine";
+            this.labelLine.Size = new System.Drawing.Size(898, 18);
+            this.labelLine.TabIndex = 48;
+            this.labelLine.Text = "---------------------------------------------------------------------------------" +
+    "--------------------------------------------------------------------------------" +
+    "-----------------";
+            // 
+            // labelDeclaration
+            // 
+            this.labelDeclaration.AutoSize = true;
+            this.labelDeclaration.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDeclaration.Location = new System.Drawing.Point(17, 382);
+            this.labelDeclaration.Name = "labelDeclaration";
+            this.labelDeclaration.Size = new System.Drawing.Size(115, 21);
+            this.labelDeclaration.TabIndex = 49;
+            this.labelDeclaration.Text = "Decleration : ";
+            // 
+            // checkBoxCustomerApplication
+            // 
+            this.checkBoxCustomerApplication.AutoSize = true;
+            this.checkBoxCustomerApplication.BackColor = System.Drawing.Color.AliceBlue;
+            this.checkBoxCustomerApplication.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxCustomerApplication.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBoxCustomerApplication.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBoxCustomerApplication.Location = new System.Drawing.Point(21, 423);
+            this.checkBoxCustomerApplication.Name = "checkBoxCustomerApplication";
+            this.checkBoxCustomerApplication.Size = new System.Drawing.Size(13, 12);
+            this.checkBoxCustomerApplication.TabIndex = 50;
+            this.checkBoxCustomerApplication.UseVisualStyleBackColor = false;
+            // 
+            // labelPara1
+            // 
+            this.labelPara1.AutoSize = true;
+            this.labelPara1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPara1.Location = new System.Drawing.Point(54, 420);
+            this.labelPara1.Name = "labelPara1";
+            this.labelPara1.Size = new System.Drawing.Size(845, 17);
+            this.labelPara1.TabIndex = 51;
+            this.labelPara1.Text = "In support of my account application , I declare that the above information enter" +
+    "ed is true to the best of my knowledge. I understand that ";
+            // 
+            // labelPara2
+            // 
+            this.labelPara2.AutoSize = true;
+            this.labelPara2.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPara2.Location = new System.Drawing.Point(54, 447);
+            this.labelPara2.Name = "labelPara2";
+            this.labelPara2.Size = new System.Drawing.Size(837, 17);
+            this.labelPara2.TabIndex = 52;
+            this.labelPara2.Text = "if any of the information I have  provided above is proven to be false, it will l" +
+    "ead to the immediate cancellation of the Account Opening .";
             // 
             // FinTrust_AccountOpen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 661);
-            this.Controls.Add(this.labellAccountOpenHead);
+            this.Controls.Add(this.buttonCustomerAccountOpenSubmit);
+            this.Controls.Add(this.panelCustomerApplicationForm);
             this.Controls.Add(this.panelAccountOpen);
             this.Name = "FinTrust_AccountOpen";
             this.Text = "Account_Opening";
             this.panelAccountOpen.ResumeLayout(false);
             this.panelAccountOpen.PerformLayout();
+            this.panelCustomerApplicationForm.ResumeLayout(false);
+            this.panelCustomerApplicationForm.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonSubmit;
         private System.Windows.Forms.Panel panelAccountOpen;
         private System.Windows.Forms.RadioButton radioButtonFemale;
         private System.Windows.Forms.RadioButton radioButtonMale;
@@ -383,7 +397,6 @@
         private System.Windows.Forms.TextBox textBoxCustomerEmail;
         private System.Windows.Forms.TextBox textBoxCustomerPhone;
         private System.Windows.Forms.TextBox textBoxCustomerName;
-        private System.Windows.Forms.TextBox textBoxCustomerID;
         private System.Windows.Forms.Label labelCustomerAadhar;
         private System.Windows.Forms.Label labelCustomerAddress;
         private System.Windows.Forms.Label labelCustomerEmail;
@@ -391,15 +404,17 @@
         private System.Windows.Forms.Label labelCustomerGender;
         private System.Windows.Forms.Label labelCustomerDOB;
         private System.Windows.Forms.Label labelCustomerName;
-        private System.Windows.Forms.Label labelCustomerID;
-        private System.Windows.Forms.Label labellAccountOpenHead;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDate;
-        private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.ComboBox comboBoxAccountType;
         private System.Windows.Forms.Label labelAccountType;
-        private System.Windows.Forms.TextBox textBoxAccountNumber;
-        private System.Windows.Forms.Label labelAccountNumber;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelCustomerApplicationForm;
+        private System.Windows.Forms.Label labelCutomerApplicationForm;
+        private System.Windows.Forms.Button buttonCustomerAccountOpenSubmit;
+        private System.Windows.Forms.Label labelLine;
+        private System.Windows.Forms.Label labelDeclaration;
+        private System.Windows.Forms.CheckBox checkBoxCustomerApplication;
+        private System.Windows.Forms.Label labelPara1;
+        private System.Windows.Forms.Label labelPara2;
     }
 }

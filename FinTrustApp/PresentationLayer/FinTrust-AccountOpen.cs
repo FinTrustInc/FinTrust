@@ -16,5 +16,10 @@ namespace FinTrustApp.PresentationLayer
         {
             InitializeComponent();
         }
+
+        private void buttonCustomerAccountOpenSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -9,21 +9,25 @@ namespace FinTrustDLL.Helper
 {
 	public class DBHelper
 	{
-		public static SqlConnection GetConnection()
-		{
-			SqlConnection connection = null;
-			String ConnectionString = null;
-			try
-			{
-				ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\1028259\\source\repos\\FinTrustApp\\FinTrustDLL\\DATA\\FinTrustDB.mdf;Integrated Security=True";
-				connection = new SqlConnection(ConnectionString);
-			}
-			catch (Exception ex)
-			{
-				Console.Out.WriteLine(ex.Message.ToString());
-			}
-			return connection;
-		}
+        public static SqlConnection GetConnection()
+        {
 
-	}
+            SqlConnection con = null;
+            string connectionString = null;
+
+            try
+            {
+                connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\1028270\\source\\repos\\FinTrust\\FinTrustDLL\\DATA\\FinTrustDB.mdf;Integrated Security=True";
+                con = new SqlConnection(connectionString);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("******Error:DBHelper.cs:GetConnection" + ex.Message.ToString());
+            }
+            return con;
+
+        }
+
+    }
 }
