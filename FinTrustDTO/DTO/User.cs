@@ -23,9 +23,9 @@ namespace FinTrustDTO.DTO
             get { return employeeName; }
             set { employeeName = value; }
         }
-        private DateTime dateOfBirth;
+        private string dateOfBirth;
 
-        public DateTime DateOfBirth
+        public string DateOfBirth
         {
             get { return dateOfBirth; }
             set { dateOfBirth = value; }
@@ -44,9 +44,9 @@ namespace FinTrustDTO.DTO
             get { return designation; }
             set { designation = value; }
         }
-        private int phone;
+        private long phone;
 
-        public int Phone
+        public long Phone
         {
             get { return phone; }
             set { phone = value; }
@@ -65,9 +65,9 @@ namespace FinTrustDTO.DTO
             get { return address; }
             set { address = value; }
         }
-        private int aadharNumber;
+        private long aadharNumber;
 
-        public int AadharNumber
+        public long AadharNumber
         {
             get { return aadharNumber; }
             set { aadharNumber = value; }

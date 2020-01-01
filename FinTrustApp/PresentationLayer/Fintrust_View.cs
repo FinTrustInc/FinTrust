@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace FinTrustApp.PresentationLayer
 {
-	public partial class FinTrust_Cashier_View : Form
-	{
-		public FinTrust_Cashier_View()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class Fintrust_View : Form
+    {
+        public Fintrust_View()
+        {
+            InitializeComponent();
+        }
+    }
 }

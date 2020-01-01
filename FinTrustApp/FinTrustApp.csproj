@@ -80,12 +80,6 @@
     <Compile Include="PresentationLayer\FinTrust-Cashier-Transaction.Designer.cs">
       <DependentUpon>FinTrust-Cashier-Transaction.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\FinTrust-Cashier-View.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\FinTrust-Cashier-View.Designer.cs">
-      <DependentUpon>FinTrust-Cashier-View.cs</DependentUpon>
-    </Compile>
     <Compile Include="PresentationLayer\FinTrust-Cashier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +97,12 @@
     </Compile>
     <Compile Include="PresentationLayer\FinTrust-Registration.Designer.cs">
       <DependentUpon>FinTrust-Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Fintrust_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Fintrust_View.Designer.cs">
+      <DependentUpon>Fintrust_View.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\Grievance _Approval_Form.cs">
       <SubType>Form</SubType>
@@ -157,9 +157,6 @@
     <EmbeddedResource Include="PresentationLayer\FinTrust-Cashier-Transaction.resx">
       <DependentUpon>FinTrust-Cashier-Transaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\FinTrust-Cashier-View.resx">
-      <DependentUpon>FinTrust-Cashier-View.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FinTrust-Cashier.resx">
       <DependentUpon>FinTrust-Cashier.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FinTrust-Registration.resx">
       <DependentUpon>FinTrust-Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Fintrust_View.resx">
+      <DependentUpon>Fintrust_View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Grievance _Approval_Form.resx">
       <DependentUpon>Grievance _Approval_Form.cs</DependentUpon>
