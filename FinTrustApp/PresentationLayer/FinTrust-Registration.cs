@@ -84,7 +84,7 @@ namespace FinTrustApp.PresentationLayer
             }
             catch(Exception ex)
             {
-
+                labelUserRegistrtionMessage.Text = ex.Message.ToString();
             }
             
         }
