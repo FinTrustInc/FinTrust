@@ -48,5 +48,43 @@ namespace FinTrustDLL.Helper
             }
             return newLoanID;
         }
+
+        public static string GenerateCustomerId(string oldID)
+        {
+            string prefix, suffix;
+            int next;
+            string newCustomerID = null;
+            try
+            {
+                prefix = oldID.Substring(0, 3);
+                suffix = oldID.Substring(3);
+                next = Convert.ToInt32(suffix) + 1;
+                newCustomerID = prefix + next;
+            }
+            catch (Exception e3)
+            {
+                Console.Out.WriteLine("Error : UtilityHelper : GenerateCustomerId" + e3.Message.ToString());
+
+            }
+            return newCustomerID;
+        }
+
+        public static string GenerateAccountNumber(string oldAccountNumber)
+        {
+           
+            int next;
+            string newAccountNumber = null;
+            try
+            {              
+                next = Convert.ToInt32(oldAccountNumber) + 1;
+                newAccountNumber = next.ToString();
+            }
+            catch (Exception e3)
+            {
+                Console.Out.WriteLine("Error : UtilityHelper : GenerateAccountNumber" + e3.Message.ToString());
+
+            }
+            return newAccountNumber;
+        }
     }
 }

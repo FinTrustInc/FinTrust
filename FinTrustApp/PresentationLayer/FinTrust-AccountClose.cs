@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FinTrustDTO.DTO;
+using FinTrustBLL.BusinessLayer;
 
 namespace FinTrustApp.PresentationLayer
 {
@@ -15,6 +17,73 @@ namespace FinTrustApp.PresentationLayer
         public FinTrust_AccountClose()
         {
             InitializeComponent();
+        }
+
+        private void checkBoxAccountClosure_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxAccountClosure.Checked)
+            {
+                buttonAccountClosureSubmit.Visible = true;
+            }
+            else
+            {
+                buttonAccountClosureSubmit.Visible = false;
+            }
+        }
+
+        private void buttonAccountNumberSearch_Click(object sender, EventArgs e)
+        {
+            Customer customerObj = null;
+            try
+            {
+
+                customerObj = CustomerBL.GetCustomerByAccountNumber(textBoxAccountNumber.Text);
+                if (customerObj != null)
+                {
+                    textBoxCustomerName.Text = customerObj.CustomerName;
+                    textBoxAccountType.Text = customerObj.AccountType;
+                    textBoxCustomerEmail.Text = customerObj.Email;
+                    textBoxCustomerPhone.Text = customerObj.Phone.ToString();
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                //lblMessage.Text = ex.Message.ToString();
+            }
+        }
+
+        private void buttonAccountClosureSubmit_Click(object sender, EventArgs e)
+        {
+
+            int output = 0;
+            try
+            {
+                if (MessageBox.Show("Do you want to delete", " S I S",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    output = CustomerBL.DeleteAccountDetails(textBoxAccountNumber.Text);
+
+
+                    if (output > 0)
+                    {
+                        labelCustomerAccountCloseMessage.Text = "Account deleted successfully !!!";
+                       
+                    }
+                    else
+                    {
+                        labelCustomerAccountCloseMessage.Text = "Try again later !!!";
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                labelCustomerAccountCloseMessage.Text = ex.Message.ToString();
+            }
+
         }
     }
 }

@@ -115,6 +115,7 @@
             this.checkBoxUserRegister.Size = new System.Drawing.Size(13, 12);
             this.checkBoxUserRegister.TabIndex = 51;
             this.checkBoxUserRegister.UseVisualStyleBackColor = false;
+            this.checkBoxUserRegister.CheckedChanged += new System.EventHandler(this.checkBoxUserRegister_CheckedChanged);
             // 
             // labelPara2
             // 
@@ -224,7 +225,6 @@
             this.textBoxEmployeeAadhar.Name = "textBoxEmployeeAadhar";
             this.textBoxEmployeeAadhar.Size = new System.Drawing.Size(234, 25);
             this.textBoxEmployeeAadhar.TabIndex = 37;
-            this.textBoxEmployeeAadhar.TextChanged += new System.EventHandler(this.textBoxEmployeeAadhar_TextChanged);
             this.textBoxEmployeeAadhar.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxEmployeeAadhar_Validating);
             // 
             // textBoxEmployeeAddress
@@ -378,7 +378,7 @@
             this.labelUserRegistrtionMessage.AutoSize = true;
             this.labelUserRegistrtionMessage.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUserRegistrtionMessage.ForeColor = System.Drawing.Color.Maroon;
-            this.labelUserRegistrtionMessage.Location = new System.Drawing.Point(445, 28);
+            this.labelUserRegistrtionMessage.Location = new System.Drawing.Point(434, 54);
             this.labelUserRegistrtionMessage.Name = "labelUserRegistrtionMessage";
             this.labelUserRegistrtionMessage.Size = new System.Drawing.Size(0, 14);
             this.labelUserRegistrtionMessage.TabIndex = 3;
@@ -420,6 +420,7 @@
             this.buttonUserRegister.TabIndex = 46;
             this.buttonUserRegister.Text = "REGISTER";
             this.buttonUserRegister.UseVisualStyleBackColor = false;
+            this.buttonUserRegister.Visible = false;
             this.buttonUserRegister.Click += new System.EventHandler(this.buttonUserRegister_Click);
             // 
             // pictureBoxRegistration

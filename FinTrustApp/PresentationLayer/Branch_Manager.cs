@@ -38,9 +38,9 @@ namespace FinTrustApp.PresentationLayer
         {
             this.Hide();
 
-           // FinTrust_BranchManager_HomePage BMViewForm = new FinTrust_BranchManager_HomePage();
-           // BMViewForm.Show();
-            
+            Fintrust_View BMViewForm = new Fintrust_View();
+            BMViewForm.Show();
+
         }
 
         private void loanApprovalToolStripMenuItem_Click(object sender, EventArgs e)

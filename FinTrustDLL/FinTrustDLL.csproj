@@ -76,6 +76,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataLayer\CustomerDL.cs" />
     <Compile Include="DataLayer\FinTrustDL.cs" />
     <Compile Include="DataLayer\GrievanceDL.cs" />
     <Compile Include="DataLayer\LoanDL.cs" />
