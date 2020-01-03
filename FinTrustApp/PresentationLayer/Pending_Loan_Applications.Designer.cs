@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvLoanApplications = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.labelloanpage = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxSearchBy = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.customerDetailsPanel = new System.Windows.Forms.Panel();
@@ -66,22 +65,13 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLoanApplications)).BeginInit();
+            this.dgvLoanApplications = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.customerDetailsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLoanApplications)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvLoanApplications
-            // 
-            this.dgvLoanApplications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLoanApplications.Location = new System.Drawing.Point(31, 212);
-            this.dgvLoanApplications.Name = "dgvLoanApplications";
-            this.dgvLoanApplications.Size = new System.Drawing.Size(463, 420);
-            this.dgvLoanApplications.TabIndex = 0;
-            this.dgvLoanApplications.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dgvLoanApplications.SelectionChanged += new System.EventHandler(this.dgvLoanApplications_SelectionChanged);
             // 
             // panel2
             // 
@@ -130,22 +120,29 @@
             // comboBoxSearchBy
             // 
             this.comboBoxSearchBy.FormattingEnabled = true;
+            this.comboBoxSearchBy.Items.AddRange(new object[] {
+            "Loan ID",
+            "Loan Type",
+            "Customer ID",
+            "Status"});
             this.comboBoxSearchBy.Location = new System.Drawing.Point(152, 13);
             this.comboBoxSearchBy.Name = "comboBoxSearchBy";
             this.comboBoxSearchBy.Size = new System.Drawing.Size(287, 21);
             this.comboBoxSearchBy.TabIndex = 23;
+            this.comboBoxSearchBy.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearchBy_SelectedIndexChanged);
             // 
-            // textBox1
+            // textBoxSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(152, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(287, 20);
-            this.textBox1.TabIndex = 24;
+            this.textBoxSearch.Location = new System.Drawing.Point(152, 63);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(287, 20);
+            this.textBoxSearch.TabIndex = 24;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBoxSearch);
             this.panel1.Controls.Add(this.comboBoxSearchBy);
             this.panel1.Location = new System.Drawing.Point(31, 63);
             this.panel1.Name = "panel1";
@@ -437,24 +434,33 @@
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(213, 21);
             this.comboBoxStatus.TabIndex = 31;
+            this.comboBoxStatus.SelectedIndexChanged += new System.EventHandler(this.comboBoxStatus_SelectedIndexChanged);
+            // 
+            // dgvLoanApplications
+            // 
+            this.dgvLoanApplications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLoanApplications.Location = new System.Drawing.Point(31, 216);
+            this.dgvLoanApplications.Name = "dgvLoanApplications";
+            this.dgvLoanApplications.Size = new System.Drawing.Size(463, 377);
+            this.dgvLoanApplications.TabIndex = 32;
+            this.dgvLoanApplications.SelectionChanged += new System.EventHandler(this.dgvLoanApplications_SelectionChanged);
             // 
             // Pending_Loan_Applications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 662);
+            this.Controls.Add(this.dgvLoanApplications);
             this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dgvLoanApplications);
             this.Controls.Add(this.checkBox1);
             this.Name = "Pending_Loan_Applications";
             this.Text = "Pending_Loan_Applications";
             this.Load += new System.EventHandler(this.Pending_Loan_Applications_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLoanApplications)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -462,19 +468,18 @@
             this.panel3.ResumeLayout(false);
             this.customerDetailsPanel.ResumeLayout(false);
             this.customerDetailsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLoanApplications)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvLoanApplications;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label labelloanpage;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxSearchBy;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel customerDetailsPanel;
@@ -507,5 +512,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridView dgvLoanApplications;
     }
 }

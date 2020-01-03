@@ -54,7 +54,7 @@ namespace FinTrustApp.PresentationLayer
 
 		private void viewTransactionsToolStripMenuItem_Click_1(object sender, EventArgs e)
 		{
-			FinTrust_Cashier_View objView = new FinTrust_Cashier_View();
+			Fintrust_View objView = new Fintrust_View();
 			objView.Show();
 			//objView.MdiParent = this;
 		}

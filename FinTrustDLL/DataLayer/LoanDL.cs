@@ -149,7 +149,8 @@ namespace FinTrustDLL.DataLayer
             DataSet dsLoans = null;
             try
             {
-                sql = "SELECT customer_table.*,loan_table.* FROM customer_table INNER JOIN loan_table ON customer_table.customerId = loan_table.customerId where loan_table.status = 'Submitted' and loan_table.loanId='"+ loanId + "'";
+                
+                sql = "SELECT customer_table.*,loan_table.* FROM customer_table INNER JOIN loan_table ON customer_table.customerId = loan_table.customerId where loan_table.loanId='" + loanId + "'";
                 con = DBHelper.GetConnection();
                 con.Open();
                 dsLoans = new DataSet();
@@ -179,6 +180,7 @@ namespace FinTrustDLL.DataLayer
             try
             {
                 sql = "SELECT customer_table.*,loan_table.* FROM customer_table INNER JOIN loan_table ON customer_table.customerId = loan_table.customerId where loan_table.status = 'Submitted'";
+               // sql = "select * from loan_table where status='Submitted'";
                 con = DBHelper.GetConnection();
                 con.Open();
                 dsLoans = new DataSet();
@@ -198,5 +200,100 @@ namespace FinTrustDLL.DataLayer
 
             return dsLoans;
         }
+
+        public static int UpdateLoanStatus(string loanId, string status)
+        {
+            int output = 0;
+            string sql = "";
+            SqlConnection con = null;
+            SqlCommand cmd = null;
+            try
+            {
+
+                sql = "update loan_table set ";
+                sql = sql + "status='" + status + "' ";             
+                sql = sql + "where loanId='" + loanId + "'";
+
+                con = DBHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+
+                output = cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("Error : FinTrustBL:UpdateLoanStatus : " + ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                cmd.Dispose();
+            }
+
+            return output;
+
+        }
+
+
+        public static DataSet GetLoansLike(string likeName, string searchOption)
+        {
+            string sql = "";
+
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            DataSet dsLoans = null;
+
+            try
+            {
+                string option = "";
+                if (searchOption == "Loan ID")
+                {
+                    option = "loanId";
+
+                }
+                else if (searchOption == "Loan Type")
+                {
+                    option = "loanType";
+                }
+                else if (searchOption == "Customer ID")
+                {
+                    option = "customerId";
+                }
+                else if (searchOption == "Status")
+                {
+                    option = "status";
+                }
+
+
+                if (option == "")
+                {
+                    sql = "select * from loan_table";
+                }
+                else
+                {
+                    sql = "select * from loan_table where " + option + " like '" + likeName + "%'";
+                }
+
+                con = DBHelper.GetConnection();
+                con.Open();
+                dsLoans = new DataSet();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dsLoans);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("Error : FinTrustDL:GetLoansLike : " + ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+
+            return dsLoans;
+        }
+
     }
 }

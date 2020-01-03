@@ -34,7 +34,7 @@ namespace FinTrustApp.PresentationLayer
                 if (customerObj != null)
                 {
                     textBoxName.Text = customerObj.CustomerName;
-                
+                    textBoxAccountNumber.Text= customerObj.AccountNumber;
                 }
 
             }
@@ -132,6 +132,9 @@ namespace FinTrustApp.PresentationLayer
             return flag;
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
