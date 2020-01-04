@@ -147,7 +147,7 @@ namespace FinTrustDLL.DataLayer
             SqlConnection con = null;
             SqlDataAdapter adapter = null;
             DataSet dsLoans = null;
-            DataSet dsStudents = null;
+        
             try
             {
                 

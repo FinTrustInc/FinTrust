@@ -19,26 +19,6 @@ namespace FinTrustApp.PresentationLayer
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void labelloanpage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBoxloanamount_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Pending_Loan_Applications_Load(object sender, EventArgs e)
         {
 
@@ -59,13 +39,15 @@ namespace FinTrustApp.PresentationLayer
                 }
                 else
                 {
-                    //lblMessage.Text = "No Students Available!";
+                   lblLoanMessage.ForeColor = Color.Red;
+                   lblLoanMessage.Text = "No Students Available!";
                 }
 
             }
             catch (Exception ex)
             {
-                //lblMessage.Text = ex.Message.ToString();
+
+                Console.WriteLine(ex.Message.ToString());
             }
         }
 
@@ -135,12 +117,14 @@ namespace FinTrustApp.PresentationLayer
             if (output > 0)
             {
                 LoadLoanApplications();
-                //lblMessage.Text = "Updated Successfully.";
+                lblLoanMessage.ForeColor = Color.Green;
+                lblLoanMessage.Text = "Status Updated Successfully.";
 
             }
             else
             {
-                //lblMessage.Text = "Please Try Again";
+                lblLoanMessage.ForeColor = Color.Red;
+                lblLoanMessage.Text = "Failed! Please Try Again.";
             }
 
         }
@@ -152,7 +136,7 @@ namespace FinTrustApp.PresentationLayer
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            //lblMessage.Text = "";
+            
             DataSet dsLoans = null;
             try
             {
@@ -166,13 +150,39 @@ namespace FinTrustApp.PresentationLayer
                 }
                 else
                 {
-                    //lblMessage.Text = "No History Available!";
+                
+                    lblLoanMessage.ForeColor = Color.Red;
+                    lblLoanMessage.Text = "No History Available!";
+                   
                 }
             }
             catch (Exception ex)
             {
-                //lblMessage.Text = ex.Message.ToString();
+                Console.WriteLine(ex.Message.ToString());
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Branch_Manager BMHomeForm = new Branch_Manager();
+            BMHomeForm.Show();
+        }
+
+
+        private void checkBoxCollaterals_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxCollaterals.Checked)
+            {
+                lblStatus.Visible = true;
+                comboBoxStatus.Visible = true;
+            }
+            else
+            {
+                lblStatus.Visible = false;
+                comboBoxStatus.Visible = false;
+            }
+               
         }
     }
 

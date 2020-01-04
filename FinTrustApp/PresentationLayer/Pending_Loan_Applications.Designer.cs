@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.labelloanpage = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxSearchBy = new System.Windows.Forms.ComboBox();
@@ -45,6 +45,8 @@
             this.textBoxDate = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxRateofInterest = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.labelname = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxLoanId = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,18 +56,18 @@
             this.textBoxGuarantor = new System.Windows.Forms.TextBox();
             this.textBoxLoanAmount = new System.Windows.Forms.TextBox();
             this.textBoxCustomerId = new System.Windows.Forms.TextBox();
-            this.textBoxName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.labelcustomerID = new System.Windows.Forms.Label();
             this.labelloantype = new System.Windows.Forms.Label();
-            this.labelname = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxCollaterals = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.dgvLoanApplications = new System.Windows.Forms.DataGridView();
+            this.lblLoanHeading = new System.Windows.Forms.Label();
+            this.lblLoanMessage = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -76,23 +78,25 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.btnBack);
             this.panel2.Controls.Add(this.labelloanpage);
             this.panel2.Location = new System.Drawing.Point(1, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(983, 46);
             this.panel2.TabIndex = 21;
             // 
-            // label13
+            // btnBack
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(509, 18);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(323, 20);
-            this.label13.TabIndex = 32;
-            this.label13.Text = "loan application approval by branch manager";
+            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(30, 9);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(109, 32);
+            this.btnBack.TabIndex = 33;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // labelloanpage
             // 
@@ -100,12 +104,11 @@
             this.labelloanpage.BackColor = System.Drawing.Color.SteelBlue;
             this.labelloanpage.Font = new System.Drawing.Font("Modern No. 20", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelloanpage.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelloanpage.Location = new System.Drawing.Point(3, 9);
+            this.labelloanpage.Location = new System.Drawing.Point(379, 5);
             this.labelloanpage.Name = "labelloanpage";
             this.labelloanpage.Size = new System.Drawing.Size(231, 31);
             this.labelloanpage.TabIndex = 3;
             this.labelloanpage.Text = "Loan Applications";
-            this.labelloanpage.Click += new System.EventHandler(this.labelloanpage_Click);
             // 
             // label2
             // 
@@ -146,7 +149,7 @@
             this.panel1.Controls.Add(this.comboBoxSearchBy);
             this.panel1.Location = new System.Drawing.Point(31, 63);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(463, 100);
+            this.panel1.Size = new System.Drawing.Size(463, 94);
             this.panel1.TabIndex = 25;
             // 
             // panel3
@@ -168,6 +171,8 @@
             this.customerDetailsPanel.Controls.Add(this.textBoxDate);
             this.customerDetailsPanel.Controls.Add(this.label8);
             this.customerDetailsPanel.Controls.Add(this.textBoxRateofInterest);
+            this.customerDetailsPanel.Controls.Add(this.textBoxName);
+            this.customerDetailsPanel.Controls.Add(this.labelname);
             this.customerDetailsPanel.Controls.Add(this.label7);
             this.customerDetailsPanel.Controls.Add(this.textBoxLoanId);
             this.customerDetailsPanel.Controls.Add(this.label6);
@@ -177,13 +182,11 @@
             this.customerDetailsPanel.Controls.Add(this.textBoxGuarantor);
             this.customerDetailsPanel.Controls.Add(this.textBoxLoanAmount);
             this.customerDetailsPanel.Controls.Add(this.textBoxCustomerId);
-            this.customerDetailsPanel.Controls.Add(this.textBoxName);
             this.customerDetailsPanel.Controls.Add(this.label3);
             this.customerDetailsPanel.Controls.Add(this.label1);
             this.customerDetailsPanel.Controls.Add(this.label5);
             this.customerDetailsPanel.Controls.Add(this.labelcustomerID);
             this.customerDetailsPanel.Controls.Add(this.labelloantype);
-            this.customerDetailsPanel.Controls.Add(this.labelname);
             this.customerDetailsPanel.Location = new System.Drawing.Point(3, 3);
             this.customerDetailsPanel.Name = "customerDetailsPanel";
             this.customerDetailsPanel.Size = new System.Drawing.Size(433, 434);
@@ -255,6 +258,23 @@
             this.textBoxRateofInterest.Size = new System.Drawing.Size(100, 20);
             this.textBoxRateofInterest.TabIndex = 24;
             // 
+            // textBoxName
+            // 
+            this.textBoxName.Location = new System.Drawing.Point(291, 15);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(128, 20);
+            this.textBoxName.TabIndex = 4;
+            // 
+            // labelname
+            // 
+            this.labelname.AutoSize = true;
+            this.labelname.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelname.Location = new System.Drawing.Point(223, 13);
+            this.labelname.Name = "labelname";
+            this.labelname.Size = new System.Drawing.Size(44, 18);
+            this.labelname.TabIndex = 0;
+            this.labelname.Text = "Name";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -315,25 +335,17 @@
             // 
             // textBoxLoanAmount
             // 
-            this.textBoxLoanAmount.Location = new System.Drawing.Point(182, 62);
+            this.textBoxLoanAmount.Location = new System.Drawing.Point(147, 61);
             this.textBoxLoanAmount.Name = "textBoxLoanAmount";
             this.textBoxLoanAmount.Size = new System.Drawing.Size(237, 20);
             this.textBoxLoanAmount.TabIndex = 12;
-            this.textBoxLoanAmount.TextChanged += new System.EventHandler(this.textBoxloanamount_TextChanged);
             // 
             // textBoxCustomerId
             // 
-            this.textBoxCustomerId.Location = new System.Drawing.Point(332, 14);
+            this.textBoxCustomerId.Location = new System.Drawing.Point(109, 15);
             this.textBoxCustomerId.Name = "textBoxCustomerId";
-            this.textBoxCustomerId.Size = new System.Drawing.Size(87, 20);
+            this.textBoxCustomerId.Size = new System.Drawing.Size(103, 20);
             this.textBoxCustomerId.TabIndex = 8;
-            // 
-            // textBoxName
-            // 
-            this.textBoxName.Location = new System.Drawing.Point(80, 14);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(128, 20);
-            this.textBoxName.TabIndex = 4;
             // 
             // label3
             // 
@@ -368,7 +380,7 @@
             // 
             this.labelcustomerID.AutoSize = true;
             this.labelcustomerID.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelcustomerID.Location = new System.Drawing.Point(217, 16);
+            this.labelcustomerID.Location = new System.Drawing.Point(12, 14);
             this.labelcustomerID.Name = "labelcustomerID";
             this.labelcustomerID.Size = new System.Drawing.Size(91, 18);
             this.labelcustomerID.TabIndex = 4;
@@ -384,28 +396,19 @@
             this.labelloantype.TabIndex = 1;
             this.labelloantype.Text = " Type";
             // 
-            // labelname
+            // checkBoxCollaterals
             // 
-            this.labelname.AutoSize = true;
-            this.labelname.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelname.Location = new System.Drawing.Point(12, 12);
-            this.labelname.Name = "labelname";
-            this.labelname.Size = new System.Drawing.Size(44, 18);
-            this.labelname.TabIndex = 0;
-            this.labelname.Text = "Name";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.AliceBlue;
-            this.checkBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBox1.Location = new System.Drawing.Point(945, 558);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(13, 12);
-            this.checkBox1.TabIndex = 19;
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBoxCollaterals.AutoSize = true;
+            this.checkBoxCollaterals.BackColor = System.Drawing.Color.AliceBlue;
+            this.checkBoxCollaterals.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxCollaterals.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBoxCollaterals.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBoxCollaterals.Location = new System.Drawing.Point(945, 558);
+            this.checkBoxCollaterals.Name = "checkBoxCollaterals";
+            this.checkBoxCollaterals.Size = new System.Drawing.Size(13, 12);
+            this.checkBoxCollaterals.TabIndex = 19;
+            this.checkBoxCollaterals.UseVisualStyleBackColor = false;
+            this.checkBoxCollaterals.CheckedChanged += new System.EventHandler(this.checkBoxCollaterals_CheckedChanged);
             // 
             // label10
             // 
@@ -417,15 +420,16 @@
             this.label10.TabIndex = 29;
             this.label10.Text = "Collaterals Verified";
             // 
-            // label12
+            // lblStatus
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(522, 610);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(192, 18);
-            this.label12.TabIndex = 30;
-            this.label12.Text = "Application Approval Status";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Location = new System.Drawing.Point(522, 610);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(192, 18);
+            this.lblStatus.TabIndex = 30;
+            this.lblStatus.Text = "Application Approval Status";
+            this.lblStatus.Visible = false;
             // 
             // comboBoxStatus
             // 
@@ -434,32 +438,56 @@
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(213, 21);
             this.comboBoxStatus.TabIndex = 31;
+            this.comboBoxStatus.Visible = false;
             this.comboBoxStatus.SelectedIndexChanged += new System.EventHandler(this.comboBoxStatus_SelectedIndexChanged);
             // 
             // dgvLoanApplications
             // 
             this.dgvLoanApplications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLoanApplications.Location = new System.Drawing.Point(31, 216);
+            this.dgvLoanApplications.Location = new System.Drawing.Point(31, 228);
             this.dgvLoanApplications.Name = "dgvLoanApplications";
             this.dgvLoanApplications.Size = new System.Drawing.Size(463, 377);
             this.dgvLoanApplications.TabIndex = 32;
             this.dgvLoanApplications.SelectionChanged += new System.EventHandler(this.dgvLoanApplications_SelectionChanged);
+            // 
+            // lblLoanHeading
+            // 
+            this.lblLoanHeading.AutoSize = true;
+            this.lblLoanHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoanHeading.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblLoanHeading.Location = new System.Drawing.Point(125, 196);
+            this.lblLoanHeading.Name = "lblLoanHeading";
+            this.lblLoanHeading.Size = new System.Drawing.Size(270, 24);
+            this.lblLoanHeading.TabIndex = 33;
+            this.lblLoanHeading.Text = "Received Loan Applications";
+            // 
+            // lblLoanMessage
+            // 
+            this.lblLoanMessage.AutoSize = true;
+            this.lblLoanMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoanMessage.ForeColor = System.Drawing.Color.Green;
+            this.lblLoanMessage.Location = new System.Drawing.Point(180, 171);
+            this.lblLoanMessage.Name = "lblLoanMessage";
+            this.lblLoanMessage.Size = new System.Drawing.Size(0, 18);
+            this.lblLoanMessage.TabIndex = 34;
             // 
             // Pending_Loan_Applications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 662);
+            this.Controls.Add(this.lblLoanMessage);
+            this.Controls.Add(this.lblLoanHeading);
             this.Controls.Add(this.dgvLoanApplications);
             this.Controls.Add(this.comboBoxStatus);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxCollaterals);
             this.Name = "Pending_Loan_Applications";
-            this.Text = "Pending_Loan_Applications";
+            this.Text = "FinTrust";
             this.Load += new System.EventHandler(this.Pending_Loan_Applications_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -483,7 +511,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel customerDetailsPanel;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxCollaterals;
         private System.Windows.Forms.TextBox textBoxTerm;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxGuarantor;
@@ -509,9 +537,11 @@
         private System.Windows.Forms.TextBox textBoxDate;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.ComboBox comboBoxStatus;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dgvLoanApplications;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label lblLoanHeading;
+        private System.Windows.Forms.Label lblLoanMessage;
     }
 }

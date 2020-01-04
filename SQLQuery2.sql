@@ -1,1 +1,0 @@
-﻿SELECT customer_table.*,loan_table.* FROM customer_table INNER JOIN loan_table ON customer_table.customerId = loan_table.customerId where loan_table.status = 'Submitted'

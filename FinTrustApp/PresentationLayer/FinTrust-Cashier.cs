@@ -58,5 +58,13 @@ namespace FinTrustApp.PresentationLayer
 			objView.Show();
 			//objView.MdiParent = this;
 		}
-	}
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FinTrust_Login loginForm = new FinTrust_Login();
+            loginForm.Show();
+        }
+    }
 }

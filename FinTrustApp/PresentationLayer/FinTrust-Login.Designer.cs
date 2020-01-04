@@ -45,14 +45,22 @@
             this.lbli = new System.Windows.Forms.Label();
             this.lblnTrust = new System.Windows.Forms.Label();
             this.lblTrust = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.panelLoginHead.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLogin
             // 
-            this.panelLogin.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelLogin.BackColor = System.Drawing.Color.White;
             this.panelLogin.Controls.Add(this.labelLoginMessage);
             this.panelLogin.Controls.Add(this.textBoxUsername);
             this.panelLogin.Controls.Add(this.labelUsername);
@@ -63,9 +71,9 @@
             this.panelLogin.Controls.Add(this.labelUser);
             this.panelLogin.Controls.Add(this.comboBoxUser);
             this.panelLogin.Controls.Add(this.panelLoginHead);
-            this.panelLogin.Location = new System.Drawing.Point(559, 139);
+            this.panelLogin.Location = new System.Drawing.Point(574, 140);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(404, 412);
+            this.panelLogin.Size = new System.Drawing.Size(413, 411);
             this.panelLogin.TabIndex = 0;
             // 
             // labelLoginMessage
@@ -100,7 +108,7 @@
             // 
             this.pictureBoxProfile.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBoxProfile.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfile.Image")));
-            this.pictureBoxProfile.Location = new System.Drawing.Point(176, 98);
+            this.pictureBoxProfile.Location = new System.Drawing.Point(173, 107);
             this.pictureBoxProfile.Name = "pictureBoxProfile";
             this.pictureBoxProfile.Size = new System.Drawing.Size(58, 52);
             this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -115,7 +123,7 @@
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLogin.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonLogin.Location = new System.Drawing.Point(136, 338);
+            this.buttonLogin.Location = new System.Drawing.Point(109, 334);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(198, 58);
             this.buttonLogin.TabIndex = 5;
@@ -193,7 +201,7 @@
             this.lblF.AutoSize = true;
             this.lblF.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblF.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblF.Location = new System.Drawing.Point(632, 18);
+            this.lblF.Location = new System.Drawing.Point(685, 38);
             this.lblF.Name = "lblF";
             this.lblF.Size = new System.Drawing.Size(53, 56);
             this.lblF.TabIndex = 12;
@@ -204,7 +212,7 @@
             this.lbli.AutoSize = true;
             this.lbli.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbli.ForeColor = System.Drawing.Color.Red;
-            this.lbli.Location = new System.Drawing.Point(667, 18);
+            this.lbli.Location = new System.Drawing.Point(720, 38);
             this.lbli.Name = "lbli";
             this.lbli.Size = new System.Drawing.Size(37, 56);
             this.lbli.TabIndex = 13;
@@ -216,7 +224,7 @@
             this.lblnTrust.AutoSize = true;
             this.lblnTrust.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblnTrust.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblnTrust.Location = new System.Drawing.Point(690, 18);
+            this.lblnTrust.Location = new System.Drawing.Point(743, 38);
             this.lblnTrust.Margin = new System.Windows.Forms.Padding(0);
             this.lblnTrust.Name = "lblnTrust";
             this.lblnTrust.Size = new System.Drawing.Size(171, 56);
@@ -228,31 +236,74 @@
             this.lblTrust.AutoSize = true;
             this.lblTrust.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrust.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblTrust.Location = new System.Drawing.Point(686, 86);
+            this.lblTrust.Location = new System.Drawing.Point(727, 94);
             this.lblTrust.Name = "lblTrust";
             this.lblTrust.Size = new System.Drawing.Size(128, 18);
             this.lblTrust.TabIndex = 14;
             this.lblTrust.Text = "Tradition of Trust";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 68);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(574, 516);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(574, 662);
+            this.panel1.TabIndex = 15;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 582);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(574, 79);
+            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(573, 70);
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            // 
             // FinTrust_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelLogin);
             this.Controls.Add(this.lblTrust);
             this.Controls.Add(this.lblnTrust);
             this.Controls.Add(this.lbli);
             this.Controls.Add(this.lblF);
+            this.MaximizeBox = false;
             this.Name = "FinTrust_Login";
-            this.Text = "FinTrust_Login";
+            this.Text = "FinTrust";
             this.Load += new System.EventHandler(this.FinTrust_Login_Load);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.panelLoginHead.ResumeLayout(false);
             this.panelLoginHead.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,5 +326,9 @@
         private System.Windows.Forms.Label lbli;
         private System.Windows.Forms.Label lblnTrust;
         private System.Windows.Forms.Label lblTrust;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
