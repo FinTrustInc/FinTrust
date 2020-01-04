@@ -56,11 +56,11 @@
     <Compile Include="PresentationLayer\Branch_Manager.Designer.cs">
       <DependentUpon>Branch_Manager.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\Customer_View.cs">
+    <Compile Include="PresentationLayer\Clerk.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\Customer_View.Designer.cs">
-      <DependentUpon>Customer_View.cs</DependentUpon>
+    <Compile Include="PresentationLayer\Clerk.Designer.cs">
+      <DependentUpon>Clerk.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\FinTrust-AccountClose.cs">
       <SubType>Form</SubType>
@@ -151,8 +151,8 @@
     <EmbeddedResource Include="PresentationLayer\Branch_Manager.resx">
       <DependentUpon>Branch_Manager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Customer_View.resx">
-      <DependentUpon>Customer_View.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\Clerk.resx">
+      <DependentUpon>Clerk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FinTrust-AccountClose.resx">
       <DependentUpon>FinTrust-AccountClose.cs</DependentUpon>
