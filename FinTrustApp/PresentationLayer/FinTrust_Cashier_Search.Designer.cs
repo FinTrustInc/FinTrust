@@ -28,6 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinTrust_Cashier_Search));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dateTimePickerSearch = new System.Windows.Forms.DateTimePicker();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
@@ -52,11 +54,13 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.labelCashierSearch = new System.Windows.Forms.Label();
+            this.errorProviderSearchTransaction = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransactions)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderSearchTransaction)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,6 +99,7 @@
             this.comboBoxSearch.Size = new System.Drawing.Size(150, 21);
             this.comboBoxSearch.TabIndex = 2;
             this.comboBoxSearch.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearch_SelectedIndexChanged);
+            this.comboBoxSearch.Validating += new System.ComponentModel.CancelEventHandler(this.comboBoxSearch_Validating);
             // 
             // label1
             // 
@@ -293,6 +298,10 @@
             this.labelCashierSearch.TabIndex = 3;
             this.labelCashierSearch.Text = "ViewTransaction";
             // 
+            // errorProviderSearchTransaction
+            // 
+            this.errorProviderSearchTransaction.ContainerControl = this;
+            // 
             // FinTrust_Cashier_Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,6 +313,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.labelMessage);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FinTrust_Cashier_Search";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -317,6 +327,7 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderSearchTransaction)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,5 +358,6 @@
         private System.Windows.Forms.Label labelCashierSearch;
 		private System.Windows.Forms.DateTimePicker dateTimePickerSearch;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ErrorProvider errorProviderSearchTransaction;
     }
 }

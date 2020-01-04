@@ -434,6 +434,7 @@
             this.Controls.Add(this.buttonAccountOpenSubmit);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelAccountOpen);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FinTrust_AccountOpen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

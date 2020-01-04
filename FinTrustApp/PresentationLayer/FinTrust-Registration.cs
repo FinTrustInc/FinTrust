@@ -70,7 +70,7 @@ namespace FinTrustApp.PresentationLayer
 
                     output = FinTrustBL.InsertUserDetails(objUser);
 
-                    string Title = "FinTrust Employee Registration";
+                    string Title = "Employee Registration";
                     if (output < 0)
                     {
                         MessageBox.Show("User Registration Failed",Title);
@@ -96,7 +96,16 @@ namespace FinTrustApp.PresentationLayer
         {
             if (checkBoxUserRegister.Checked)
             {
-                if(textBoxEmployeeID.Text == string.Empty || textBoxEmployeeName.Text == string.Empty || comboBoxDesignation.SelectedIndex ==-1  || textBoxEmployeePhone.Text == string.Empty || textBoxEmployeeEmail.Text == string.Empty || textBoxEmployeeAddress.Text == string.Empty || textBoxEmployeeAadhar.Text == string.Empty || textBoxtEmployeePAN.Text == string.Empty || !(radioButtonEmployeeFemale.Checked || radioButtonEmployeeMale.Checked))
+                if (radioButtonEmployeeFemale.Checked == true || radioButtonEmployeeMale.Checked == true)
+                {
+                    errorProviderUserRegistration.SetError(radioButtonEmployeeFemale, string.Empty);
+                }
+                    
+
+
+
+
+                if (textBoxEmployeeID.Text == string.Empty || textBoxEmployeeName.Text == string.Empty || comboBoxDesignation.SelectedIndex ==-1  || textBoxEmployeePhone.Text == string.Empty || textBoxEmployeeEmail.Text == string.Empty || textBoxEmployeeAddress.Text == string.Empty || textBoxEmployeeAadhar.Text == string.Empty || textBoxtEmployeePAN.Text == string.Empty || !(radioButtonEmployeeFemale.Checked || radioButtonEmployeeMale.Checked))
                 {
                     checkBoxUserRegister.Checked = false;
                     buttonUserRegister.Enabled = false;
@@ -225,6 +234,17 @@ namespace FinTrustApp.PresentationLayer
             {
                 errorProviderUserRegistration.SetError(textBoxtEmployeePAN, string.Empty);
             }
+
+            ////////////////////////
+
+            if (radioButtonEmployeeFemale.Checked == false || radioButtonEmployeeMale.Checked == false)
+            {
+                errorProviderUserRegistration.SetError(radioButtonEmployeeFemale, "Employee gender required !");
+            }
+            else
+            {
+                errorProviderUserRegistration.SetError(radioButtonEmployeeFemale, string.Empty);
+            }
         }
 
         private void textBoxEmployeeAadhar_Validating(object sender, CancelEventArgs e)
@@ -235,22 +255,33 @@ namespace FinTrustApp.PresentationLayer
             }
             else if (textBoxEmployeeAadhar.Text.Length != 12)
             {
-                errorProviderUserRegistration.SetError(textBoxEmployeePhone, "Aadhar number should contain 12 digits !");
+                errorProviderUserRegistration.SetError(textBoxEmployeeAadhar, "Aadhar number should contain 12 digits !");
             }
             else if (!long.TryParse(textBoxEmployeeAadhar.Text, out long result))
             {
-                errorProviderUserRegistration.SetError(textBoxEmployeePhone, "Aadhar number should contain digits !");
+                errorProviderUserRegistration.SetError(textBoxEmployeeAadhar, "Aadhar number should contain digits !");
             }
             else
             {
                 errorProviderUserRegistration.SetError(textBoxEmployeeAadhar, string.Empty);
             }
+            
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             Utility.GetLastPage();
+        }
+
+        private void radioButtonEmployeeFemale_Validating(object sender, CancelEventArgs e)
+        {
+            
+        }
+
+        private void labelEmployeeGender_Validating(object sender, CancelEventArgs e)
+        {
+           
         }
     }
 }

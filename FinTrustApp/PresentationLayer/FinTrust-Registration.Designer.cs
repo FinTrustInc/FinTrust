@@ -187,6 +187,7 @@
             this.radioButtonEmployeeFemale.TabStop = true;
             this.radioButtonEmployeeFemale.Text = "Female";
             this.radioButtonEmployeeFemale.UseVisualStyleBackColor = true;
+            this.radioButtonEmployeeFemale.Validating += new System.ComponentModel.CancelEventHandler(this.radioButtonEmployeeFemale_Validating);
             // 
             // radioButtonEmployeeMale
             // 
@@ -342,6 +343,7 @@
             this.labelEmployeeGender.Size = new System.Drawing.Size(54, 18);
             this.labelEmployeeGender.TabIndex = 25;
             this.labelEmployeeGender.Text = "Gender";
+            this.labelEmployeeGender.Validating += new System.ComponentModel.CancelEventHandler(this.labelEmployeeGender_Validating);
             // 
             // labelEmployeeDOB
             // 
@@ -458,6 +460,7 @@
             this.Controls.Add(this.panelUserApplicationForm);
             this.Controls.Add(this.labelUserRegistrtionMessage);
             this.Controls.Add(this.panelRegistration);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FinTrust_Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

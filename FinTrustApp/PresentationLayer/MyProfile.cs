@@ -47,7 +47,7 @@ namespace FinTrustApp.PresentationLayer
                     textBoxEmployeeId.Text = Data[0].ToString();
                     textBoxEmployeeName.Text = Data[1].ToString();
                     textBoxDesignation.Text= Data[4].ToString();
-                    textBoxDOB.Text = Data[2].ToString();
+                    textBoxDOB.Text = Data[2].ToString().Substring(0,9);
                     textBoxGender.Text = Data[3].ToString();
                      textBoxPhone.Text = Data[5].ToString();
                     textBoxEmail.Text = Data[6].ToString();
@@ -81,6 +81,18 @@ namespace FinTrustApp.PresentationLayer
                 {
                     MessageBox.Show("Password Updation Failed!");
                 }
+            }
+            else if(pswd1 != pswd2)
+            {
+                MessageBox.Show("The specified passwords do not match.");
+            }
+            else if (pswd1.Trim()=="")
+            {
+                MessageBox.Show("Password should not be empty.");
+            }
+            else
+            {
+                MessageBox.Show("Invalid Password.");
             }
         }
     }

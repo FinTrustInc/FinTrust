@@ -91,6 +91,11 @@ namespace FinTrustApp.PresentationLayer
         {
             if (checkBoxAccountOpen.Checked)
             {
+                if (radioButtonCustomerFemale.Checked == true || radioButtonCustomerMale.Checked == true)
+                {
+                    errorProviderAccountOpen.SetError(radioButtonCustomerFemale, string.Empty);
+                }
+
                 if (textBoxCustomerName.Text == string.Empty || comboBoxAccountType.SelectedIndex == -1 || dateTimePickerCustomerDOB.Text == string.Empty || textBoxCustomerEmail.Text == string.Empty || textBoxCustomerPhone.Text == string.Empty || textBoxCustomerAddress.Text == string.Empty || textBoxCustomerAadhar.Text == string.Empty || textBoxCustomerPanNumber.Text == string.Empty || !(radioButtonCustomerFemale.Checked || radioButtonCustomerMale.Checked))
                 {
                     checkBoxAccountOpen.Checked = false;
@@ -225,6 +230,16 @@ namespace FinTrustApp.PresentationLayer
             else
             {
                 errorProviderAccountOpen.SetError(textBoxCustomerPanNumber, string.Empty);
+            }
+
+            //////////////////////
+            if (radioButtonCustomerFemale.Checked == false || radioButtonCustomerMale.Checked == false)
+            {
+                errorProviderAccountOpen.SetError(radioButtonCustomerFemale, "Employee gender required !");
+            }
+            else
+            {
+                errorProviderAccountOpen.SetError(radioButtonCustomerFemale, string.Empty);
             }
         }
 

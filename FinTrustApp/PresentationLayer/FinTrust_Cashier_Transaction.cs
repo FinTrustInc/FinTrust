@@ -114,17 +114,45 @@ namespace FinTrustApp.PresentationLayer
 
 		private void textBoxAccNo_Validating(object sender, CancelEventArgs e)
 		{
-			if (textBoxAccNo.Text == string.Empty)
-			{
-				errorProviderTransaction.SetError(textBoxAccNo, "Account no is Required.!");
-				textBoxAccNo.BackColor = Color.LightCoral;
-			}
-		}
+            
+           if (textBoxAccNo.Text == string.Empty)
+            {
+                errorProviderTransaction.SetError(textBoxAccNo, "Account number Required !");
+            }
+            else if ((textBoxAccNo.Text.Length != 6))
+            {
+                errorProviderTransaction.SetError(textBoxAccNo, "Account number should contain 6 digits !");
+            }
+            else if (!int.TryParse(textBoxAccNo.Text, out int result))
+            {
+                errorProviderTransaction.SetError(textBoxAccNo, "Account number should contain digits !");
+            }
+            else
+            {
+                errorProviderTransaction.SetError(textBoxAccNo, string.Empty);
+            }
+        }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             Utility.GetLastPage();
+        }
+
+        private void textBoxAmount_Validating(object sender, CancelEventArgs e)
+        {
+            if(textBoxAmount.Text == string.Empty)
+            {
+                errorProviderTransaction.SetError(textBoxAmount, "Transaction amount Required !");
+            }
+            else if (!long.TryParse(textBoxAmount.Text, out long result))
+            {
+                errorProviderTransaction.SetError(textBoxAmount, "Transaction amount should contain digits !");
+            }
+            else
+            {
+                errorProviderTransaction.SetError(textBoxAmount, string.Empty);
+            }
         }
     }
 }

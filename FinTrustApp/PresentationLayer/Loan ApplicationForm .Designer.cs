@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Loan_ApplicationForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxAccountNumber = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -54,8 +56,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblLoanMessage = new System.Windows.Forms.Label();
+            this.errorProviderLoanApplication = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderLoanApplication)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -342,6 +346,10 @@
             this.lblLoanMessage.Size = new System.Drawing.Size(0, 16);
             this.lblLoanMessage.TabIndex = 21;
             // 
+            // errorProviderLoanApplication
+            // 
+            this.errorProviderLoanApplication.ContainerControl = this;
+            // 
             // Loan_ApplicationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,6 +360,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.buttonsubmit);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Loan_ApplicationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -360,6 +369,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderLoanApplication)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,5 +403,6 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox textBoxAccountNumber;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ErrorProvider errorProviderLoanApplication;
     }
 }

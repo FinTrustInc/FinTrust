@@ -28,6 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer_View));
             this.labelCashierSearch = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
@@ -66,11 +68,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.errorProviderCustomerView = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderCustomerView)).BeginInit();
             this.SuspendLayout();
             // 
             // labelCashierSearch
@@ -426,6 +430,7 @@
             this.comboBoxSearch.Name = "comboBoxSearch";
             this.comboBoxSearch.Size = new System.Drawing.Size(150, 21);
             this.comboBoxSearch.TabIndex = 2;
+            this.comboBoxSearch.Validating += new System.ComponentModel.CancelEventHandler(this.comboBoxSearch_Validating_1);
             // 
             // label1
             // 
@@ -457,6 +462,10 @@
             this.panel1.Size = new System.Drawing.Size(367, 128);
             this.panel1.TabIndex = 22;
             // 
+            // errorProviderCustomerView
+            // 
+            this.errorProviderCustomerView.ContainerControl = this;
+            // 
             // Customer_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -468,6 +477,7 @@
             this.Controls.Add(this.labelMessage);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Customer_View";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -481,6 +491,7 @@
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderCustomerView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -526,5 +537,6 @@
 		private System.Windows.Forms.TextBox textBoxAccName;
 		private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ErrorProvider errorProviderCustomerView;
     }
 }

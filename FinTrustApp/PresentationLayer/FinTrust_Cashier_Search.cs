@@ -153,5 +153,18 @@ namespace FinTrustApp.PresentationLayer
             this.Hide();
             Utility.GetLastPage();
         }
+
+        private void comboBoxSearch_Validating(object sender, CancelEventArgs e)
+        {
+            
+          if (comboBoxSearch.SelectedIndex == -1)
+            {
+                errorProviderSearchTransaction.SetError(comboBoxSearch, "Select type !");
+            }
+            else
+            {
+                errorProviderSearchTransaction.SetError(comboBoxSearch, string.Empty);
+            }
+        }
     }
 }

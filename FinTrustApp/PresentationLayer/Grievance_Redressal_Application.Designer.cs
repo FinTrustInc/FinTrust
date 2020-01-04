@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Grievance_Redressal_Application));
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -49,9 +50,11 @@
             this.buttonsubmit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelMessage = new System.Windows.Forms.Label();
+            this.errorProviderGrievanceRegistration = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderGrievanceRegistration)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -135,6 +138,7 @@
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.Size = new System.Drawing.Size(348, 20);
             this.textBoxTitle.TabIndex = 25;
+            this.textBoxTitle.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxTitle_Validating);
             // 
             // labeltitle
             // 
@@ -154,6 +158,7 @@
             this.richTextBoxGrievance.TabIndex = 20;
             this.richTextBoxGrievance.Text = "";
             this.richTextBoxGrievance.TextChanged += new System.EventHandler(this.richTextBoxGrievance_TextChanged);
+            this.richTextBoxGrievance.Validating += new System.ComponentModel.CancelEventHandler(this.richTextBoxGrievance_Validating);
             // 
             // checkBoxDeclerationGrievance
             // 
@@ -167,6 +172,7 @@
             this.checkBoxDeclerationGrievance.Size = new System.Drawing.Size(13, 12);
             this.checkBoxDeclerationGrievance.TabIndex = 19;
             this.checkBoxDeclerationGrievance.UseVisualStyleBackColor = false;
+            this.checkBoxDeclerationGrievance.CheckedChanged += new System.EventHandler(this.checkBoxDeclerationGrievance_CheckedChanged);
             // 
             // label8
             // 
@@ -270,6 +276,10 @@
             this.labelMessage.TabIndex = 25;
             this.labelMessage.Text = "____________________";
             // 
+            // errorProviderGrievanceRegistration
+            // 
+            this.errorProviderGrievanceRegistration.ContainerControl = this;
+            // 
             // Grievance_Redressal_Application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,6 +291,7 @@
             this.Controls.Add(this.buttonsubmit);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Grievance_Redressal_Application";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -291,6 +302,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderGrievanceRegistration)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,5 +329,6 @@
         private System.Windows.Forms.TextBox textBoxGrievanceID;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ErrorProvider errorProviderGrievanceRegistration;
     }
 }

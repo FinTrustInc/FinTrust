@@ -79,5 +79,52 @@ namespace FinTrustApp.PresentationLayer
             this.Hide();
             Utility.GetLastPage();
         }
+
+        private void textBoxTitle_Validating(object sender, CancelEventArgs e)
+        {
+            if (textBoxTitle.Text == string.Empty)
+            {
+                errorProviderGrievanceRegistration.SetError(textBoxTitle, "Title required !");
+            }
+            else
+            {
+                errorProviderGrievanceRegistration.SetError(textBoxTitle, string.Empty);
+            }
+
+        }
+
+        private void richTextBoxGrievance_Validating(object sender, CancelEventArgs e)
+        {
+         
+         if (richTextBoxGrievance.Text == string.Empty)
+            {
+                errorProviderGrievanceRegistration.SetError(richTextBoxGrievance, "Grievance description required !");
+            }
+            else
+            {
+                errorProviderGrievanceRegistration.SetError(richTextBoxGrievance, string.Empty);
+            }
+        }
+
+        private void checkBoxDeclerationGrievance_CheckedChanged(object sender, EventArgs e)
+        {
+           
+           if (checkBoxDeclerationGrievance.Checked)
+            {
+                if (textBoxcustomerid.Text == string.Empty || textBoxTitle.Text == string.Empty || richTextBoxGrievance.Text == string.Empty)
+                {
+                    checkBoxDeclerationGrievance.Checked = false;
+                    buttonsubmit.Enabled = false;
+                }
+                else
+                {
+                    buttonsubmit.Enabled = true;
+                }
+            }
+            else
+            {
+                buttonsubmit.Enabled = false;
+            }
+        }
     }
 }

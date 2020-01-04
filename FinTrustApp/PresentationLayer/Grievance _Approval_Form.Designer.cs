@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Grievance__Approval_Form));
             this.comboBoxAction = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -63,11 +65,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.labelMessage = new System.Windows.Forms.Label();
+            this.errorProviderGrievanceApproval = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridGriev)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderGrievanceApproval)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxAction
@@ -378,6 +382,7 @@
             this.comboBoxSearchBy.Size = new System.Drawing.Size(287, 21);
             this.comboBoxSearchBy.TabIndex = 23;
             this.comboBoxSearchBy.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearchBy_SelectedIndexChanged);
+            this.comboBoxSearchBy.Validating += new System.ComponentModel.CancelEventHandler(this.comboBoxSearchBy_Validating);
             // 
             // searchField
             // 
@@ -415,6 +420,10 @@
             this.labelMessage.TabIndex = 40;
             this.labelMessage.Text = "___________";
             // 
+            // errorProviderGrievanceApproval
+            // 
+            this.errorProviderGrievanceApproval.ContainerControl = this;
+            // 
             // Grievance__Approval_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -430,6 +439,7 @@
             this.Controls.Add(this.dataGridGriev);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Grievance__Approval_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -443,6 +453,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderGrievanceApproval)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -485,5 +496,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxGrievanceid;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ErrorProvider errorProviderGrievanceApproval;
     }
 }

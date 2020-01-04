@@ -102,6 +102,7 @@
             this.textBoxAmount.Name = "textBoxAmount";
             this.textBoxAmount.Size = new System.Drawing.Size(243, 20);
             this.textBoxAmount.TabIndex = 8;
+            this.textBoxAmount.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxAmount_Validating);
             // 
             // radioButtonDebit
             // 
@@ -285,6 +286,7 @@
             this.Controls.Add(this.labelMessage);
             this.Controls.Add(this.buttonPay);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FinTrust_Cashier_Transaction";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
