@@ -232,7 +232,7 @@ namespace FinTrustApp.PresentationLayer
                 errorProviderAccountOpen.SetError(textBoxCustomerPanNumber, string.Empty);
             }
 
-            //////////////////////
+            
             if (radioButtonCustomerFemale.Checked == false || radioButtonCustomerMale.Checked == false)
             {
                 errorProviderAccountOpen.SetError(radioButtonCustomerFemale, "Employee gender required !");
