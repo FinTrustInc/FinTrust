@@ -38,13 +38,17 @@ namespace FinTrustApp.PresentationLayer
         private void buttonsubmit_Click(object sender, EventArgs e)
         {
             Grievance objGrievance = null;
+            objGrievance = new Grievance();
             int output = 0;
             try
             {
-                objGrievance = new Grievance();
+                objGrievance.GrievanceID = textBoxGrievanceID.Text;
                 objGrievance.CustomerId = textBoxcustomerid.Text;
-                objGrievance.AccountNumber = richTextBoxGrievance.Text;
-                objGrievance.GrievanceID = "GRV1001";
+                objGrievance.GrievanceDetail = richTextBoxGrievance.Text;
+                objGrievance.Title = textBoxTitle.Text;
+                objGrievance.Status = "Submitted";
+
+
                 DateTime today = DateTime.Today;
 
                 output = GrievanceBL.InsertGrievanceDetails(objGrievance);
@@ -62,6 +66,12 @@ namespace FinTrustApp.PresentationLayer
             {
                 labelMessage.Text = ex.Message.ToString();
             }
+        }
+
+        private void Grievance_Redressal_Application_Load(object sender, EventArgs e)
+        {
+            textBoxGrievanceID.Text = GrievanceBL.GetNewGrievanceId().ToString();
+           
         }
     }
 }
