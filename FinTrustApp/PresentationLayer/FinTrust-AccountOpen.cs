@@ -94,16 +94,16 @@ namespace FinTrustApp.PresentationLayer
                 if (textBoxCustomerName.Text == string.Empty || comboBoxAccountType.SelectedIndex == -1 || dateTimePickerCustomerDOB.Text == string.Empty || textBoxCustomerEmail.Text == string.Empty || textBoxCustomerPhone.Text == string.Empty || textBoxCustomerAddress.Text == string.Empty || textBoxCustomerAadhar.Text == string.Empty || textBoxCustomerPanNumber.Text == string.Empty || !(radioButtonCustomerFemale.Checked || radioButtonCustomerMale.Checked))
                 {
                     checkBoxAccountOpen.Checked = false;
-                    buttonAccountOpenSubmit.Visible = false;
+                    buttonAccountOpenSubmit.Enabled = false;
                 }
                 else
                 {
-                    buttonAccountOpenSubmit.Visible = true;
+                    buttonAccountOpenSubmit.Enabled = true;
                 }
             }                
             else
             {
-                buttonAccountOpenSubmit.Visible = false;
+                buttonAccountOpenSubmit.Enabled = false;
             }
         }
 
@@ -123,7 +123,7 @@ namespace FinTrustApp.PresentationLayer
 
         private void comboBoxAccountType_Validating(object sender, CancelEventArgs e)
         {
-            if (comboBoxAccountType.Text == string.Empty)
+            if (comboBoxAccountType.SelectedIndex==-1)
             {
                 errorProviderAccountOpen.SetError(comboBoxAccountType, "Account type required !");
             }
@@ -182,9 +182,13 @@ namespace FinTrustApp.PresentationLayer
             {
                 errorProviderAccountOpen.SetError(textBoxCustomerPhone, "Customer phone number required !");
             }
-            else if ((textBoxCustomerPhone.Text.Length != 10) || (!long.TryParse(textBoxCustomerPhone.Text, out long result)))
+            else if (textBoxCustomerPhone.Text.Length != 10)
             {
-                errorProviderAccountOpen.SetError(textBoxCustomerPhone, "Enter valid phone number !");
+                errorProviderAccountOpen.SetError(textBoxCustomerPhone, "Phone number should contain 10 digits !");
+            }
+            else if (!long.TryParse(textBoxCustomerPhone.Text, out long result))
+            {
+                errorProviderAccountOpen.SetError(textBoxCustomerPhone, "Phone number should contain digits !");
             }
             else
             {
@@ -198,9 +202,13 @@ namespace FinTrustApp.PresentationLayer
             {
                 errorProviderAccountOpen.SetError(textBoxCustomerAadhar, "Customer aadhar number required !");
             }
-            else if ((textBoxCustomerAadhar.Text.Length != 12) || (!long.TryParse(textBoxCustomerAadhar.Text, out long result)))
+            else if (textBoxCustomerAadhar.Text.Length != 12)
             {
-                errorProviderAccountOpen.SetError(textBoxCustomerAadhar, "Enter valid aadhar number !");
+                errorProviderAccountOpen.SetError(textBoxCustomerAadhar, "Aadhar number should contain 12 digits !");
+            }
+            else if (!long.TryParse(textBoxCustomerAadhar.Text, out long result))
+            {
+                errorProviderAccountOpen.SetError(textBoxCustomerAadhar, "Aadhar number should contain digits !");
             }
             else
             {

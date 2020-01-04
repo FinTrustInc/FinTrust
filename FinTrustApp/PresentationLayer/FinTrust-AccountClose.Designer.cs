@@ -176,6 +176,7 @@
             // 
             this.buttonAccountClosureSubmit.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonAccountClosureSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAccountClosureSubmit.Enabled = false;
             this.buttonAccountClosureSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAccountClosureSubmit.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAccountClosureSubmit.Location = new System.Drawing.Point(843, 594);
@@ -184,7 +185,6 @@
             this.buttonAccountClosureSubmit.TabIndex = 54;
             this.buttonAccountClosureSubmit.Text = "SUBMIT";
             this.buttonAccountClosureSubmit.UseVisualStyleBackColor = false;
-            this.buttonAccountClosureSubmit.Visible = false;
             this.buttonAccountClosureSubmit.Click += new System.EventHandler(this.buttonAccountClosureSubmit_Click);
             // 
             // pictureBox1

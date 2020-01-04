@@ -24,11 +24,11 @@ namespace FinTrustApp.PresentationLayer
         {
             if (checkBoxAccountClosure.Checked)
             {
-                buttonAccountClosureSubmit.Visible = true;
+                buttonAccountClosureSubmit.Enabled = true;
             }
             else
             {
-                buttonAccountClosureSubmit.Visible = false;
+                buttonAccountClosureSubmit.Enabled = false;
             }
         }
 
