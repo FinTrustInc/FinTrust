@@ -57,7 +57,7 @@ namespace FinTrustApp.PresentationLayer
         {
             this.Hide();
 
-            Help helpForm = new Help();
+            About helpForm = new About();
             helpForm.Show();
         }
 
@@ -93,6 +93,14 @@ namespace FinTrustApp.PresentationLayer
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FinTrust_Login loginForm = new FinTrust_Login();
+            loginForm.Show();
         }
     }
 }
