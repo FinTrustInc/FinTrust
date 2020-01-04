@@ -102,6 +102,7 @@
 			this.textBoxAmount.Name = "textBoxAmount";
 			this.textBoxAmount.Size = new System.Drawing.Size(243, 20);
 			this.textBoxAmount.TabIndex = 8;
+			this.textBoxAmount.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxAmount_Validating);
 			// 
 			// radioButtonDebit
 			// 
@@ -116,6 +117,7 @@
 			this.radioButtonDebit.TabStop = true;
 			this.radioButtonDebit.Text = "Debit";
 			this.radioButtonDebit.UseVisualStyleBackColor = false;
+			this.radioButtonDebit.Validating += new System.ComponentModel.CancelEventHandler(this.radioButtonDebit_Validating);
 			// 
 			// radioButtonCredit
 			// 
