@@ -45,7 +45,7 @@ namespace FinTrustBLL.BusinessLayer
                 }
                 else
                 {
-                    newCustomerId = "CUS1001";
+                    newCustomerId = "1001";
                 }
             }
             catch (Exception ex)
@@ -69,7 +69,7 @@ namespace FinTrustBLL.BusinessLayer
                 }
                 else
                 {
-                    newAccountNumber = "1001";
+                    newAccountNumber = "100001";
                 }
             }
             catch (Exception ex)

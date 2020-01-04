@@ -27,7 +27,7 @@ namespace FinTrustApp.PresentationLayer
 
             try
             {
-                if (textBoxEmployeeID.Text == string.Empty || textBoxEmployeeName.Text == string.Empty || comboBoxDesignation.SelectedIndex == -1 || textBoxEmployeePhone.Text == string.Empty || textBoxEmployeeEmail.Text == string.Empty || textBoxEmployeeAddress.Text == string.Empty || textBoxEmployeeAadhar.Text == string.Empty || textBoxtEmployeePAN.Text == string.Empty ||(radioButtonEmployeeMale.Checked==radioButtonEmployeeFemale.Checked==false))
+                if (textBoxEmployeeID.Text == string.Empty || textBoxEmployeeName.Text == string.Empty || comboBoxDesignation.SelectedIndex == -1 || textBoxEmployeePhone.Text == string.Empty || textBoxEmployeeEmail.Text == string.Empty || textBoxEmployeeAddress.Text == string.Empty || textBoxEmployeeAadhar.Text == string.Empty || textBoxtEmployeePAN.Text == string.Empty || !(radioButtonEmployeeFemale.Checked || radioButtonEmployeeMale.Checked))
                 {
                     
                     foreach (Control control in this.Controls)
@@ -69,16 +69,16 @@ namespace FinTrustApp.PresentationLayer
                     objUser.PanNumber = textBoxtEmployeePAN.Text;
 
                     output = FinTrustBL.InsertUserDetails(objUser);
+
+                    string Title = "FinTrust Employee Registration";
                     if (output < 0)
                     {
-                        labelUserRegistrtionMessage.Text = "FAIL";
+                        MessageBox.Show("User Registration Failed",Title);
                     }
                     else
                     {
-                        labelUserRegistrtionMessage.Text = "SUCCESS";
-                        this.Hide();
-                        Branch_Manager BMHomeForm = new Branch_Manager();
-                        BMHomeForm.Show();
+                        MessageBox.Show("User Registration Success",Title);
+                        
                     }
 
 
@@ -96,7 +96,7 @@ namespace FinTrustApp.PresentationLayer
         {
             if (checkBoxUserRegister.Checked)
             {
-                if(textBoxEmployeeID.Text == string.Empty || textBoxEmployeeName.Text == string.Empty || comboBoxDesignation.SelectedIndex ==-1  || textBoxEmployeePhone.Text == string.Empty || textBoxEmployeeEmail.Text == string.Empty || textBoxEmployeeAddress.Text == string.Empty || textBoxEmployeeAadhar.Text == string.Empty || textBoxtEmployeePAN.Text == string.Empty)
+                if(textBoxEmployeeID.Text == string.Empty || textBoxEmployeeName.Text == string.Empty || comboBoxDesignation.SelectedIndex ==-1  || textBoxEmployeePhone.Text == string.Empty || textBoxEmployeeEmail.Text == string.Empty || textBoxEmployeeAddress.Text == string.Empty || textBoxEmployeeAadhar.Text == string.Empty || textBoxtEmployeePAN.Text == string.Empty || !(radioButtonEmployeeFemale.Checked || radioButtonEmployeeMale.Checked))
                 {
                     checkBoxUserRegister.Checked = false;
                     buttonUserRegister.Visible = false;
@@ -228,6 +228,10 @@ namespace FinTrustApp.PresentationLayer
             if (textBoxEmployeeAadhar.Text == string.Empty)
             {
                 errorProviderUserRegistration.SetError(textBoxEmployeeAadhar, "Employee aadhar number required !");
+            }
+            else if ((textBoxEmployeeAadhar.Text.Length != 12) || (!long.TryParse(textBoxEmployeeAadhar.Text, out long result)))
+            {
+                errorProviderUserRegistration.SetError(textBoxEmployeePhone, "Enter valid aadhar number !");
             }
             else
             {

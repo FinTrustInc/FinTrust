@@ -68,18 +68,16 @@ namespace FinTrustApp.PresentationLayer
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     output = CustomerBL.DeleteAccountDetails(textBoxAccountNumber.Text);
-                    this.Hide();
-                    Clerk ClerkHomeForm = new Clerk();
-                    ClerkHomeForm.Show();
 
+                    string Title = "Account Handling";
                     if (output > 0)
                     {
-                        labelCustomerAccountCloseMessage.Text = "Account deleted successfully !!!";
+                        MessageBox.Show("Account deleted successfully !!!",Title);
                        
                     }
                     else
                     {
-                        labelCustomerAccountCloseMessage.Text = "Try again later !!!";
+                        MessageBox.Show("Try again later !!!",Title);
                     }
                 }
 

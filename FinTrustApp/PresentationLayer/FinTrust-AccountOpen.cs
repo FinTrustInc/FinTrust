@@ -26,7 +26,7 @@ namespace FinTrustApp.PresentationLayer
             Customer objCustomer = null;
             try
             {
-                if (textBoxCustomerName.Text == string.Empty || comboBoxAccountType.SelectedIndex == -1 || dateTimePickerCustomerDOB.Text == string.Empty || textBoxCustomerEmail.Text == string.Empty || textBoxCustomerPhone.Text == string.Empty || textBoxCustomerAddress.Text == string.Empty || textBoxCustomerAadhar.Text == string.Empty || textBoxCustomerPanNumber.Text == string.Empty )
+                if (textBoxCustomerName.Text == string.Empty || comboBoxAccountType.SelectedIndex == -1 || dateTimePickerCustomerDOB.Text == string.Empty || textBoxCustomerEmail.Text == string.Empty || textBoxCustomerPhone.Text == string.Empty || textBoxCustomerAddress.Text == string.Empty || textBoxCustomerAadhar.Text == string.Empty || textBoxCustomerPanNumber.Text == string.Empty || !(radioButtonCustomerFemale.Checked || radioButtonCustomerMale.Checked))
                 {
                     foreach (Control control in this.Controls)
                     {
@@ -67,17 +67,15 @@ namespace FinTrustApp.PresentationLayer
                     DateTime today = DateTime.Today;
                     objCustomer.DateOfAccount = today.ToString();
                     output = CustomerBL.InsertCustomerDetails(objCustomer);
-                    this.Hide();
-                    Clerk ClerkHomeForm = new Clerk();
-                    ClerkHomeForm.Show();
 
+                    string Title = "Account Handling";
                     if (output < 0)
                     {
-                        labelCustomerMessage.Text = "FAIL";
+                        MessageBox.Show("Account Creation Failed",Title);
                     }
                     else
                     {
-                        labelCustomerMessage.Text = "SUCCESS";
+                        MessageBox.Show("Account Creation Success",Title);
                     }
                 }
             }
@@ -93,7 +91,7 @@ namespace FinTrustApp.PresentationLayer
         {
             if (checkBoxAccountOpen.Checked)
             {
-                if (textBoxCustomerName.Text == string.Empty || comboBoxAccountType.SelectedIndex == -1 || dateTimePickerCustomerDOB.Text == string.Empty || textBoxCustomerEmail.Text == string.Empty || textBoxCustomerPhone.Text == string.Empty || textBoxCustomerAddress.Text == string.Empty || textBoxCustomerAadhar.Text == string.Empty || textBoxCustomerPanNumber.Text == string.Empty)
+                if (textBoxCustomerName.Text == string.Empty || comboBoxAccountType.SelectedIndex == -1 || dateTimePickerCustomerDOB.Text == string.Empty || textBoxCustomerEmail.Text == string.Empty || textBoxCustomerPhone.Text == string.Empty || textBoxCustomerAddress.Text == string.Empty || textBoxCustomerAadhar.Text == string.Empty || textBoxCustomerPanNumber.Text == string.Empty || !(radioButtonCustomerFemale.Checked || radioButtonCustomerMale.Checked))
                 {
                     checkBoxAccountOpen.Checked = false;
                     buttonAccountOpenSubmit.Visible = false;
@@ -199,6 +197,10 @@ namespace FinTrustApp.PresentationLayer
             if (textBoxCustomerAadhar.Text == string.Empty)
             {
                 errorProviderAccountOpen.SetError(textBoxCustomerAadhar, "Customer aadhar number required !");
+            }
+            else if ((textBoxCustomerAadhar.Text.Length != 12) || (!long.TryParse(textBoxCustomerAadhar.Text, out long result)))
+            {
+                errorProviderAccountOpen.SetError(textBoxCustomerAadhar, "Enter valid aadhar number !");
             }
             else
             {

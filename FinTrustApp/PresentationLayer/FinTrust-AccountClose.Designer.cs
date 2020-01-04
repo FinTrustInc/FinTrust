@@ -246,7 +246,7 @@
             // 
             // buttonAccountNumberSearch
             // 
-            this.buttonAccountNumberSearch.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.buttonAccountNumberSearch.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.buttonAccountNumberSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAccountNumberSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAccountNumberSearch.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
