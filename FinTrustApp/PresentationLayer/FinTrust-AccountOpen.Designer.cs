@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinTrust_AccountOpen));
             this.panelAccountOpen = new System.Windows.Forms.Panel();
-            this.checkBoxLoanApplication = new System.Windows.Forms.CheckBox();
+            this.checkBoxAccountOpen = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxAccountType = new System.Windows.Forms.ComboBox();
             this.labelAccountType = new System.Windows.Forms.Label();
-            this.radioButtonFemale = new System.Windows.Forms.RadioButton();
-            this.radioButtonMale = new System.Windows.Forms.RadioButton();
+            this.radioButtonCustomerFemale = new System.Windows.Forms.RadioButton();
+            this.radioButtonCustomerMale = new System.Windows.Forms.RadioButton();
             this.dateTimePickerCustomerDOB = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxCustomerPanNumber = new System.Windows.Forms.TextBox();
             this.textBoxCustomerAadhar = new System.Windows.Forms.TextBox();
             this.textBoxCustomerAddress = new System.Windows.Forms.TextBox();
             this.textBoxCustomerEmail = new System.Windows.Forms.TextBox();
@@ -56,27 +57,30 @@
             this.labelCustomerName = new System.Windows.Forms.Label();
             this.labelloanpage = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAccountOpenSubmit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelCustomerMessage = new System.Windows.Forms.Label();
+            this.errorProviderAccountOpen = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelAccountOpen.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAccountOpen)).BeginInit();
             this.SuspendLayout();
             // 
             // panelAccountOpen
             // 
             this.panelAccountOpen.BackColor = System.Drawing.Color.White;
-            this.panelAccountOpen.Controls.Add(this.checkBoxLoanApplication);
+            this.panelAccountOpen.Controls.Add(this.checkBoxAccountOpen);
             this.panelAccountOpen.Controls.Add(this.label7);
             this.panelAccountOpen.Controls.Add(this.label6);
             this.panelAccountOpen.Controls.Add(this.label8);
             this.panelAccountOpen.Controls.Add(this.label5);
             this.panelAccountOpen.Controls.Add(this.comboBoxAccountType);
             this.panelAccountOpen.Controls.Add(this.labelAccountType);
-            this.panelAccountOpen.Controls.Add(this.radioButtonFemale);
-            this.panelAccountOpen.Controls.Add(this.radioButtonMale);
+            this.panelAccountOpen.Controls.Add(this.radioButtonCustomerFemale);
+            this.panelAccountOpen.Controls.Add(this.radioButtonCustomerMale);
             this.panelAccountOpen.Controls.Add(this.dateTimePickerCustomerDOB);
-            this.panelAccountOpen.Controls.Add(this.textBox1);
+            this.panelAccountOpen.Controls.Add(this.textBoxCustomerPanNumber);
             this.panelAccountOpen.Controls.Add(this.textBoxCustomerAadhar);
             this.panelAccountOpen.Controls.Add(this.textBoxCustomerAddress);
             this.panelAccountOpen.Controls.Add(this.textBoxCustomerEmail);
@@ -95,18 +99,19 @@
             this.panelAccountOpen.Size = new System.Drawing.Size(914, 472);
             this.panelAccountOpen.TabIndex = 3;
             // 
-            // checkBoxLoanApplication
+            // checkBoxAccountOpen
             // 
-            this.checkBoxLoanApplication.AutoSize = true;
-            this.checkBoxLoanApplication.BackColor = System.Drawing.Color.AliceBlue;
-            this.checkBoxLoanApplication.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkBoxLoanApplication.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBoxLoanApplication.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBoxLoanApplication.Location = new System.Drawing.Point(25, 377);
-            this.checkBoxLoanApplication.Name = "checkBoxLoanApplication";
-            this.checkBoxLoanApplication.Size = new System.Drawing.Size(13, 12);
-            this.checkBoxLoanApplication.TabIndex = 54;
-            this.checkBoxLoanApplication.UseVisualStyleBackColor = false;
+            this.checkBoxAccountOpen.AutoSize = true;
+            this.checkBoxAccountOpen.BackColor = System.Drawing.Color.AliceBlue;
+            this.checkBoxAccountOpen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxAccountOpen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBoxAccountOpen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBoxAccountOpen.Location = new System.Drawing.Point(25, 377);
+            this.checkBoxAccountOpen.Name = "checkBoxAccountOpen";
+            this.checkBoxAccountOpen.Size = new System.Drawing.Size(13, 12);
+            this.checkBoxAccountOpen.TabIndex = 54;
+            this.checkBoxAccountOpen.UseVisualStyleBackColor = false;
+            this.checkBoxAccountOpen.CheckedChanged += new System.EventHandler(this.checkBoxLoanApplication_CheckedChanged);
             // 
             // label7
             // 
@@ -151,7 +156,6 @@
             this.label5.Text = "---------------------------------------------------------------------------------" +
     "--------------------------------------------------------------------------------" +
     "-----------";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // comboBoxAccountType
             // 
@@ -160,10 +164,11 @@
             this.comboBoxAccountType.Items.AddRange(new object[] {
             "Savings Account",
             "Current Account"});
-            this.comboBoxAccountType.Location = new System.Drawing.Point(646, 26);
+            this.comboBoxAccountType.Location = new System.Drawing.Point(643, 14);
             this.comboBoxAccountType.Name = "comboBoxAccountType";
             this.comboBoxAccountType.Size = new System.Drawing.Size(244, 26);
             this.comboBoxAccountType.TabIndex = 47;
+            this.comboBoxAccountType.Validating += new System.ComponentModel.CancelEventHandler(this.comboBoxAccountType_Validating);
             // 
             // labelAccountType
             // 
@@ -174,65 +179,67 @@
             this.labelAccountType.Size = new System.Drawing.Size(96, 18);
             this.labelAccountType.TabIndex = 46;
             this.labelAccountType.Text = "Account Type";
-            this.labelAccountType.Click += new System.EventHandler(this.labelAccountType_Click);
             // 
-            // radioButtonFemale
+            // radioButtonCustomerFemale
             // 
-            this.radioButtonFemale.AutoSize = true;
-            this.radioButtonFemale.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonFemale.Location = new System.Drawing.Point(337, 75);
-            this.radioButtonFemale.Name = "radioButtonFemale";
-            this.radioButtonFemale.Size = new System.Drawing.Size(72, 22);
-            this.radioButtonFemale.TabIndex = 41;
-            this.radioButtonFemale.TabStop = true;
-            this.radioButtonFemale.Text = "Female";
-            this.radioButtonFemale.UseVisualStyleBackColor = true;
+            this.radioButtonCustomerFemale.AutoSize = true;
+            this.radioButtonCustomerFemale.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCustomerFemale.Location = new System.Drawing.Point(337, 75);
+            this.radioButtonCustomerFemale.Name = "radioButtonCustomerFemale";
+            this.radioButtonCustomerFemale.Size = new System.Drawing.Size(72, 22);
+            this.radioButtonCustomerFemale.TabIndex = 41;
+            this.radioButtonCustomerFemale.TabStop = true;
+            this.radioButtonCustomerFemale.Text = "Female";
+            this.radioButtonCustomerFemale.UseVisualStyleBackColor = true;
             // 
-            // radioButtonMale
+            // radioButtonCustomerMale
             // 
-            this.radioButtonMale.AutoSize = true;
-            this.radioButtonMale.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonMale.Location = new System.Drawing.Point(189, 73);
-            this.radioButtonMale.Name = "radioButtonMale";
-            this.radioButtonMale.Size = new System.Drawing.Size(58, 22);
-            this.radioButtonMale.TabIndex = 40;
-            this.radioButtonMale.TabStop = true;
-            this.radioButtonMale.Text = "Male";
-            this.radioButtonMale.UseVisualStyleBackColor = true;
+            this.radioButtonCustomerMale.AutoSize = true;
+            this.radioButtonCustomerMale.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCustomerMale.Location = new System.Drawing.Point(189, 73);
+            this.radioButtonCustomerMale.Name = "radioButtonCustomerMale";
+            this.radioButtonCustomerMale.Size = new System.Drawing.Size(58, 22);
+            this.radioButtonCustomerMale.TabIndex = 40;
+            this.radioButtonCustomerMale.TabStop = true;
+            this.radioButtonCustomerMale.Text = "Male";
+            this.radioButtonCustomerMale.UseVisualStyleBackColor = true;
             // 
             // dateTimePickerCustomerDOB
             // 
             this.dateTimePickerCustomerDOB.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerCustomerDOB.Location = new System.Drawing.Point(646, 91);
+            this.dateTimePickerCustomerDOB.Location = new System.Drawing.Point(643, 73);
             this.dateTimePickerCustomerDOB.Name = "dateTimePickerCustomerDOB";
             this.dateTimePickerCustomerDOB.Size = new System.Drawing.Size(244, 25);
             this.dateTimePickerCustomerDOB.TabIndex = 39;
+            this.dateTimePickerCustomerDOB.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimePickerCustomerDOB_Validating);
             // 
-            // textBox1
+            // textBoxCustomerPanNumber
             // 
-            this.textBox1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(656, 251);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 25);
-            this.textBox1.TabIndex = 38;
+            this.textBoxCustomerPanNumber.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCustomerPanNumber.Location = new System.Drawing.Point(643, 251);
+            this.textBoxCustomerPanNumber.Name = "textBoxCustomerPanNumber";
+            this.textBoxCustomerPanNumber.Size = new System.Drawing.Size(244, 25);
+            this.textBoxCustomerPanNumber.TabIndex = 38;
+            this.textBoxCustomerPanNumber.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxCustomerPanNumber_Validating);
             // 
             // textBoxCustomerAadhar
             // 
             this.textBoxCustomerAadhar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerAadhar.Location = new System.Drawing.Point(189, 258);
+            this.textBoxCustomerAadhar.Location = new System.Drawing.Point(189, 251);
             this.textBoxCustomerAadhar.Name = "textBoxCustomerAadhar";
             this.textBoxCustomerAadhar.Size = new System.Drawing.Size(234, 25);
             this.textBoxCustomerAadhar.TabIndex = 37;
+            this.textBoxCustomerAadhar.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxCustomerAadhar_Validating);
             // 
             // textBoxCustomerAddress
             // 
             this.textBoxCustomerAddress.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerAddress.Location = new System.Drawing.Point(643, 135);
+            this.textBoxCustomerAddress.Location = new System.Drawing.Point(643, 124);
             this.textBoxCustomerAddress.Multiline = true;
             this.textBoxCustomerAddress.Name = "textBoxCustomerAddress";
-            this.textBoxCustomerAddress.Size = new System.Drawing.Size(247, 94);
+            this.textBoxCustomerAddress.Size = new System.Drawing.Size(244, 94);
             this.textBoxCustomerAddress.TabIndex = 36;
-            this.textBoxCustomerAddress.TextChanged += new System.EventHandler(this.textBoxCustomerAddress_TextChanged);
+            this.textBoxCustomerAddress.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxCustomerAddress_Validating);
             // 
             // textBoxCustomerEmail
             // 
@@ -241,28 +248,31 @@
             this.textBoxCustomerEmail.Name = "textBoxCustomerEmail";
             this.textBoxCustomerEmail.Size = new System.Drawing.Size(234, 25);
             this.textBoxCustomerEmail.TabIndex = 35;
+            this.textBoxCustomerEmail.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxCustomerEmail_Validating);
             // 
             // textBoxCustomerPhone
             // 
             this.textBoxCustomerPhone.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerPhone.Location = new System.Drawing.Point(189, 193);
+            this.textBoxCustomerPhone.Location = new System.Drawing.Point(189, 186);
             this.textBoxCustomerPhone.Name = "textBoxCustomerPhone";
             this.textBoxCustomerPhone.Size = new System.Drawing.Size(234, 25);
             this.textBoxCustomerPhone.TabIndex = 34;
+            this.textBoxCustomerPhone.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxCustomerPhone_Validating);
             // 
             // textBoxCustomerName
             // 
             this.textBoxCustomerName.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCustomerName.Location = new System.Drawing.Point(189, 19);
             this.textBoxCustomerName.Name = "textBoxCustomerName";
-            this.textBoxCustomerName.Size = new System.Drawing.Size(220, 25);
+            this.textBoxCustomerName.Size = new System.Drawing.Size(234, 25);
             this.textBoxCustomerName.TabIndex = 33;
+            this.textBoxCustomerName.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxCustomerName_Validating);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(477, 261);
+            this.label1.Location = new System.Drawing.Point(478, 258);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 18);
             this.label1.TabIndex = 31;
@@ -359,19 +369,20 @@
             this.panel2.Size = new System.Drawing.Size(983, 45);
             this.panel2.TabIndex = 21;
             // 
-            // button1
+            // buttonAccountOpenSubmit
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(852, 598);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 51);
-            this.button1.TabIndex = 50;
-            this.button1.Text = "SUBMIT";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonAccountOpenSubmit.BackColor = System.Drawing.Color.SteelBlue;
+            this.buttonAccountOpenSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAccountOpenSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAccountOpenSubmit.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAccountOpenSubmit.Location = new System.Drawing.Point(852, 598);
+            this.buttonAccountOpenSubmit.Name = "buttonAccountOpenSubmit";
+            this.buttonAccountOpenSubmit.Size = new System.Drawing.Size(100, 51);
+            this.buttonAccountOpenSubmit.TabIndex = 50;
+            this.buttonAccountOpenSubmit.Text = "SUBMIT";
+            this.buttonAccountOpenSubmit.UseVisualStyleBackColor = false;
+            this.buttonAccountOpenSubmit.Visible = false;
+            this.buttonAccountOpenSubmit.Click += new System.EventHandler(this.buttonAccountOpenSubmit_Click);
             // 
             // pictureBox1
             // 
@@ -383,14 +394,29 @@
             this.pictureBox1.TabIndex = 51;
             this.pictureBox1.TabStop = false;
             // 
+            // labelCustomerMessage
+            // 
+            this.labelCustomerMessage.AutoSize = true;
+            this.labelCustomerMessage.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCustomerMessage.ForeColor = System.Drawing.Color.Maroon;
+            this.labelCustomerMessage.Location = new System.Drawing.Point(392, 66);
+            this.labelCustomerMessage.Name = "labelCustomerMessage";
+            this.labelCustomerMessage.Size = new System.Drawing.Size(0, 14);
+            this.labelCustomerMessage.TabIndex = 52;
+            // 
+            // errorProviderAccountOpen
+            // 
+            this.errorProviderAccountOpen.ContainerControl = this;
+            // 
             // FinTrust_AccountOpen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.labelCustomerMessage);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonAccountOpenSubmit);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelAccountOpen);
             this.Name = "FinTrust_AccountOpen";
@@ -400,14 +426,16 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAccountOpen)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panelAccountOpen;
-        private System.Windows.Forms.RadioButton radioButtonFemale;
-        private System.Windows.Forms.RadioButton radioButtonMale;
+        private System.Windows.Forms.RadioButton radioButtonCustomerFemale;
+        private System.Windows.Forms.RadioButton radioButtonCustomerMale;
         private System.Windows.Forms.DateTimePicker dateTimePickerCustomerDOB;
         private System.Windows.Forms.TextBox textBoxCustomerAadhar;
         private System.Windows.Forms.TextBox textBoxCustomerAddress;
@@ -423,16 +451,18 @@
         private System.Windows.Forms.Label labelCustomerName;
         private System.Windows.Forms.ComboBox comboBoxAccountType;
         private System.Windows.Forms.Label labelAccountType;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxCustomerPanNumber;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelloanpage;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAccountOpenSubmit;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checkBoxLoanApplication;
+        private System.Windows.Forms.CheckBox checkBoxAccountOpen;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelCustomerMessage;
+        private System.Windows.Forms.ErrorProvider errorProviderAccountOpen;
     }
 }

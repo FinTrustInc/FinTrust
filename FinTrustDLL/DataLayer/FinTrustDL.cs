@@ -148,8 +148,9 @@ namespace FinTrustDLL.DataLayer
 			}
 			return objCustomer;
 		}
+        //************************** INSERT USER DETAILS ******************************
 
-        public static int UserInsert(User objUser)
+        public static int InsertUserDetails(User objUser)
         {
             int output = 0;
             string sql = "";
@@ -179,7 +180,7 @@ namespace FinTrustDLL.DataLayer
             }
             catch (Exception ex)
             {
-                Console.Out.WriteLine("******Error:FinTrustDL.cs:UserInsert" + ex.Message.ToString());
+                Console.Out.WriteLine("******Error:FinTrustDL.cs:InsertUserDetails" + ex.Message.ToString());
             }
             finally
             {

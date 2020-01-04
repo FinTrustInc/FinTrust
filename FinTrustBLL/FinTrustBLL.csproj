@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\CustomerBL.cs" />
     <Compile Include="BusinessLayer\FinTrustBL.cs" />
     <Compile Include="BusinessLayer\GrievanceBL.cs" />
     <Compile Include="BusinessLayer\LoanBL.cs" />

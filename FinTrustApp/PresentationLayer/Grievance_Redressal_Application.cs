@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FinTrustBLL.BusinessLayer;
-using FinTrustBLL.BusinessLayer;
+
 
 namespace FinTrustApp.PresentationLayer
 {

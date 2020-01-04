@@ -60,7 +60,6 @@
             this.labelUserRegistrtionMessage = new System.Windows.Forms.Label();
             this.errorProviderUserRegistration = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelUserApplicationForm = new System.Windows.Forms.Panel();
-            this.btnBack = new System.Windows.Forms.Button();
             this.labelUserApplicationForm = new System.Windows.Forms.Label();
             this.buttonUserRegister = new System.Windows.Forms.Button();
             this.pictureBoxRegistration = new System.Windows.Forms.PictureBox();
@@ -116,6 +115,7 @@
             this.checkBoxUserRegister.Size = new System.Drawing.Size(13, 12);
             this.checkBoxUserRegister.TabIndex = 51;
             this.checkBoxUserRegister.UseVisualStyleBackColor = false;
+            this.checkBoxUserRegister.CheckedChanged += new System.EventHandler(this.checkBoxUserRegister_CheckedChanged);
             // 
             // labelPara2
             // 
@@ -173,7 +173,6 @@
             this.comboBoxDesignation.Name = "comboBoxDesignation";
             this.comboBoxDesignation.Size = new System.Drawing.Size(234, 26);
             this.comboBoxDesignation.TabIndex = 42;
-            this.comboBoxDesignation.Text = "           - - - Select - - -";
             this.comboBoxDesignation.Validating += new System.ComponentModel.CancelEventHandler(this.comboBoxDesignation_Validating);
             // 
             // radioButtonEmployeeFemale
@@ -212,7 +211,7 @@
             // textBoxtEmployeePAN
             // 
             this.textBoxtEmployeePAN.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxtEmployeePAN.Location = new System.Drawing.Point(645, 332);
+            this.textBoxtEmployeePAN.Location = new System.Drawing.Point(636, 328);
             this.textBoxtEmployeePAN.Name = "textBoxtEmployeePAN";
             this.textBoxtEmployeePAN.Size = new System.Drawing.Size(234, 25);
             this.textBoxtEmployeePAN.TabIndex = 38;
@@ -225,7 +224,6 @@
             this.textBoxEmployeeAadhar.Name = "textBoxEmployeeAadhar";
             this.textBoxEmployeeAadhar.Size = new System.Drawing.Size(234, 25);
             this.textBoxEmployeeAadhar.TabIndex = 37;
-            this.textBoxEmployeeAadhar.TextChanged += new System.EventHandler(this.textBoxEmployeeAadhar_TextChanged);
             this.textBoxEmployeeAadhar.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxEmployeeAadhar_Validating);
             // 
             // textBoxEmployeeAddress
@@ -379,7 +377,7 @@
             this.labelUserRegistrtionMessage.AutoSize = true;
             this.labelUserRegistrtionMessage.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUserRegistrtionMessage.ForeColor = System.Drawing.Color.Maroon;
-            this.labelUserRegistrtionMessage.Location = new System.Drawing.Point(445, 28);
+            this.labelUserRegistrtionMessage.Location = new System.Drawing.Point(434, 54);
             this.labelUserRegistrtionMessage.Name = "labelUserRegistrtionMessage";
             this.labelUserRegistrtionMessage.Size = new System.Drawing.Size(0, 14);
             this.labelUserRegistrtionMessage.TabIndex = 3;
@@ -391,25 +389,11 @@
             // panelUserApplicationForm
             // 
             this.panelUserApplicationForm.BackColor = System.Drawing.Color.SteelBlue;
-            this.panelUserApplicationForm.Controls.Add(this.btnBack);
             this.panelUserApplicationForm.Controls.Add(this.labelUserApplicationForm);
             this.panelUserApplicationForm.Location = new System.Drawing.Point(1, 2);
             this.panelUserApplicationForm.Name = "panelUserApplicationForm";
             this.panelUserApplicationForm.Size = new System.Drawing.Size(983, 49);
             this.panelUserApplicationForm.TabIndex = 22;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack.Location = new System.Drawing.Point(33, 14);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(109, 32);
-            this.btnBack.TabIndex = 24;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // labelUserApplicationForm
             // 
@@ -435,6 +419,7 @@
             this.buttonUserRegister.TabIndex = 46;
             this.buttonUserRegister.Text = "REGISTER";
             this.buttonUserRegister.UseVisualStyleBackColor = false;
+            this.buttonUserRegister.Visible = false;
             this.buttonUserRegister.Click += new System.EventHandler(this.buttonUserRegister_Click);
             // 
             // pictureBoxRegistration
@@ -495,7 +480,6 @@
         private System.Windows.Forms.Label labelEmployeeName;
         private System.Windows.Forms.Label labelEmployeeID;
         private System.Windows.Forms.Label labelUserRegistrtionMessage;
-        public System.Windows.Forms.ErrorProvider errorProviderUserRegistration;
         private System.Windows.Forms.Panel panelUserApplicationForm;
         private System.Windows.Forms.Label labelUserApplicationForm;
         private System.Windows.Forms.Button buttonUserRegister;
@@ -505,6 +489,6 @@
         private System.Windows.Forms.Label labelPara2;
         private System.Windows.Forms.CheckBox checkBoxUserRegister;
         private System.Windows.Forms.PictureBox pictureBoxRegistration;
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ErrorProvider errorProviderUserRegistration;
     }
 }
