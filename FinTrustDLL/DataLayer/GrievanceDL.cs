@@ -7,12 +7,13 @@ using FinTrustDTO.DTO;
 using System.Data.SqlClient;
 using FinTrustDLL.Helper;
 using System.Data;
+using System.Windows.Forms;
 
 namespace FinTrustDLL.DataLayer
 {
     public class GrievanceDL
     {
-        public static int InsertTransactionDetails(Grievance objGrievance)
+        public static int InsertGrievanceDetails(Grievance objGrievance)
         {
             int output = 0;
             string sql = "";
@@ -20,11 +21,12 @@ namespace FinTrustDLL.DataLayer
             SqlCommand cmd = null;
             try
             {
-                sql = "insert into grievance_table(customerId,grievanceDetail,grievanceID) values(";
+                sql = "insert into grievance_table(customerId,grievanceDetail,grievanceID,title) values(";
                 sql = sql + "'" + objGrievance.CustomerId + "',";
                 sql = sql + "'" + objGrievance.GrievanceDetail + "',";
-                sql = sql + "'" + objGrievance.GrievanceID + ")";
-                
+                sql = sql + "'" + objGrievance.GrievanceID + "',";
+                sql = sql + "'" + objGrievance.Title + "')";
+
 
                 con = DBHelper.GetConnection();
                 con.Open();
@@ -59,7 +61,7 @@ namespace FinTrustDLL.DataLayer
                 adapter = new SqlDataAdapter(sql, con);
                 adapter.Fill(dsGrievance);
 
-                if (dsGrievance.Tables[0].Rows.Count > 0)
+                if (dsGrievance.Tables[0].Rows.Count > 0) //Grievance ID  is present
                 {
                     Data = dsGrievance.Tables[0].Rows[0].ItemArray;
                     lastgrievanceID = Data[0].ToString();
@@ -77,5 +79,100 @@ namespace FinTrustDLL.DataLayer
 
             return lastgrievanceID;
         }
+
+        public static DataSet GetBasicGrievanceDetails()
+        {
+            string sql = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            DataSet dsGrieve = null;
+            try
+            {
+                sql = "select customer_table.*,grievance_table.grievanceDetail,grievance_table.grievanceID,grievance_table.title FROM customer_table INNER JOIN grievance_table ON customer_table.customerId = grievance_table.customerId ";
+                // sql = "select * from loan_table where status='Submitted'";
+                con = DBHelper.GetConnection();
+                con.Open();
+                dsGrieve = new DataSet();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dsGrieve);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("Error : GrievanceDL:GetBasicGrievanceDetails : " + ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+
+            return dsGrieve;
+        }
+        
+         public static void InsertStatus(Grievance objectGrievane)
+        {
+            
+            string sql = "";
+            SqlConnection con = null;
+            SqlCommand cmd = null;
+            try
+            {
+                sql = "update grievance_table set status=" + objectGrievane.Status + "where grievanceID=" + objectGrievane.GrievanceID;
+
+
+                con = DBHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+              
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("Error : GrievanceDL : InsertStatus() " + ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                cmd.Dispose();
+                string Title = "Grievance Status";
+                MessageBox.Show("Grievance Status is Updated",Title);
+            }
+        }
+        public static DataSet GetGrievanceLike(string category, string like)
+        {
+            string sql = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            DataSet dsGrievance = null;
+            try
+            {
+                if (category == "customerId" || category == "accountNumber" || category == "customerName")
+                {
+                    sql = "SELECT grievance_table.grievanceID,customer_table.customerId,customer_table.customerName,grievance_table.title,customer_table.accountNumber FROM customer_table JOIN grievance_table on customer_table.customerId=grievance_table.customerId WHERE customer_table." + category + " like '" + like + "%'";
+                }
+
+                else if (category == "grievanceID")
+                {
+                    sql = "SELECT grievance_table.grievanceID,customer_table.customerId,customer_table.customerName,grievance_table.title,customer_table.accountNumber FROM customer_table JOIN grievance_table on customer_table.customerId=grievance_table.customerId WHERE grievance_table." + category + " like '" + like + "%'";
+                    
+                }
+                con = DBHelper.GetConnection();
+                con.Open();
+                dsGrievance = new DataSet();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dsGrievance);
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine(" Error : GrievanceDL : GetGrievanceLike() " + ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+            return dsGrievance;
+        }
+
     }
 }
