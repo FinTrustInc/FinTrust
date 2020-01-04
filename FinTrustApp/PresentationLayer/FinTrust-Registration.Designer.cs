@@ -411,15 +411,15 @@
             // 
             this.buttonUserRegister.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonUserRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonUserRegister.Enabled = false;
             this.buttonUserRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUserRegister.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUserRegister.Location = new System.Drawing.Point(859, 570);
+            this.buttonUserRegister.Location = new System.Drawing.Point(872, 569);
             this.buttonUserRegister.Name = "buttonUserRegister";
             this.buttonUserRegister.Size = new System.Drawing.Size(100, 51);
             this.buttonUserRegister.TabIndex = 46;
             this.buttonUserRegister.Text = "REGISTER";
             this.buttonUserRegister.UseVisualStyleBackColor = false;
-            this.buttonUserRegister.Visible = false;
             this.buttonUserRegister.Click += new System.EventHandler(this.buttonUserRegister_Click);
             // 
             // pictureBoxRegistration

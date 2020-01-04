@@ -167,5 +167,17 @@ namespace FinTrustApp.PresentationLayer
 
 
 }
+
+        private void comboBoxSearchBy_Validating(object sender, CancelEventArgs e)
+        {
+            if (comboBoxSearchBy.SelectedIndex == -1)
+            {
+                errorProviderGrievanceApproval.SetError(comboBoxSearchBy, "Select type !");
+            }
+            else
+            {
+                errorProviderGrievanceApproval.SetError(comboBoxSearchBy, string.Empty);
+            }
+        }
     }
 }

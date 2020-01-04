@@ -28,8 +28,10 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+            this.components = new System.ComponentModel.Container();
             this.labelCashierSearch = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.comboBoxAccType = new System.Windows.Forms.ComboBox();
@@ -65,12 +67,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.errorProviderCustomerView = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderCustomerView)).BeginInit();
             this.SuspendLayout();
             // 
             // labelCashierSearch
@@ -94,6 +97,19 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(983, 49);
             this.panel5.TabIndex = 26;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(37, 10);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(109, 32);
+            this.btnBack.TabIndex = 23;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // panel4
             // 
@@ -413,6 +429,7 @@
             this.comboBoxSearch.Name = "comboBoxSearch";
             this.comboBoxSearch.Size = new System.Drawing.Size(150, 21);
             this.comboBoxSearch.TabIndex = 2;
+            this.comboBoxSearch.Validating += new System.ComponentModel.CancelEventHandler(this.comboBoxSearch_Validating);
             // 
             // label1
             // 
@@ -444,18 +461,9 @@
             this.panel1.Size = new System.Drawing.Size(367, 128);
             this.panel1.TabIndex = 22;
             // 
-            // btnBack
+            // errorProviderCustomerView
             // 
-            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack.Location = new System.Drawing.Point(37, 10);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(109, 32);
-            this.btnBack.TabIndex = 23;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.errorProviderCustomerView.ContainerControl = this;
             // 
             // Customer_View
             // 
@@ -479,6 +487,7 @@
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderCustomerView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -524,5 +533,6 @@
 		private System.Windows.Forms.TextBox textBoxAccName;
 		private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ErrorProvider errorProviderCustomerView;
     }
 }
