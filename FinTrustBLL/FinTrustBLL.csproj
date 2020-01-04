@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="BusinessLayer\FinTrustBL.cs" />
     <Compile Include="BusinessLayer\LoanBL.cs" />
+    <Compile Include="BusinessLayer\TransactionBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
