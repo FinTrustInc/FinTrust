@@ -89,6 +89,7 @@ namespace FinTrustDLL.DataLayer
 		
 		//----------------------------------------------------------------------------------------------------------------
 		//----------------------------- Update Balance amount after each transaction -------------------------------------
+
 		public static double GetBalance(string accountNumber)
 		{
 			string sql = "";
@@ -125,6 +126,7 @@ namespace FinTrustDLL.DataLayer
 
 			return balance;
 		}
+
 		//----------------------------------------------------------------------------------------------------------------
 		//----------------------------- Update Balance amount after each transaction -------------------------------------
 
@@ -171,11 +173,11 @@ namespace FinTrustDLL.DataLayer
 			{
 				if (category == "customerId" || category == "accountNumber" || category == "customerName")
 				{
-					sql = "SELECT customer_table.customerId, customer_table.accountNumber, customer_table.customerName,transaction_table.transactionId,transaction_table.transactionType,transaction_table.transactionDate,transaction_table.transactionAmount,customer_table.balanceAmount FROM customer_table CROSS JOIN transaction_table where customer_table." + category + " like '" + like + "%'";
+					sql = "SELECT transaction_table.transactionId, customer_table.accountNumber, customer_table.customerName,transaction_table.transactionDate,transaction_table.transactionAmount,transaction_table.transactionType,customer_table.balanceAmount FROM customer_table CROSS JOIN transaction_table where customer_table." + category + " like '" + like + "%'";
 				}
 				else
 				{
-					sql = "SELECT customer_table.customerId, customer_table.accountNumber, customer_table.customerName,transaction_table.transactionId,transaction_table.transactionType,transaction_table.transactionDate,transaction_table.transactionAmount,customer_table.balanceAmount FROM customer_table CROSS JOIN transaction_table where transaction_table." + category + " like '" + like + "%'";
+					sql = "SELECT transaction_table.transactionId, customer_table.accountNumber, customer_table.customerName,transaction_table.transactionDate,transaction_table.transactionAmount,transaction_table.transactionType,customer_table.balanceAmount FROM customer_table CROSS JOIN transaction_table where transaction_table." + category + " like '" + like + "%'";
 				}
 				con = DBHelper.GetConnection();
 				con.Open();
@@ -197,6 +199,7 @@ namespace FinTrustDLL.DataLayer
 
 		//----------------------------------------------------------------------------------------------------------
 		//----------------------------- Search for a Transaction with transaction date -----------------------------
+
 		public static DataSet GetTransactionsLikeDate(string category, string like, string searchDate)
 		{
 			string sql = "";
@@ -207,11 +210,11 @@ namespace FinTrustDLL.DataLayer
 			{
 				if (category == "customerId" || category == "accountNumber" || category == "customerName")
 				{
-					sql = "SELECT customer_table.customerId, customer_table.accountNumber, customer_table.customerName,transaction_table.transactionId,transaction_table.transactionType,transaction_table.transactionDate,transaction_table.transactionAmount,customer_table.balanceAmount FROM customer_table CROSS JOIN transaction_table where customer_table." + category + " like '" + like + "%' and transactionDate = '" + searchDate + "'";
+					sql = "SELECT transaction_table.transactionId, customer_table.accountNumber, customer_table.customerName,transaction_table.transactionDate,transaction_table.transactionAmount,transaction_table.transactionType,customer_table.balanceAmount FROM customer_table CROSS JOIN transaction_table where customer_table." + category + " like '" + like + "%' and transactionDate = '" + searchDate + "'";
 				}
 				else
 				{
-					sql = "SELECT customer_table.customerId, customer_table.accountNumber, customer_table.customerName,transaction_table.transactionId,transaction_table.transactionType,transaction_table.transactionDate,transaction_table.transactionAmount,customer_table.balanceAmount FROM customer_table CROSS JOIN transaction_table where transaction_table." + category + " like '" + like + "%' and transactionDate = '" + searchDate + "'";
+					sql = "SELECT transaction_table.transactionId, customer_table.accountNumber, customer_table.customerName,transaction_table.transactionDate,transaction_table.transactionAmount,transaction_table.transactionType,customer_table.balanceAmount FROM customer_table CROSS JOIN transaction_table where transaction_table." + category + " like '" + like + "%' and transactionDate = '" + searchDate + "'";
 				}
 				con = DBHelper.GetConnection();
 				con.Open();
@@ -230,6 +233,7 @@ namespace FinTrustDLL.DataLayer
 			}
 			return dsTransactions;
 		}
+
 		//----------------------------------------------------------------------------------------------------------------
 		//----------------------------- Generate Account Name after entering Account No ----------------------------------
 
@@ -265,6 +269,7 @@ namespace FinTrustDLL.DataLayer
 
 		//--------------------------------------------------------------------------------------------------------------
 		//----------------------------- Search for a Customer ----------------------------------------------------------
+
 		public static DataSet GetCustomersLike(string category, string like)
 		{
 			string sql = "";
