@@ -57,8 +57,7 @@ namespace FinTrustApp.PresentationLayer
         {
             this.Hide();
 
-            Help helpForm = new Help();
-            helpForm.Show();
+           
         }
 
         private void greivanceRedressalToolStripMenuItem_Click(object sender, EventArgs e)

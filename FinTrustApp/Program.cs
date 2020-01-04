@@ -17,7 +17,7 @@ namespace FinTrustApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Grievance__Approval_Form());
+            Application.Run(new About());
         }
     }
 }

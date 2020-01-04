@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PresentationLayer\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\Branch_Manager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,12 +134,6 @@
     <Compile Include="PresentationLayer\Grievance_Redressal_Application.Designer.cs">
       <DependentUpon>Grievance_Redressal_Application.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\Help.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\Help.Designer.cs">
-      <DependentUpon>Help.cs</DependentUpon>
-    </Compile>
     <Compile Include="PresentationLayer\Loan ApplicationForm .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +154,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PresentationLayer\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Branch_Manager.resx">
       <DependentUpon>Branch_Manager.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,9 +195,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Grievance_Redressal_Application.resx">
       <DependentUpon>Grievance_Redressal_Application.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Help.resx">
-      <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Loan ApplicationForm .resx">
       <DependentUpon>Loan ApplicationForm .cs</DependentUpon>

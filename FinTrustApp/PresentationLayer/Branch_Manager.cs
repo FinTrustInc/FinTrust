@@ -55,9 +55,6 @@ namespace FinTrustApp.PresentationLayer
         private void helpToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             this.Hide();
-
-            Help helpForm = new Help();
-            helpForm.Show();
         }
     }
 }
