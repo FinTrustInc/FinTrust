@@ -99,17 +99,17 @@ namespace FinTrustApp.PresentationLayer
                 if(textBoxEmployeeID.Text == string.Empty || textBoxEmployeeName.Text == string.Empty || comboBoxDesignation.SelectedIndex ==-1  || textBoxEmployeePhone.Text == string.Empty || textBoxEmployeeEmail.Text == string.Empty || textBoxEmployeeAddress.Text == string.Empty || textBoxEmployeeAadhar.Text == string.Empty || textBoxtEmployeePAN.Text == string.Empty || !(radioButtonEmployeeFemale.Checked || radioButtonEmployeeMale.Checked))
                 {
                     checkBoxUserRegister.Checked = false;
-                    buttonUserRegister.Visible = false;
+                    buttonUserRegister.Enabled = false;
                 }
                 else
                 {
-                    buttonUserRegister.Visible = true;
+                    buttonUserRegister.Enabled = true;
                 }
                 
             }
             else
             {
-                buttonUserRegister.Visible = false;
+                buttonUserRegister.Enabled = false;
             }
         }
 
@@ -143,7 +143,7 @@ namespace FinTrustApp.PresentationLayer
         {
             if (dateTimePickerEmployeeDOB.Text == string.Empty)
             {
-                errorProviderUserRegistration.SetError(dateTimePickerEmployeeDOB, "Employee date of birth required !");
+                errorProviderUserRegistration.SetError(dateTimePickerEmployeeDOB, "Employee DOB required !");
             }
             else
             {
@@ -153,7 +153,7 @@ namespace FinTrustApp.PresentationLayer
 
         private void comboBoxDesignation_Validating(object sender, CancelEventArgs e)
         {
-            if (comboBoxDesignation.Text == string.Empty)
+            if (comboBoxDesignation.SelectedIndex==-1)
             {
                 errorProviderUserRegistration.SetError(comboBoxDesignation, "Employee designation required !");
             }
@@ -169,9 +169,13 @@ namespace FinTrustApp.PresentationLayer
             {
                 errorProviderUserRegistration.SetError(textBoxEmployeePhone, "Employee phone number required !");
             }
-            else if ((textBoxEmployeePhone.Text.Length != 10) || (!long.TryParse(textBoxEmployeePhone.Text, out long result)))
+            else if (textBoxEmployeePhone.Text.Length != 10)
             {
-                errorProviderUserRegistration.SetError(textBoxEmployeePhone, "Enter valid phone number !");
+                errorProviderUserRegistration.SetError(textBoxEmployeePhone, "Phone number should contain 10 digits !");
+            }
+            else if (!long.TryParse(textBoxEmployeePhone.Text, out long result))
+            {
+                errorProviderUserRegistration.SetError(textBoxEmployeePhone, "Phone number should contain digits !");
             }
             else
             {
@@ -229,9 +233,13 @@ namespace FinTrustApp.PresentationLayer
             {
                 errorProviderUserRegistration.SetError(textBoxEmployeeAadhar, "Employee aadhar number required !");
             }
-            else if ((textBoxEmployeeAadhar.Text.Length != 12) || (!long.TryParse(textBoxEmployeeAadhar.Text, out long result)))
+            else if (textBoxEmployeeAadhar.Text.Length != 12)
             {
-                errorProviderUserRegistration.SetError(textBoxEmployeePhone, "Enter valid aadhar number !");
+                errorProviderUserRegistration.SetError(textBoxEmployeePhone, "Aadhar number should contain 12 digits !");
+            }
+            else if (!long.TryParse(textBoxEmployeeAadhar.Text, out long result))
+            {
+                errorProviderUserRegistration.SetError(textBoxEmployeePhone, "Aadhar number should contain digits !");
             }
             else
             {

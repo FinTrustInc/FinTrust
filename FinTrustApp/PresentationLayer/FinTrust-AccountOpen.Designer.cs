@@ -373,6 +373,7 @@
             // 
             this.buttonAccountOpenSubmit.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonAccountOpenSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAccountOpenSubmit.Enabled = false;
             this.buttonAccountOpenSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAccountOpenSubmit.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAccountOpenSubmit.Location = new System.Drawing.Point(852, 598);
@@ -381,7 +382,6 @@
             this.buttonAccountOpenSubmit.TabIndex = 50;
             this.buttonAccountOpenSubmit.Text = "SUBMIT";
             this.buttonAccountOpenSubmit.UseVisualStyleBackColor = false;
-            this.buttonAccountOpenSubmit.Visible = false;
             this.buttonAccountOpenSubmit.Click += new System.EventHandler(this.buttonAccountOpenSubmit_Click);
             // 
             // pictureBox1
