@@ -80,6 +80,7 @@
     <Compile Include="DataLayer\FinTrustDL.cs" />
     <Compile Include="DataLayer\GrievanceDL.cs" />
     <Compile Include="DataLayer\LoanDL.cs" />
+    <Compile Include="DataLayer\TransactionDL.cs" />
     <Compile Include="Helper\DBHelper.cs" />
     <Compile Include="Helper\UtilityHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -55,7 +55,6 @@ namespace FinTrustApp.PresentationLayer
 		private void viewTransactionsToolStripMenuItem_Click_1(object sender, EventArgs e)
 		{
 			
-			//objView.MdiParent = this;
 		}
 	}
 }
