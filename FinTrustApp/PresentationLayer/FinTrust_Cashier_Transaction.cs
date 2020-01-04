@@ -18,6 +18,7 @@ namespace FinTrustApp.PresentationLayer
 		{
 			InitializeComponent();
 		}
+
 		//---------------------------------------------------------------------------------------------------------------
 		//----------------------------- Insert a Transaction ------------------------------------------------------------
 
@@ -42,20 +43,58 @@ namespace FinTrustApp.PresentationLayer
 				}
 				objTransaction.TransactionAmount = Convert.ToInt64(textBoxAmount.Text);
 
-				output = TransactionBL.InsertTransactionDetails(objTransaction);
+				//--------------------------------------------------------------------------------------------------------------
+				//------------------------------ Get Balance Amount ------------------------------------------------------------
 
-				if (output > 0)
+				double balance = TransactionBL.GetBalance(objTransaction.AccountNumber, objTransaction.TransactionType, objTransaction.TransactionAmount);
+				if (balance > 0)
 				{
-					labelMessage.Text = "DATA ADDED SUCCESSFULLY";
-					
-					//----------------------------- Update Balance amount after each transaction -------------------------------------
-					TransactionBL.UpdateBalanceAmount(objTransaction.AccountNumber, objTransaction.TransactionType, objTransaction.TransactionAmount);
+					output = TransactionBL.InsertTransactionDetails(objTransaction);
+
+					if (output > 0)
+					{
+						string title = "Financial Transaction";
+						string message = "Transactiontion Successful";
+						MessageBoxButtons buttons = MessageBoxButtons.OK;
+						DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Asterisk);
+						if (result == DialogResult.OK)
+						{
+							textBoxTransactionId.Text = TransactionBL.GetNewTransactionId().ToString();
+							textBoxAccNo.Clear();
+							textBoxAccName.Clear();
+							radioButtonCredit.Checked = radioButtonDebit.Checked = false;
+							textBoxAmount.Clear();
+						}
+
+						//----------------------------- Update Balance amount after each transaction -------------------------------------
+						TransactionBL.UpdateBalanceAmount(objTransaction.AccountNumber, balance);
+					}
+					else
+					{
+						string title = "Financial Transaction";
+						string message = "Transactiontion Failed";
+						MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+						DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Error);
+						if (result == DialogResult.Retry)
+						{
+							textBoxAccNo.Clear();
+							textBoxAccName.Clear();
+							radioButtonCredit.Checked = radioButtonDebit.Checked = false;
+							textBoxAmount.Clear();
+						}
+					}
 				}
 				else
 				{
-					labelMessage.Text = "INSERTION FAILED";
+					string title = "Financial Transaction";
+					string message = "Insufficient Balance";
+					MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+					DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Error);
+					if (result == DialogResult.Retry)
+					{
+						textBoxAmount.Clear();
+					}
 				}
-
 			}
 			catch (Exception ex)
 			{
@@ -67,7 +106,7 @@ namespace FinTrustApp.PresentationLayer
 		private void FinTrust_Cashier_Transaction_Load(object sender, EventArgs e)
 		{
 			//---------------------Get new Transaction Id for next transaction-------------------------
-			textBoxTransactionId.Text = FinTrustBL.GetNewTransactionId().ToString();
+			textBoxTransactionId.Text = TransactionBL.GetNewTransactionId().ToString();
 		}
 
 		private void textBoxTransactionId_TextChanged(object sender, EventArgs e)
@@ -84,9 +123,10 @@ namespace FinTrustApp.PresentationLayer
         {
 
         }
+
 		//----------------------------------------------------------------------------------------------------------------
 		//----------------------------- Generate Account Name after entering Account No ----------------------------------
-		//----
+
 		private void textBoxAccNo_KeyUp(object sender, KeyEventArgs e)
 		{
 			try
@@ -111,6 +151,9 @@ namespace FinTrustApp.PresentationLayer
 		{
 			
 		}
+
+		//---------------------------------------------------------------------------------------
+		//----------------------- Validation ----------------------------------------------------
 
 		private void textBoxAccNo_Validating(object sender, CancelEventArgs e)
 		{

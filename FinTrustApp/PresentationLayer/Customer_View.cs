@@ -24,18 +24,22 @@ namespace FinTrustApp.PresentationLayer
 
 		}
 
+		//---------------------------------------------------------------------------------------------------------
+		//------------------------------------- Load data from combobox -------------------------------------------
+
 		private void Customer_View_Load(object sender, EventArgs e)
 		{
 			comboBoxSearch.Items.Add("Customer ID");
 			comboBoxSearch.Items.Add("Account No");
 			comboBoxSearch.Items.Add("Customer Name");
 
-			comboBoxAccType.Items.Add("Savings");
-			comboBoxAccType.Items.Add("Current");
+			comboBoxAccType.Items.Add("SAVINGS");
+			comboBoxAccType.Items.Add("CURRENT");
 		}
 
-		//--------------------------------------------------------------------------------------------------------------
+		//-----------------------------------------------------------------------------------------------------------
 		//----------------------------- Search for a Customer -------------------------------------------------------
+
 		private void textBoxViewSearch_TextChanged(object sender, EventArgs e)
 		{
 			DataSet dsCustomers = null;
@@ -61,7 +65,7 @@ namespace FinTrustApp.PresentationLayer
 				{
 					dataGridViewCustomers.DataSource = dsCustomers.Tables[0];
 				}
-				else
+				if(dsCustomers.Tables[0].Rows.Count < 1)
 				{
 					labelMessage.Text = "No Customers available";
 				}
@@ -73,7 +77,8 @@ namespace FinTrustApp.PresentationLayer
 		}
 
 		//---------------------------------------------------------------------------------------------------------------------
-		//-------------- Display Customer Details while Clicking on one of the rows of DatagridView-------------------
+		//-------------- Display Customer Details while Clicking on one of the rows of DatagridView----------------------------
+
 		private void dataGridViewTransactions_SelectionChanged(object sender, EventArgs e)
 		{
 			
@@ -100,6 +105,9 @@ namespace FinTrustApp.PresentationLayer
 			}
 		}
 
+		//---------------------------------------------------------------------------------------------------------
+		//-------------------------------------- Update customer details ------------------------------------------
+
 		private void buttonUpdate_Click(object sender, EventArgs e)
 		{
 			Customer objCustomer = null;
@@ -117,11 +125,50 @@ namespace FinTrustApp.PresentationLayer
 				output = TransactionBL.UpdateCustomerDetails(objCustomer);
 				if (output > 0)
 				{
-					labelMessage.Text = "DATA UPDATED SUCCESSFULLY";
+					string title = "Customer View";
+					string message = "Updation Successful";
+					MessageBoxButtons buttons = MessageBoxButtons.OK;
+					DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Information);
+					DataSet dsCustomers = null;
+					string category = null;
+					if (comboBoxSearch.Text == "Customer ID")
+					{
+						category = "customerId";
+					}
+					else if (comboBoxSearch.Text == "Account No")
+					{
+						category = "accountNumber";
+					}
+					else if (comboBoxSearch.Text == "Customer Name")
+					{
+						category = "customerName";
+					}
+
+					string like = textBoxViewSearch.Text;
+					dsCustomers = TransactionBL.GetCustomersLike(category, like);
+					if (dsCustomers != null)
+					{
+						dataGridViewCustomers.DataSource = dsCustomers.Tables[0];
+					}
+					else
+					{
+						labelMessage.Text = "No Customers available";
+					}
+
 				}
 				else
 				{
-					labelMessage.Text = "UPDATION FAILED";
+					string title = "Customer View";
+					string message = "Updation Failed";
+					MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+					DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Error);
+					if (result == DialogResult.Retry)
+					{
+						textBoxAccName.Clear();
+						textBoxPhone.Clear();
+						textBoxEmail.Clear();
+						richTextBoxAddress.Clear();
+					}
 				}
 
 			}

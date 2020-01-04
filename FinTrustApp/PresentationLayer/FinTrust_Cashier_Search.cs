@@ -23,6 +23,9 @@ namespace FinTrustApp.PresentationLayer
 
 		}
 
+		//------------------------------------------------------------------------------------
+		//----------------------- Load Data to combobox --------------------------------------
+
 		private void FinTrust_Cashier_Search_Load(object sender, EventArgs e)
 		{
 			comboBoxSearch.Items.Add("Customer ID");
@@ -30,8 +33,10 @@ namespace FinTrustApp.PresentationLayer
 			comboBoxSearch.Items.Add("Customer Name");
 			comboBoxSearch.Items.Add("Transaction Type");
 		}
+
 		//-------------------------------------------------------------------------------------
 		//----------------------------- Search for a Transaction ------------------------------
+
 		private void textBoxSearch_TextChanged(object sender, EventArgs e)
 		{
 			DataSet dsTransactions = null;
@@ -61,12 +66,15 @@ namespace FinTrustApp.PresentationLayer
 
 				string like = textBoxSearch.Text;
 				
+				//---------------------------------------------------------------------------------------------------------
+				//--------------------------------- Search for transactions -----------------------------------------------
+
 				dsTransactions = TransactionBL.GetTransactionsLike(category, like);
 				if (dsTransactions != null)
 				{
 					dataGridViewTransactions.DataSource = dsTransactions.Tables[0];
 				}
-				else
+				if(dsTransactions.Tables[0].Rows.Count < 1)
 				{
 					labelMessage.Text = "No Details Available in Transactions";
 				}
@@ -80,6 +88,7 @@ namespace FinTrustApp.PresentationLayer
 
 		//---------------------------------------------------------------------------------------------------------------------
 		//-------------- Display an Individual Transaction while Clicking on one of the rows of DatagridView-------------------
+
 		private void dataGridViewTransactions_SelectionChanged(object sender, EventArgs e)
 		{
 			if (dataGridViewTransactions.SelectedCells.Count > 0)
@@ -102,6 +111,9 @@ namespace FinTrustApp.PresentationLayer
 		{
 
 		}
+
+		//----------------------------------------------------------------------------------------------------------
+		//---------------------------- Search With date of Transaction ---------------------------------------------
 
 		private void dateTimePickerSearch_ValueChanged(object sender, EventArgs e)
 		{
@@ -131,8 +143,12 @@ namespace FinTrustApp.PresentationLayer
 				}
 
 				string like = textBoxSearch.Text;
-				string d = dateTimePickerSearch.Value.Date.Month + "/" + dateTimePickerSearch.Value.Date.Day + "/" + dateTimePickerSearch.Value.Date.Year;
-				dsTransactions = TransactionBL.GetTransactionsLikeDate(category, like, d);
+
+				//-------------------------------------------------------------------------------------------------------------------
+				//----------------------------Search for transaction with date ------------------------------------------------------
+
+				string searchDate = dateTimePickerSearch.Value.Date.Month + "/" + dateTimePickerSearch.Value.Date.Day + "/" + dateTimePickerSearch.Value.Date.Year;
+				dsTransactions = TransactionBL.GetTransactionsLikeDate(category, like, searchDate);
 				if (dsTransactions != null)
 				{
 					dataGridViewTransactions.DataSource = dsTransactions.Tables[0];

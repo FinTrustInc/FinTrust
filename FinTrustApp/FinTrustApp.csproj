@@ -128,12 +128,6 @@
     <Compile Include="PresentationLayer\Grievance_Redressal_Application.Designer.cs">
       <DependentUpon>Grievance_Redressal_Application.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\Help.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\Help.Designer.cs">
-      <DependentUpon>Help.cs</DependentUpon>
-    </Compile>
     <Compile Include="PresentationLayer\Loan ApplicationForm .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,9 +186,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Grievance_Redressal_Application.resx">
       <DependentUpon>Grievance_Redressal_Application.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Help.resx">
-      <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Loan ApplicationForm .resx">
       <DependentUpon>Loan ApplicationForm .cs</DependentUpon>

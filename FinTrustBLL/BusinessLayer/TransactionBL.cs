@@ -58,7 +58,7 @@ namespace FinTrustBLL.BusinessLayer
 		//----------------------------------------------------------------------------------------------------------------
 		//----------------------------- Update Balance amount after each transaction -------------------------------------
 
-		public static void UpdateBalanceAmount(string accountNumber, string transactionType, double amount)
+		public static double GetBalance(string accountNumber, string transactionType, double amount)
 		{
 			double balanceAmount = TransactionDL.GetBalance(accountNumber);
 			if (transactionType == "Credit")
@@ -69,7 +69,15 @@ namespace FinTrustBLL.BusinessLayer
 			{
 				balanceAmount = balanceAmount - amount;
 			}
-			TransactionDL.UpdateBalanceAmount(accountNumber, balanceAmount);
+			return balanceAmount;
+		}
+
+		//-----------------------------------------------------------------------------------------------------------
+		//----------------------------- Update Balance Amount of customer after each transaction --------------------
+
+		public static void UpdateBalanceAmount(string accountNumber,double balance)
+		{		
+			TransactionDL.UpdateBalanceAmount(accountNumber,balance);
 		}
 
 		//--------------------------------------------------------------------------------------------------------------
@@ -90,7 +98,8 @@ namespace FinTrustBLL.BusinessLayer
 		}
 
 		//--------------------------------------------------------------------------------------------------------------
-		//----------------------------- Search for a Transaction with transaction date -------------------------------------------------------
+		//----------------------------- Search for a Transaction with transaction date ---------------------------------
+
 		public static DataSet GetTransactionsLikeDate(string category, string like, string searchDate)
 		{
 			DataSet dsTransactions = null;
@@ -124,6 +133,7 @@ namespace FinTrustBLL.BusinessLayer
 
 		//--------------------------------------------------------------------------------------------------------------
 		//----------------------------- Search for a Customer ----------------------------------------------------------
+
 		public static DataSet GetCustomersLike(string category, string like)
 		{
 			DataSet dsTransactions = null;

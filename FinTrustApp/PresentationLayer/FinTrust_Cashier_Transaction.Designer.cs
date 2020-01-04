@@ -175,9 +175,9 @@
 			this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label2.Location = new System.Drawing.Point(121, 204);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(161, 18);
+			this.label2.Size = new System.Drawing.Size(108, 18);
 			this.label2.TabIndex = 1;
-			this.label2.Text = "Account Holder\'s Name";
+			this.label2.Text = "Customer Name";
 			// 
 			// label1
 			// 

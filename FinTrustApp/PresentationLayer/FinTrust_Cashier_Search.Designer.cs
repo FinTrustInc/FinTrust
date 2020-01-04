@@ -108,11 +108,11 @@
 			// labelMessage
 			// 
 			this.labelMessage.AutoSize = true;
-			this.labelMessage.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.labelMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-			this.labelMessage.Location = new System.Drawing.Point(210, 63);
+			this.labelMessage.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.labelMessage.Location = new System.Drawing.Point(246, 71);
 			this.labelMessage.Name = "labelMessage";
-			this.labelMessage.Size = new System.Drawing.Size(32, 18);
+			this.labelMessage.Size = new System.Drawing.Size(40, 24);
 			this.labelMessage.TabIndex = 14;
 			this.labelMessage.Text = "......";
 			this.labelMessage.Click += new System.EventHandler(this.labelMessage_Click);
@@ -160,6 +160,7 @@
 			// 
 			this.textBoxBalanceAmount.Location = new System.Drawing.Point(206, 447);
 			this.textBoxBalanceAmount.Name = "textBoxBalanceAmount";
+			this.textBoxBalanceAmount.ReadOnly = true;
 			this.textBoxBalanceAmount.Size = new System.Drawing.Size(243, 20);
 			this.textBoxBalanceAmount.TabIndex = 13;
 			// 
@@ -177,6 +178,7 @@
 			// 
 			this.textBoxTransactionDate.Location = new System.Drawing.Point(206, 370);
 			this.textBoxTransactionDate.Name = "textBoxTransactionDate";
+			this.textBoxTransactionDate.ReadOnly = true;
 			this.textBoxTransactionDate.Size = new System.Drawing.Size(243, 20);
 			this.textBoxTransactionDate.TabIndex = 11;
 			// 
@@ -194,6 +196,7 @@
 			// 
 			this.textBoxAmount.Location = new System.Drawing.Point(206, 289);
 			this.textBoxAmount.Name = "textBoxAmount";
+			this.textBoxAmount.ReadOnly = true;
 			this.textBoxAmount.Size = new System.Drawing.Size(243, 20);
 			this.textBoxAmount.TabIndex = 9;
 			// 
@@ -211,6 +214,7 @@
 			// 
 			this.textBoxTransactionType.Location = new System.Drawing.Point(206, 213);
 			this.textBoxTransactionType.Name = "textBoxTransactionType";
+			this.textBoxTransactionType.ReadOnly = true;
 			this.textBoxTransactionType.Size = new System.Drawing.Size(243, 20);
 			this.textBoxTransactionType.TabIndex = 7;
 			// 
@@ -228,6 +232,7 @@
 			// 
 			this.textBoxAccName.Location = new System.Drawing.Point(206, 137);
 			this.textBoxAccName.Name = "textBoxAccName";
+			this.textBoxAccName.ReadOnly = true;
 			this.textBoxAccName.Size = new System.Drawing.Size(243, 20);
 			this.textBoxAccName.TabIndex = 5;
 			// 
@@ -237,14 +242,15 @@
 			this.label3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.Location = new System.Drawing.Point(26, 139);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(161, 18);
+			this.label3.Size = new System.Drawing.Size(108, 18);
 			this.label3.TabIndex = 4;
-			this.label3.Text = "Account Holder\'s Name";
+			this.label3.Text = "Customer Name";
 			// 
 			// textBoxAccNo
 			// 
 			this.textBoxAccNo.Location = new System.Drawing.Point(206, 60);
 			this.textBoxAccNo.Name = "textBoxAccNo";
+			this.textBoxAccNo.ReadOnly = true;
 			this.textBoxAccNo.Size = new System.Drawing.Size(243, 20);
 			this.textBoxAccNo.TabIndex = 3;
 			// 
