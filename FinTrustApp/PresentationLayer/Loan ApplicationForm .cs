@@ -34,7 +34,7 @@ namespace FinTrustApp.PresentationLayer
                 if (customerObj != null)
                 {
                     textBoxName.Text = customerObj.CustomerName;
-                
+                    textBoxAccountNumber.Text= customerObj.AccountNumber;
                 }
 
             }
@@ -63,7 +63,7 @@ namespace FinTrustApp.PresentationLayer
 
         private void buttonsubmit_Click(object sender, EventArgs e)
         {
-            Loan loanObj = null;
+             Loan loanObj = null;
             int output = 0;
             if (LoanFormValidation())
             {
@@ -132,6 +132,11 @@ namespace FinTrustApp.PresentationLayer
             return flag;
         }
 
-
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Probationary_Officer POHomeForm = new Probationary_Officer();
+            POHomeForm.Show();
+        }
     }
 }

@@ -1,0 +1,1 @@
+﻿alter table customer_table add balanceAmount varchar(50) default 0;

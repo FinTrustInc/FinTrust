@@ -17,18 +17,43 @@ namespace FinTrustApp.PresentationLayer
             InitializeComponent();
         }
 
-        private void accountClosingToolStripMenuItem_Click(object sender, EventArgs e)
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FinTrust_AccountClose AccountCloseForm = new FinTrust_AccountClose();
-            AccountCloseForm.Show();
+
+            FinTrust_Login loginForm = new FinTrust_Login();
+            loginForm.Show();
+        }
+
+        private void grievanceToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Grievance_Redressal_Application grievanceForm = new Grievance_Redressal_Application();
+            grievanceForm.Show();
+        }
+
+        private void customerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Customer_View ViewForm = new Customer_View();
+            ViewForm.Show();
         }
 
         private void accountOpenimgToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FinTrust_AccountOpen AccountOpenForm = new FinTrust_AccountOpen();
-            AccountOpenForm.Show();
+
+             FinTrust_AccountOpen accountOpenForm = new FinTrust_AccountOpen();
+            accountOpenForm.Show();
+           
+        }
+
+        private void accountClosingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FinTrust_AccountClose accountCloseForm = new FinTrust_AccountClose();
+            accountCloseForm.Show();
         }
     }
 }

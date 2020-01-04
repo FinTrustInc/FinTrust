@@ -108,6 +108,35 @@ namespace FinTrustBLL.BusinessLayer
             return dsLoans;
         }
 
+        public static int UpdateLoanStatus(string loanId,string status)
+        {
+            int output = 0;
+
+            output = LoanDL.UpdateLoanStatus(loanId, status);          
+            return output;
+
+        }
+
+        public static DataSet GetLoansLike(string likeName, string searchOption)
+        {
+
+            DataSet dsLoans = null;
+            try
+            {
+
+                dsLoans = LoanDL.GetLoansLike(likeName, searchOption);
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("Error : FinTrustBL:GetLoansLike : " + ex.Message.ToString());
+            }
+
+            return dsLoans;
+        }
+
+
 
     }
 

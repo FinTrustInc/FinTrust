@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace FinTrustApp.PresentationLayer
 {
     public partial class Branch_Manager : Form
@@ -17,38 +18,14 @@ namespace FinTrustApp.PresentationLayer
             InitializeComponent();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
-            FinTrust_Registration registrationForm = new FinTrust_Registration();
-            registrationForm.Show();
+           
         }
 
         private void viewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
-            Fintrust_View BMViewForm = new Fintrust_View();
-            BMViewForm.Show();
-
-        }
-
-        private void loanApprovalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-
-            Pending_Loan_Applications loanApprovalForm = new Pending_Loan_Applications();
-            loanApprovalForm.Show();
+          
             
         }
 
@@ -58,6 +35,43 @@ namespace FinTrustApp.PresentationLayer
 
             Help helpForm = new Help();
             helpForm.Show();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FinTrust_Login loginForm = new FinTrust_Login();
+            loginForm.Show();
+        }
+
+        private void ToolStripApproveLoan_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void accountDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Customer_View ViewForm = new Customer_View();
+            ViewForm.Show();
+        }
+
+        private void loanDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Pending_Loan_Applications loanApprovalForm = new Pending_Loan_Applications();
+            loanApprovalForm.Show();
+        }
+
+        private void registerEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FinTrust_Registration registrationForm = new FinTrust_Registration();
+            registrationForm.Show();
         }
     }
 }
