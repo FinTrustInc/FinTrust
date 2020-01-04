@@ -20,18 +20,12 @@ namespace FinTrustApp.PresentationLayer
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
-            FinTrust_Registration registrationForm = new FinTrust_Registration();
-            registrationForm.Show();
+           
         }
 
         private void viewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
-           Fintrust_View ViewForm = new Fintrust_View();
-            ViewForm.Show();
+          
             
         }
 
@@ -53,11 +47,31 @@ namespace FinTrustApp.PresentationLayer
 
         private void ToolStripApproveLoan_Click(object sender, EventArgs e)
         {
+            
+
+        }
+
+        private void accountDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Customer_View ViewForm = new Customer_View();
+            ViewForm.Show();
+        }
+
+        private void loanDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             this.Hide();
 
             Pending_Loan_Applications loanApprovalForm = new Pending_Loan_Applications();
             loanApprovalForm.Show();
+        }
 
+        private void registerEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FinTrust_Registration registrationForm = new FinTrust_Registration();
+            registrationForm.Show();
         }
     }
 }

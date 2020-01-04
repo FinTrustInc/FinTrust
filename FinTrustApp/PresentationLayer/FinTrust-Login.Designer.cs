@@ -79,11 +79,11 @@
             // labelLoginMessage
             // 
             this.labelLoginMessage.AutoSize = true;
-            this.labelLoginMessage.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLoginMessage.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLoginMessage.ForeColor = System.Drawing.Color.Maroon;
-            this.labelLoginMessage.Location = new System.Drawing.Point(190, 162);
+            this.labelLoginMessage.Location = new System.Drawing.Point(118, 169);
             this.labelLoginMessage.Name = "labelLoginMessage";
-            this.labelLoginMessage.Size = new System.Drawing.Size(0, 15);
+            this.labelLoginMessage.Size = new System.Drawing.Size(0, 18);
             this.labelLoginMessage.TabIndex = 19;
             // 
             // textBoxUsername

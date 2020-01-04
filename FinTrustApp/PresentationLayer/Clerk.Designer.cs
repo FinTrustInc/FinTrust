@@ -37,30 +37,24 @@
             this.helpToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.lblServices = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.loanApprovalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.validateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grievanceToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -68,8 +62,9 @@
             this.menuStrip1.AllowDrop = true;
             this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.accHandlingToolStripMenuItem,
             this.grievanceToolStripMenuItem,
+            this.viewToolStripMenuItem1,
+            this.accHandlingToolStripMenuItem,
             this.helpToolStripMenuItem2,
             this.profileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -84,26 +79,30 @@
             this.accountOpenimgToolStripMenuItem,
             this.accountClosingToolStripMenuItem});
             this.accHandlingToolStripMenuItem.Name = "accHandlingToolStripMenuItem";
-            this.accHandlingToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
-            this.accHandlingToolStripMenuItem.Text = "Account Handling";
+            this.accHandlingToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.accHandlingToolStripMenuItem.Text = "Account";
             // 
             // accountOpenimgToolStripMenuItem
             // 
             this.accountOpenimgToolStripMenuItem.Name = "accountOpenimgToolStripMenuItem";
-            this.accountOpenimgToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.accountOpenimgToolStripMenuItem.Text = "Account Opening";
+            this.accountOpenimgToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.accountOpenimgToolStripMenuItem.Text = "Open Account";
+            this.accountOpenimgToolStripMenuItem.Click += new System.EventHandler(this.accountOpenimgToolStripMenuItem_Click);
             // 
             // accountClosingToolStripMenuItem
             // 
             this.accountClosingToolStripMenuItem.Name = "accountClosingToolStripMenuItem";
-            this.accountClosingToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.accountClosingToolStripMenuItem.Text = "Account Closing";
+            this.accountClosingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.accountClosingToolStripMenuItem.Text = "Close Account";
+            this.accountClosingToolStripMenuItem.Click += new System.EventHandler(this.accountClosingToolStripMenuItem_Click);
             // 
             // grievanceToolStripMenuItem
             // 
+            this.grievanceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.grievanceToolStripMenuItem1});
             this.grievanceToolStripMenuItem.Name = "grievanceToolStripMenuItem";
-            this.grievanceToolStripMenuItem.Size = new System.Drawing.Size(123, 20);
-            this.grievanceToolStripMenuItem.Text = "Grievance Redressal";
+            this.grievanceToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.grievanceToolStripMenuItem.Text = "New";
             // 
             // helpToolStripMenuItem2
             // 
@@ -122,9 +121,17 @@
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            // 
+            // viewToolStripMenuItem1
+            // 
+            this.viewToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.customerToolStripMenuItem});
+            this.viewToolStripMenuItem1.Name = "viewToolStripMenuItem1";
+            this.viewToolStripMenuItem1.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem1.Text = "View";
             // 
             // label2
             // 
@@ -156,9 +163,9 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel3.Location = new System.Drawing.Point(12, 28);
+            this.panel3.Location = new System.Drawing.Point(12, 27);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(960, 319);
+            this.panel3.Size = new System.Drawing.Size(960, 320);
             this.panel3.TabIndex = 46;
             // 
             // label1
@@ -192,12 +199,6 @@
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
-            this.toolStripMenuItem1.Text = "Logout";
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -209,12 +210,6 @@
             this.pictureBox3.TabIndex = 43;
             this.pictureBox3.TabStop = false;
             // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(44, 20);
-            this.toolStripMenuItem2.Text = "Help";
-            // 
             // pictureBox4
             // 
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -225,12 +220,6 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 44;
             this.pictureBox4.TabStop = false;
-            // 
-            // loanApprovalToolStripMenuItem
-            // 
-            this.loanApprovalToolStripMenuItem.Name = "loanApprovalToolStripMenuItem";
-            this.loanApprovalToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.loanApprovalToolStripMenuItem.Text = "Approve Loan";
             // 
             // panel2
             // 
@@ -244,49 +233,19 @@
             this.panel2.Size = new System.Drawing.Size(302, 186);
             this.panel2.TabIndex = 42;
             // 
-            // validateToolStripMenuItem
+            // customerToolStripMenuItem
             // 
-            this.validateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loanApprovalToolStripMenuItem});
-            this.validateToolStripMenuItem.Name = "validateToolStripMenuItem";
-            this.validateToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.validateToolStripMenuItem.Text = "Approve";
+            this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
+            this.customerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.customerToolStripMenuItem.Text = "Customer Details";
+            this.customerToolStripMenuItem.Click += new System.EventHandler(this.customerToolStripMenuItem_Click);
             // 
-            // viewToolStripMenuItem
+            // grievanceToolStripMenuItem1
             // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "View";
-            // 
-            // addUsersToolStripMenuItem
-            // 
-            this.addUsersToolStripMenuItem.Name = "addUsersToolStripMenuItem";
-            this.addUsersToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
-            this.addUsersToolStripMenuItem.Text = "Register Employee";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(53, 20);
-            this.toolStripMenuItem3.Text = "Profile";
-            // 
-            // menuStrip2
-            // 
-            this.menuStrip2.AllowDrop = true;
-            this.menuStrip2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addUsersToolStripMenuItem,
-            this.viewToolStripMenuItem,
-            this.validateToolStripMenuItem,
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 24);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(984, 24);
-            this.menuStrip2.TabIndex = 41;
-            this.menuStrip2.Text = "menuStrip1";
+            this.grievanceToolStripMenuItem1.Name = "grievanceToolStripMenuItem1";
+            this.grievanceToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.grievanceToolStripMenuItem1.Text = "Grievance";
+            this.grievanceToolStripMenuItem1.Click += new System.EventHandler(this.grievanceToolStripMenuItem1_Click);
             // 
             // Clerk
             // 
@@ -299,7 +258,6 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.menuStrip1);
             this.MaximizeBox = false;
             this.Name = "Clerk";
@@ -312,8 +270,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,16 +290,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.ToolStripMenuItem loanApprovalToolStripMenuItem;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ToolStripMenuItem validateToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addUsersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem customerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grievanceToolStripMenuItem1;
     }
 }

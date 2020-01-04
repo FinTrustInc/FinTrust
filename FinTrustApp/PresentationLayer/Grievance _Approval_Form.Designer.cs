@@ -59,6 +59,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -137,6 +138,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.btnBack);
             this.panel2.Controls.Add(this.labelloanpage);
             this.panel2.Location = new System.Drawing.Point(1, 15);
             this.panel2.Name = "panel2";
@@ -149,11 +151,11 @@
             this.labelloanpage.BackColor = System.Drawing.Color.SteelBlue;
             this.labelloanpage.Font = new System.Drawing.Font("Modern No. 20", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelloanpage.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelloanpage.Location = new System.Drawing.Point(3, 9);
+            this.labelloanpage.Location = new System.Drawing.Point(405, 11);
             this.labelloanpage.Name = "labelloanpage";
-            this.labelloanpage.Size = new System.Drawing.Size(237, 31);
+            this.labelloanpage.Size = new System.Drawing.Size(140, 31);
             this.labelloanpage.TabIndex = 3;
-            this.labelloanpage.Text = "Resolve grievances ";
+            this.labelloanpage.Text = "Grievances";
             // 
             // dataGridView1
             // 
@@ -359,6 +361,19 @@
             this.panel3.Size = new System.Drawing.Size(436, 437);
             this.panel3.TabIndex = 36;
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(30, 11);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(109, 32);
+            this.btnBack.TabIndex = 25;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // Grievance__Approval_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,5 +436,6 @@
         private System.Windows.Forms.TextBox textBoxPhoneNo;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnBack;
     }
 }

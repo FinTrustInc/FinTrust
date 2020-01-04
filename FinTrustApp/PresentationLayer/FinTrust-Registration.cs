@@ -238,5 +238,12 @@ namespace FinTrustApp.PresentationLayer
         {
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Branch_Manager BMHomeForm = new Branch_Manager();
+            BMHomeForm.Show();
+        }
     }
 }

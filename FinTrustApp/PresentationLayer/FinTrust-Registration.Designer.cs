@@ -60,6 +60,7 @@
             this.labelUserRegistrtionMessage = new System.Windows.Forms.Label();
             this.errorProviderUserRegistration = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelUserApplicationForm = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.labelUserApplicationForm = new System.Windows.Forms.Label();
             this.buttonUserRegister = new System.Windows.Forms.Button();
             this.pictureBoxRegistration = new System.Windows.Forms.PictureBox();
@@ -390,11 +391,25 @@
             // panelUserApplicationForm
             // 
             this.panelUserApplicationForm.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelUserApplicationForm.Controls.Add(this.btnBack);
             this.panelUserApplicationForm.Controls.Add(this.labelUserApplicationForm);
             this.panelUserApplicationForm.Location = new System.Drawing.Point(1, 2);
             this.panelUserApplicationForm.Name = "panelUserApplicationForm";
             this.panelUserApplicationForm.Size = new System.Drawing.Size(983, 49);
             this.panelUserApplicationForm.TabIndex = 22;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(33, 14);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(109, 32);
+            this.btnBack.TabIndex = 24;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // labelUserApplicationForm
             // 
@@ -490,5 +505,6 @@
         private System.Windows.Forms.Label labelPara2;
         private System.Windows.Forms.CheckBox checkBoxUserRegister;
         private System.Windows.Forms.PictureBox pictureBoxRegistration;
+        private System.Windows.Forms.Button btnBack;
     }
 }

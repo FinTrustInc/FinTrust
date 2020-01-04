@@ -34,7 +34,6 @@ namespace FinTrustApp.PresentationLayer
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripApproveLoan = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +46,9 @@ namespace FinTrustApp.PresentationLayer
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblServices = new System.Windows.Forms.Label();
+            this.accountDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loanDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -62,7 +64,6 @@ namespace FinTrustApp.PresentationLayer
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addUsersToolStripMenuItem,
             this.viewToolStripMenuItem,
-            this.ToolStripApproveLoan,
             this.helpToolStripMenuItem2,
             this.profileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -73,24 +74,20 @@ namespace FinTrustApp.PresentationLayer
             // 
             // addUsersToolStripMenuItem
             // 
+            this.addUsersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registerEmployeeToolStripMenuItem});
             this.addUsersToolStripMenuItem.Name = "addUsersToolStripMenuItem";
-            this.addUsersToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
-            this.addUsersToolStripMenuItem.Text = "Register Employee";
-            this.addUsersToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
+            this.addUsersToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.addUsersToolStripMenuItem.Text = "New";
             // 
             // viewToolStripMenuItem
             // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.accountDetailsToolStripMenuItem,
+            this.loanDetailsToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
-            this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
-            // 
-            // ToolStripApproveLoan
-            // 
-            this.ToolStripApproveLoan.Name = "ToolStripApproveLoan";
-            this.ToolStripApproveLoan.Size = new System.Drawing.Size(93, 20);
-            this.ToolStripApproveLoan.Text = "Approve Loan";
-            this.ToolStripApproveLoan.Click += new System.EventHandler(this.ToolStripApproveLoan_Click);
             // 
             // helpToolStripMenuItem2
             // 
@@ -214,6 +211,27 @@ namespace FinTrustApp.PresentationLayer
             this.lblServices.TabIndex = 38;
             this.lblServices.Text = "Services";
             // 
+            // accountDetailsToolStripMenuItem
+            // 
+            this.accountDetailsToolStripMenuItem.Name = "accountDetailsToolStripMenuItem";
+            this.accountDetailsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.accountDetailsToolStripMenuItem.Text = "Account Details";
+            this.accountDetailsToolStripMenuItem.Click += new System.EventHandler(this.accountDetailsToolStripMenuItem_Click);
+            // 
+            // loanDetailsToolStripMenuItem
+            // 
+            this.loanDetailsToolStripMenuItem.Name = "loanDetailsToolStripMenuItem";
+            this.loanDetailsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loanDetailsToolStripMenuItem.Text = "Loan Details";
+            this.loanDetailsToolStripMenuItem.Click += new System.EventHandler(this.loanDetailsToolStripMenuItem_Click);
+            // 
+            // registerEmployeeToolStripMenuItem
+            // 
+            this.registerEmployeeToolStripMenuItem.Name = "registerEmployeeToolStripMenuItem";
+            this.registerEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registerEmployeeToolStripMenuItem.Text = "Register Employee";
+            this.registerEmployeeToolStripMenuItem.Click += new System.EventHandler(this.registerEmployeeToolStripMenuItem_Click);
+            // 
             // Branch_Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,7 +271,6 @@ namespace FinTrustApp.PresentationLayer
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem addUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripApproveLoan;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
@@ -266,5 +283,8 @@ namespace FinTrustApp.PresentationLayer
         private System.Windows.Forms.Label lblServices;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem accountDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loanDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerEmployeeToolStripMenuItem;
     }
 }

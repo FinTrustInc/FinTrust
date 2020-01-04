@@ -31,9 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Probationary_Officer));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.validateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.greivanceRedressalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.accountapprovalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loanapplicationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +44,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.loanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grievanceDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -60,9 +60,8 @@
             this.menuStrip1.AllowDrop = true;
             this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewToolStripMenuItem,
-            this.validateToolStripMenuItem,
             this.loanapplicationToolStripMenuItem1,
+            this.viewToolStripMenuItem,
             this.helpToolStripMenuItem2,
             this.profileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -73,39 +72,20 @@
             // 
             // viewToolStripMenuItem
             // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.customerDetailsToolStripMenuItem,
+            this.grievanceDetailsToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
             // 
-            // validateToolStripMenuItem
-            // 
-            this.validateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.greivanceRedressalToolStripMenuItem,
-            this.accountapprovalToolStripMenuItem});
-            this.validateToolStripMenuItem.Name = "validateToolStripMenuItem";
-            this.validateToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.validateToolStripMenuItem.Text = "Validate";
-            // 
-            // greivanceRedressalToolStripMenuItem
-            // 
-            this.greivanceRedressalToolStripMenuItem.Name = "greivanceRedressalToolStripMenuItem";
-            this.greivanceRedressalToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.greivanceRedressalToolStripMenuItem.Text = "Grievance Redressal";
-            this.greivanceRedressalToolStripMenuItem.Click += new System.EventHandler(this.greivanceRedressalToolStripMenuItem_Click);
-            // 
-            // accountapprovalToolStripMenuItem
-            // 
-            this.accountapprovalToolStripMenuItem.Name = "accountapprovalToolStripMenuItem";
-            this.accountapprovalToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.accountapprovalToolStripMenuItem.Text = "Account Approval";
-            this.accountapprovalToolStripMenuItem.Click += new System.EventHandler(this.accountHandlingToolStripMenuItem_Click);
-            // 
             // loanapplicationToolStripMenuItem1
             // 
+            this.loanapplicationToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loanToolStripMenuItem});
             this.loanapplicationToolStripMenuItem1.Name = "loanapplicationToolStripMenuItem1";
-            this.loanapplicationToolStripMenuItem1.Size = new System.Drawing.Size(114, 20);
-            this.loanapplicationToolStripMenuItem1.Text = "Loan Applications";
-            this.loanapplicationToolStripMenuItem1.Click += new System.EventHandler(this.helpToolStripMenuItem1_Click);
+            this.loanapplicationToolStripMenuItem1.Size = new System.Drawing.Size(43, 20);
+            this.loanapplicationToolStripMenuItem1.Text = "New";
             // 
             // helpToolStripMenuItem2
             // 
@@ -229,6 +209,27 @@
             this.panel2.Size = new System.Drawing.Size(302, 186);
             this.panel2.TabIndex = 39;
             // 
+            // loanToolStripMenuItem
+            // 
+            this.loanToolStripMenuItem.Name = "loanToolStripMenuItem";
+            this.loanToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loanToolStripMenuItem.Text = "Loan";
+            this.loanToolStripMenuItem.Click += new System.EventHandler(this.loanToolStripMenuItem_Click);
+            // 
+            // customerDetailsToolStripMenuItem
+            // 
+            this.customerDetailsToolStripMenuItem.Name = "customerDetailsToolStripMenuItem";
+            this.customerDetailsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.customerDetailsToolStripMenuItem.Text = "Customer Details";
+            this.customerDetailsToolStripMenuItem.Click += new System.EventHandler(this.customerDetailsToolStripMenuItem_Click);
+            // 
+            // grievanceDetailsToolStripMenuItem
+            // 
+            this.grievanceDetailsToolStripMenuItem.Name = "grievanceDetailsToolStripMenuItem";
+            this.grievanceDetailsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.grievanceDetailsToolStripMenuItem.Text = "Grievance Details";
+            this.grievanceDetailsToolStripMenuItem.Click += new System.EventHandler(this.grievanceDetailsToolStripMenuItem_Click);
+            // 
             // Probationary_Officer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,9 +263,6 @@
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem validateToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem greivanceRedressalToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem accountapprovalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loanapplicationToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
@@ -278,5 +276,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ToolStripMenuItem loanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem customerDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grievanceDetailsToolStripMenuItem;
     }
 }

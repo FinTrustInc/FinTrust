@@ -130,5 +130,10 @@ namespace FinTrustApp.PresentationLayer
 				labelMessage.Text = ex.Message.ToString();
 			}
 		}
-	}
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+    }
 }
