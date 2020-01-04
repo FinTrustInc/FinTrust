@@ -175,11 +175,11 @@ namespace FinTrustApp.PresentationLayer
             
           if (comboBoxSearch.SelectedIndex == -1)
             {
-                errorProviderSearchTransaction.SetError(comboBoxSearch, "Select type !");
+                //errorProviderSearchTransaction.SetError(comboBoxSearch, "Select type !");
             }
             else
             {
-                errorProviderSearchTransaction.SetError(comboBoxSearch, string.Empty);
+               // errorProviderSearchTransaction.SetError(comboBoxSearch, string.Empty);
             }
         }
     }
