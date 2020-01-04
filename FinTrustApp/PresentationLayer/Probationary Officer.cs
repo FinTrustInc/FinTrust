@@ -48,8 +48,8 @@ namespace FinTrustApp.PresentationLayer
         {
             this.Hide();
 
-            Help helpForm = new Help();
-            helpForm.Show();
+            //Help helpForm = new Help();
+            //helpForm.Show();
         }
 
         private void Probationary_Officer_Load(object sender, EventArgs e)
