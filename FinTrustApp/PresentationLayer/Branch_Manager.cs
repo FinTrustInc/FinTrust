@@ -33,8 +33,8 @@ namespace FinTrustApp.PresentationLayer
         {
             this.Hide();
 
-            Help helpForm = new Help();
-            helpForm.Show();
+            //Help helpForm = new Help();
+            //helpForm.Show();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
