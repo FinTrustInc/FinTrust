@@ -66,6 +66,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.labelMessage = new System.Windows.Forms.Label();
             this.errorProviderGrievanceApproval = new System.Windows.Forms.ErrorProvider(this.components);
+            this.labelError = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridGriev)).BeginInit();
             this.panel4.SuspendLayout();
@@ -414,7 +415,7 @@
             // labelMessage
             // 
             this.labelMessage.AutoSize = true;
-            this.labelMessage.Location = new System.Drawing.Point(242, 77);
+            this.labelMessage.Location = new System.Drawing.Point(840, 77);
             this.labelMessage.Name = "labelMessage";
             this.labelMessage.Size = new System.Drawing.Size(73, 13);
             this.labelMessage.TabIndex = 40;
@@ -424,12 +425,22 @@
             // 
             this.errorProviderGrievanceApproval.ContainerControl = this;
             // 
+            // labelError
+            // 
+            this.labelError.AutoSize = true;
+            this.labelError.Location = new System.Drawing.Point(438, 77);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(55, 13);
+            this.labelError.TabIndex = 42;
+            this.labelError.Text = "88888888";
+            // 
             // Grievance__Approval_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 662);
+            this.Controls.Add(this.labelError);
             this.Controls.Add(this.labelMessage);
             this.Controls.Add(this.comboBoxAction);
             this.Controls.Add(this.label12);
@@ -497,5 +508,6 @@
         private System.Windows.Forms.TextBox textBoxGrievanceid;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.ErrorProvider errorProviderGrievanceApproval;
+        private System.Windows.Forms.Label labelError;
     }
 }

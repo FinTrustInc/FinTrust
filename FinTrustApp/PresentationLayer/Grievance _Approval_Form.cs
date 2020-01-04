@@ -140,7 +140,7 @@ namespace FinTrustApp.PresentationLayer
                 }
                 else if (searchBy == "Account Number")
                 {
-                    category = "accountnumber";
+                    category = "accountNumber";
                 }
                 else if (searchBy == "Customer Name")
                 {
@@ -154,9 +154,16 @@ namespace FinTrustApp.PresentationLayer
                 {
                     dataGridGriev.DataSource = dsGrievance.Tables[0];
                 }
-                else
+                if (dsGrievance.Tables[0].Rows.Count < 1)
                 {
-                    labelMessage.Text = "No Details Available in Grievance Record";
+                    string title = "Grievance System";
+                    string message = "No Details Available in Grievance Record";
+                    MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+                    DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Error);
+                    if (result == DialogResult.Retry)
+                    {
+                        searchField.Clear();
+                    }
                 }
             }
 

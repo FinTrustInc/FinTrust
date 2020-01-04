@@ -38,6 +38,7 @@ namespace FinTrustApp.PresentationLayer
 
         private void customerToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Customer_View ViewForm = new Customer_View();
             ViewForm.Show();
         }
@@ -64,6 +65,13 @@ namespace FinTrustApp.PresentationLayer
             this.Hide();
             MyProfile profileObj = new MyProfile();
             profileObj.Show();
+        }
+
+        private void helpToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            About aboutObj = new About();
+            aboutObj.Show();
         }
     }
 }

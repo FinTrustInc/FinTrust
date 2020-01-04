@@ -76,6 +76,7 @@ namespace FinTrustApp.PresentationLayer
 
         private void accountDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Customer_View ViewForm = new Customer_View();
             ViewForm.Show();
         }
@@ -89,6 +90,7 @@ namespace FinTrustApp.PresentationLayer
 
         private void transactionToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FinTrust_Cashier_Transaction objTransaction = new FinTrust_Cashier_Transaction();
             objTransaction.Show();
            
@@ -104,6 +106,13 @@ namespace FinTrustApp.PresentationLayer
             this.Hide();
             MyProfile profileObj = new MyProfile();
             profileObj.Show();
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            About aboutObj = new About();
+            aboutObj.Show();
         }
     }
 }

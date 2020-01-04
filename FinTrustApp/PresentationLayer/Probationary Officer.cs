@@ -48,8 +48,10 @@ namespace FinTrustApp.PresentationLayer
         private void helpToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             this.Hide();
+            About aboutObj = new About();
+            aboutObj.Show();
 
-           
+
         }
 
         private void Probationary_Officer_Load(object sender, EventArgs e)
@@ -93,6 +95,7 @@ namespace FinTrustApp.PresentationLayer
 
         private void customerDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Customer_View ViewForm = new Customer_View();
             ViewForm.Show();
         }

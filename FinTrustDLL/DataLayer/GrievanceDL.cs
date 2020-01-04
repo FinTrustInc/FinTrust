@@ -21,11 +21,12 @@ namespace FinTrustDLL.DataLayer
             SqlCommand cmd = null;
             try
             {
-                sql = "insert into grievance_table(customerId,grievanceDetail,grievanceID,title) values(";
+                sql = "insert into grievance_table(customerId,grievanceDetail,grievanceID,title,status) values(";
                 sql = sql + "'" + objGrievance.CustomerId + "',";
                 sql = sql + "'" + objGrievance.GrievanceDetail + "',";
                 sql = sql + "'" + objGrievance.GrievanceID + "',";
-                sql = sql + "'" + objGrievance.Title + "')";
+                sql = sql + "'" + objGrievance.Title + "',";
+                sql = sql + "'" + objGrievance.Status + "')";
 
 
                 con = DBHelper.GetConnection();
@@ -35,7 +36,7 @@ namespace FinTrustDLL.DataLayer
             }
             catch (Exception ex)
             {
-                Console.Out.WriteLine("Error : GrievanceDL : InsertTransactionDetails() " + ex.Message.ToString());
+                Console.Out.WriteLine("Error : GrievanceDL : InsertGrievanceDetails() " + ex.Message.ToString());
             }
             finally
             {

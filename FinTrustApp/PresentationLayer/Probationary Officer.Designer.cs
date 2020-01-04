@@ -112,8 +112,8 @@
             // helpToolStripMenuItem2
             // 
             this.helpToolStripMenuItem2.Name = "helpToolStripMenuItem2";
-            this.helpToolStripMenuItem2.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem2.Text = "Help";
+            this.helpToolStripMenuItem2.Size = new System.Drawing.Size(52, 20);
+            this.helpToolStripMenuItem2.Text = "About";
             this.helpToolStripMenuItem2.Click += new System.EventHandler(this.helpToolStripMenuItem2_Click);
             // 
             // profileToolStripMenuItem

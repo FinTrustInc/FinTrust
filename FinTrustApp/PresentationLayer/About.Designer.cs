@@ -43,6 +43,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
@@ -53,6 +54,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.btnBack);
             this.panel2.Controls.Add(this.labelloanpage);
             this.panel2.Location = new System.Drawing.Point(0, 1);
             this.panel2.Name = "panel2";
@@ -65,11 +67,11 @@
             this.labelloanpage.BackColor = System.Drawing.Color.SteelBlue;
             this.labelloanpage.Font = new System.Drawing.Font("Modern No. 20", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelloanpage.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelloanpage.Location = new System.Drawing.Point(3, 7);
+            this.labelloanpage.Location = new System.Drawing.Point(411, 8);
             this.labelloanpage.Name = "labelloanpage";
-            this.labelloanpage.Size = new System.Drawing.Size(132, 38);
+            this.labelloanpage.Size = new System.Drawing.Size(158, 38);
             this.labelloanpage.TabIndex = 3;
-            this.labelloanpage.Text = "About...";
+            this.labelloanpage.Text = "About Us";
             // 
             // pictureBox1
             // 
@@ -202,6 +204,20 @@
             this.pictureBox2.TabIndex = 66;
             this.pictureBox2.TabStop = false;
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(22, 6);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(109, 32);
+            this.btnBack.TabIndex = 24;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseMnemonic = false;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,6 +239,7 @@
             this.Controls.Add(this.picturecbs);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "About";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "About";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -251,5 +268,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnBack;
     }
 }
