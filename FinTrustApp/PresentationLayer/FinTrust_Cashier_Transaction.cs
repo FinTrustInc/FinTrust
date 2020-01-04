@@ -86,7 +86,7 @@ namespace FinTrustApp.PresentationLayer
         }
 		//----------------------------------------------------------------------------------------------------------------
 		//----------------------------- Generate Account Name after entering Account No ----------------------------------
-
+		//----
 		private void textBoxAccNo_KeyUp(object sender, KeyEventArgs e)
 		{
 			try
