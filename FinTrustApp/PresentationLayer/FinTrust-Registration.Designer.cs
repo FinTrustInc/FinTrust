@@ -115,6 +115,7 @@
             this.checkBoxUserRegister.Size = new System.Drawing.Size(13, 12);
             this.checkBoxUserRegister.TabIndex = 51;
             this.checkBoxUserRegister.UseVisualStyleBackColor = false;
+            this.checkBoxUserRegister.CheckedChanged += new System.EventHandler(this.checkBoxUserRegister_CheckedChanged);
             // 
             // labelPara2
             // 
@@ -172,7 +173,6 @@
             this.comboBoxDesignation.Name = "comboBoxDesignation";
             this.comboBoxDesignation.Size = new System.Drawing.Size(234, 26);
             this.comboBoxDesignation.TabIndex = 42;
-            this.comboBoxDesignation.Text = "           - - - Select - - -";
             this.comboBoxDesignation.Validating += new System.ComponentModel.CancelEventHandler(this.comboBoxDesignation_Validating);
             // 
             // radioButtonEmployeeFemale
@@ -211,7 +211,7 @@
             // textBoxtEmployeePAN
             // 
             this.textBoxtEmployeePAN.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxtEmployeePAN.Location = new System.Drawing.Point(645, 332);
+            this.textBoxtEmployeePAN.Location = new System.Drawing.Point(636, 328);
             this.textBoxtEmployeePAN.Name = "textBoxtEmployeePAN";
             this.textBoxtEmployeePAN.Size = new System.Drawing.Size(234, 25);
             this.textBoxtEmployeePAN.TabIndex = 38;
@@ -224,7 +224,6 @@
             this.textBoxEmployeeAadhar.Name = "textBoxEmployeeAadhar";
             this.textBoxEmployeeAadhar.Size = new System.Drawing.Size(234, 25);
             this.textBoxEmployeeAadhar.TabIndex = 37;
-            this.textBoxEmployeeAadhar.TextChanged += new System.EventHandler(this.textBoxEmployeeAadhar_TextChanged);
             this.textBoxEmployeeAadhar.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxEmployeeAadhar_Validating);
             // 
             // textBoxEmployeeAddress
@@ -378,7 +377,7 @@
             this.labelUserRegistrtionMessage.AutoSize = true;
             this.labelUserRegistrtionMessage.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUserRegistrtionMessage.ForeColor = System.Drawing.Color.Maroon;
-            this.labelUserRegistrtionMessage.Location = new System.Drawing.Point(445, 28);
+            this.labelUserRegistrtionMessage.Location = new System.Drawing.Point(434, 54);
             this.labelUserRegistrtionMessage.Name = "labelUserRegistrtionMessage";
             this.labelUserRegistrtionMessage.Size = new System.Drawing.Size(0, 14);
             this.labelUserRegistrtionMessage.TabIndex = 3;
@@ -412,9 +411,10 @@
             // 
             this.buttonUserRegister.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonUserRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonUserRegister.Enabled = false;
             this.buttonUserRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUserRegister.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUserRegister.Location = new System.Drawing.Point(859, 570);
+            this.buttonUserRegister.Location = new System.Drawing.Point(872, 569);
             this.buttonUserRegister.Name = "buttonUserRegister";
             this.buttonUserRegister.Size = new System.Drawing.Size(100, 51);
             this.buttonUserRegister.TabIndex = 46;
@@ -480,7 +480,6 @@
         private System.Windows.Forms.Label labelEmployeeName;
         private System.Windows.Forms.Label labelEmployeeID;
         private System.Windows.Forms.Label labelUserRegistrtionMessage;
-        public System.Windows.Forms.ErrorProvider errorProviderUserRegistration;
         private System.Windows.Forms.Panel panelUserApplicationForm;
         private System.Windows.Forms.Label labelUserApplicationForm;
         private System.Windows.Forms.Button buttonUserRegister;
@@ -490,5 +489,6 @@
         private System.Windows.Forms.Label labelPara2;
         private System.Windows.Forms.CheckBox checkBoxUserRegister;
         private System.Windows.Forms.PictureBox pictureBoxRegistration;
+        private System.Windows.Forms.ErrorProvider errorProviderUserRegistration;
     }
 }

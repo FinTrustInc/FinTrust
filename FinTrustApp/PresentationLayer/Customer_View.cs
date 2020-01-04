@@ -130,5 +130,22 @@ namespace FinTrustApp.PresentationLayer
 				labelMessage.Text = ex.Message.ToString();
 			}
 		}
-	}
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void comboBoxSearch_Validating(object sender, CancelEventArgs e)
+        {
+            if (comboBoxSearch.SelectedIndex == -1)
+            {
+                errorProviderCustomerView.SetError(comboBoxSearch, "Select type !");
+            }
+            else
+            {
+                errorProviderCustomerView.SetError(comboBoxSearch, string.Empty);
+            }
+        }
+    }
 }

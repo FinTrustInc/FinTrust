@@ -76,6 +76,12 @@ namespace FinTrustApp.PresentationLayer
                         FinTrust_Cashier CashierHomeForm = new FinTrust_Cashier();
                         CashierHomeForm.Show();
                     }
+                    else if (objUser.Designation == "Clerk")
+                    {
+                        this.Hide();
+                        Clerk ClerkHomeForm = new Clerk();
+                        ClerkHomeForm.Show();
+                    }
                 }  
                 else
                 {
