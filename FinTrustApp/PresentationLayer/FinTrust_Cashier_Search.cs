@@ -163,5 +163,17 @@ namespace FinTrustApp.PresentationLayer
 				Console.Out.WriteLine(ex.Message.ToString());
 			}
 		}
-	}
+
+        private void comboBoxSearch_Validating(object sender, CancelEventArgs e)
+        {
+            if (comboBoxSearch.SelectedIndex==-1)
+            {
+                errorProviderSearchTransaction.SetError(comboBoxSearch, "Select type !");
+            }
+            else
+            {
+                errorProviderSearchTransaction.SetError(comboBoxSearch, string.Empty);
+            }
+        }
+    }
 }

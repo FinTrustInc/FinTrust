@@ -95,21 +95,26 @@ namespace FinTrustBLL.BusinessLayer
 			}
 			return objCustomer;
 		}
+        //************************** INSERT USER DETAILS ******************************
 
-        public static int UserInsert(User objUser)
+        public static int InsertUserDetails(User objUser)
         {
             int output = 0;
             
             try
             {             
-                output = FinTrustDL.UserInsert(objUser);
+                output = FinTrustDL.InsertUserDetails(objUser);
             }
             catch (Exception ex)
             {
-                Console.Out.WriteLine("******Error:FinTrustBL.cs:UserInsert" + ex.Message.ToString());
+                Console.Out.WriteLine("******Error:FinTrustBL.cs:InsertUserDetails" + ex.Message.ToString());
             }
            
             return output;
         }
+
+
+       
+
     }
 }

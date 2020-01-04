@@ -44,35 +44,12 @@ namespace FinTrustApp.PresentationLayer
 
         }
 
-        private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-
-            Loan_ApplicationForm loanApplicationForm = new Loan_ApplicationForm();
-            loanApplicationForm.Show();
-            
-        }
-
         private void helpToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+            this.Hide();
 
             //Help helpForm = new Help();
             //helpForm.Show();
-        }
-
-        private void greivanceRedressalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-
-            Grievance__Approval_Form grievanceApprovalForm = new Grievance__Approval_Form();
-            grievanceApprovalForm.Show();
-            
-        }
-
-        private void accountHandlingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Probationary_Officer_Load(object sender, EventArgs e)
@@ -93,6 +70,36 @@ namespace FinTrustApp.PresentationLayer
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FinTrust_Login loginForm = new FinTrust_Login();
+            loginForm.Show();
+        }
+
+        private void loanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Loan_ApplicationForm loanApplicationForm = new Loan_ApplicationForm();
+            loanApplicationForm.Show();
+        }
+
+        private void customerDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Customer_View ViewForm = new Customer_View();
+            ViewForm.Show();
+        }
+
+        private void grievanceDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Grievance__Approval_Form grievanceApprovalForm = new Grievance__Approval_Form();
+            grievanceApprovalForm.Show();
         }
     }
 }

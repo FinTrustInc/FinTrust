@@ -36,9 +36,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.SqlClient, Version=4.6.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SqlClient.4.8.0\lib\net461\System.Data.SqlClient.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PresentationLayer\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\Branch_Manager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,12 +113,6 @@
     <Compile Include="PresentationLayer\FinTrust-Registration.Designer.cs">
       <DependentUpon>FinTrust-Registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\Fintrust_View.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\Fintrust_View.Designer.cs">
-      <DependentUpon>Fintrust_View.cs</DependentUpon>
-    </Compile>
     <Compile Include="PresentationLayer\Grievance _Approval_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +145,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PresentationLayer\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Branch_Manager.resx">
       <DependentUpon>Branch_Manager.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,9 +177,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FinTrust-Registration.resx">
       <DependentUpon>FinTrust-Registration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Fintrust_View.resx">
-      <DependentUpon>Fintrust_View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Grievance _Approval_Form.resx">
       <DependentUpon>Grievance _Approval_Form.cs</DependentUpon>

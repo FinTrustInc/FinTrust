@@ -34,7 +34,7 @@ namespace FinTrustApp.PresentationLayer
                 if (customerObj != null)
                 {
                     textBoxName.Text = customerObj.CustomerName;
-                
+                    textBoxAccountNumber.Text= customerObj.AccountNumber;
                 }
 
             }
@@ -48,11 +48,19 @@ namespace FinTrustApp.PresentationLayer
         {
             if (checkBoxLoanApplicationDeclaration.Checked)
             {
-                buttonsubmit.Visible = true;
+                if (textBoxLoanAmount.Text == string.Empty || comboBoxLoanType.SelectedIndex==-1 || textBoxGuarantor.Text == string.Empty || textBoxTerm.Text == string.Empty)
+                {
+                    checkBoxLoanApplicationDeclaration.Checked = false;
+                    buttonsubmit.Enabled = false;
+                }
+                else
+                {
+                    buttonsubmit.Enabled = true;
+                }
             }
             else
             {
-                buttonsubmit.Visible = false;
+                buttonsubmit.Enabled = false;
             }
         }
 
@@ -63,7 +71,7 @@ namespace FinTrustApp.PresentationLayer
 
         private void buttonsubmit_Click(object sender, EventArgs e)
         {
-            Loan loanObj = null;
+             Loan loanObj = null;
             int output = 0;
             if (LoanFormValidation())
             {
@@ -132,6 +140,67 @@ namespace FinTrustApp.PresentationLayer
             return flag;
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Probationary_Officer POHomeForm = new Probationary_Officer();
+            POHomeForm.Show();
+        }
 
+        private void textBoxLoanAmount_Validating(object sender, CancelEventArgs e)
+        {
+            if (textBoxLoanAmount.Text == string.Empty)
+            {
+                errorProviderLoanApplication.SetError(textBoxLoanAmount, "Loan amount required !");
+            }
+            else if (!long.TryParse(textBoxLoanAmount.Text, out long result))
+            {
+                errorProviderLoanApplication.SetError(textBoxLoanAmount, "Loan amount should contain digits !");
+            }
+            else
+            {
+                errorProviderLoanApplication.SetError(textBoxLoanAmount, string.Empty);
+            }
+        }
+
+        private void textBoxGuarantor_Validating(object sender, CancelEventArgs e)
+        {
+            if (textBoxGuarantor.Text == string.Empty)
+            {
+                errorProviderLoanApplication.SetError(textBoxGuarantor, "Guarantor name required !");
+            }
+            else
+            {
+                errorProviderLoanApplication.SetError(textBoxGuarantor, string.Empty);
+            }
+        }
+
+        private void textBoxTerm_Validating(object sender, CancelEventArgs e)
+        {
+            if (textBoxTerm.Text == string.Empty)
+            {
+                errorProviderLoanApplication.SetError(textBoxTerm, "number of terms required !");
+            }
+            else if (!long.TryParse(textBoxTerm.Text, out long result))
+            {
+                errorProviderLoanApplication.SetError(textBoxTerm, "term should contain digits !");
+            }
+            else
+            {
+                errorProviderLoanApplication.SetError(textBoxTerm, string.Empty);
+            }
+        }
+
+        private void comboBoxLoanType_Validating(object sender, CancelEventArgs e)
+        {
+            if (comboBoxLoanType.SelectedIndex == -1)
+            {
+                errorProviderLoanApplication.SetError(comboBoxLoanType, "Loan type required !");
+            }
+            else
+            {
+                errorProviderLoanApplication.SetError(comboBoxLoanType, string.Empty);
+            }
+        }
     }
 }
