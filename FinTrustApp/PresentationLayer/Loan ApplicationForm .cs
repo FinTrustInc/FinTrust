@@ -30,7 +30,8 @@ namespace FinTrustApp.PresentationLayer
             try
             {
 
-                customerObj = LoanBL.GetCustomerById(textBoxCustomerId.Text);
+                customerObj = 
+                    LoanBL.GetCustomerById(textBoxCustomerId.Text);
                 if (customerObj != null)
                 {
                     textBoxName.Text = customerObj.CustomerName;
