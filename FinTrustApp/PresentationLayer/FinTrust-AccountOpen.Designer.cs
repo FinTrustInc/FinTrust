@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinTrust_AccountOpen));
             this.panelAccountOpen = new System.Windows.Forms.Panel();
-            this.checkBoxLoanApplication = new System.Windows.Forms.CheckBox();
+            this.checkBoxAccountOpen = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -59,15 +60,17 @@
             this.buttonAccountOpenSubmit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelCustomerMessage = new System.Windows.Forms.Label();
+            this.errorProviderAccountOpen = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelAccountOpen.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAccountOpen)).BeginInit();
             this.SuspendLayout();
             // 
             // panelAccountOpen
             // 
             this.panelAccountOpen.BackColor = System.Drawing.Color.White;
-            this.panelAccountOpen.Controls.Add(this.checkBoxLoanApplication);
+            this.panelAccountOpen.Controls.Add(this.checkBoxAccountOpen);
             this.panelAccountOpen.Controls.Add(this.label7);
             this.panelAccountOpen.Controls.Add(this.label6);
             this.panelAccountOpen.Controls.Add(this.label8);
@@ -96,19 +99,19 @@
             this.panelAccountOpen.Size = new System.Drawing.Size(914, 472);
             this.panelAccountOpen.TabIndex = 3;
             // 
-            // checkBoxLoanApplication
+            // checkBoxAccountOpen
             // 
-            this.checkBoxLoanApplication.AutoSize = true;
-            this.checkBoxLoanApplication.BackColor = System.Drawing.Color.AliceBlue;
-            this.checkBoxLoanApplication.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkBoxLoanApplication.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBoxLoanApplication.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBoxLoanApplication.Location = new System.Drawing.Point(25, 377);
-            this.checkBoxLoanApplication.Name = "checkBoxLoanApplication";
-            this.checkBoxLoanApplication.Size = new System.Drawing.Size(13, 12);
-            this.checkBoxLoanApplication.TabIndex = 54;
-            this.checkBoxLoanApplication.UseVisualStyleBackColor = false;
-            this.checkBoxLoanApplication.CheckedChanged += new System.EventHandler(this.checkBoxLoanApplication_CheckedChanged);
+            this.checkBoxAccountOpen.AutoSize = true;
+            this.checkBoxAccountOpen.BackColor = System.Drawing.Color.AliceBlue;
+            this.checkBoxAccountOpen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxAccountOpen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBoxAccountOpen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBoxAccountOpen.Location = new System.Drawing.Point(25, 377);
+            this.checkBoxAccountOpen.Name = "checkBoxAccountOpen";
+            this.checkBoxAccountOpen.Size = new System.Drawing.Size(13, 12);
+            this.checkBoxAccountOpen.TabIndex = 54;
+            this.checkBoxAccountOpen.UseVisualStyleBackColor = false;
+            this.checkBoxAccountOpen.CheckedChanged += new System.EventHandler(this.checkBoxLoanApplication_CheckedChanged);
             // 
             // label7
             // 
@@ -165,6 +168,7 @@
             this.comboBoxAccountType.Name = "comboBoxAccountType";
             this.comboBoxAccountType.Size = new System.Drawing.Size(244, 26);
             this.comboBoxAccountType.TabIndex = 47;
+            this.comboBoxAccountType.Validating += new System.ComponentModel.CancelEventHandler(this.comboBoxAccountType_Validating);
             // 
             // labelAccountType
             // 
@@ -207,14 +211,16 @@
             this.dateTimePickerCustomerDOB.Name = "dateTimePickerCustomerDOB";
             this.dateTimePickerCustomerDOB.Size = new System.Drawing.Size(244, 25);
             this.dateTimePickerCustomerDOB.TabIndex = 39;
+            this.dateTimePickerCustomerDOB.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimePickerCustomerDOB_Validating);
             // 
             // textBoxCustomerPanNumber
             // 
             this.textBoxCustomerPanNumber.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerPanNumber.Location = new System.Drawing.Point(646, 251);
+            this.textBoxCustomerPanNumber.Location = new System.Drawing.Point(643, 251);
             this.textBoxCustomerPanNumber.Name = "textBoxCustomerPanNumber";
-            this.textBoxCustomerPanNumber.Size = new System.Drawing.Size(241, 25);
+            this.textBoxCustomerPanNumber.Size = new System.Drawing.Size(244, 25);
             this.textBoxCustomerPanNumber.TabIndex = 38;
+            this.textBoxCustomerPanNumber.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxCustomerPanNumber_Validating);
             // 
             // textBoxCustomerAadhar
             // 
@@ -223,6 +229,7 @@
             this.textBoxCustomerAadhar.Name = "textBoxCustomerAadhar";
             this.textBoxCustomerAadhar.Size = new System.Drawing.Size(234, 25);
             this.textBoxCustomerAadhar.TabIndex = 37;
+            this.textBoxCustomerAadhar.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxCustomerAadhar_Validating);
             // 
             // textBoxCustomerAddress
             // 
@@ -232,6 +239,7 @@
             this.textBoxCustomerAddress.Name = "textBoxCustomerAddress";
             this.textBoxCustomerAddress.Size = new System.Drawing.Size(244, 94);
             this.textBoxCustomerAddress.TabIndex = 36;
+            this.textBoxCustomerAddress.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxCustomerAddress_Validating);
             // 
             // textBoxCustomerEmail
             // 
@@ -240,6 +248,7 @@
             this.textBoxCustomerEmail.Name = "textBoxCustomerEmail";
             this.textBoxCustomerEmail.Size = new System.Drawing.Size(234, 25);
             this.textBoxCustomerEmail.TabIndex = 35;
+            this.textBoxCustomerEmail.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxCustomerEmail_Validating);
             // 
             // textBoxCustomerPhone
             // 
@@ -248,6 +257,7 @@
             this.textBoxCustomerPhone.Name = "textBoxCustomerPhone";
             this.textBoxCustomerPhone.Size = new System.Drawing.Size(234, 25);
             this.textBoxCustomerPhone.TabIndex = 34;
+            this.textBoxCustomerPhone.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxCustomerPhone_Validating);
             // 
             // textBoxCustomerName
             // 
@@ -256,6 +266,7 @@
             this.textBoxCustomerName.Name = "textBoxCustomerName";
             this.textBoxCustomerName.Size = new System.Drawing.Size(234, 25);
             this.textBoxCustomerName.TabIndex = 33;
+            this.textBoxCustomerName.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxCustomerName_Validating);
             // 
             // label1
             // 
@@ -393,6 +404,10 @@
             this.labelCustomerMessage.Size = new System.Drawing.Size(0, 14);
             this.labelCustomerMessage.TabIndex = 52;
             // 
+            // errorProviderAccountOpen
+            // 
+            this.errorProviderAccountOpen.ContainerControl = this;
+            // 
             // FinTrust_AccountOpen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -411,6 +426,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAccountOpen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,8 +460,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checkBoxLoanApplication;
+        private System.Windows.Forms.CheckBox checkBoxAccountOpen;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelCustomerMessage;
+        private System.Windows.Forms.ErrorProvider errorProviderAccountOpen;
     }
 }

@@ -34,10 +34,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.accHandlingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.grievanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.accountOpenimgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountClosingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grievanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -101,6 +101,20 @@
             this.accHandlingToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
             this.accHandlingToolStripMenuItem.Text = "Account Handling";
             // 
+            // accountOpenimgToolStripMenuItem
+            // 
+            this.accountOpenimgToolStripMenuItem.Name = "accountOpenimgToolStripMenuItem";
+            this.accountOpenimgToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.accountOpenimgToolStripMenuItem.Text = "Account Opening";
+            this.accountOpenimgToolStripMenuItem.Click += new System.EventHandler(this.accountOpenimgToolStripMenuItem_Click);
+            // 
+            // accountClosingToolStripMenuItem
+            // 
+            this.accountClosingToolStripMenuItem.Name = "accountClosingToolStripMenuItem";
+            this.accountClosingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.accountClosingToolStripMenuItem.Text = "Account Closing";
+            this.accountClosingToolStripMenuItem.Click += new System.EventHandler(this.accountClosingToolStripMenuItem_Click);
+            // 
             // grievanceToolStripMenuItem
             // 
             this.grievanceToolStripMenuItem.Name = "grievanceToolStripMenuItem";
@@ -112,18 +126,6 @@
             this.helpToolStripMenuItem2.Name = "helpToolStripMenuItem2";
             this.helpToolStripMenuItem2.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem2.Text = "Help";
-            // 
-            // accountOpenimgToolStripMenuItem
-            // 
-            this.accountOpenimgToolStripMenuItem.Name = "accountOpenimgToolStripMenuItem";
-            this.accountOpenimgToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.accountOpenimgToolStripMenuItem.Text = "Account Opening";
-            // 
-            // accountClosingToolStripMenuItem
-            // 
-            this.accountClosingToolStripMenuItem.Name = "accountClosingToolStripMenuItem";
-            this.accountClosingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.accountClosingToolStripMenuItem.Text = "Account Closing";
             // 
             // pictureBox2
             // 

@@ -95,6 +95,7 @@ namespace FinTrustBLL.BusinessLayer
 			}
 			return objCustomer;
 		}
+        //************************** INSERT USER DETAILS ******************************
 
         public static int InsertUserDetails(User objUser)
         {

@@ -18,6 +18,7 @@ namespace FinTrustApp.PresentationLayer
         {
             InitializeComponent();
         }
+        //********************************* CHEKBOX CHECKING **********************************************
 
         private void checkBoxAccountClosure_CheckedChanged(object sender, EventArgs e)
         {
@@ -55,6 +56,8 @@ namespace FinTrustApp.PresentationLayer
             }
         }
 
+        //******************************** DELETING ACCOUNT DETAILS ******************************************
+
         private void buttonAccountClosureSubmit_Click(object sender, EventArgs e)
         {
 
@@ -65,7 +68,9 @@ namespace FinTrustApp.PresentationLayer
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     output = CustomerBL.DeleteAccountDetails(textBoxAccountNumber.Text);
-
+                    this.Hide();
+                    Clerk ClerkHomeForm = new Clerk();
+                    ClerkHomeForm.Show();
 
                     if (output > 0)
                     {

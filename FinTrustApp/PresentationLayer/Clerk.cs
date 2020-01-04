@@ -16,5 +16,19 @@ namespace FinTrustApp.PresentationLayer
         {
             InitializeComponent();
         }
+
+        private void accountClosingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FinTrust_AccountClose AccountCloseForm = new FinTrust_AccountClose();
+            AccountCloseForm.Show();
+        }
+
+        private void accountOpenimgToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FinTrust_AccountOpen AccountOpenForm = new FinTrust_AccountOpen();
+            AccountOpenForm.Show();
+        }
     }
 }

@@ -27,23 +27,25 @@ namespace FinTrustApp.PresentationLayer
 
             try
             {
-                if (textBoxEmployeeID.Text == string.Empty || textBoxEmployeeName.Text == string.Empty || comboBoxDesignation.Text == string.Empty || textBoxEmployeePhone.Text == string.Empty || textBoxEmployeeEmail.Text == string.Empty || textBoxEmployeeAddress.Text == string.Empty || textBoxEmployeeAadhar.Text == string.Empty || textBoxtEmployeePAN.Text == string.Empty)
+                if (textBoxEmployeeID.Text == string.Empty || textBoxEmployeeName.Text == string.Empty || comboBoxDesignation.SelectedIndex == -1 || textBoxEmployeePhone.Text == string.Empty || textBoxEmployeeEmail.Text == string.Empty || textBoxEmployeeAddress.Text == string.Empty || textBoxEmployeeAadhar.Text == string.Empty || textBoxtEmployeePAN.Text == string.Empty ||(radioButtonEmployeeMale.Checked==radioButtonEmployeeFemale.Checked==false))
                 {
+                    
                     foreach (Control control in this.Controls)
-                    {
-                        // Set focus on control
-                        control.Focus();
-                        // Validate causes the control's Validating event to be fired,
-                        // if CausesValidation is True
-                        if (!Validate())
+                    {                                                                     
+                        control.Focus();                                             // Set focus on control
+                        
+                        if (!Validate())                                            // Validate causes the control's Validating event to be fired,if CausesValidation is True
+                                                                  
                         {
-                            DialogResult = DialogResult.None;
+                            DialogResult = DialogResult.None;                            
                             return;
                         }
                     }
 
                 }
-
+                
+                //************************************************* INSERTING USER DETAILS *****************************************
+           
                 else
                 {
                     objUser = new User();
@@ -74,6 +76,9 @@ namespace FinTrustApp.PresentationLayer
                     else
                     {
                         labelUserRegistrtionMessage.Text = "SUCCESS";
+                        this.Hide();
+                        Branch_Manager BMHomeForm = new Branch_Manager();
+                        BMHomeForm.Show();
                     }
 
 
@@ -85,11 +90,22 @@ namespace FinTrustApp.PresentationLayer
             }
         }
 
+        //*********************************************** CHECKBOX CHECKING ****************************************************
+
         private void checkBoxUserRegister_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxUserRegister.Checked)
             {
-                buttonUserRegister.Visible = true;
+                if(textBoxEmployeeID.Text == string.Empty || textBoxEmployeeName.Text == string.Empty || comboBoxDesignation.SelectedIndex ==-1  || textBoxEmployeePhone.Text == string.Empty || textBoxEmployeeEmail.Text == string.Empty || textBoxEmployeeAddress.Text == string.Empty || textBoxEmployeeAadhar.Text == string.Empty || textBoxtEmployeePAN.Text == string.Empty)
+                {
+                    checkBoxUserRegister.Checked = false;
+                    buttonUserRegister.Visible = false;
+                }
+                else
+                {
+                    buttonUserRegister.Visible = true;
+                }
+                
             }
             else
             {
@@ -97,17 +113,17 @@ namespace FinTrustApp.PresentationLayer
             }
         }
 
+        //************************************************** VALIDATING TEXTBOXES ***********************************************
+
         private void textBoxEmployeeID_Validating(object sender, CancelEventArgs e)
         {
             if (textBoxEmployeeID.Text == string.Empty)
             {
-                errorProviderUserRegistration.SetError(textBoxEmployeeID, "Employee id required !");
-                textBoxEmployeeID.BackColor = Color.LightCoral;
+                errorProviderUserRegistration.SetError(textBoxEmployeeID, "Employee id required !");                
             }
             else
             {
-                errorProviderUserRegistration.SetError(textBoxEmployeeID, string.Empty);
-                textBoxEmployeeID.BackColor = Color.White;
+                errorProviderUserRegistration.SetError(textBoxEmployeeID, string.Empty);                
             }
         }
 
@@ -115,13 +131,11 @@ namespace FinTrustApp.PresentationLayer
         {
             if (textBoxEmployeeName.Text == string.Empty)
             {
-                errorProviderUserRegistration.SetError(textBoxEmployeeName, "Employee name required !");
-                textBoxEmployeeName.BackColor = Color.LightCoral;
+                errorProviderUserRegistration.SetError(textBoxEmployeeName, "Employee name required !");                
             }
             else
             {
                 errorProviderUserRegistration.SetError(textBoxEmployeeName, string.Empty);
-                textBoxEmployeeName.BackColor = Color.White;
             }
         }
 
@@ -130,12 +144,10 @@ namespace FinTrustApp.PresentationLayer
             if (dateTimePickerEmployeeDOB.Text == string.Empty)
             {
                 errorProviderUserRegistration.SetError(dateTimePickerEmployeeDOB, "Employee date of birth required !");
-                dateTimePickerEmployeeDOB.BackColor = Color.LightCoral;
             }
             else
             {
                 errorProviderUserRegistration.SetError(dateTimePickerEmployeeDOB, string.Empty);
-                dateTimePickerEmployeeDOB.BackColor = Color.White;
             }
         }
 
@@ -144,12 +156,10 @@ namespace FinTrustApp.PresentationLayer
             if (comboBoxDesignation.Text == string.Empty)
             {
                 errorProviderUserRegistration.SetError(comboBoxDesignation, "Employee designation required !");
-                comboBoxDesignation.BackColor = Color.LightCoral;
             }
             else
             {
                 errorProviderUserRegistration.SetError(comboBoxDesignation, string.Empty);
-                comboBoxDesignation.BackColor = Color.White;
             }
         }
 
@@ -158,17 +168,14 @@ namespace FinTrustApp.PresentationLayer
             if (textBoxEmployeePhone.Text == string.Empty)
             {
                 errorProviderUserRegistration.SetError(textBoxEmployeePhone, "Employee phone number required !");
-                textBoxEmployeePhone.BackColor = Color.LightCoral;
             }
-            else if (textBoxEmployeePhone.Text.Length != 10 || !int.TryParse(textBoxEmployeePhone.Text, out int result))
+            else if ((textBoxEmployeePhone.Text.Length != 10) || (!long.TryParse(textBoxEmployeePhone.Text, out long result)))
             {
                 errorProviderUserRegistration.SetError(textBoxEmployeePhone, "Enter valid phone number !");
-                textBoxEmployeePhone.BackColor = Color.LightCoral;
             }
             else
             {
                 errorProviderUserRegistration.SetError(textBoxEmployeePhone, string.Empty);
-                textBoxEmployeePhone.BackColor = Color.White;
             }
         }
 
@@ -180,18 +187,15 @@ namespace FinTrustApp.PresentationLayer
             if (textBoxEmployeeEmail.Text == string.Empty)
             {
                 errorProviderUserRegistration.SetError(textBoxEmployeeEmail, "Employee email required !");
-                textBoxEmployeeEmail.BackColor = Color.LightCoral;
             }
             else if (!match.Success)
             {
                 errorProviderUserRegistration.SetError(textBoxEmployeeEmail, "Invalid email !");
-                textBoxEmployeeEmail.BackColor = Color.LightCoral;
 
             }
             else
             {
                 errorProviderUserRegistration.SetError(textBoxEmployeeEmail, string.Empty);
-                textBoxEmployeeEmail.BackColor = Color.White;
             }
         }
 
@@ -200,12 +204,10 @@ namespace FinTrustApp.PresentationLayer
             if (textBoxEmployeeAddress.Text == string.Empty)
             {
                 errorProviderUserRegistration.SetError(textBoxEmployeeAddress, "Employee address required !");
-                textBoxEmployeeAddress.BackColor = Color.LightCoral;
             }
             else
             {
                 errorProviderUserRegistration.SetError(textBoxEmployeeAddress, string.Empty);
-                textBoxEmployeeAddress.BackColor = Color.White;
             }
         }
         
@@ -214,12 +216,10 @@ namespace FinTrustApp.PresentationLayer
             if (textBoxtEmployeePAN.Text == string.Empty)
             {
                 errorProviderUserRegistration.SetError(textBoxtEmployeePAN, "Employee pan number required !");
-                textBoxtEmployeePAN.BackColor = Color.LightCoral;
             }
             else
             {
                 errorProviderUserRegistration.SetError(textBoxtEmployeePAN, string.Empty);
-                textBoxtEmployeePAN.BackColor = Color.White;
             }
         }
 
@@ -228,12 +228,10 @@ namespace FinTrustApp.PresentationLayer
             if (textBoxEmployeeAadhar.Text == string.Empty)
             {
                 errorProviderUserRegistration.SetError(textBoxEmployeeAadhar, "Employee aadhar number required !");
-                textBoxEmployeeAadhar.BackColor = Color.LightCoral;
             }
             else
             {
                 errorProviderUserRegistration.SetError(textBoxEmployeeAadhar, string.Empty);
-                textBoxEmployeeAadhar.BackColor = Color.White;
             }
         }
     }

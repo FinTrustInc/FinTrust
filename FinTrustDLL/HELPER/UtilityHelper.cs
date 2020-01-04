@@ -49,17 +49,16 @@ namespace FinTrustDLL.Helper
             return newLoanID;
         }
 
+        //*************************************** AUTO GENERATING CUSTOMER ID ************************************
+
         public static string GenerateCustomerId(string oldID)
-        {
-            string prefix, suffix;
+        {            
             int next;
             string newCustomerID = null;
             try
             {
-                prefix = oldID.Substring(0, 3);
-                suffix = oldID.Substring(3);
-                next = Convert.ToInt32(suffix) + 1;
-                newCustomerID = prefix + next;
+                next = Convert.ToInt32(oldID) + 1;
+                newCustomerID = next.ToString();
             }
             catch (Exception e3)
             {
@@ -68,6 +67,8 @@ namespace FinTrustDLL.Helper
             }
             return newCustomerID;
         }
+
+        //*************************************** AUTO GENERATING ACCOUNT NUMBER ************************************
 
         public static string GenerateAccountNumber(string oldAccountNumber)
         {

@@ -17,7 +17,7 @@ namespace FinTrustApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FinTrust_AccountClose());
+            Application.Run(new FinTrust_AccountOpen());
         }
     }
 }

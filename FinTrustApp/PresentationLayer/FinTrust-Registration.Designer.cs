@@ -173,7 +173,6 @@
             this.comboBoxDesignation.Name = "comboBoxDesignation";
             this.comboBoxDesignation.Size = new System.Drawing.Size(234, 26);
             this.comboBoxDesignation.TabIndex = 42;
-            this.comboBoxDesignation.Text = "           - - - Select - - -";
             this.comboBoxDesignation.Validating += new System.ComponentModel.CancelEventHandler(this.comboBoxDesignation_Validating);
             // 
             // radioButtonEmployeeFemale
@@ -212,7 +211,7 @@
             // textBoxtEmployeePAN
             // 
             this.textBoxtEmployeePAN.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxtEmployeePAN.Location = new System.Drawing.Point(645, 332);
+            this.textBoxtEmployeePAN.Location = new System.Drawing.Point(636, 328);
             this.textBoxtEmployeePAN.Name = "textBoxtEmployeePAN";
             this.textBoxtEmployeePAN.Size = new System.Drawing.Size(234, 25);
             this.textBoxtEmployeePAN.TabIndex = 38;
@@ -481,7 +480,6 @@
         private System.Windows.Forms.Label labelEmployeeName;
         private System.Windows.Forms.Label labelEmployeeID;
         private System.Windows.Forms.Label labelUserRegistrtionMessage;
-        public System.Windows.Forms.ErrorProvider errorProviderUserRegistration;
         private System.Windows.Forms.Panel panelUserApplicationForm;
         private System.Windows.Forms.Label labelUserApplicationForm;
         private System.Windows.Forms.Button buttonUserRegister;
@@ -491,5 +489,6 @@
         private System.Windows.Forms.Label labelPara2;
         private System.Windows.Forms.CheckBox checkBoxUserRegister;
         private System.Windows.Forms.PictureBox pictureBoxRegistration;
+        private System.Windows.Forms.ErrorProvider errorProviderUserRegistration;
     }
 }

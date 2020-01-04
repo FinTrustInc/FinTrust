@@ -36,21 +36,19 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.labelAccountType = new System.Windows.Forms.Label();
-            this.textBoxCustomerClosureReason = new System.Windows.Forms.TextBox();
             this.textBoxCustomerEmail = new System.Windows.Forms.TextBox();
             this.textBoxCustomerPhone = new System.Windows.Forms.TextBox();
             this.textBoxCustomerName = new System.Windows.Forms.TextBox();
             this.buttonAccountClosureSubmit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelCustomerAddress = new System.Windows.Forms.Label();
             this.labelCustomerEmail = new System.Windows.Forms.Label();
             this.labelCustomerPhone = new System.Windows.Forms.Label();
             this.labelCustomerName = new System.Windows.Forms.Label();
             this.panelAccountOpen = new System.Windows.Forms.Panel();
+            this.textBoxAccountType = new System.Windows.Forms.TextBox();
+            this.buttonAccountNumberSearch = new System.Windows.Forms.Button();
             this.textBoxAccountNumber = new System.Windows.Forms.TextBox();
             this.labelAccountNumber = new System.Windows.Forms.Label();
-            this.buttonAccountNumberSearch = new System.Windows.Forms.Button();
-            this.textBoxAccountType = new System.Windows.Forms.TextBox();
             this.labelCustomerAccountCloseMessage = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -129,25 +127,16 @@
             // 
             this.labelAccountType.AutoSize = true;
             this.labelAccountType.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAccountType.Location = new System.Drawing.Point(492, 42);
+            this.labelAccountType.Location = new System.Drawing.Point(492, 120);
             this.labelAccountType.Name = "labelAccountType";
             this.labelAccountType.Size = new System.Drawing.Size(96, 18);
             this.labelAccountType.TabIndex = 46;
             this.labelAccountType.Text = "Account Type";
             // 
-            // textBoxCustomerClosureReason
-            // 
-            this.textBoxCustomerClosureReason.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerClosureReason.Location = new System.Drawing.Point(614, 149);
-            this.textBoxCustomerClosureReason.Multiline = true;
-            this.textBoxCustomerClosureReason.Name = "textBoxCustomerClosureReason";
-            this.textBoxCustomerClosureReason.Size = new System.Drawing.Size(276, 135);
-            this.textBoxCustomerClosureReason.TabIndex = 36;
-            // 
             // textBoxCustomerEmail
             // 
             this.textBoxCustomerEmail.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerEmail.Location = new System.Drawing.Point(614, 99);
+            this.textBoxCustomerEmail.Location = new System.Drawing.Point(614, 224);
             this.textBoxCustomerEmail.Name = "textBoxCustomerEmail";
             this.textBoxCustomerEmail.Size = new System.Drawing.Size(276, 25);
             this.textBoxCustomerEmail.TabIndex = 35;
@@ -155,7 +144,7 @@
             // textBoxCustomerPhone
             // 
             this.textBoxCustomerPhone.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerPhone.Location = new System.Drawing.Point(184, 168);
+            this.textBoxCustomerPhone.Location = new System.Drawing.Point(175, 224);
             this.textBoxCustomerPhone.Name = "textBoxCustomerPhone";
             this.textBoxCustomerPhone.Size = new System.Drawing.Size(275, 25);
             this.textBoxCustomerPhone.TabIndex = 34;
@@ -163,7 +152,7 @@
             // textBoxCustomerName
             // 
             this.textBoxCustomerName.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerName.Location = new System.Drawing.Point(184, 103);
+            this.textBoxCustomerName.Location = new System.Drawing.Point(175, 120);
             this.textBoxCustomerName.Name = "textBoxCustomerName";
             this.textBoxCustomerName.Size = new System.Drawing.Size(275, 25);
             this.textBoxCustomerName.TabIndex = 33;
@@ -194,21 +183,11 @@
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
             // 
-            // labelCustomerAddress
-            // 
-            this.labelCustomerAddress.AutoSize = true;
-            this.labelCustomerAddress.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCustomerAddress.Location = new System.Drawing.Point(492, 175);
-            this.labelCustomerAddress.Name = "labelCustomerAddress";
-            this.labelCustomerAddress.Size = new System.Drawing.Size(101, 18);
-            this.labelCustomerAddress.TabIndex = 29;
-            this.labelCustomerAddress.Text = "Closure reason";
-            // 
             // labelCustomerEmail
             // 
             this.labelCustomerEmail.AutoSize = true;
             this.labelCustomerEmail.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCustomerEmail.Location = new System.Drawing.Point(492, 110);
+            this.labelCustomerEmail.Location = new System.Drawing.Point(505, 231);
             this.labelCustomerEmail.Name = "labelCustomerEmail";
             this.labelCustomerEmail.Size = new System.Drawing.Size(48, 18);
             this.labelCustomerEmail.TabIndex = 28;
@@ -218,7 +197,7 @@
             // 
             this.labelCustomerPhone.AutoSize = true;
             this.labelCustomerPhone.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCustomerPhone.Location = new System.Drawing.Point(38, 175);
+            this.labelCustomerPhone.Location = new System.Drawing.Point(32, 231);
             this.labelCustomerPhone.Name = "labelCustomerPhone";
             this.labelCustomerPhone.Size = new System.Drawing.Size(105, 18);
             this.labelCustomerPhone.TabIndex = 27;
@@ -228,7 +207,7 @@
             // 
             this.labelCustomerName.AutoSize = true;
             this.labelCustomerName.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCustomerName.Location = new System.Drawing.Point(38, 106);
+            this.labelCustomerName.Location = new System.Drawing.Point(29, 123);
             this.labelCustomerName.Name = "labelCustomerName";
             this.labelCustomerName.Size = new System.Drawing.Size(108, 18);
             this.labelCustomerName.TabIndex = 23;
@@ -246,11 +225,9 @@
             this.panelAccountOpen.Controls.Add(this.label8);
             this.panelAccountOpen.Controls.Add(this.label5);
             this.panelAccountOpen.Controls.Add(this.labelAccountType);
-            this.panelAccountOpen.Controls.Add(this.textBoxCustomerClosureReason);
             this.panelAccountOpen.Controls.Add(this.textBoxCustomerEmail);
             this.panelAccountOpen.Controls.Add(this.textBoxCustomerPhone);
             this.panelAccountOpen.Controls.Add(this.textBoxCustomerName);
-            this.panelAccountOpen.Controls.Add(this.labelCustomerAddress);
             this.panelAccountOpen.Controls.Add(this.labelCustomerEmail);
             this.panelAccountOpen.Controls.Add(this.labelCustomerPhone);
             this.panelAccountOpen.Controls.Add(this.labelCustomerName);
@@ -258,6 +235,28 @@
             this.panelAccountOpen.Name = "panelAccountOpen";
             this.panelAccountOpen.Size = new System.Drawing.Size(914, 421);
             this.panelAccountOpen.TabIndex = 52;
+            // 
+            // textBoxAccountType
+            // 
+            this.textBoxAccountType.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAccountType.Location = new System.Drawing.Point(614, 120);
+            this.textBoxAccountType.Name = "textBoxAccountType";
+            this.textBoxAccountType.Size = new System.Drawing.Size(276, 25);
+            this.textBoxAccountType.TabIndex = 57;
+            // 
+            // buttonAccountNumberSearch
+            // 
+            this.buttonAccountNumberSearch.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.buttonAccountNumberSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAccountNumberSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAccountNumberSearch.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAccountNumberSearch.Location = new System.Drawing.Point(349, 39);
+            this.buttonAccountNumberSearch.Name = "buttonAccountNumberSearch";
+            this.buttonAccountNumberSearch.Size = new System.Drawing.Size(110, 25);
+            this.buttonAccountNumberSearch.TabIndex = 56;
+            this.buttonAccountNumberSearch.Text = "SEARCH";
+            this.buttonAccountNumberSearch.UseVisualStyleBackColor = false;
+            this.buttonAccountNumberSearch.Click += new System.EventHandler(this.buttonAccountNumberSearch_Click);
             // 
             // textBoxAccountNumber
             // 
@@ -276,28 +275,6 @@
             this.labelAccountNumber.Size = new System.Drawing.Size(116, 18);
             this.labelAccountNumber.TabIndex = 55;
             this.labelAccountNumber.Text = "Account Number";
-            // 
-            // buttonAccountNumberSearch
-            // 
-            this.buttonAccountNumberSearch.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.buttonAccountNumberSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAccountNumberSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonAccountNumberSearch.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAccountNumberSearch.Location = new System.Drawing.Point(349, 39);
-            this.buttonAccountNumberSearch.Name = "buttonAccountNumberSearch";
-            this.buttonAccountNumberSearch.Size = new System.Drawing.Size(110, 25);
-            this.buttonAccountNumberSearch.TabIndex = 56;
-            this.buttonAccountNumberSearch.Text = "SEARCH";
-            this.buttonAccountNumberSearch.UseVisualStyleBackColor = false;
-            this.buttonAccountNumberSearch.Click += new System.EventHandler(this.buttonAccountNumberSearch_Click);
-            // 
-            // textBoxAccountType
-            // 
-            this.textBoxAccountType.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAccountType.Location = new System.Drawing.Point(614, 42);
-            this.textBoxAccountType.Name = "textBoxAccountType";
-            this.textBoxAccountType.Size = new System.Drawing.Size(276, 25);
-            this.textBoxAccountType.TabIndex = 57;
             // 
             // labelCustomerAccountCloseMessage
             // 
@@ -341,13 +318,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelAccountType;
-        private System.Windows.Forms.TextBox textBoxCustomerClosureReason;
         private System.Windows.Forms.TextBox textBoxCustomerEmail;
         private System.Windows.Forms.TextBox textBoxCustomerPhone;
         private System.Windows.Forms.TextBox textBoxCustomerName;
         private System.Windows.Forms.Button buttonAccountClosureSubmit;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label labelCustomerAddress;
         private System.Windows.Forms.Label labelCustomerEmail;
         private System.Windows.Forms.Label labelCustomerPhone;
         private System.Windows.Forms.Label labelCustomerName;
