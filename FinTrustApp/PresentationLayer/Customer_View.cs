@@ -174,7 +174,7 @@ namespace FinTrustApp.PresentationLayer
 			}
 			catch (Exception ex)
 			{
-				labelMessage.Text = ex.Message.ToString();
+				Console.Out.WriteLine(ex.Message.ToString());
 			}
 		}
 	}

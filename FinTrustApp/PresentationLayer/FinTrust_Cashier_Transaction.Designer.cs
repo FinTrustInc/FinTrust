@@ -219,12 +219,11 @@
 			// 
 			this.labelMessage.AutoSize = true;
 			this.labelMessage.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.labelMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-			this.labelMessage.Location = new System.Drawing.Point(189, 62);
+			this.labelMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.labelMessage.Location = new System.Drawing.Point(331, 66);
 			this.labelMessage.Name = "labelMessage";
-			this.labelMessage.Size = new System.Drawing.Size(28, 18);
+			this.labelMessage.Size = new System.Drawing.Size(0, 18);
 			this.labelMessage.TabIndex = 9;
-			this.labelMessage.Text = ".....";
 			// 
 			// panel3
 			// 
