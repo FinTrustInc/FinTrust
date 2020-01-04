@@ -293,6 +293,7 @@
             this.Controls.Add(this.lblF);
             this.MaximizeBox = false;
             this.Name = "FinTrust_Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FinTrust";
             this.Load += new System.EventHandler(this.FinTrust_Login_Load);
             this.panelLogin.ResumeLayout(false);

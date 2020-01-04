@@ -135,8 +135,7 @@ namespace FinTrustApp.PresentationLayer
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Probationary_Officer POHomeForm = new Probationary_Officer();
-            POHomeForm.Show();
+            Utility.GetLastPage();
         }
     }
 }

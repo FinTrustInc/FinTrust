@@ -44,6 +44,7 @@
     <Compile Include="DTO\Customer.cs" />
     <Compile Include="DTO\Grievance.cs" />
     <Compile Include="DTO\Loan.cs" />
+    <Compile Include="DTO\LoginInfo.cs" />
     <Compile Include="DTO\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

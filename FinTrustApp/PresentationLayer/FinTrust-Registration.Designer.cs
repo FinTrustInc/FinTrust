@@ -60,6 +60,7 @@
             this.labelUserRegistrtionMessage = new System.Windows.Forms.Label();
             this.errorProviderUserRegistration = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelUserApplicationForm = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.labelUserApplicationForm = new System.Windows.Forms.Label();
             this.buttonUserRegister = new System.Windows.Forms.Button();
             this.pictureBoxRegistration = new System.Windows.Forms.PictureBox();
@@ -389,11 +390,25 @@
             // panelUserApplicationForm
             // 
             this.panelUserApplicationForm.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelUserApplicationForm.Controls.Add(this.btnBack);
             this.panelUserApplicationForm.Controls.Add(this.labelUserApplicationForm);
             this.panelUserApplicationForm.Location = new System.Drawing.Point(1, 2);
             this.panelUserApplicationForm.Name = "panelUserApplicationForm";
             this.panelUserApplicationForm.Size = new System.Drawing.Size(983, 49);
             this.panelUserApplicationForm.TabIndex = 22;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(30, 10);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(109, 32);
+            this.btnBack.TabIndex = 24;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // labelUserApplicationForm
             // 
@@ -401,11 +416,11 @@
             this.labelUserApplicationForm.BackColor = System.Drawing.Color.SteelBlue;
             this.labelUserApplicationForm.Font = new System.Drawing.Font("Modern No. 20", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUserApplicationForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelUserApplicationForm.Location = new System.Drawing.Point(309, 10);
+            this.labelUserApplicationForm.Location = new System.Drawing.Point(253, 7);
             this.labelUserApplicationForm.Name = "labelUserApplicationForm";
-            this.labelUserApplicationForm.Size = new System.Drawing.Size(376, 38);
+            this.labelUserApplicationForm.Size = new System.Drawing.Size(455, 38);
             this.labelUserApplicationForm.TabIndex = 3;
-            this.labelUserApplicationForm.Text = "User Registration Form";
+            this.labelUserApplicationForm.Text = "Employee Registration Form";
             // 
             // buttonUserRegister
             // 
@@ -443,8 +458,10 @@
             this.Controls.Add(this.panelUserApplicationForm);
             this.Controls.Add(this.labelUserRegistrtionMessage);
             this.Controls.Add(this.panelRegistration);
+            this.MaximizeBox = false;
             this.Name = "FinTrust_Registration";
-            this.Text = "FinTrust_Registration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Employee Registration - FinTrust";
             this.panelRegistration.ResumeLayout(false);
             this.panelRegistration.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderUserRegistration)).EndInit();
@@ -490,5 +507,6 @@
         private System.Windows.Forms.CheckBox checkBoxUserRegister;
         private System.Windows.Forms.PictureBox pictureBoxRegistration;
         private System.Windows.Forms.ErrorProvider errorProviderUserRegistration;
+        private System.Windows.Forms.Button btnBack;
     }
 }

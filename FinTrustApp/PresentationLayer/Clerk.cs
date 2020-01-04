@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinTrustDTO.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,8 @@ namespace FinTrustApp.PresentationLayer
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            LoginInfo.designation = "";
+            LoginInfo.employeeId = "";
             this.Hide();
 
             FinTrust_Login loginForm = new FinTrust_Login();
@@ -54,6 +57,13 @@ namespace FinTrustApp.PresentationLayer
 
             FinTrust_AccountClose accountCloseForm = new FinTrust_AccountClose();
             accountCloseForm.Show();
+        }
+
+        private void myProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MyProfile profileObj = new MyProfile();
+            profileObj.Show();
         }
     }
 }

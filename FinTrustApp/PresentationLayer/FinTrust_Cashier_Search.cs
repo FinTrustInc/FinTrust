@@ -147,5 +147,11 @@ namespace FinTrustApp.PresentationLayer
 				Console.Out.WriteLine(ex.Message.ToString());
 			}
 		}
-	}
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Utility.GetLastPage();
+        }
+    }
 }

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Grievance_Redressal_Application));
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxGrievanceID = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -59,7 +60,7 @@
             this.label1.BackColor = System.Drawing.Color.SteelBlue;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(265, 11);
+            this.label1.Location = new System.Drawing.Point(277, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(457, 38);
             this.label1.TabIndex = 3;
@@ -69,11 +70,25 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.btnBack);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(1, 1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(983, 49);
             this.panel2.TabIndex = 21;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(36, 11);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(109, 32);
+            this.btnBack.TabIndex = 25;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // panel1
             // 
@@ -266,8 +281,10 @@
             this.Controls.Add(this.buttonsubmit);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.MaximizeBox = false;
             this.Name = "Grievance_Redressal_Application";
-            this.Text = "Grievance Registration Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Grievance Registration Form - FinTrust";
             this.Load += new System.EventHandler(this.Grievance_Redressal_Application_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -299,5 +316,6 @@
         private System.Windows.Forms.Label labelMessage;
         private System.Windows.Forms.TextBox textBoxGrievanceID;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnBack;
     }
 }

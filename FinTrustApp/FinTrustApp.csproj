@@ -119,17 +119,17 @@
     <Compile Include="PresentationLayer\Grievance_Redressal_Application.Designer.cs">
       <DependentUpon>Grievance_Redressal_Application.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\Help.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\Help.Designer.cs">
-      <DependentUpon>Help.cs</DependentUpon>
-    </Compile>
     <Compile Include="PresentationLayer\Loan ApplicationForm .cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\Loan ApplicationForm .Designer.cs">
       <DependentUpon>Loan ApplicationForm .cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MyProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MyProfile.Designer.cs">
+      <DependentUpon>MyProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\Pending_Loan_Applications.cs">
       <SubType>Form</SubType>
@@ -143,6 +143,7 @@
     <Compile Include="PresentationLayer\Probationary Officer.Designer.cs">
       <DependentUpon>Probationary Officer.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\Utility.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PresentationLayer\Branch_Manager.resx">
@@ -181,11 +182,11 @@
     <EmbeddedResource Include="PresentationLayer\Grievance_Redressal_Application.resx">
       <DependentUpon>Grievance_Redressal_Application.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Help.resx">
-      <DependentUpon>Help.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Loan ApplicationForm .resx">
       <DependentUpon>Loan ApplicationForm .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MyProfile.resx">
+      <DependentUpon>MyProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Pending_Loan_Applications.resx">
       <DependentUpon>Pending_Loan_Applications.cs</DependentUpon>

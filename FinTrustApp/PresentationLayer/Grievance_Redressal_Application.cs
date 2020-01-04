@@ -73,5 +73,11 @@ namespace FinTrustApp.PresentationLayer
             textBoxGrievanceID.Text = GrievanceBL.GetNewGrievanceId().ToString();
            
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Utility.GetLastPage();
+        }
     }
 }

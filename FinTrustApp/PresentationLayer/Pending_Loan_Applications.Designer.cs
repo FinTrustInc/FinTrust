@@ -486,8 +486,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.checkBoxCollaterals);
+            this.MaximizeBox = false;
             this.Name = "Pending_Loan_Applications";
-            this.Text = "FinTrust";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Loan Applications - FinTrust";
             this.Load += new System.EventHandler(this.Pending_Loan_Applications_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

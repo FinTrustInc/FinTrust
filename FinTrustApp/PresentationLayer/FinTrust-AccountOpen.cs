@@ -219,5 +219,11 @@ namespace FinTrustApp.PresentationLayer
                 errorProviderAccountOpen.SetError(textBoxCustomerPanNumber, string.Empty);
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Utility.GetLastPage();
+        }
     }
 }

@@ -12,6 +12,37 @@ namespace FinTrustDLL.DataLayer
 {
 	public class FinTrustDL
 	{
+        public static DataSet GetEmployeeDetails(string employeeId)
+        {
+            string sql = "";
+            SqlConnection con = null;
+            SqlDataAdapter adapter = null;
+            DataSet dsEmployeeUser = null;
+
+            try
+            {
+                sql = "select * from user_table where employeeId='" + employeeId + "'";
+                con = DBHelper.GetConnection();
+                con.Open();
+                dsEmployeeUser = new DataSet();
+                adapter = new SqlDataAdapter(sql, con);
+                adapter.Fill(dsEmployeeUser);
+
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("Error : FinTrustDL:GetEmployeeDetails : " + ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                adapter.Dispose();
+            }
+
+            return dsEmployeeUser;
+        }
+
+
         public static DataSet GetEmployeeCredentials(User objUser)
         {
             string sql = "";
@@ -21,7 +52,7 @@ namespace FinTrustDLL.DataLayer
 
             try
             {
-                sql = "select email,password from user_table where designation='"+objUser.Designation+"'";
+                sql = "select employeeId,email,password from user_table where designation='"+objUser.Designation+"'";
                 con = DBHelper.GetConnection();
                 con.Open();
                 dsEmployeeUser = new DataSet();
@@ -181,6 +212,33 @@ namespace FinTrustDLL.DataLayer
             catch (Exception ex)
             {
                 Console.Out.WriteLine("******Error:FinTrustDL.cs:InsertUserDetails" + ex.Message.ToString());
+            }
+            finally
+            {
+                con.Close();
+                cmd.Dispose();
+            }
+            return output;
+        }
+
+        public static int UpdatePassword(string password, string employeeId)
+        {
+            int output = 0;
+            string sql = "";
+            SqlConnection con = null;
+            SqlCommand cmd = null;
+            try
+            {
+                sql = "update user_table set password='" + password + "' where employeeId='" + employeeId + "'";
+
+                con = DBHelper.GetConnection();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+                output = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine("Error : FinTrustDL : GetUpdatePassword() " + ex.Message.ToString());
             }
             finally
             {

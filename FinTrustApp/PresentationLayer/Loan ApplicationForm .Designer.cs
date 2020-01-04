@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxAccountNumber = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.checkBoxLoanApplicationDeclaration = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,10 +52,8 @@
             this.labelloanpage = new System.Windows.Forms.Label();
             this.buttonsubmit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblLoanMessage = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.textBoxAccountNumber = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblLoanMessage = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +85,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(911, 474);
             this.panel1.TabIndex = 0;
+            // 
+            // textBoxAccountNumber
+            // 
+            this.textBoxAccountNumber.Enabled = false;
+            this.textBoxAccountNumber.Location = new System.Drawing.Point(694, 81);
+            this.textBoxAccountNumber.Name = "textBoxAccountNumber";
+            this.textBoxAccountNumber.Size = new System.Drawing.Size(172, 20);
+            this.textBoxAccountNumber.TabIndex = 21;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(505, 83);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(116, 18);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Account Number";
             // 
             // checkBoxLoanApplicationDeclaration
             // 
@@ -301,16 +319,6 @@
             this.panel2.Size = new System.Drawing.Size(983, 49);
             this.panel2.TabIndex = 20;
             // 
-            // lblLoanMessage
-            // 
-            this.lblLoanMessage.AutoSize = true;
-            this.lblLoanMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoanMessage.ForeColor = System.Drawing.Color.Green;
-            this.lblLoanMessage.Location = new System.Drawing.Point(419, 65);
-            this.lblLoanMessage.Name = "lblLoanMessage";
-            this.lblLoanMessage.Size = new System.Drawing.Size(0, 16);
-            this.lblLoanMessage.TabIndex = 21;
-            // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
@@ -324,23 +332,15 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // textBoxAccountNumber
+            // lblLoanMessage
             // 
-            this.textBoxAccountNumber.Enabled = false;
-            this.textBoxAccountNumber.Location = new System.Drawing.Point(694, 81);
-            this.textBoxAccountNumber.Name = "textBoxAccountNumber";
-            this.textBoxAccountNumber.Size = new System.Drawing.Size(172, 20);
-            this.textBoxAccountNumber.TabIndex = 21;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(505, 83);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(116, 18);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Account Number";
+            this.lblLoanMessage.AutoSize = true;
+            this.lblLoanMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoanMessage.ForeColor = System.Drawing.Color.Green;
+            this.lblLoanMessage.Location = new System.Drawing.Point(419, 65);
+            this.lblLoanMessage.Name = "lblLoanMessage";
+            this.lblLoanMessage.Size = new System.Drawing.Size(0, 16);
+            this.lblLoanMessage.TabIndex = 21;
             // 
             // Loan_ApplicationForm
             // 
@@ -352,8 +352,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.buttonsubmit);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "Loan_ApplicationForm";
-            this.Text = "Loan ApplicationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Loan ApplicationcForm - FinTrust";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

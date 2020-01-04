@@ -30,6 +30,7 @@
 		{
             this.labelCashierSearch = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.comboBoxAccType = new System.Windows.Forms.ComboBox();
@@ -65,7 +66,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBack = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).BeginInit();
@@ -79,11 +79,11 @@
             this.labelCashierSearch.BackColor = System.Drawing.Color.SteelBlue;
             this.labelCashierSearch.Font = new System.Drawing.Font("Modern No. 20", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCashierSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelCashierSearch.Location = new System.Drawing.Point(348, 4);
+            this.labelCashierSearch.Location = new System.Drawing.Point(348, 10);
             this.labelCashierSearch.Name = "labelCashierSearch";
-            this.labelCashierSearch.Size = new System.Drawing.Size(273, 38);
+            this.labelCashierSearch.Size = new System.Drawing.Size(258, 38);
             this.labelCashierSearch.TabIndex = 3;
-            this.labelCashierSearch.Text = "Customer Details";
+            this.labelCashierSearch.Text = "Account Details";
             // 
             // panel5
             // 
@@ -94,6 +94,19 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(983, 49);
             this.panel5.TabIndex = 26;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(37, 10);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(109, 32);
+            this.btnBack.TabIndex = 23;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // panel4
             // 
@@ -444,19 +457,6 @@
             this.panel1.Size = new System.Drawing.Size(367, 128);
             this.panel1.TabIndex = 22;
             // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack.Location = new System.Drawing.Point(37, 10);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(109, 32);
-            this.btnBack.TabIndex = 23;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // Customer_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -468,8 +468,10 @@
             this.Controls.Add(this.labelMessage);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "Customer_View";
-            this.Text = "Customer_View";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Account Details - FinTrust";
             this.Load += new System.EventHandler(this.Customer_View_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();

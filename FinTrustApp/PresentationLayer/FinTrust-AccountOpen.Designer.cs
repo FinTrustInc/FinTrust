@@ -57,6 +57,7 @@
             this.labelCustomerName = new System.Windows.Forms.Label();
             this.labelloanpage = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.buttonAccountOpenSubmit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelCustomerMessage = new System.Windows.Forms.Label();
@@ -363,11 +364,25 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.btnBack);
             this.panel2.Controls.Add(this.labelloanpage);
             this.panel2.Location = new System.Drawing.Point(0, 1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(983, 45);
             this.panel2.TabIndex = 21;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(38, 7);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(109, 32);
+            this.btnBack.TabIndex = 24;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // buttonAccountOpenSubmit
             // 
@@ -419,8 +434,10 @@
             this.Controls.Add(this.buttonAccountOpenSubmit);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelAccountOpen);
+            this.MaximizeBox = false;
             this.Name = "FinTrust_AccountOpen";
-            this.Text = "Account Opening";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Account Opening Form - FinTrust";
             this.panelAccountOpen.ResumeLayout(false);
             this.panelAccountOpen.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -464,5 +481,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelCustomerMessage;
         private System.Windows.Forms.ErrorProvider errorProviderAccountOpen;
+        private System.Windows.Forms.Button btnBack;
     }
 }

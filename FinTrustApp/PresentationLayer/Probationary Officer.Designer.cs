@@ -30,10 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Probationary_Officer));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loanapplicationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.loanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grievanceDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.myProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblServices = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -44,9 +48,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.loanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customerDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.grievanceDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -70,6 +71,21 @@
             this.menuStrip1.TabIndex = 25;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // loanapplicationToolStripMenuItem1
+            // 
+            this.loanapplicationToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loanToolStripMenuItem});
+            this.loanapplicationToolStripMenuItem1.Name = "loanapplicationToolStripMenuItem1";
+            this.loanapplicationToolStripMenuItem1.Size = new System.Drawing.Size(43, 20);
+            this.loanapplicationToolStripMenuItem1.Text = "New";
+            // 
+            // loanToolStripMenuItem
+            // 
+            this.loanToolStripMenuItem.Name = "loanToolStripMenuItem";
+            this.loanToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.loanToolStripMenuItem.Text = "Loan";
+            this.loanToolStripMenuItem.Click += new System.EventHandler(this.loanToolStripMenuItem_Click);
+            // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -79,13 +95,19 @@
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
             // 
-            // loanapplicationToolStripMenuItem1
+            // customerDetailsToolStripMenuItem
             // 
-            this.loanapplicationToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loanToolStripMenuItem});
-            this.loanapplicationToolStripMenuItem1.Name = "loanapplicationToolStripMenuItem1";
-            this.loanapplicationToolStripMenuItem1.Size = new System.Drawing.Size(43, 20);
-            this.loanapplicationToolStripMenuItem1.Text = "New";
+            this.customerDetailsToolStripMenuItem.Name = "customerDetailsToolStripMenuItem";
+            this.customerDetailsToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.customerDetailsToolStripMenuItem.Text = "Account Details";
+            this.customerDetailsToolStripMenuItem.Click += new System.EventHandler(this.customerDetailsToolStripMenuItem_Click);
+            // 
+            // grievanceDetailsToolStripMenuItem
+            // 
+            this.grievanceDetailsToolStripMenuItem.Name = "grievanceDetailsToolStripMenuItem";
+            this.grievanceDetailsToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.grievanceDetailsToolStripMenuItem.Text = "Grievance Details";
+            this.grievanceDetailsToolStripMenuItem.Click += new System.EventHandler(this.grievanceDetailsToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem2
             // 
@@ -97,15 +119,23 @@
             // profileToolStripMenuItem
             // 
             this.profileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.myProfileToolStripMenuItem,
             this.logoutToolStripMenuItem});
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
             this.profileToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.profileToolStripMenuItem.Text = "Profile";
             // 
+            // myProfileToolStripMenuItem
+            // 
+            this.myProfileToolStripMenuItem.Name = "myProfileToolStripMenuItem";
+            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.myProfileToolStripMenuItem.Text = "My Profile";
+            this.myProfileToolStripMenuItem.Click += new System.EventHandler(this.myProfileToolStripMenuItem_Click);
+            // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -209,27 +239,6 @@
             this.panel2.Size = new System.Drawing.Size(302, 186);
             this.panel2.TabIndex = 39;
             // 
-            // loanToolStripMenuItem
-            // 
-            this.loanToolStripMenuItem.Name = "loanToolStripMenuItem";
-            this.loanToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.loanToolStripMenuItem.Text = "Loan";
-            this.loanToolStripMenuItem.Click += new System.EventHandler(this.loanToolStripMenuItem_Click);
-            // 
-            // customerDetailsToolStripMenuItem
-            // 
-            this.customerDetailsToolStripMenuItem.Name = "customerDetailsToolStripMenuItem";
-            this.customerDetailsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.customerDetailsToolStripMenuItem.Text = "Customer Details";
-            this.customerDetailsToolStripMenuItem.Click += new System.EventHandler(this.customerDetailsToolStripMenuItem_Click);
-            // 
-            // grievanceDetailsToolStripMenuItem
-            // 
-            this.grievanceDetailsToolStripMenuItem.Name = "grievanceDetailsToolStripMenuItem";
-            this.grievanceDetailsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.grievanceDetailsToolStripMenuItem.Text = "Grievance Details";
-            this.grievanceDetailsToolStripMenuItem.Click += new System.EventHandler(this.grievanceDetailsToolStripMenuItem_Click);
-            // 
             // Probationary_Officer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,7 +254,8 @@
             this.Controls.Add(this.menuStrip1);
             this.MaximizeBox = false;
             this.Name = "Probationary_Officer";
-            this.Text = "Probationary Officer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Home - FinTrust";
             this.Load += new System.EventHandler(this.Probationary_Officer_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -279,5 +289,6 @@
         private System.Windows.Forms.ToolStripMenuItem loanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem customerDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grievanceDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem myProfileToolStripMenuItem;
     }
 }

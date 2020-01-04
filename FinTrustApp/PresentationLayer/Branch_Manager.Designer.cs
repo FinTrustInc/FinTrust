@@ -33,9 +33,13 @@ namespace FinTrustApp.PresentationLayer
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Branch_Manager));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loanDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.myProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -46,9 +50,6 @@ namespace FinTrustApp.PresentationLayer
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblServices = new System.Windows.Forms.Label();
-            this.accountDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loanDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registerEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -80,6 +81,13 @@ namespace FinTrustApp.PresentationLayer
             this.addUsersToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.addUsersToolStripMenuItem.Text = "New";
             // 
+            // registerEmployeeToolStripMenuItem
+            // 
+            this.registerEmployeeToolStripMenuItem.Name = "registerEmployeeToolStripMenuItem";
+            this.registerEmployeeToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.registerEmployeeToolStripMenuItem.Text = "Register Employee";
+            this.registerEmployeeToolStripMenuItem.Click += new System.EventHandler(this.registerEmployeeToolStripMenuItem_Click);
+            // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -88,6 +96,20 @@ namespace FinTrustApp.PresentationLayer
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
+            // 
+            // accountDetailsToolStripMenuItem
+            // 
+            this.accountDetailsToolStripMenuItem.Name = "accountDetailsToolStripMenuItem";
+            this.accountDetailsToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.accountDetailsToolStripMenuItem.Text = "Account Details";
+            this.accountDetailsToolStripMenuItem.Click += new System.EventHandler(this.accountDetailsToolStripMenuItem_Click);
+            // 
+            // loanDetailsToolStripMenuItem
+            // 
+            this.loanDetailsToolStripMenuItem.Name = "loanDetailsToolStripMenuItem";
+            this.loanDetailsToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.loanDetailsToolStripMenuItem.Text = "Loan Details";
+            this.loanDetailsToolStripMenuItem.Click += new System.EventHandler(this.loanDetailsToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem2
             // 
@@ -99,15 +121,23 @@ namespace FinTrustApp.PresentationLayer
             // profileToolStripMenuItem
             // 
             this.profileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.myProfileToolStripMenuItem,
             this.logoutToolStripMenuItem});
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
             this.profileToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.profileToolStripMenuItem.Text = "Profile";
             // 
+            // myProfileToolStripMenuItem
+            // 
+            this.myProfileToolStripMenuItem.Name = "myProfileToolStripMenuItem";
+            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.myProfileToolStripMenuItem.Text = "My Profile";
+            this.myProfileToolStripMenuItem.Click += new System.EventHandler(this.myProfileToolStripMenuItem_Click);
+            // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -211,27 +241,6 @@ namespace FinTrustApp.PresentationLayer
             this.lblServices.TabIndex = 38;
             this.lblServices.Text = "Services";
             // 
-            // accountDetailsToolStripMenuItem
-            // 
-            this.accountDetailsToolStripMenuItem.Name = "accountDetailsToolStripMenuItem";
-            this.accountDetailsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.accountDetailsToolStripMenuItem.Text = "Account Details";
-            this.accountDetailsToolStripMenuItem.Click += new System.EventHandler(this.accountDetailsToolStripMenuItem_Click);
-            // 
-            // loanDetailsToolStripMenuItem
-            // 
-            this.loanDetailsToolStripMenuItem.Name = "loanDetailsToolStripMenuItem";
-            this.loanDetailsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.loanDetailsToolStripMenuItem.Text = "Loan Details";
-            this.loanDetailsToolStripMenuItem.Click += new System.EventHandler(this.loanDetailsToolStripMenuItem_Click);
-            // 
-            // registerEmployeeToolStripMenuItem
-            // 
-            this.registerEmployeeToolStripMenuItem.Name = "registerEmployeeToolStripMenuItem";
-            this.registerEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.registerEmployeeToolStripMenuItem.Text = "Register Employee";
-            this.registerEmployeeToolStripMenuItem.Click += new System.EventHandler(this.registerEmployeeToolStripMenuItem_Click);
-            // 
             // Branch_Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,7 +256,8 @@ namespace FinTrustApp.PresentationLayer
             this.Controls.Add(this.panel2);
             this.MaximizeBox = false;
             this.Name = "Branch_Manager";
-            this.Text = "FinTrust";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Home - FinTrust";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -286,5 +296,6 @@ namespace FinTrustApp.PresentationLayer
         private System.Windows.Forms.ToolStripMenuItem accountDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loanDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registerEmployeeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem myProfileToolStripMenuItem;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinTrustDTO.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,12 +34,12 @@ namespace FinTrustApp.PresentationLayer
         {
             this.Hide();
 
-            Help helpForm = new Help();
-            helpForm.Show();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            LoginInfo.designation = "";
+            LoginInfo.employeeId = "";
             this.Hide();
 
             FinTrust_Login loginForm = new FinTrust_Login();
@@ -72,6 +73,13 @@ namespace FinTrustApp.PresentationLayer
 
             FinTrust_Registration registrationForm = new FinTrust_Registration();
             registrationForm.Show();
+        }
+
+        private void myProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MyProfile profileObj = new MyProfile();
+            profileObj.Show();
         }
     }
 }

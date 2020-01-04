@@ -36,6 +36,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.labelloanpage = new System.Windows.Forms.Label();
             this.dataGridGriev = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -145,11 +146,25 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.btnBack);
             this.panel2.Controls.Add(this.labelloanpage);
-            this.panel2.Location = new System.Drawing.Point(1, 15);
+            this.panel2.Location = new System.Drawing.Point(1, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(983, 46);
+            this.panel2.Size = new System.Drawing.Size(983, 58);
             this.panel2.TabIndex = 34;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(30, 15);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(109, 32);
+            this.btnBack.TabIndex = 24;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // labelloanpage
             // 
@@ -157,11 +172,11 @@
             this.labelloanpage.BackColor = System.Drawing.Color.SteelBlue;
             this.labelloanpage.Font = new System.Drawing.Font("Modern No. 20", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelloanpage.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelloanpage.Location = new System.Drawing.Point(3, 9);
+            this.labelloanpage.Location = new System.Drawing.Point(330, 16);
             this.labelloanpage.Name = "labelloanpage";
-            this.labelloanpage.Size = new System.Drawing.Size(237, 31);
+            this.labelloanpage.Size = new System.Drawing.Size(348, 31);
             this.labelloanpage.TabIndex = 3;
-            this.labelloanpage.Text = "Resolve grievances ";
+            this.labelloanpage.Text = "Grievances Redressal System";
             // 
             // dataGridGriev
             // 
@@ -415,8 +430,10 @@
             this.Controls.Add(this.dataGridGriev);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
+            this.MaximizeBox = false;
             this.Name = "Grievance__Approval_Form";
-            this.Text = "Grievance__Approval_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Grievance Redressal System - FinTrust";
             this.Load += new System.EventHandler(this.Grievance__Approval_Form_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -467,5 +484,6 @@
         private System.Windows.Forms.TextBox textBoxAccType;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxGrievanceid;
+        private System.Windows.Forms.Button btnBack;
     }
 }

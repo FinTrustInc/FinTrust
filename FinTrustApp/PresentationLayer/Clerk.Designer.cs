@@ -30,14 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clerk));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.grievanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grievanceToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accHandlingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountOpenimgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountClosingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.grievanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.myProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.lblServices = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -47,8 +50,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.grievanceToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -73,6 +74,36 @@
             this.menuStrip1.TabIndex = 40;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // grievanceToolStripMenuItem
+            // 
+            this.grievanceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.grievanceToolStripMenuItem1});
+            this.grievanceToolStripMenuItem.Name = "grievanceToolStripMenuItem";
+            this.grievanceToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.grievanceToolStripMenuItem.Text = "New";
+            // 
+            // grievanceToolStripMenuItem1
+            // 
+            this.grievanceToolStripMenuItem1.Name = "grievanceToolStripMenuItem1";
+            this.grievanceToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
+            this.grievanceToolStripMenuItem1.Text = "Grievance";
+            this.grievanceToolStripMenuItem1.Click += new System.EventHandler(this.grievanceToolStripMenuItem1_Click);
+            // 
+            // viewToolStripMenuItem1
+            // 
+            this.viewToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.customerToolStripMenuItem});
+            this.viewToolStripMenuItem1.Name = "viewToolStripMenuItem1";
+            this.viewToolStripMenuItem1.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem1.Text = "View";
+            // 
+            // customerToolStripMenuItem
+            // 
+            this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
+            this.customerToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.customerToolStripMenuItem.Text = "Account Details";
+            this.customerToolStripMenuItem.Click += new System.EventHandler(this.customerToolStripMenuItem_Click);
+            // 
             // accHandlingToolStripMenuItem
             // 
             this.accHandlingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -85,24 +116,16 @@
             // accountOpenimgToolStripMenuItem
             // 
             this.accountOpenimgToolStripMenuItem.Name = "accountOpenimgToolStripMenuItem";
-            this.accountOpenimgToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.accountOpenimgToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.accountOpenimgToolStripMenuItem.Text = "Open Account";
             this.accountOpenimgToolStripMenuItem.Click += new System.EventHandler(this.accountOpenimgToolStripMenuItem_Click);
             // 
             // accountClosingToolStripMenuItem
             // 
             this.accountClosingToolStripMenuItem.Name = "accountClosingToolStripMenuItem";
-            this.accountClosingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.accountClosingToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.accountClosingToolStripMenuItem.Text = "Close Account";
             this.accountClosingToolStripMenuItem.Click += new System.EventHandler(this.accountClosingToolStripMenuItem_Click);
-            // 
-            // grievanceToolStripMenuItem
-            // 
-            this.grievanceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.grievanceToolStripMenuItem1});
-            this.grievanceToolStripMenuItem.Name = "grievanceToolStripMenuItem";
-            this.grievanceToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.grievanceToolStripMenuItem.Text = "New";
             // 
             // helpToolStripMenuItem2
             // 
@@ -113,10 +136,18 @@
             // profileToolStripMenuItem
             // 
             this.profileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.myProfileToolStripMenuItem,
             this.logoutToolStripMenuItem});
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
             this.profileToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.profileToolStripMenuItem.Text = "Profile";
+            // 
+            // myProfileToolStripMenuItem
+            // 
+            this.myProfileToolStripMenuItem.Name = "myProfileToolStripMenuItem";
+            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.myProfileToolStripMenuItem.Text = "My Profile";
+            this.myProfileToolStripMenuItem.Click += new System.EventHandler(this.myProfileToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
@@ -124,14 +155,6 @@
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
-            // 
-            // viewToolStripMenuItem1
-            // 
-            this.viewToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.customerToolStripMenuItem});
-            this.viewToolStripMenuItem1.Name = "viewToolStripMenuItem1";
-            this.viewToolStripMenuItem1.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem1.Text = "View";
             // 
             // label2
             // 
@@ -233,20 +256,6 @@
             this.panel2.Size = new System.Drawing.Size(302, 186);
             this.panel2.TabIndex = 42;
             // 
-            // customerToolStripMenuItem
-            // 
-            this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
-            this.customerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.customerToolStripMenuItem.Text = "Customer Details";
-            this.customerToolStripMenuItem.Click += new System.EventHandler(this.customerToolStripMenuItem_Click);
-            // 
-            // grievanceToolStripMenuItem1
-            // 
-            this.grievanceToolStripMenuItem1.Name = "grievanceToolStripMenuItem1";
-            this.grievanceToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.grievanceToolStripMenuItem1.Text = "Grievance";
-            this.grievanceToolStripMenuItem1.Click += new System.EventHandler(this.grievanceToolStripMenuItem1_Click);
-            // 
             // Clerk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,7 +270,8 @@
             this.Controls.Add(this.menuStrip1);
             this.MaximizeBox = false;
             this.Name = "Clerk";
-            this.Text = "Clerk";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Home - FinTrust";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -296,5 +306,6 @@
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem customerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grievanceToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem myProfileToolStripMenuItem;
     }
 }

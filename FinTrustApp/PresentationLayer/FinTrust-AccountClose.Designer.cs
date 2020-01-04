@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinTrust_AccountClose));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.labelloanpage = new System.Windows.Forms.Label();
             this.checkBoxAccountClosure = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,11 +59,25 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.btnBack);
             this.panel2.Controls.Add(this.labelloanpage);
             this.panel2.Location = new System.Drawing.Point(1, 6);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(983, 45);
             this.panel2.TabIndex = 53;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(40, 7);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(109, 32);
+            this.btnBack.TabIndex = 24;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // labelloanpage
             // 
@@ -297,8 +312,10 @@
             this.Controls.Add(this.buttonAccountClosureSubmit);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelAccountOpen);
+            this.MaximizeBox = false;
             this.Name = "FinTrust_AccountClose";
-            this.Text = "Account Closure Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Account Closure Form - FinTrust";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -332,5 +349,6 @@
         private System.Windows.Forms.Label labelAccountNumber;
         private System.Windows.Forms.TextBox textBoxAccountType;
         private System.Windows.Forms.Label labelCustomerAccountCloseMessage;
+        private System.Windows.Forms.Button btnBack;
     }
 }

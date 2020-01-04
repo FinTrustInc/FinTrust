@@ -238,5 +238,11 @@ namespace FinTrustApp.PresentationLayer
                 errorProviderUserRegistration.SetError(textBoxEmployeeAadhar, string.Empty);
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Utility.GetLastPage();
+        }
     }
 }

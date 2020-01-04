@@ -134,6 +134,7 @@ namespace FinTrustApp.PresentationLayer
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Utility.GetLastPage();
         }
     }
 }
