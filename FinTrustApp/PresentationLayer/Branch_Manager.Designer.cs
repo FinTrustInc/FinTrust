@@ -44,9 +44,9 @@ namespace FinTrustApp.PresentationLayer
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblServices = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblServices = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -110,7 +110,7 @@ namespace FinTrustApp.PresentationLayer
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -180,16 +180,16 @@ namespace FinTrustApp.PresentationLayer
             this.panel3.Size = new System.Drawing.Size(960, 319);
             this.panel3.TabIndex = 37;
             // 
-            // lblServices
+            // label2
             // 
-            this.lblServices.AutoSize = true;
-            this.lblServices.Font = new System.Drawing.Font("Rockwell", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblServices.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblServices.Location = new System.Drawing.Point(423, 349);
-            this.lblServices.Name = "lblServices";
-            this.lblServices.Size = new System.Drawing.Size(135, 36);
-            this.lblServices.TabIndex = 38;
-            this.lblServices.Text = "Services";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(56, 116);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(395, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "The All in One Core Banking System";
             // 
             // label1
             // 
@@ -203,16 +203,16 @@ namespace FinTrustApp.PresentationLayer
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to FinTrust!";
             // 
-            // label2
+            // lblServices
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(56, 116);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(395, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "The All in One Core Banking System";
+            this.lblServices.AutoSize = true;
+            this.lblServices.Font = new System.Drawing.Font("Rockwell", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServices.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblServices.Location = new System.Drawing.Point(423, 349);
+            this.lblServices.Name = "lblServices";
+            this.lblServices.Size = new System.Drawing.Size(135, 36);
+            this.lblServices.TabIndex = 38;
+            this.lblServices.Text = "Services";
             // 
             // Branch_Manager
             // 

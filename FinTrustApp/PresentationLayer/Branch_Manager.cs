@@ -39,7 +39,7 @@ namespace FinTrustApp.PresentationLayer
         {
             this.Hide();
 
-            About helpForm = new About();
+            Help helpForm = new Help();
             helpForm.Show();
         }
 
