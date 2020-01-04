@@ -71,12 +71,6 @@
     <Compile Include="PresentationLayer\FinTrust-AccountOpen.Designer.cs">
       <DependentUpon>FinTrust-AccountOpen.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\FinTrust-Cashier-Search.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\FinTrust-Cashier-Search.Designer.cs">
-      <DependentUpon>FinTrust-Cashier-Search.cs</DependentUpon>
-    </Compile>
     <Compile Include="PresentationLayer\FinTrust-Cashier-Transaction.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,9 +150,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FinTrust-AccountOpen.resx">
       <DependentUpon>FinTrust-AccountOpen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\FinTrust-Cashier-Search.resx">
-      <DependentUpon>FinTrust-Cashier-Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\FinTrust-Cashier-Transaction.resx">
       <DependentUpon>FinTrust-Cashier-Transaction.cs</DependentUpon>
