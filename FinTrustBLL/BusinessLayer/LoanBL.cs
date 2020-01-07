@@ -12,24 +12,25 @@ namespace FinTrustBLL.BusinessLayer
 {
     public class LoanBL
     {
- 
+        //--------------------------------------------------------------------------------
+        //------------------- Get Customer Details By Customer Id ------------------------
+
         public static Customer GetCustomerById(string customerId)
         {
-
             Customer customerObj = null;
             try
             {
                 customerObj = LoanDL.GetCustomerById(customerId);
-
             }
             catch (Exception ex)
             {
                 Console.Out.WriteLine("Error : LoanBL:GetCustomerById : " + ex.Message.ToString());
             }
-
-
             return customerObj;
         }
+
+        //----------------------------------------------------------------------------------
+        //---------- Generate New Loan Id for next -----------------------------------------
 
         public static string GetNewLoanId()
         {
@@ -54,6 +55,9 @@ namespace FinTrustBLL.BusinessLayer
             return newLoanId;
         }
 
+        //------------------------------------------------------------------------------------------
+        //----------------------- Insert Loan Details ----------------------------------------------
+
         public static int InsertLoanDetails(Loan InsertLoanDetails)
         {
             int output = 0;
@@ -65,15 +69,14 @@ namespace FinTrustBLL.BusinessLayer
             {
                 Console.Out.WriteLine("Error : LoanBL:InsertLoanDetails : " + ex.Message.ToString());
             }
-
             return output;
-
         }
 
+        //-----------------------------------------------------------------------------------------
+        //------------------------------- Get Loan Details ----------------------------------------
+        
         public static DataSet GetLoanDetails(string loanId)
         {
-
-
             DataSet dsLoans = null;
             try
             {
@@ -84,15 +87,14 @@ namespace FinTrustBLL.BusinessLayer
             {
                 Console.Out.WriteLine("Error : LoanBL:GetLoanDetails : " + ex.Message.ToString());
             }
-
-
             return dsLoans;
         }
 
+        //----------------------------------------------------------------------------------------
+        //--------------- Get basic Loan Details -------------------------------------------------
+
         public static DataSet GetBasicLoanDetails()
         {
-
-
             DataSet dsLoans = null;
             try
             {
@@ -103,10 +105,11 @@ namespace FinTrustBLL.BusinessLayer
             {
                 Console.Out.WriteLine("Error : LoanBL:GetBasicLoanDetails : " + ex.Message.ToString());
             }
-
-
             return dsLoans;
         }
+
+        //-------------------------------------------------------------------------------
+        //------------------------ Update Loan Status -----------------------------------
 
         public static int UpdateLoanStatus(string loanId,string status)
         {
@@ -114,8 +117,10 @@ namespace FinTrustBLL.BusinessLayer
 
             output = LoanDL.UpdateLoanStatus(loanId, status);          
             return output;
-
         }
+
+        //--------------------------------------------------------------------------------------
+        //-------------- Search for Loan Details -----------------------------------------------
 
         public static DataSet GetLoansLike(string likeName, string searchOption)
         {
@@ -123,10 +128,7 @@ namespace FinTrustBLL.BusinessLayer
             DataSet dsLoans = null;
             try
             {
-
                 dsLoans = LoanDL.GetLoansLike(likeName, searchOption);
-
-
             }
             catch (Exception ex)
             {
@@ -135,10 +137,5 @@ namespace FinTrustBLL.BusinessLayer
 
             return dsLoans;
         }
-
-
-
     }
-
-
 }

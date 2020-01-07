@@ -20,6 +20,9 @@ namespace FinTrustApp.PresentationLayer
             InitializeComponent();
         }
 
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Insertion of Customer data for account opening -----------------------
+
         private void buttonAccountOpenSubmit_Click(object sender, EventArgs e)
         {
             int output = 0;
@@ -81,7 +84,7 @@ namespace FinTrustApp.PresentationLayer
             }
             catch(Exception ex)
             {
-
+                Console.Out.WriteLine(ex.Message.ToString());
             }           
         }
 
@@ -242,6 +245,9 @@ namespace FinTrustApp.PresentationLayer
                 errorProviderAccountOpen.SetError(radioButtonCustomerFemale, string.Empty);
             }
         }
+
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Action for Back Button -----------------------------------------------
 
         private void btnBack_Click(object sender, EventArgs e)
         {

@@ -30,6 +30,9 @@ namespace FinTrustApp.PresentationLayer
             
         }
 
+        //---------------------------------------------------------------------------------------
+        //----------------------- Action for About Button ----------------------------------------
+
         private void helpToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -37,6 +40,9 @@ namespace FinTrustApp.PresentationLayer
             aboutObj.Show();
 
         }
+
+        //---------------------------------------------------------------------------------------
+        //----------------------- Action for Logout Button ----------------------------------------
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -54,12 +60,18 @@ namespace FinTrustApp.PresentationLayer
 
         }
 
+        //---------------------------------------------------------------------------------------
+        //----------------------- Customer View ----------------------------------------
+
         private void accountDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Customer_View ViewForm = new Customer_View();
             ViewForm.Show();
         }
+
+        //---------------------------------------------------------------------------------------
+        //----------------------- Loan Details ----------------------------------------
 
         private void loanDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -69,6 +81,9 @@ namespace FinTrustApp.PresentationLayer
             loanApprovalForm.Show();
         }
 
+        //---------------------------------------------------------------------------------------
+        //----------------------- Employee Registration ----------------------------------------
+
         private void registerEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -76,6 +91,9 @@ namespace FinTrustApp.PresentationLayer
             FinTrust_Registration registrationForm = new FinTrust_Registration();
             registrationForm.Show();
         }
+
+        //---------------------------------------------------------------------------------------
+        //----------------------- Employee Profile ----------------------------------------
 
         private void myProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -123,6 +123,7 @@
             // 
             // comboBoxSearchBy
             // 
+            this.comboBoxSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSearchBy.FormattingEnabled = true;
             this.comboBoxSearchBy.Items.AddRange(new object[] {
             "Loan ID",

@@ -11,26 +11,25 @@ namespace FinTrustBLL.BusinessLayer
 {
     public class CustomerBL
     {
-
+        //-----------------------------------------------------------------------------------
+        //----------------------- get Account Details using Account Number ------------------
 
         public static Customer GetCustomerByAccountNumber(string accountNumber)
-        {
-           
+        {          
             Customer customerObj = null;
             try
             {
                 customerObj = CustomerDL.GetCustomerByAccountNumber(accountNumber);
-
             }
             catch (Exception ex)
             {
                 Console.Out.WriteLine("Error : CustomerBL:GetCustomerByAccountNumber : " + ex.Message.ToString());
-            }
-           
-
+            }          
             return customerObj;
         }
 
+        //------------------------------------------------------------------------------------------
+        //------------- Get Last Customer Id for generating new Customer Id for customers ----------
 
         public static string GetNewCustomerId()
         {
@@ -55,6 +54,8 @@ namespace FinTrustBLL.BusinessLayer
             return newCustomerId;
         }
 
+        //------------------------------------------------------------------------------------------
+        //------------- Get Last Account No for generating new account No for customers ------------
 
         public static string GetNewAccountNumber()
         {
@@ -79,6 +80,9 @@ namespace FinTrustBLL.BusinessLayer
             return newAccountNumber;
         }
 
+        //-----------------------------------------------------------------------------------------
+        //----------------- Insert New Customer Details -------------------------------------------
+
         public static int InsertCustomerDetails(Customer objCustomer)
         {
             int output = 0;
@@ -95,6 +99,9 @@ namespace FinTrustBLL.BusinessLayer
             
             return output;
         }
+
+        //------------------------------------------------------------------------------------
+        //----------------------- Delete Customer Account ------------------------------------
 
         public static int DeleteAccountDetails(string accountNumber)
         {

@@ -73,7 +73,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(76, 104);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(769, 427);
+            this.panel1.Size = new System.Drawing.Size(822, 427);
             this.panel1.TabIndex = 0;
             // 
             // label6
@@ -176,9 +176,9 @@
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(121, 204);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 18);
+            this.label2.Size = new System.Drawing.Size(108, 18);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Account Holder\'s Name";
+            this.label2.Text = "Customer Name";
             // 
             // label1
             // 
@@ -197,11 +197,12 @@
             this.buttonPay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPay.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPay.Location = new System.Drawing.Point(850, 598);
+            this.buttonPay.ForeColor = System.Drawing.Color.White;
+            this.buttonPay.Location = new System.Drawing.Point(696, 570);
             this.buttonPay.Name = "buttonPay";
-            this.buttonPay.Size = new System.Drawing.Size(100, 51);
+            this.buttonPay.Size = new System.Drawing.Size(202, 51);
             this.buttonPay.TabIndex = 10;
-            this.buttonPay.Text = "PAY";
+            this.buttonPay.Text = "PERFOM TRANSACTION";
             this.buttonPay.UseVisualStyleBackColor = false;
             this.buttonPay.Click += new System.EventHandler(this.buttonPay_Click);
             // 

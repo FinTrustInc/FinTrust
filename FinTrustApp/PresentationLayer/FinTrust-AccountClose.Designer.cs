@@ -179,7 +179,8 @@
             this.buttonAccountClosureSubmit.Enabled = false;
             this.buttonAccountClosureSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAccountClosureSubmit.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAccountClosureSubmit.Location = new System.Drawing.Point(843, 594);
+            this.buttonAccountClosureSubmit.ForeColor = System.Drawing.Color.White;
+            this.buttonAccountClosureSubmit.Location = new System.Drawing.Point(843, 571);
             this.buttonAccountClosureSubmit.Name = "buttonAccountClosureSubmit";
             this.buttonAccountClosureSubmit.Size = new System.Drawing.Size(110, 55);
             this.buttonAccountClosureSubmit.TabIndex = 54;

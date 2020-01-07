@@ -154,6 +154,7 @@
             this.buttonUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUpdate.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpdate.ForeColor = System.Drawing.Color.White;
             this.buttonUpdate.Location = new System.Drawing.Point(455, 479);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(100, 51);
@@ -164,6 +165,7 @@
             // 
             // comboBoxAccType
             // 
+            this.comboBoxAccType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAccType.FormattingEnabled = true;
             this.comboBoxAccType.Location = new System.Drawing.Point(147, 107);
             this.comboBoxAccType.Name = "comboBoxAccType";
@@ -210,7 +212,6 @@
             // 
             this.textBoxPan.Location = new System.Drawing.Point(147, 421);
             this.textBoxPan.Name = "textBoxPan";
-            this.textBoxPan.ReadOnly = true;
             this.textBoxPan.Size = new System.Drawing.Size(243, 20);
             this.textBoxPan.TabIndex = 27;
             // 
@@ -218,7 +219,6 @@
             // 
             this.textBoxAadhar.Location = new System.Drawing.Point(147, 364);
             this.textBoxAadhar.Name = "textBoxAadhar";
-            this.textBoxAadhar.ReadOnly = true;
             this.textBoxAadhar.Size = new System.Drawing.Size(243, 20);
             this.textBoxAadhar.TabIndex = 26;
             // 
@@ -280,7 +280,6 @@
             // 
             this.textBoxDOB.Location = new System.Drawing.Point(434, 208);
             this.textBoxDOB.Name = "textBoxDOB";
-            this.textBoxDOB.ReadOnly = true;
             this.textBoxDOB.Size = new System.Drawing.Size(130, 20);
             this.textBoxDOB.TabIndex = 19;
             // 
@@ -298,7 +297,6 @@
             // 
             this.textBoxGender.Location = new System.Drawing.Point(434, 157);
             this.textBoxGender.Name = "textBoxGender";
-            this.textBoxGender.ReadOnly = true;
             this.textBoxGender.Size = new System.Drawing.Size(130, 20);
             this.textBoxGender.TabIndex = 17;
             // 
@@ -409,11 +407,10 @@
             this.labelMessage.AutoSize = true;
             this.labelMessage.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMessage.ForeColor = System.Drawing.Color.DarkGreen;
-            this.labelMessage.Location = new System.Drawing.Point(369, 62);
+            this.labelMessage.Location = new System.Drawing.Point(375, 62);
             this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Size = new System.Drawing.Size(32, 18);
+            this.labelMessage.Size = new System.Drawing.Size(0, 18);
             this.labelMessage.TabIndex = 23;
-            this.labelMessage.Text = "......";
             // 
             // textBoxViewSearch
             // 
@@ -425,6 +422,7 @@
             // 
             // comboBoxSearch
             // 
+            this.comboBoxSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSearch.FormattingEnabled = true;
             this.comboBoxSearch.Location = new System.Drawing.Point(194, 29);
             this.comboBoxSearch.Name = "comboBoxSearch";

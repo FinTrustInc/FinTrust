@@ -17,6 +17,9 @@ namespace FinTrustApp.PresentationLayer
             InitializeComponent();
         }
 
+        //---------------------------------------------------------------------------------------
+        //----------------------- Mouse Enter Event for Animation ------------------------------
+
         private void logo_MouseEnter(object sender, EventArgs e)
         {
             
@@ -24,6 +27,9 @@ namespace FinTrustApp.PresentationLayer
             int y = logo.Location.Y;
             logo.Location = new Point(x + 0, y + 12);
         }
+
+        //---------------------------------------------------------------------------------------
+        //----------------------- Mouse Leave Event for Animation ------------------------------
 
         private void logo_MouseLeave(object sender, EventArgs e)
         {
@@ -47,6 +53,9 @@ namespace FinTrustApp.PresentationLayer
         {
             
         }
+
+        //---------------------------------------------------------------------------------------
+        //----------------------- Action for Back Button ----------------------------------------
 
         private void btnBack_Click(object sender, EventArgs e)
         {

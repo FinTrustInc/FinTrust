@@ -13,6 +13,9 @@ namespace FinTrustDLL.DataLayer
 {
     public class GrievanceDL
     {
+        //-------------------------------------------------------------------------------------
+        //---------------------------- Insert Grievance Details -------------------------------
+
         public static int InsertGrievanceDetails(Grievance objGrievance)
         {
             int output = 0;
@@ -45,6 +48,10 @@ namespace FinTrustDLL.DataLayer
             }
             return output;
         }
+
+        //----------------------------------------------------------------------------------------------
+        //------------------ Get Grievance Id for genereating New for Grievances -----------------------
+
         public static string GetlastgrievanceID()
         {
             string sql = "";
@@ -77,9 +84,11 @@ namespace FinTrustDLL.DataLayer
                 con.Close();
                 adapter.Dispose();
             }
-
             return lastgrievanceID;
         }
+
+        //----------------------------------------------------------------------------------------------
+        //------------------------ Load Basic grievance Details in datagridView ------------------------
 
         public static DataSet GetBasicGrievanceDetails()
         {
@@ -90,13 +99,11 @@ namespace FinTrustDLL.DataLayer
             try
             {
                 sql = "select customer_table.*,grievance_table.grievanceDetail,grievance_table.grievanceID,grievance_table.title FROM customer_table INNER JOIN grievance_table ON customer_table.customerId = grievance_table.customerId ";
-                // sql = "select * from loan_table where status='Submitted'";
                 con = DBHelper.GetConnection();
                 con.Open();
                 dsGrieve = new DataSet();
                 adapter = new SqlDataAdapter(sql, con);
                 adapter.Fill(dsGrieve);
-
             }
             catch (Exception ex)
             {
@@ -107,11 +114,13 @@ namespace FinTrustDLL.DataLayer
                 con.Close();
                 adapter.Dispose();
             }
-
             return dsGrieve;
         }
         
-         public static void InsertStatus(Grievance objectGrievane)
+        //------------------------------------------------------------------------------------------------
+        //------------------ Update Status of the Grievance Applied --------------------------------------
+
+        public static void InsertStatus(Grievance objectGrievane)
         {
             
             string sql = "";
@@ -139,6 +148,10 @@ namespace FinTrustDLL.DataLayer
                 MessageBox.Show("Grievance Status is Updated",Title);
             }
         }
+
+        //-------------------------------------------------------------------------------------------
+        //------------------ Search for Grievances --------------------------------------------------
+
         public static DataSet GetGrievanceLike(string category, string like)
         {
             string sql = "";

@@ -196,6 +196,9 @@ namespace FinTrustApp.PresentationLayer
 			
 		}
 
+        //---------------------------------------------------------------------------------------
+        //----------------------- Action for Back Button ----------------------------------------
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();

@@ -18,12 +18,13 @@ namespace FinTrustApp.PresentationLayer
         {
             InitializeComponent();
         }
-
         private void Pending_Loan_Applications_Load(object sender, EventArgs e)
         {
 
             LoadLoanApplications();
         }
+
+        //---------------- Load Loan Details form ---------------------------
 
         private void LoadLoanApplications()
         {
@@ -51,6 +52,8 @@ namespace FinTrustApp.PresentationLayer
             }
         }
 
+        //---------------- Action performed when grid view selection changed ---------------------------
+
         private void dgvLoanApplications_SelectionChanged(object sender, EventArgs e)
         {
             string loanId, status;
@@ -59,15 +62,11 @@ namespace FinTrustApp.PresentationLayer
             if (dgvLoanApplications.SelectedCells.Count > 0)
             {
                 int selectedrowindex = dgvLoanApplications.SelectedCells[0].RowIndex;
-
-                DataGridViewRow selectedRow = dgvLoanApplications.Rows[selectedrowindex];
-              
-                    loanId = Convert.ToString(selectedRow.Cells["loanId"].Value);
-                    
-
+                DataGridViewRow selectedRow = dgvLoanApplications.Rows[selectedrowindex];       
+                loanId = Convert.ToString(selectedRow.Cells["loanId"].Value);
                 dsLoanDetails = LoanBL.GetLoanDetails(loanId);
-                    if (dsLoanDetails.Tables[0].Rows.Count > 0)
-                    {
+                if (dsLoanDetails.Tables[0].Rows.Count > 0)
+                {
                     try
                     {
                         Object[] Data = null;
@@ -77,14 +76,14 @@ namespace FinTrustApp.PresentationLayer
                         textBoxAccountNumber.Text = Data[1].ToString();
                         textBoxName.Text = Data[2].ToString();
                         textBoxAddress.Text = Data[9].ToString();
-                        textBoxLoanAmount.Text = Data[15].ToString();
-                        textBoxLoanType.Text = Data[14].ToString();
-                        textBoxLoanId.Text = Data[12].ToString();
-                        textBoxGuarantor.Text = Data[19].ToString();
-                        txtTerm.Text = Data[17].ToString();
-                        textBoxRateofInterest.Text = Data[16].ToString();
-                        textBoxDate.Text = Data[21].ToString().Substring(0, 9);
-                        status=Data[20].ToString();
+                        textBoxLoanAmount.Text = Data[16].ToString();
+                        textBoxLoanType.Text = Data[15].ToString();
+                        textBoxLoanId.Text = Data[13].ToString();
+                        textBoxGuarantor.Text = Data[20].ToString();
+                        txtTerm.Text = Data[18].ToString();
+                        textBoxRateofInterest.Text = Data[17].ToString();
+                        textBoxDate.Text = Data[22].ToString().Substring(0, 9);
+                        status=Data[21].ToString();
                         comboBoxStatus.Text = status;
                         if (status=="Submitted")
                         {
@@ -100,11 +99,13 @@ namespace FinTrustApp.PresentationLayer
                     }
                     catch (Exception ex)
                     {
-                    Console.WriteLine(ex.Message.ToString());
+                        Console.WriteLine(ex.Message.ToString());
                     }
-                    }
+                }
             }
         }
+
+        //---------------- Action for Status Combo Box selection change ---------------------------
 
         private void comboBoxStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -129,10 +130,14 @@ namespace FinTrustApp.PresentationLayer
 
         }
 
+        //---------------- Action for Search By Combo Box selection change ---------------------------
+
         private void comboBoxSearchBy_SelectedIndexChanged(object sender, EventArgs e)
         {
             searchOption = comboBoxSearchBy.Text;
         }
+
+        //---------------- Action for Search TextBox text change ---------------------------
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
@@ -143,17 +148,13 @@ namespace FinTrustApp.PresentationLayer
                 string nameLike = textBoxSearch.Text;
                 dsLoans = LoanBL.GetLoansLike(nameLike, searchOption);
                 if (dsLoans != null)
-                {
-                   
-                    dgvLoanApplications.DataSource = dsLoans.Tables[0];
-                    
+                {                  
+                    dgvLoanApplications.DataSource = dsLoans.Tables[0];                   
                 }
                 else
-                {
-                
+                {               
                     lblLoanMessage.ForeColor = Color.Red;
-                    lblLoanMessage.Text = "No History Available!";
-                   
+                    lblLoanMessage.Text = "No History Available!";                   
                 }
             }
             catch (Exception ex)
@@ -162,12 +163,15 @@ namespace FinTrustApp.PresentationLayer
             }
         }
 
+        //---------------- Action for Back Button ---------------------------
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             Utility.GetLastPage();
         }
 
+        //---------------- Action for Collaterals selection ---------------------------
 
         private void checkBoxCollaterals_CheckedChanged(object sender, EventArgs e)
         {

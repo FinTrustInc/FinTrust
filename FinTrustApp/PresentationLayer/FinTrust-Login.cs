@@ -41,6 +41,9 @@ namespace FinTrustApp.PresentationLayer
 
         }
 
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Employee Login -------------------------------------------------------
+
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             User objUser = null;

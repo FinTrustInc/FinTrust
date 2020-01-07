@@ -18,6 +18,9 @@ namespace FinTrustApp.PresentationLayer
             InitializeComponent();
         }
 
+        //---------------------------------------------------------------------------------------
+        //----------------------- Action for Logout Button ----------------------------------------
+
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LoginInfo.designation = "";
@@ -28,6 +31,9 @@ namespace FinTrustApp.PresentationLayer
             loginForm.Show();
         }
 
+        //---------------------------------------------------------------------------------------
+        //----------------------- Grievance Redressal ----------------------------------------
+
         private void grievanceToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -36,12 +42,18 @@ namespace FinTrustApp.PresentationLayer
             grievanceForm.Show();
         }
 
+        //---------------------------------------------------------------------------------------
+        //----------------------- Customer View -------------------------------------------------
+
         private void customerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Customer_View ViewForm = new Customer_View();
             ViewForm.Show();
         }
+
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Account Opening for Customers ----------------------------------------
 
         private void accountOpenimgToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -52,6 +64,9 @@ namespace FinTrustApp.PresentationLayer
            
         }
 
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Account Closing for Customers ----------------------------------------
+
         private void accountClosingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -60,12 +75,18 @@ namespace FinTrustApp.PresentationLayer
             accountCloseForm.Show();
         }
 
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Employee Profile -----------------------------------------------------
+
         private void myProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             MyProfile profileObj = new MyProfile();
             profileObj.Show();
         }
+
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Action for About Button ----------------------------------------
 
         private void helpToolStripMenuItem2_Click(object sender, EventArgs e)
         {

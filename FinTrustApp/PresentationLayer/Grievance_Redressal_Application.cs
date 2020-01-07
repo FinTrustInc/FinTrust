@@ -35,6 +35,9 @@ namespace FinTrustApp.PresentationLayer
 
         }
 
+        //-------------------------------------------------------------------------------
+        //--------------------------- Insert Grievance Details --------------------------
+
         private void buttonsubmit_Click(object sender, EventArgs e)
         {
             Grievance objGrievance = null;
@@ -48,23 +51,21 @@ namespace FinTrustApp.PresentationLayer
                 objGrievance.Title = textBoxTitle.Text;
                 objGrievance.Status = "Submitted";
 
-
                 DateTime today = DateTime.Today;
-
                 output = GrievanceBL.InsertGrievanceDetails(objGrievance);
 
                 if (output > 0)
                 {
-                    labelMessage.Text = "DATA ADDED SUCCESSFULLY";
+                    MessageBox.Show ( "DATA ADDED SUCCESSFULLY");
                 }
                 else
                 {
-                    labelMessage.Text = "INSERTION FAILED";
+                    MessageBox.Show("INSERTION FAILED");
                 }
             }
             catch (Exception ex)
             {
-                labelMessage.Text = ex.Message.ToString();
+                Console.Out.WriteLine( ex.Message.ToString());
             }
         }
 
@@ -73,12 +74,18 @@ namespace FinTrustApp.PresentationLayer
             textBoxGrievanceID.Text = GrievanceBL.GetNewGrievanceId().ToString();
            
         }
+        
+        //----------------------------------------------------------------------------------
+        //--------------------- Action for Back Button -------------------------------------
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             Utility.GetLastPage();
         }
+
+        //----------------------------------------------------------------------------------
+        //------------------- Validation ---------------------------------------------------
 
         private void textBoxTitle_Validating(object sender, CancelEventArgs e)
         {
@@ -105,6 +112,9 @@ namespace FinTrustApp.PresentationLayer
                 errorProviderGrievanceRegistration.SetError(richTextBoxGrievance, string.Empty);
             }
         }
+
+        //------------------------------------------------------------------------------
+        //-------------------- CheckBox declaration ------------------------------------
 
         private void checkBoxDeclerationGrievance_CheckedChanged(object sender, EventArgs e)
         {

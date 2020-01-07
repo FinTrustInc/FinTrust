@@ -35,20 +35,29 @@ namespace FinTrustApp.PresentationLayer
 		{
 			
 		}
-	
-		private void searchToolStripMenuItem_Click_1(object sender, EventArgs e)
+
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Action for Cashier Search Button -------------------------------------
+
+        private void searchToolStripMenuItem_Click_1(object sender, EventArgs e)
 		{
 			FinTrust_Cashier_Search objSearch = new FinTrust_Cashier_Search();
 			objSearch.Show();
 			//objSearch.MdiParent = this;
 		}
 
-		private void viewTransactionsToolStripMenuItem_Click_1(object sender, EventArgs e)
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Customer View --------------------------------------------------------
+
+        private void viewTransactionsToolStripMenuItem_Click_1(object sender, EventArgs e)
 		{
             Customer_View objView = new Customer_View();
 			objView.Show();
 			//objView.MdiParent = this;
 		}
+
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Action for Logout Button ---------------------------------------------
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -60,11 +69,17 @@ namespace FinTrustApp.PresentationLayer
             loginForm.Show();
         }
 
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Customer View --------------------------------------------------------
+
         private void viewToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Customer_View ViewForm = new Customer_View();
             ViewForm.Show();
         }
+
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Action for Cashier Search Button -------------------------------------
 
         private void transactionDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -73,6 +88,9 @@ namespace FinTrustApp.PresentationLayer
             FinTrust_Cashier_Search cashierSearchForm = new FinTrust_Cashier_Search();
             cashierSearchForm.Show();
         }
+
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Customer View --------------------------------------------------------
 
         private void accountDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -88,6 +106,9 @@ namespace FinTrustApp.PresentationLayer
 
         }
 
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Transaction Button for Cashier ---------------------------------------
+
         private void transactionToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -101,12 +122,18 @@ namespace FinTrustApp.PresentationLayer
 
         }
 
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Employee Profile -----------------------------------------------------
+
         private void myProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             MyProfile profileObj = new MyProfile();
             profileObj.Show();
         }
+
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Action for About Button ----------------------------------------------
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {

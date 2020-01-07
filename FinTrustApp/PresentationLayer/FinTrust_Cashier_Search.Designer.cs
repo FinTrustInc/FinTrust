@@ -93,6 +93,7 @@
             // 
             // comboBoxSearch
             // 
+            this.comboBoxSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSearch.FormattingEnabled = true;
             this.comboBoxSearch.Location = new System.Drawing.Point(194, 29);
             this.comboBoxSearch.Name = "comboBoxSearch";
@@ -165,6 +166,7 @@
             // 
             this.textBoxBalanceAmount.Location = new System.Drawing.Point(206, 447);
             this.textBoxBalanceAmount.Name = "textBoxBalanceAmount";
+            this.textBoxBalanceAmount.ReadOnly = true;
             this.textBoxBalanceAmount.Size = new System.Drawing.Size(243, 20);
             this.textBoxBalanceAmount.TabIndex = 13;
             // 
@@ -182,6 +184,7 @@
             // 
             this.textBoxTransactionDate.Location = new System.Drawing.Point(206, 370);
             this.textBoxTransactionDate.Name = "textBoxTransactionDate";
+            this.textBoxTransactionDate.ReadOnly = true;
             this.textBoxTransactionDate.Size = new System.Drawing.Size(243, 20);
             this.textBoxTransactionDate.TabIndex = 11;
             // 
@@ -199,6 +202,7 @@
             // 
             this.textBoxAmount.Location = new System.Drawing.Point(206, 289);
             this.textBoxAmount.Name = "textBoxAmount";
+            this.textBoxAmount.ReadOnly = true;
             this.textBoxAmount.Size = new System.Drawing.Size(243, 20);
             this.textBoxAmount.TabIndex = 9;
             // 
@@ -216,6 +220,7 @@
             // 
             this.textBoxTransactionType.Location = new System.Drawing.Point(206, 213);
             this.textBoxTransactionType.Name = "textBoxTransactionType";
+            this.textBoxTransactionType.ReadOnly = true;
             this.textBoxTransactionType.Size = new System.Drawing.Size(243, 20);
             this.textBoxTransactionType.TabIndex = 7;
             // 
@@ -233,6 +238,7 @@
             // 
             this.textBoxAccName.Location = new System.Drawing.Point(206, 137);
             this.textBoxAccName.Name = "textBoxAccName";
+            this.textBoxAccName.ReadOnly = true;
             this.textBoxAccName.Size = new System.Drawing.Size(243, 20);
             this.textBoxAccName.TabIndex = 5;
             // 
@@ -242,14 +248,15 @@
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(26, 139);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 18);
+            this.label3.Size = new System.Drawing.Size(108, 18);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Account Holder\'s Name";
+            this.label3.Text = "Customer Name";
             // 
             // textBoxAccNo
             // 
             this.textBoxAccNo.Location = new System.Drawing.Point(206, 60);
             this.textBoxAccNo.Name = "textBoxAccNo";
+            this.textBoxAccNo.ReadOnly = true;
             this.textBoxAccNo.Size = new System.Drawing.Size(243, 20);
             this.textBoxAccNo.TabIndex = 3;
             // 
@@ -294,9 +301,9 @@
             this.labelCashierSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelCashierSearch.Location = new System.Drawing.Point(309, 4);
             this.labelCashierSearch.Name = "labelCashierSearch";
-            this.labelCashierSearch.Size = new System.Drawing.Size(273, 38);
+            this.labelCashierSearch.Size = new System.Drawing.Size(284, 38);
             this.labelCashierSearch.TabIndex = 3;
-            this.labelCashierSearch.Text = "ViewTransaction";
+            this.labelCashierSearch.Text = "View Transaction";
             // 
             // errorProviderSearchTransaction
             // 

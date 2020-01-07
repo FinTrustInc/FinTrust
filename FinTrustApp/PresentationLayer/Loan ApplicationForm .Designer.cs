@@ -174,6 +174,7 @@
             this.textBoxTerm.Name = "textBoxTerm";
             this.textBoxTerm.Size = new System.Drawing.Size(172, 20);
             this.textBoxTerm.TabIndex = 15;
+            this.textBoxTerm.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxTerm_Validating);
             // 
             // label4
             // 
@@ -191,6 +192,7 @@
             this.textBoxGuarantor.Name = "textBoxGuarantor";
             this.textBoxGuarantor.Size = new System.Drawing.Size(172, 20);
             this.textBoxGuarantor.TabIndex = 13;
+            this.textBoxGuarantor.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxGuarantor_Validating);
             // 
             // textBoxLoanAmount
             // 
@@ -198,9 +200,11 @@
             this.textBoxLoanAmount.Name = "textBoxLoanAmount";
             this.textBoxLoanAmount.Size = new System.Drawing.Size(172, 20);
             this.textBoxLoanAmount.TabIndex = 12;
+            this.textBoxLoanAmount.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxLoanAmount_Validating);
             // 
             // comboBoxLoanType
             // 
+            this.comboBoxLoanType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLoanType.FormattingEnabled = true;
             this.comboBoxLoanType.Items.AddRange(new object[] {
             "Home Loan",
@@ -210,6 +214,7 @@
             this.comboBoxLoanType.Name = "comboBoxLoanType";
             this.comboBoxLoanType.Size = new System.Drawing.Size(172, 21);
             this.comboBoxLoanType.TabIndex = 11;
+            this.comboBoxLoanType.Validating += new System.ComponentModel.CancelEventHandler(this.comboBoxLoanType_Validating);
             // 
             // textBoxCustomerId
             // 
@@ -302,15 +307,16 @@
             // 
             this.buttonsubmit.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonsubmit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonsubmit.Enabled = false;
             this.buttonsubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonsubmit.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonsubmit.ForeColor = System.Drawing.Color.White;
             this.buttonsubmit.Location = new System.Drawing.Point(850, 599);
             this.buttonsubmit.Name = "buttonsubmit";
             this.buttonsubmit.Size = new System.Drawing.Size(100, 51);
             this.buttonsubmit.TabIndex = 14;
             this.buttonsubmit.Text = "SUBMIT";
             this.buttonsubmit.UseVisualStyleBackColor = false;
-            this.buttonsubmit.Visible = false;
             this.buttonsubmit.Click += new System.EventHandler(this.buttonsubmit_Click);
             // 
             // panel2

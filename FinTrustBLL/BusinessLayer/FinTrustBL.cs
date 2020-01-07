@@ -12,7 +12,8 @@ namespace FinTrustBLL.BusinessLayer
 {
 	public class FinTrustBL
     {
-
+        //-----------------------------------------------------------------------------------------
+        //----------------------
 
         public static bool CheckEmployeeUser(User objUser)
         {
@@ -52,6 +53,9 @@ namespace FinTrustBLL.BusinessLayer
             return flag;
         }
 
+        //------------------------------------------------------------------------------------------
+        //------------------------ 
+
         private static void SetLoginInfo(string employeeId)
         {
             DataSet dsEmployeeUser = null;
@@ -70,54 +74,6 @@ namespace FinTrustBLL.BusinessLayer
             }
         }
 
-        public static int InsertTransactionDetails(Transaction objTransaction)
-		{
-			int output = 0;
-			try
-			{
-				output = FinTrustDL.InsertTransactionDetails(objTransaction);
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine("Error : FinTrustBL : InsertTransactionDetails()" + ex.Message.ToString());
-			}
-			return output;
-		}
-		public static string GetNewTransactionId()
-		{
-			string lastTransactionId = null;
-			string newTransactionId = null;
-			try
-			{
-				lastTransactionId = FinTrustDL.GetLastTransactionId();
-				if (lastTransactionId != null)
-				{
-					newTransactionId = UtilityHelper.GenerateTransactionId(lastTransactionId);
-				}
-				else
-				{
-					newTransactionId = "TRA1001";
-				}
-			}
-			catch (Exception ex)
-			{
-				Console.Out.WriteLine("Error : FinTrustBL : GetNewTransactionId() " + ex.Message.ToString());
-			}
-			return newTransactionId;
-		}
-		public static Customer GetNameByAccountNumber(string accountNumber)
-		{
-			Customer objCustomer = null;
-			try
-			{
-				objCustomer = FinTrustDL.GetNameByAccountNumber(accountNumber);
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine("Error : FinTrustBL : GetNameByAccountNumber()" + ex.Message.ToString());
-			}
-			return objCustomer;
-		}
         //************************** INSERT USER DETAILS ******************************
 
         public static int InsertUserDetails(User objUser)
@@ -137,15 +93,11 @@ namespace FinTrustBLL.BusinessLayer
         }
 
         public static DataSet GetEmployeeDetails(string employeeId)
-        {
-            
-            DataSet dsEmployeeUser = null;
-       
+        {           
+            DataSet dsEmployeeUser = null;       
             try
             {
-                dsEmployeeUser = FinTrustDL.GetEmployeeDetails(employeeId);
-                
-                
+                dsEmployeeUser = FinTrustDL.GetEmployeeDetails(employeeId);                
             }
             catch (Exception ex)
             {
@@ -154,6 +106,8 @@ namespace FinTrustBLL.BusinessLayer
             return dsEmployeeUser;
         }
 
+        //----------------------------------------------------------------------------------------
+        //---------------------------- Update Password -------------------------------------------
 
         public static int UpdatePassword(string password, string employeeId)
         {

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.labelloanpage = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnBack = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
@@ -60,6 +60,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(983, 45);
             this.panel2.TabIndex = 54;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(22, 6);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(109, 32);
+            this.btnBack.TabIndex = 24;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseMnemonic = false;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // labelloanpage
             // 
@@ -131,9 +145,9 @@
             // picturecbs
             // 
             this.picturecbs.Image = ((System.Drawing.Image)(resources.GetObject("picturecbs.Image")));
-            this.picturecbs.Location = new System.Drawing.Point(368, 150);
+            this.picturecbs.Location = new System.Drawing.Point(319, 150);
             this.picturecbs.Name = "picturecbs";
-            this.picturecbs.Size = new System.Drawing.Size(249, 111);
+            this.picturecbs.Size = new System.Drawing.Size(308, 103);
             this.picturecbs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picturecbs.TabIndex = 60;
             this.picturecbs.TabStop = false;
@@ -198,25 +212,11 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 49);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 45);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(283, 212);
+            this.pictureBox2.Size = new System.Drawing.Size(295, 216);
             this.pictureBox2.TabIndex = 66;
             this.pictureBox2.TabStop = false;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack.Location = new System.Drawing.Point(22, 6);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(109, 32);
-            this.btnBack.TabIndex = 24;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseMnemonic = false;
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // About
             // 
@@ -239,7 +239,7 @@
             this.Controls.Add(this.picturecbs);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "About";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

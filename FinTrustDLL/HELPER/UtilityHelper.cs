@@ -8,6 +8,9 @@ namespace FinTrustDLL.Helper
 {
 	public  class UtilityHelper
 	{
+        //----------------------------------------------------------------------------------
+        //--------------- Generate New Transaction Id for next Transaction -----------------
+
 		public static string GenerateTransactionId(string oldID)
 		{
 			string prefix, suffix;
@@ -28,6 +31,8 @@ namespace FinTrustDLL.Helper
 			return newTransactionID;
 		}
 
+        //----------------------------------------------------------------------------------
+        //--------------- Generate New Loan Id for next Loan Application -------------------
 
         public static string GenerateLoanId(string oldID)
         {

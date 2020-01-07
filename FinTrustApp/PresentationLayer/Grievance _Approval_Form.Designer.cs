@@ -377,6 +377,7 @@
             // 
             // comboBoxSearchBy
             // 
+            this.comboBoxSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSearchBy.FormattingEnabled = true;
             this.comboBoxSearchBy.Location = new System.Drawing.Point(152, 13);
             this.comboBoxSearchBy.Name = "comboBoxSearchBy";
@@ -417,9 +418,8 @@
             this.labelMessage.AutoSize = true;
             this.labelMessage.Location = new System.Drawing.Point(840, 77);
             this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Size = new System.Drawing.Size(73, 13);
+            this.labelMessage.Size = new System.Drawing.Size(0, 13);
             this.labelMessage.TabIndex = 40;
-            this.labelMessage.Text = "___________";
             // 
             // errorProviderGrievanceApproval
             // 
@@ -428,11 +428,11 @@
             // labelError
             // 
             this.labelError.AutoSize = true;
+            this.labelError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.labelError.Location = new System.Drawing.Point(438, 77);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(55, 13);
+            this.labelError.Size = new System.Drawing.Size(0, 13);
             this.labelError.TabIndex = 42;
-            this.labelError.Text = "88888888";
             // 
             // Grievance__Approval_Form
             // 

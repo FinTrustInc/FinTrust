@@ -32,6 +32,9 @@ namespace FinTrustApp.PresentationLayer
             }
         }
 
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Search for Account Details -------------------------------------------
+
         private void buttonAccountNumberSearch_Click(object sender, EventArgs e)
         {
             Customer customerObj = null;
@@ -52,7 +55,7 @@ namespace FinTrustApp.PresentationLayer
             }
             catch (Exception ex)
             {
-                //lblMessage.Text = ex.Message.ToString();
+                 Console.Out.WriteLine(ex.Message.ToString());
             }
         }
 
@@ -84,10 +87,13 @@ namespace FinTrustApp.PresentationLayer
             }
             catch (Exception ex)
             {
-                labelCustomerAccountCloseMessage.Text = ex.Message.ToString();
+                Console.Out.WriteLine(ex.Message.ToString());
             }
 
         }
+
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Action for Back Button -----------------------------------------------
 
         private void btnBack_Click(object sender, EventArgs e)
         {

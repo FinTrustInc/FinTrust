@@ -19,7 +19,10 @@ namespace FinTrustApp.PresentationLayer
             InitializeComponent();
       
         }
-    
+
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Load data in Combobox ------------------------------------------------
+
         private void Grievance__Approval_Form_Load(object sender, EventArgs e)
         {
             LoadGrievanceApplications();
@@ -31,6 +34,10 @@ namespace FinTrustApp.PresentationLayer
             comboBoxSearchBy.Items.Add("Account Number");
             comboBoxSearchBy.Items.Add("Customer Name");
         }
+
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Load Grievance Details -----------------------------------------------
+
         private void LoadGrievanceApplications()
         {
             DataSet dsLoans = null;
@@ -51,7 +58,7 @@ namespace FinTrustApp.PresentationLayer
             }
             catch (Exception ex)
             {
-                labelMessage.Text = ex.Message.ToString();
+                Console.Out.WriteLine(ex.Message.ToString());
             }
         }
 
@@ -59,6 +66,9 @@ namespace FinTrustApp.PresentationLayer
         {
 
         }
+
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Dislay datagridview data in form -------------------------------------
 
         private void dataGridGriev_SelectionChanged(object sender, EventArgs e)
         {
@@ -123,6 +133,9 @@ namespace FinTrustApp.PresentationLayer
             }
         }
 
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Action for Search By ComboBox -------------------------------------
+
         private void searchField_TextChanged(object sender, EventArgs e)
         {
             try
@@ -174,6 +187,8 @@ namespace FinTrustApp.PresentationLayer
 
 
 }
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Action for Back Button -------------------------------------
 
         private void btnBack_Click(object sender, EventArgs e)
         {

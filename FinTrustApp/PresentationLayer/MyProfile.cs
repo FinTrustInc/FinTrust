@@ -25,7 +25,8 @@ namespace FinTrustApp.PresentationLayer
             Utility.GetLastPage();
         }
 
-       
+        //----------------------------------------------------------------------------
+        //----------------------- Load Employee Profile ------------------------------
 
         private void MyProfile_Load(object sender, EventArgs e)
         {
@@ -59,10 +60,10 @@ namespace FinTrustApp.PresentationLayer
             {
                 Console.Out.WriteLine("Error : FinTrustBL:GetEmployeeDetails : " + ex.Message.ToString());
             }
-
-        
-
         }
+
+        //---------------------------------------------------------------------------
+        //--------------- Password Changing -----------------------------------------
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {

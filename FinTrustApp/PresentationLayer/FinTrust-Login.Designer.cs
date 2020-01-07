@@ -123,7 +123,7 @@
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLogin.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonLogin.Location = new System.Drawing.Point(109, 334);
+            this.buttonLogin.Location = new System.Drawing.Point(121, 331);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(198, 58);
             this.buttonLogin.TabIndex = 5;
@@ -163,6 +163,7 @@
             // 
             // comboBoxUser
             // 
+            this.comboBoxUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxUser.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxUser.ForeColor = System.Drawing.SystemColors.ControlText;
             this.comboBoxUser.FormattingEnabled = true;

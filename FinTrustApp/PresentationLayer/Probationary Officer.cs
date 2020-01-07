@@ -28,11 +28,13 @@ namespace FinTrustApp.PresentationLayer
 
         }
 
+        //--------------------------------------------------------------------------------------
+        //----------------------- Load Pending Loan Application --------------------------------
+
         private void loanApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
            Pending_Loan_Applications objectname = new Pending_Loan_Applications();
-            objectname.Show();
-            
+            objectname.Show();            
         }
 
         private void textBoxname_TextChanged(object sender, EventArgs e)
@@ -45,13 +47,14 @@ namespace FinTrustApp.PresentationLayer
 
         }
 
+        //------------------------------------------------------------------------------------
+        //------------------- Action for About Button ----------------------------------------
+
         private void helpToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             this.Hide();
             About aboutObj = new About();
             aboutObj.Show();
-
-
         }
 
         private void Probationary_Officer_Load(object sender, EventArgs e)
@@ -74,6 +77,9 @@ namespace FinTrustApp.PresentationLayer
 
         }
 
+        //------------------------------------------------------------------------------
+        //--------------------- Action for Logout Buton --------------------------------
+
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LoginInfo.designation = "";
@@ -85,6 +91,9 @@ namespace FinTrustApp.PresentationLayer
             loginForm.Show();
         }
 
+        //--------------------------------------------------------------------------------
+        //------------------------------ Load Loan Application Form ----------------------
+
         private void loanToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -93,12 +102,18 @@ namespace FinTrustApp.PresentationLayer
             loanApplicationForm.Show();
         }
 
+        //--------------------------------------------------------------------------------
+        //--------------------- View Customers -------------------------------------------
+
         private void customerDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Customer_View ViewForm = new Customer_View();
             ViewForm.Show();
         }
+
+        //--------------------------------------------------------------------------------
+        //-------------- Load Grievance Approval Form ------------------------------------
 
         private void grievanceDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -107,6 +122,9 @@ namespace FinTrustApp.PresentationLayer
             Grievance__Approval_Form grievanceApprovalForm = new Grievance__Approval_Form();
             grievanceApprovalForm.Show();
         }
+
+        //-------------------------------------------------------------------------------
+        //------------------------- Employee Profile ------------------------------------
 
         private void myProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {

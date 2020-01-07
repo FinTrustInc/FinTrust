@@ -247,8 +247,10 @@
             // 
             this.buttonsubmit.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonsubmit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonsubmit.Enabled = false;
             this.buttonsubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonsubmit.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonsubmit.ForeColor = System.Drawing.Color.White;
             this.buttonsubmit.Location = new System.Drawing.Point(849, 599);
             this.buttonsubmit.Name = "buttonsubmit";
             this.buttonsubmit.Size = new System.Drawing.Size(100, 51);
@@ -272,9 +274,8 @@
             this.labelMessage.AutoSize = true;
             this.labelMessage.Location = new System.Drawing.Point(383, 68);
             this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Size = new System.Drawing.Size(127, 13);
+            this.labelMessage.Size = new System.Drawing.Size(0, 13);
             this.labelMessage.TabIndex = 25;
-            this.labelMessage.Text = "____________________";
             // 
             // errorProviderGrievanceRegistration
             // 

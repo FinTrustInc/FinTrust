@@ -10,6 +10,8 @@ namespace FinTrustDLL.Helper
 {
 	public class DBHelper
 	{
+        //-------------------------------------------------------------------------------------------
+        //------------------- Database connection Establishment -------------------------------------
         public static SqlConnection GetConnection()
         {
             SqlConnection connection = null;

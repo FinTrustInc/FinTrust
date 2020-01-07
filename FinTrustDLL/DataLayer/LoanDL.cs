@@ -12,6 +12,9 @@ namespace FinTrustDLL.DataLayer
 {
     public class LoanDL
     {
+        //--------------------------------------------------------------------------------
+        //------------------- Get Customer Details By Customer Id ------------------------
+
         public static Customer GetCustomerById(string customerId)
         {
             string sql = "";
@@ -62,6 +65,9 @@ namespace FinTrustDLL.DataLayer
             return customerObj;
         }
 
+        //----------------------------------------------------------------------------------
+        //---------- Get Last Loan Id Generate New Loan Id ---------------------------------
+
         public static string GetLastLoanId()
         {
             string sql = "";
@@ -98,6 +104,9 @@ namespace FinTrustDLL.DataLayer
             return lastLoanId;
         }
 
+        //------------------------------------------------------------------------------------------
+        //----------------------- Insert Loan Details ----------------------------------------------
+
         public static int InsertLoanDetails(Loan loanObj)
         {
             int output = 0;
@@ -124,7 +133,6 @@ namespace FinTrustDLL.DataLayer
                 cmd = new SqlCommand(sql, con);
 
                 output = cmd.ExecuteNonQuery();
-
             }
             catch (Exception ex)
             {
@@ -135,11 +143,11 @@ namespace FinTrustDLL.DataLayer
                 con.Close();
                 cmd.Dispose();
             }
-
             return output;
-
-
         }
+
+        //-----------------------------------------------------------------------------------------
+        //------------------------------- Display Loan Details ------------------------------------
 
         public static DataSet GetLoanDetails(string loanId)
         {
@@ -172,6 +180,9 @@ namespace FinTrustDLL.DataLayer
             return dsLoans;
         }
 
+        //----------------------------------------------------------------------------------------
+        //--------------- Get basic Loan Details -------------------------------------------------
+
         public static DataSet GetBasicLoanDetails()
         {
             string sql = "";
@@ -201,6 +212,9 @@ namespace FinTrustDLL.DataLayer
 
             return dsLoans;
         }
+
+        //-------------------------------------------------------------------------------
+        //------------------------ Update Loan Status -----------------------------------
 
         public static int UpdateLoanStatus(string loanId, string status)
         {
@@ -236,6 +250,8 @@ namespace FinTrustDLL.DataLayer
 
         }
 
+        //--------------------------------------------------------------------------------------
+        //-------------- Search for Loan Details -----------------------------------------------
 
         public static DataSet GetLoansLike(string likeName, string searchOption)
         {

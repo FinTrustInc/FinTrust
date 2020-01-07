@@ -33,8 +33,8 @@ namespace FinTrustApp.PresentationLayer
 			comboBoxSearch.Items.Add("Account No");
 			comboBoxSearch.Items.Add("Customer Name");
 
-			comboBoxAccType.Items.Add("SAVINGS");
-			comboBoxAccType.Items.Add("CURRENT");
+			comboBoxAccType.Items.Add("Savings Account");
+			comboBoxAccType.Items.Add("Current Account");
 		}
 
 		//-----------------------------------------------------------------------------------------------------------
@@ -178,11 +178,17 @@ namespace FinTrustApp.PresentationLayer
 			}
 		}
 
+        //---------------------------------------------------------------------------------------
+        //----------------------- Action for Back Button ----------------------------------------
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             Utility.GetLastPage();
         }
+
+        //---------------------------------------------------------------------------------------
+        //----------------------- Validation ----------------------------------------------------
 
         private void comboBoxSearch_Validating(object sender, CancelEventArgs e)
         {

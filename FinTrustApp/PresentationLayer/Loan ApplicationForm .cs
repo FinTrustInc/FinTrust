@@ -24,6 +24,8 @@ namespace FinTrustApp.PresentationLayer
 
         }
 
+        //----------------- Action for Customer Id change -------------------------
+
         private void textBoxcustomerid_TextChanged(object sender, EventArgs e)
         {
             Customer customerObj = null;
@@ -41,9 +43,11 @@ namespace FinTrustApp.PresentationLayer
             }
             catch (Exception ex)
             {
-                //lblMessage.Text = ex.Message.ToString();
+               Console.WriteLine(ex.Message.ToString());
             }
         }
+
+        //---------------- Action for status Combo Box selection change ---------------------------
 
         private void checkBoxLoanApplicationDeclaration_CheckedChanged(object sender, EventArgs e)
         {
@@ -70,12 +74,13 @@ namespace FinTrustApp.PresentationLayer
 
         }
 
+        //---------------- Action for submit button ---------------------------
+
         private void buttonsubmit_Click(object sender, EventArgs e)
         {
              Loan loanObj = null;
             int output = 0;
-            if (LoanFormValidation())
-            {
+           
                 try
                 {
 
@@ -102,50 +107,28 @@ namespace FinTrustApp.PresentationLayer
                     }
                     else
                     {
-                        //lblMessage2.Text = "Failed! Please Try Again.";
+                        lblLoanMessage.Text = "Failed! Please Try Again.";
                     }
 
                 }
                 catch (Exception ex)
                 {
-                    //lblMessage2.Text = ex.Message.ToString();
+                    Console.WriteLine(ex.Message.ToString());
                 }
-            }
+            
 
         }
 
-        private bool LoanFormValidation()
-        {
-            bool flag = true;
-           
-            //if (textBoxName.Text == "")
-            //{
-            //    lblMessage2.Text = "Please Enter the Name";
-            //    flag = false;
-            //}
-            //else if (!(radioMale.Checked || radioFemale.Checked))
-            //{
-            //    lblMessage2.Text = "Please select your gender.";
-            //    flag = false;
-            //}
-            //else if (txtMobile.Text.Length != 10 || !int.TryParse(txtMobile.Text, out int result))
-            //{
-            //    lblMessage2.Text = "Invalid Mobile Number.";
-            //    flag = false;
-            //}
-            //else if (!match.Success)
-            //{
-            //    lblMessage2.Text = "Invalid Email Address.";
-            //    flag = false;
-            //}
-            return flag;
-        }
+      
+        //--------------------- Action for Back Button ------------------------
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             Utility.GetLastPage();
         }
+
+        //--------------------- Validation ------------------------------
 
         private void textBoxLoanAmount_Validating(object sender, CancelEventArgs e)
         {

@@ -19,7 +19,10 @@ namespace FinTrustApp.PresentationLayer
         {
             InitializeComponent();
         }
-        
+
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Employee Registration ------------------------------------------------
+
         private void buttonUserRegister_Click(object sender, EventArgs e)
         {
             User objUser = null;
@@ -86,7 +89,7 @@ namespace FinTrustApp.PresentationLayer
             }
             catch (Exception ex)
             {
-                labelUserRegistrtionMessage.Text = ex.Message.ToString();
+                Console.Out.WriteLine(ex.Message.ToString());
             }
         }
 
@@ -100,11 +103,7 @@ namespace FinTrustApp.PresentationLayer
                 {
                     errorProviderUserRegistration.SetError(radioButtonEmployeeFemale, string.Empty);
                 }
-                    
-
-
-
-
+                  
                 if (textBoxEmployeeID.Text == string.Empty || textBoxEmployeeName.Text == string.Empty || comboBoxDesignation.SelectedIndex ==-1  || textBoxEmployeePhone.Text == string.Empty || textBoxEmployeeEmail.Text == string.Empty || textBoxEmployeeAddress.Text == string.Empty || textBoxEmployeeAadhar.Text == string.Empty || textBoxtEmployeePAN.Text == string.Empty || !(radioButtonEmployeeFemale.Checked || radioButtonEmployeeMale.Checked))
                 {
                     checkBoxUserRegister.Checked = false;
@@ -235,7 +234,7 @@ namespace FinTrustApp.PresentationLayer
                 errorProviderUserRegistration.SetError(textBoxtEmployeePAN, string.Empty);
             }
 
-            ////////////////////////
+            //-------------------------------------------
 
             if (radioButtonEmployeeFemale.Checked == false || radioButtonEmployeeMale.Checked == false)
             {
@@ -267,6 +266,9 @@ namespace FinTrustApp.PresentationLayer
             }
             
         }
+
+        //----------------------------------------------------------------------------------------------
+        //----------------------- Action For Back Button -----------------------------------------------
 
         private void btnBack_Click(object sender, EventArgs e)
         {

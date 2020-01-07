@@ -160,6 +160,7 @@
             // 
             // comboBoxAccountType
             // 
+            this.comboBoxAccountType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAccountType.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxAccountType.FormattingEnabled = true;
             this.comboBoxAccountType.Items.AddRange(new object[] {
@@ -391,6 +392,7 @@
             this.buttonAccountOpenSubmit.Enabled = false;
             this.buttonAccountOpenSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAccountOpenSubmit.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAccountOpenSubmit.ForeColor = System.Drawing.Color.White;
             this.buttonAccountOpenSubmit.Location = new System.Drawing.Point(852, 598);
             this.buttonAccountOpenSubmit.Name = "buttonAccountOpenSubmit";
             this.buttonAccountOpenSubmit.Size = new System.Drawing.Size(100, 51);

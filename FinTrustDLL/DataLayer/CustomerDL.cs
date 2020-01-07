@@ -12,7 +12,8 @@ namespace FinTrustDLL.DataLayer
 {
     public class CustomerDL
     {
-
+        //-----------------------------------------------------------------------------------
+        //----------------------- get Account Details using Account Number ------------------
 
         public static Customer GetCustomerByAccountNumber(string accountNumber)
         {
@@ -64,6 +65,8 @@ namespace FinTrustDLL.DataLayer
             return customerObj;
         }
 
+        //------------------------------------------------------------------------------------------
+        //------------- Get Last Customer Id for generating new Customer Id for customers ----------
 
         public static string GetLastCustomerId()
         {
@@ -101,6 +104,8 @@ namespace FinTrustDLL.DataLayer
             return lastCustomerId;
         }
 
+        //------------------------------------------------------------------------------------------
+        //------------- Get Last Account No for generating new account No for customers ------------
 
         public static string GetLastAccountNumber()
         {
@@ -137,6 +142,9 @@ namespace FinTrustDLL.DataLayer
 
             return lastAccountNumber;
         }
+
+        //-----------------------------------------------------------------------------------------
+        //----------------- Insert New Customer Details -------------------------------------------
 
         public static int InsertCustomerDetails(Customer objCustomer)
         {
@@ -179,6 +187,9 @@ namespace FinTrustDLL.DataLayer
             }
             return output;
         }
+
+        //------------------------------------------------------------------------------------
+        //----------------------- Delete Customer Account ------------------------------------
 
         public static int DeleteAccountDetails(string accountNumber)
         {

@@ -170,6 +170,9 @@ namespace FinTrustApp.PresentationLayer
             Utility.GetLastPage();
         }
 
+        //---------------------------------------------------------------------
+        //------------------ Validation --------------------------------------
+
         private void comboBoxSearch_Validating(object sender, CancelEventArgs e)
         {
             
